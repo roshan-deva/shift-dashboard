@@ -1,0 +1,100 @@
+{
+  "generated": "2026-06-27T07:10:31.927647",
+  "meta": {
+    "date": "06/27/2026",
+    "shift": "24H",
+    "project": "Spiral Line LR-LDC - API 5L",
+    "pipe": "42\" x 0.600\"",
+    "coating": "FBE+IFC",
+    "crewDay": "A",
+    "crewNight": "B",
+    "prodSup": "\u2014",
+    "qualSup": "\u2014",
+    "maintSup": "\u2014",
+    "speeds": {
+      "extBlast": 0,
+      "extCoat": 0,
+      "intBlast": 0,
+      "intCoat": 0
+    }
+  },
+  "production": {
+    "bare": {
+      "day": 47,
+      "night": 75,
+      "total": 122,
+      "tgt": 140
+    },
+    "idCoated": {
+      "day": 96,
+      "night": 79,
+      "total": 175,
+      "tgt": 140
+    },
+    "odTpi": {
+      "day": 89,
+      "night": 88,
+      "total": 177,
+      "tgt": 145
+    },
+    "odCoated": {
+      "day": 81,
+      "night": 88,
+      "total": 169,
+      "tgt": 145
+    },
+    "wipBareId": {
+      "total": 0,
+      "tgt": 400
+    },
+    "wipIdOd": {
+      "total": 308,
+      "tgt": 400
+    },
+    "directFeedPct": {
+      "val": 0.0,
+      "tgt": 75
+    },
+    "idOdFeedPct": {
+      "val": 0.0,
+      "tgt": 75
+    },
+    "loadedRail": {
+      "day": 89,
+      "night": 88,
+      "total": 177,
+      "tgt": 145
+    },
+    "odFromGround": {
+      "total": 0
+    }
+  },
+  "quality": {
+    "ftrOd": 97.18,
+    "repairPct": 1.69,
+    "rejectPct": 1.13,
+    "ftrOdTgt": 96,
+    "ftrId": 100.0,
+    "idRejectPct": 0.0,
+    "ftrIdTgt": 98,
+    "repairPipes": 3,
+    "rejectPipes": 2,
+    "twoPartRepairs": 161,
+    "bevel": 2,
+    "sample": 2,
+    "tape": 0,
+    "idRejects": 0,
+    "pipeMismatch": 0,
+    "pipesToGroundId": 0
+  },
+  "maintenance": {
+    "idDowntimeHrs": 0,
+    "odDowntimeHrs": 0,
+    "tgt": 85,
+    "sapNotif": 0,
+    "plannedDt": 0,
+    "unplannedDt": 0,
+    "forklift": 0,
+    "downtimeEvents": []
+  }
+}

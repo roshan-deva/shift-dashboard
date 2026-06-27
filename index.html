@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WTL Coating — Daily Shift Snapshot</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!--
+  daily_snapshot.json data contract (standalone — sibling of dashboard_data.json, NOT the 33-KPI schema):
+  {
+    "generated":"ISO ts",
+    "meta":{ date, shift, project, pipe, coating, crewDay, crewNight, prodSup, qualSup, maintSup,
+             speeds:{ extBlast, extCoat, intBlast, intCoat } },
+    "production":{ bare:{day,night,total,tgt}, idCoated:{...}, odTpi:{...}, odCoated:{...},
+                   wipBareId:{total,tgt}, wipIdOd:{total,tgt},
+                   directFeedPct:{val,tgt}, idOdFeedPct:{val,tgt},
+                   loadedRail:{day,night,total,tgt}, odFromGround:{total} },
+    "quality":{ ftrOd, repairPct, rejectPct, ftrOdTgt, ftrId, idRejectPct, ftrIdTgt,
+                repairPipes, rejectPipes, twoPartRepairs, bevel, sample, tape,
+                idRejects, pipeMismatch, pipesToGroundId },
+    "maintenance":{ idDowntimeHrs, odDowntimeHrs, tgt, sapNotif, plannedDt, unplannedDt, forklift,
+                    downtimeEvents:[ {desc,start,stop,durMin,dept,line,sap,shift,cause} ] }
+  }
+  Utilization computed in JS: (24 - downtimeHrs)/24 * 100. Percentages stored already x100 (e.g. 91.49).
+-->
+<style>
+:root{
+  --bg:#262634; --card:#161623; --border:rgba(255,255,255,0.1); --border2:rgba(255,255,255,0.06);
+  --violet:#985ffd; --pink:#ff49cd; --cyan:#00c9ff; --green:#32d484; --amber:#fdaf22; --coral:#ff6757; --teal:#35b5aa;
+  --text:rgba(255,255,255,0.87); --muted:#8c9097; --axis:#8c9097; --gauge-bg:#0d0d1a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:13px;min-height:100vh;overflow-x:hidden}
+
+/* ── Header ───────────────────────────────────────── */
+header{position:sticky;top:0;z-index:50;background:#13131f;border-bottom:0.67px solid var(--border);
+  background-image:
+    repeating-linear-gradient(90deg, rgba(152,95,253,0.05) 0 1px, transparent 1px 26px),
+    radial-gradient(140% 140% at 0% -20%, rgba(152,95,253,0.18), transparent 55%),
+    radial-gradient(120% 120% at 100% -30%, rgba(255,73,205,0.12), transparent 50%);
+  backdrop-filter:blur(12px)}
+.hwrap{display:flex;align-items:center;justify-content:space-between;padding:12px 22px;gap:16px}
+.hleft{display:flex;align-items:center;gap:14px;min-width:0}
+.hleft img{height:34px;mix-blend-mode:screen;flex-shrink:0;object-fit:contain}
+.hsep{width:0.67px;height:28px;background:rgba(255,255,255,0.14)}
+.htitle{font-weight:700;font-size:16px;letter-spacing:.05em;color:rgba(255,255,255,.92);line-height:1}
+.hsub{font-size:10px;color:var(--muted);margin-top:3px;letter-spacing:.12em;text-transform:uppercase}
+.hright{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.datebadge{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.datebadge .d{font-weight:700;font-size:14px;color:var(--violet)}
+.datebadge .s{font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.ldot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pdot 2s infinite;display:inline-block}
+@keyframes pdot{0%,100%{opacity:1}50%{opacity:.3}}
+
+.sub-tog{display:inline-flex;background:var(--card);border:0.67px solid var(--border);border-radius:100px;overflow:hidden;padding:2px;gap:2px}
+.sub-tog button{padding:6px 14px;font-weight:600;font-size:11px;letter-spacing:.05em;cursor:pointer;background:transparent;color:var(--muted);border:none;border-radius:100px;transition:all .15s;font-family:inherit}
+.sub-tog button.active{background:var(--violet);color:#fff;box-shadow:0 0 12px rgba(152,95,253,.5)}
+
+/* ── Layout: sidebar + main ───────────────────────── */
+.layout{display:flex;align-items:flex-start}
+.sidebar{width:212px;flex-shrink:0;background:var(--card);border-right:0.67px solid var(--border);
+  min-height:calc(100vh - 60px);padding:14px 12px;position:sticky;top:60px;transition:width .25s ease}
+.layout.collapsed .sidebar{width:62px}
+.sidebar .navtoggle{display:flex;align-items:center;justify-content:center;width:36px;height:36px;margin:0 0 12px auto;
+  border:0.67px solid var(--border);background:transparent;color:var(--muted);border-radius:8px;cursor:pointer;transition:all .15s;font-size:16px}
+.sidebar .navtoggle:hover{color:var(--violet);border-color:var(--violet)}
+.navbtn{display:flex;align-items:center;gap:13px;width:100%;padding:12px 13px;margin-bottom:5px;border:none;background:transparent;
+  color:var(--muted);font:600 12px/1 'Space Grotesk';letter-spacing:.06em;text-transform:uppercase;border-radius:8px;cursor:pointer;
+  border-left:2.5px solid transparent;transition:all .15s;white-space:nowrap;overflow:hidden}
+.navbtn:hover{color:var(--text);background:rgba(255,255,255,.03)}
+.navbtn.active{background:rgba(152,95,253,.14);color:var(--violet);border-left-color:var(--violet)}
+.navbtn .ic{font-size:17px;flex-shrink:0;width:20px;text-align:center}
+.layout.collapsed .navbtn .lbl{display:none}
+.layout.collapsed .navbtn{justify-content:center;gap:0;padding:12px 0}
+
+main{flex:1;min-width:0;padding:22px 26px;max-width:1500px}
+.sechead{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.sechead h2{font-weight:700;font-size:17px;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.92)}
+.sechead .bar{width:4px;height:22px;border-radius:3px;background:linear-gradient(var(--violet),var(--pink))}
+
+/* ── Cards ────────────────────────────────────────── */
+.grid{display:grid;gap:14px}
+.card{background:var(--card);border:0.67px solid var(--border);border-radius:10px;padding:18px;box-shadow:rgba(255,255,255,0.04) 0 2px 1px -1px}
+
+/* Style B — neumorphic dark stat card */
+.statc{position:relative;background:linear-gradient(145deg,#1b1b2b,#121220);border:0.67px solid var(--border);border-radius:14px;padding:16px 18px;
+  box-shadow:6px 6px 16px rgba(0,0,0,.45),-4px -4px 12px rgba(255,255,255,.03);overflow:hidden}
+.statc .lab{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.statc .val{font-weight:700;font-size:30px;line-height:1.05;margin-top:8px;text-shadow:0 0 18px rgba(152,95,253,.45)}
+.statc .unit{font-size:14px;font-weight:600;color:var(--muted);margin-left:3px}
+.statc .delta{font-size:11px;font-weight:600;margin-top:7px;display:flex;align-items:center;gap:5px}
+.statc .spark{position:absolute;right:-6px;bottom:-6px;width:74px;height:42px;opacity:.5}
+.c-on{color:var(--green)}.c-off{color:var(--coral)}.c-watch{color:var(--amber)}.c-mut{color:var(--muted)}.c-violet{color:var(--violet)}
+
+/* headline chips */
+.chips{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:20px}
+.chip{background:linear-gradient(145deg,#1b1b2b,#121220);border:0.67px solid var(--border);border-radius:14px;padding:14px 15px;
+  box-shadow:5px 5px 14px rgba(0,0,0,.4),-3px -3px 10px rgba(255,255,255,.025);border-top:2px solid var(--violet)}
+.chip .lab{font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.chip .val{font-weight:700;font-size:25px;margin-top:6px}
+.chip .sub{font-size:10px;color:var(--muted);margin-top:3px}
+
+/* ── Style A — pill bars ──────────────────────────── */
+.pillrow{margin:16px 0}
+.pillrow .ptop{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px}
+.pillrow .pname{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--text)}
+.pillrow .pval{font-size:13px;font-weight:700}
+.pillrow .pval small{color:var(--muted);font-weight:600;font-size:11px}
+.pill-track{position:relative;height:26px;border-radius:50px;background:rgba(255,255,255,.04);
+  box-shadow:inset 3px 3px 7px rgba(0,0,0,.55),inset -2px -2px 5px rgba(255,255,255,.04)}
+.pill-fill{height:100%;width:0;border-radius:50px;background:linear-gradient(90deg,var(--violet),var(--pink));
+  box-shadow:0 0 14px rgba(152,95,253,.55);transition:width .8s cubic-bezier(.22,1,.36,1)}
+.pill-tgt{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--amber);box-shadow:0 0 7px var(--amber);border-radius:2px}
+.pill-tgt::after{display:none}
+
+/* ── Style I — gauges ─────────────────────────────── */
+.gauge-card{background:var(--gauge-bg);border:0.67px solid var(--border);border-radius:16px;padding:18px;text-align:center;position:relative;overflow:hidden}
+.gauge-card .gtitle{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.gwrap{position:relative;width:100%;display:flex;justify-content:center}
+.gcenter{position:absolute;top:50%;left:50%;transform:translate(-50%,-35%);text-align:center;pointer-events:none}
+.gcenter .gv{font-weight:700;font-size:34px;line-height:1;text-shadow:0 0 20px rgba(152,95,253,.5)}
+.gcenter .gl{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.gcenter .gt{font-size:9.5px;color:var(--muted);margin-top:3px}
+.arc-seg{fill:none;stroke-linecap:round}
+.glegend{display:flex;justify-content:center;gap:14px;margin-top:6px;flex-wrap:wrap}
+.glegend span{display:flex;align-items:center;gap:5px;font-size:10.5px;color:var(--muted)}
+.glegend i{width:9px;height:9px;border-radius:2px;display:inline-block}
+
+/* breakdown rows (Style I) */
+.brk{margin-top:14px}
+.brk-row{display:flex;align-items:center;gap:11px;padding:9px 2px;border-bottom:0.67px solid var(--border2)}
+.brk-row:last-child{border-bottom:none}
+.brk-ic{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.brk-row .bl{flex:1;font-size:12px;font-weight:600;color:var(--text)}
+.brk-row .bv{font-size:15px;font-weight:700}
+.warnbadge{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.08em;padding:2px 7px;border-radius:100px;
+  background:rgba(255,103,87,.18);color:var(--coral);border:0.67px solid rgba(255,103,87,.4);margin-left:8px;vertical-align:middle}
+
+/* crew cards */
+.crewc{background:linear-gradient(145deg,#1b1b2b,#121220);border:0.67px solid var(--border);border-radius:14px;padding:20px;
+  box-shadow:5px 5px 14px rgba(0,0,0,.4)}
+.crewc .ct{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.crewc .cn{font-weight:700;font-size:26px;margin-top:8px}
+.shiftbadge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;padding:3px 10px;border-radius:100px;margin-top:10px}
+.sb-day{background:rgba(253,175,34,.16);color:var(--amber);border:0.67px solid rgba(253,175,34,.4)}
+.sb-night{background:rgba(0,201,255,.14);color:var(--cyan);border:0.67px solid rgba(0,201,255,.4)}
+.crewc .meta{font-size:11.5px;color:var(--muted);margin-top:12px;line-height:1.7}
+.crewc .meta b{color:var(--text);font-weight:600}
+
+/* hero */
+.hero{position:relative;border-radius:16px;overflow:hidden;border:0.67px solid var(--border);margin-bottom:20px;background:var(--card)}
+.hero .herobg{position:absolute;inset:0;opacity:.9;z-index:0}
+.hero .heroover{position:absolute;inset:0;background:linear-gradient(120deg,rgba(19,19,31,.96),rgba(19,19,31,.55) 60%,rgba(152,95,253,.18));z-index:1}
+.hero .herogrid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr 1.4fr 1fr;gap:18px;padding:20px}
+.herozone{background:rgba(13,13,26,.55);border:0.67px solid var(--border);border-radius:12px;padding:16px;backdrop-filter:blur(3px)}
+.herozone .zt{font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;display:flex;align-items:center;gap:7px}
+
+.crewstrip{display:flex;gap:14px;flex-wrap:wrap;align-items:center;background:var(--card);border:0.67px solid var(--border);border-radius:12px;padding:14px 18px}
+.crewstrip .cs{display:flex;flex-direction:column;gap:2px}
+.crewstrip .cs .k{font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.crewstrip .cs .v{font-size:14px;font-weight:700}
+.crewstrip .vsep{width:0.67px;height:30px;background:var(--border)}
+
+.dtbl{width:100%;border-collapse:collapse;margin-top:6px}
+.dtbl th{font-weight:700;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);padding:7px 10px;border-bottom:0.67px solid var(--border);text-align:left}
+.dtbl td{padding:7px 10px;border-bottom:0.67px solid var(--border2);font-size:12px}
+
+.canolder{position:relative;height:240px}
+.empty{color:var(--muted);font-size:12px;font-style:italic;padding:18px;text-align:center}
+
+@keyframes fi{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.fi{animation:fi .45s ease forwards}
+
+/* pulsing red dot — flags any metric below target (functional indicator) */
+.pulse-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--coral);
+  margin-right:6px;vertical-align:middle;box-shadow:0 0 0 0 rgba(255,103,87,.6);animation:pulseDot 1.5s ease-out infinite}
+@keyframes pulseDot{
+  0%{box-shadow:0 0 0 0 rgba(255,103,87,.55);transform:scale(1)}
+  70%{box-shadow:0 0 0 10px rgba(255,103,87,0);transform:scale(1.08)}
+  100%{box-shadow:0 0 0 0 rgba(255,103,87,0);transform:scale(1)}}
+.statc .pulse-dot{position:absolute;top:14px;right:14px;margin:0}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:4px}
+#tt{position:fixed;background:rgba(0,0,0,.88);border:0.67px solid var(--border);border-radius:5px;padding:6px 11px;font-size:11px;white-space:nowrap;z-index:9999;pointer-events:none;display:none;color:var(--text)}
+#demo-banner{background:rgba(253,175,34,.1);border-bottom:0.67px solid rgba(253,175,34,.3);color:var(--amber);font-size:11px;padding:6px;text-align:center;letter-spacing:.06em;display:none}
+@media(max-width:1100px){.chips{grid-template-columns:repeat(3,1fr)}.hero .herogrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="tt"></div>
+<div id="demo-banner">⚠ DEMO MODE — daily_snapshot.json not found · Displaying built-in sample data</div>
+
+<header>
+  <div class="hwrap">
+    <div class="hleft">
+      <img src="Welspun Logo Main.png" alt="Welspun">
+      <div class="hsep"></div>
+      <div>
+        <div class="htitle">WTL COATING — DAILY SHIFT SNAPSHOT</div>
+        <div class="hsub">Executive Operations Overview</div>
+      </div>
+    </div>
+    <div class="hright">
+      <div class="datebadge">
+        <span class="d" id="hdr-date">—</span>
+        <span class="s"><span class="ldot"></span> <span id="hdr-shift">24-HR</span></span>
+        <span class="s" id="hdr-refresh" style="font-size:9px;opacity:0.6;margin-top:1px">—</span>
+      </div>
+      <div class="sub-tog" id="mode-tog">
+        <button data-m="Day" onclick="setMode('Day')">Day</button>
+        <button data-m="Night" onclick="setMode('Night')">Night</button>
+        <button data-m="24H" class="active" onclick="setMode('24H')">24H</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="layout" id="layout">
+  <aside class="sidebar">
+    <button class="navtoggle" onclick="toggleSidebar()" title="Collapse / expand">☰</button>
+    <button class="navbtn active" data-sec="overview"    onclick="showSnap('overview')"><span class="ic">◉</span><span class="lbl">Overview</span></button>
+    <button class="navbtn"        data-sec="production"  onclick="showSnap('production')"><span class="ic">▣</span><span class="lbl">Production</span></button>
+    <button class="navbtn"        data-sec="quality"     onclick="showSnap('quality')"><span class="ic">◈</span><span class="lbl">Quality</span></button>
+    <button class="navbtn"        data-sec="maintenance" onclick="showSnap('maintenance')"><span class="ic">⚙</span><span class="lbl">Maintenance</span></button>
+    <button class="navbtn"        data-sec="crew"        onclick="showSnap('crew')"><span class="ic">⛑</span><span class="lbl">Crew &amp; Speeds</span></button>
+  </aside>
+  <main id="snap-body"></main>
+</div>
+
+<script src="./daily_snapshot_data.js" onerror="void 0"></script>
+<script>
+/* ─────────────────────────────────────────────────────────────
+   WTL Coating — Daily Shift Snapshot (standalone)
+   Single inline script block. SVG+CSS for dials/pills/gauges; Chart.js
+   only for bell curve + grouped bars. No base64 in JS literals.
+   ───────────────────────────────────────────────────────────── */
+const G=['#985ffd','#ff49cd','#00c9ff','#32d484','#fdaf22','#ff6757','#35b5aa'];
+
+/* Built-in demo data — mirrors daily_snapshot.json schema; values = real current extract. */
+const DEMO={
+  generated:new Date().toISOString(),
+  meta:{date:"06/20/2026",shift:"24H",project:"Spiral Line LR-LDC · API 5L",pipe:'42" x 0.600"',coating:"FBE+IFC",
+        crewDay:"A",crewNight:"B",prodSup:"R. Mehta / S. Khan",qualSup:"A. Patil / D. Rao",maintSup:"V. Singh / J. Lee",
+        speeds:{extBlast:12.5,extCoat:10.2,intBlast:11.0,intCoat:9.4}},
+  production:{
+    bare:{day:41,night:62,total:103,tgt:140}, idCoated:{day:79,night:57,total:136,tgt:140},
+    odTpi:{day:28,night:65,total:93,tgt:145}, odCoated:{day:30,night:64,total:94,tgt:145},
+    wipBareId:{total:478,tgt:400}, wipIdOd:{total:108,tgt:400},
+    directFeedPct:{val:8.74,tgt:75}, idOdFeedPct:{val:57.45,tgt:75},
+    loadedRail:{day:28,night:65,total:93,tgt:93}, odFromGround:{total:40}},
+  quality:{ ftrOd:91.49,repairPct:6.38,rejectPct:2.13,ftrOdTgt:96,
+            ftrId:98.53,idRejectPct:1.47,ftrIdTgt:98,
+            repairPipes:6,rejectPipes:2,twoPartRepairs:70,bevel:2,sample:3,tape:0,
+            idRejects:2,pipeMismatch:0,pipesToGroundId:0 },
+  maintenance:{ idDowntimeHrs:0,odDowntimeHrs:0,tgt:85,sapNotif:0,plannedDt:0,unplannedDt:0,forklift:0,downtimeEvents:[] }
+};
+
+let DATA=DEMO, MODE='24H', SEC='overview', CH={};
+
+/* ── helpers ─────────────────────────────────────── */
+function statusH(v,t){ if(t==null) return 'mut'; return v>=t?'on':v>=t*0.9?'watch':'off'; }
+function colorFor(s){ return s==='on'?'var(--green)':s==='watch'?'var(--amber)':s==='off'?'var(--coral)':'var(--muted)'; }
+function pick(o){ if(!o) return 0; if(MODE==='Day') return o.day!=null?o.day:0; if(MODE==='Night') return o.night!=null?o.night:0; return o.total!=null?o.total:0; }
+function shiftTgt(t){ return MODE==='24H' ? t : t/2; }   /* single shift → half of 24-hr target; 24H view keeps full target */
+function fmt(n){ return (Math.round(n*100)/100).toLocaleString(); }
+function tip(e,html){ const t=document.getElementById('tt'); t.innerHTML=html; t.style.display='block'; t.style.left=(e.clientX+12)+'px'; t.style.top=(e.clientY+12)+'px'; }
+function untip(){ document.getElementById('tt').style.display='none'; }
+
+/* polar→cartesian (0°=top, clockwise) + arc path */
+function p2c(cx,cy,r,deg){ const a=deg*Math.PI/180; return [cx+r*Math.sin(a), cy-r*Math.cos(a)]; }
+function arcPath(cx,cy,r,a0,a1){ const s=p2c(cx,cy,r,a0), e=p2c(cx,cy,r,a1); const large=(a1-a0)>180?1:0;
+  return `M ${s[0].toFixed(2)} ${s[1].toFixed(2)} A ${r} ${r} 0 ${large} 1 ${e[0].toFixed(2)} ${e[1].toFixed(2)}`; }
+
+const A_START=-135, A_SWEEP=270;            /* 270° gauge */
+function pctAngle(p){ return A_START + (Math.max(0,Math.min(100,p))/100)*A_SWEEP; }
+
+/* Build a Style-I dial. segments:[{pct,color,label}] stacked 0→100. */
+function buildDial(id,segments,centerVal,centerLbl,tgtPct,sub){
+  const S=200, cx=100, cy=104, r=78, sw=13;
+  const dash='3 4';                                  /* static dashed/pixelated ring — matches utilization gauge */
+  let cum=0, segPaths='';
+  segments.forEach((sg,i)=>{
+    const a0=pctAngle(cum), a1=pctAngle(cum+sg.pct); cum+=sg.pct;
+    segPaths+=`<path d="${arcPath(cx,cy,r,a0,a1)}" fill="none" stroke="${sg.color}" stroke-width="${sw}" stroke-linecap="butt" stroke-dasharray="${dash}" stroke-dashoffset="${i*2}" style="filter:drop-shadow(0 0 5px ${sg.color})"></path>`;
+  });
+  const track=`<path d="${arcPath(cx,cy,r,A_START,A_START+A_SWEEP)}" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="${sw}" stroke-linecap="butt" stroke-dasharray="${dash}"></path>`;
+  let tick='';
+  if(tgtPct!=null){ const ta=pctAngle(tgtPct), o=p2c(cx,cy,r+9,ta), inr=p2c(cx,cy,r-9,ta);
+    tick=`<line x1="${inr[0].toFixed(1)}" y1="${inr[1].toFixed(1)}" x2="${o[0].toFixed(1)}" y2="${o[1].toFixed(1)}" stroke="var(--amber)" stroke-width="2.5" stroke-linecap="round"></line>`; }
+  const leg=segments.map(s=>`<span><i style="background:${s.color}"></i>${s.label}</span>`).join('');
+  return `<div class="gwrap fi"><svg id="${id}" viewBox="0 0 ${S} ${S}" width="100%" style="max-width:230px">${track}${segPaths}${tick}</svg>
+      <div class="gcenter"><div class="gv">${centerVal}</div><div class="gl">${centerLbl}</div>${sub?`<div class="gt">${sub}</div>`:''}</div></div>
+      <div class="glegend">${leg}</div>`;
+}
+
+/* Single-value radial gauge (utilization). */
+function buildGauge(id,val,tgt,title){
+  const s=statusH(val,tgt), col=colorFor(s);
+  const S=200, cx=100, cy=104, r=78, sw=13;
+  const track=`<path class="arc-seg" d="${arcPath(cx,cy,r,A_START,A_START+A_SWEEP)}" stroke="rgba(255,255,255,0.06)" stroke-width="${sw}"></path>`;
+  const fill=`<path class="arc-seg" data-anim="1" d="${arcPath(cx,cy,r,pctAngle(0),pctAngle(val))}" stroke="${col}" stroke-width="${sw}"></path>`;
+  const ta=pctAngle(tgt), o=p2c(cx,cy,r+9,ta), inr=p2c(cx,cy,r-9,ta);
+  const tick=`<line x1="${inr[0].toFixed(1)}" y1="${inr[1].toFixed(1)}" x2="${o[0].toFixed(1)}" y2="${o[1].toFixed(1)}" stroke="var(--amber)" stroke-width="2.5" stroke-linecap="round"></line>`;
+  return `<div class="gauge-card"><div class="gtitle">${title}</div>
+    <div class="gwrap"><svg id="${id}" viewBox="0 0 ${S} ${S}" width="100%" style="max-width:210px">${track}${fill}${tick}</svg>
+      <div class="gcenter"><div class="gv" style="color:${col}">${fmt(val)}<span style="font-size:16px">%</span></div><div class="gl">Utilization</div><div class="gt">Target ${tgt}%</div></div></div></div>`;
+}
+
+/* Dual concentric segmented gauge: ID outer (violet), OD inner (pink).
+   Staggered dash offset between rings gives the pixelated-ring reference look. */
+function buildDualGauge(id,idVal,odVal,plantVal,tgt,title){
+  const S=220, cx=110, cy=118, rO=86, rI=64, sw=10, dash='3 4';
+  function ring(r,val,col,off){
+    let h=`<path d="${arcPath(cx,cy,r,A_START,A_START+A_SWEEP)}" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="${sw}" stroke-linecap="butt" stroke-dasharray="${dash}" stroke-dashoffset="${off}"></path>`;
+    if(val>0.5){ h+=`<path d="${arcPath(cx,cy,r,A_START,pctAngle(val))}" fill="none" stroke="${col}" stroke-width="${sw}" stroke-linecap="butt" stroke-dasharray="${dash}" stroke-dashoffset="${off}" style="filter:drop-shadow(0 0 5px ${col})"></path>`; }
+    const ta=pctAngle(tgt), o=p2c(cx,cy,r+sw/2+3,ta), inr=p2c(cx,cy,r-sw/2-3,ta);
+    h+=`<line x1="${inr[0].toFixed(1)}" y1="${inr[1].toFixed(1)}" x2="${o[0].toFixed(1)}" y2="${o[1].toFixed(1)}" stroke="var(--amber)" stroke-width="2.5" stroke-linecap="round"></line>`;
+    return h;
+  }
+  const arcs=ring(rO,idVal,'#985ffd',0)+ring(rI,odVal,'#ff49cd',3.5);
+  const gt=title?`<div class="gtitle">${title}</div>`:'';
+  return `<div class="gauge-card fi">${gt}
+    <div class="gwrap"><svg viewBox="0 0 ${S} ${S}" width="100%" style="max-width:240px">${arcs}</svg>
+      <div class="gcenter" style="transform:translate(-50%,-44%)"><div class="gv">${fmt(plantVal)}<span style="font-size:16px">%</span></div><div class="gl">Plant</div>
+        <div class="gt" style="margin-top:5px"><span style="color:#985ffd;font-weight:700">ID ${fmt(idVal)}%</span> · <span style="color:#ff49cd;font-weight:700">OD ${fmt(odVal)}%</span></div>
+        <div class="gt">Target ${tgt}%</div></div></div>
+    <div class="glegend" style="margin-top:10px"><span><i style="background:#985ffd"></i>ID</span><span><i style="background:#ff49cd"></i>OD</span></div></div>`;
+}
+
+/* Animate arcs: draw-on (solid) then settle to dashed 4 4 (Style I texture). */
+function animateArcs(root){
+  root.querySelectorAll('.arc-seg[data-anim]').forEach(p=>{
+    const L=p.getTotalLength();
+    p.style.transition='none'; p.style.strokeDasharray=L; p.style.strokeDashoffset=L;
+    p.getBoundingClientRect();
+    p.style.transition='stroke-dashoffset .9s cubic-bezier(.22,1,.36,1)';
+    requestAnimationFrame(()=>{ p.style.strokeDashoffset=0; });
+    setTimeout(()=>{ p.style.transition='none'; p.style.strokeDasharray='4 5'; p.style.strokeDashoffset=0; },920);
+  });
+}
+
+/* Style A pill bar row. */
+function pillRow(name,val,tgt,color){
+  const scale=Math.max(val,tgt)*1.08 || 1;
+  const fw=Math.min(100,val/scale*100), tl=Math.min(100,tgt/scale*100);
+  const s=statusH(val,tgt);
+  const dot = val<tgt ? `<span class="pulse-dot" title="Below target"></span>` : '';
+  return `<div class="pillrow">
+    <div class="ptop"><span class="pname">${dot}${name}</span><span class="pval">${fmt(val)} <small>/ ${fmt(tgt)} tgt</small> &nbsp;<span class="c-${s}">${Math.round(val/tgt*100)}%</span></span></div>
+    <div class="pill-track"><div class="pill-tgt" style="left:${tl}%"></div><div class="pill-fill" data-w="${fw}"></div></div></div>`;
+}
+function animatePills(root){ root.querySelectorAll('.pill-fill[data-w]').forEach(f=>{ requestAnimationFrame(()=>{ f.style.width=f.getAttribute('data-w')+'%'; }); }); }
+
+/* Count-up: animate the leading number of headline value nodes 0→target on each render.
+   Touches text nodes only — unit spans (%, ft/min) live as siblings and stay untouched. */
+function countUp(root,dur=900){
+  root.querySelectorAll('.chip .val, .statc .val, .gcenter .gv, .pillrow .pval').forEach(el=>{
+    const tn=el.firstChild;
+    if(!tn||tn.nodeType!==3) return;                 /* must be a leading text node */
+    const m=tn.nodeValue.match(/^(\d[\d,]*(?:\.\d+)?)(.*)$/);
+    if(!m) return;                                    /* skip non-numeric (e.g. "Crew A") */
+    const end=parseFloat(m[1].replace(/,/g,'')), suffix=m[2];
+    if(!isFinite(end)) return;
+    const dec=(m[1].split('.')[1]||'').length;        /* preserve displayed decimals */
+    const t0=performance.now();
+    (function step(now){
+      const p=Math.min(1,(now-t0)/dur), e=1-Math.pow(1-p,3);   /* easeOutCubic */
+      tn.nodeValue=(end*e).toLocaleString(undefined,{minimumFractionDigits:dec,maximumFractionDigits:dec})+suffix;
+      if(p<1) requestAnimationFrame(step);
+    })(t0);
+  });
+}
+
+/* Style B stat card. */
+function statCard(lab,val,unit,tgt,dir,sub){
+  let delta='', dot='';
+  if(tgt!=null){ const s=dir==='L'?(val<=tgt?'on':val<=tgt*1.1?'watch':'off'):statusH(val,tgt);
+    const diff=val-tgt, arrow=diff>=0?'▲':'▼';
+    delta=`<div class="delta c-${s}">${arrow} ${fmt(Math.abs(diff))} vs ${fmt(tgt)} tgt</div>`;
+    if(s!=='on') dot=`<span class="pulse-dot" title="Below target"></span>`; }
+  return `<div class="statc">${dot}<div class="lab">${lab}</div><div class="val">${fmt(val)}<span class="unit">${unit||''}</span></div>${delta}</div>`;
+}
+
+/* ── Section renderers ───────────────────────────── */
+function renderOverview(){
+  const p=DATA.production, q=DATA.quality, m=DATA.maintenance;
+  const util=plantUtil();
+  const chips=[
+    ['Bare Pipes',fmt(pick(p.bare)),MODE+' shift'], ['ID Coated',fmt(pick(p.idCoated)),MODE+' shift'],
+    ['OD-TPI Cleared',fmt(pick(p.odTpi)),MODE+' shift'], ['FTR — OD',fmt(q.ftrOd)+'%','24-hr'],
+    ['FTR — ID',fmt(q.ftrId)+'%','24-hr'], ['Plant Availability',fmt(util.plant)+'%','uptime · 85% util tgt']
+  ].map((c,i)=>`<div class="chip fi" style="animation-delay:${i*60}ms"><div class="lab">${c[0]}</div><div class="val">${c[1]}</div><div class="sub">${c[2]}</div></div>`).join('');
+
+  const odDial=buildDial('ov-od',[
+    {pct:q.ftrOd,color:G[0],label:'FTR'},{pct:q.repairPct,color:G[4],label:'Repair'},{pct:q.rejectPct,color:G[5],label:'Reject'}
+  ],fmt(q.ftrOd)+'%','FTR — OD',q.ftrOdTgt,'Target '+q.ftrOdTgt+'%');
+  const idDial=buildDial('ov-id',[
+    {pct:q.ftrId,color:G[0],label:'FTR'},{pct:q.idRejectPct,color:G[5],label:'Reject'}
+  ],fmt(q.ftrId)+'%','FTR — ID',q.ftrIdTgt,'Target '+q.ftrIdTgt+'%');
+
+  document.getElementById('snap-body').innerHTML=`
+    <div class="sechead"><span class="bar"></span><h2>Overview</h2></div>
+    <div class="chips">${chips}</div>
+    <div class="hero">
+      ${pipeSVG()}
+      <div class="heroover"></div>
+      <div class="herogrid">
+        <div class="herozone"><div class="zt">▣ Production Throughput</div>
+          ${pillRow('Bare Pipes',pick(p.bare),shiftTgt(p.bare.tgt))}
+          ${pillRow('ID Coated',pick(p.idCoated),shiftTgt(p.idCoated.tgt))}
+          ${pillRow('OD-TPI Cleared',pick(p.odTpi),shiftTgt(p.odTpi.tgt))}
+        </div>
+        <div class="herozone"><div class="zt">◈ Quality — First Time Right</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div style="text-align:center"><div class="gtitle" style="font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px">OD</div>${odDial}</div>
+            <div style="text-align:center"><div class="gtitle" style="font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px">ID</div>${idDial}</div>
+          </div>
+        </div>
+        <div class="herozone"><div class="zt">⚙ Plant Utilization · ID vs OD</div>
+          ${buildDualGauge('ov-util',util.id,util.od,util.plant,m.tgt,'')}
+        </div>
+      </div>
+    </div>
+    <div class="crewstrip">
+      <div class="cs"><span class="k">Day Crew</span><span class="v">${DATA.meta.crewDay||'—'}</span></div><div class="vsep"></div>
+      <div class="cs"><span class="k">Night Crew</span><span class="v">${DATA.meta.crewNight||'—'}</span></div><div class="vsep"></div>
+      <div class="cs"><span class="k">Ext Coat</span><span class="v">${DATA.meta.speeds.extCoat} <small style="color:var(--muted)">ft/min</small></span></div><div class="vsep"></div>
+      <div class="cs"><span class="k">Int Coat</span><span class="v">${DATA.meta.speeds.intCoat} <small style="color:var(--muted)">ft/min</small></span></div><div class="vsep"></div>
+      <div class="cs"><span class="k">Coating</span><span class="v">${DATA.meta.coating}</span></div>
+    </div>`;
+  const b=document.getElementById('snap-body'); animateArcs(b); animatePills(b); countUp(b);
+}
+
+function renderProduction(){
+  const p=DATA.production;
+  const cards=[
+    statCard('WIP — Bare→ID',p.wipBareId.total,'',p.wipBareId.tgt,'L'),
+    statCard('WIP — ID→OD',p.wipIdOd.total,'',p.wipIdOd.tgt,'L'),
+    statCard('Direct Feed → ID',p.directFeedPct.val,'%',p.directFeedPct.tgt,'H'),
+    statCard('ID → OD Feeding',p.idOdFeedPct.val,'%',p.idOdFeedPct.tgt,'H'),
+    statCard('Loaded to Rail',pick(p.loadedRail),'',p.loadedRail.tgt,'H'),
+    statCard('OD From Ground',p.odFromGround.total,'',null)
+  ].map((c,i)=>`<div class="fi" style="animation-delay:${i*55}ms">${c}</div>`).join('');
+
+  document.getElementById('snap-body').innerHTML=`
+    <div class="sechead"><span class="bar"></span><h2>Production · Volume &amp; Flow</h2></div>
+    <div class="card" style="margin-bottom:16px">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Throughput vs Target · ${MODE} shift</div>
+      ${pillRow('Bare Pipes Produced',pick(p.bare),shiftTgt(p.bare.tgt))}
+      ${pillRow('ID Coated',pick(p.idCoated),shiftTgt(p.idCoated.tgt))}
+      ${pillRow('OD-TPI Cleared',pick(p.odTpi),shiftTgt(p.odTpi.tgt))}
+      ${pillRow('OD Coated',pick(p.odCoated),shiftTgt(p.odCoated.tgt))}
+    </div>
+    <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:16px">${cards}</div>
+    <div class="card">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Day vs Night — by stage</div>
+      <div class="canolder"><canvas id="ch-dn"></canvas></div>
+    </div>`;
+  const b=document.getElementById('snap-body'); animatePills(b); countUp(b);
+  drawDayNight();
+}
+
+function renderQuality(){
+  const q=DATA.quality;
+  const odDial=buildDial('q-od',[
+    {pct:q.ftrOd,color:G[0],label:'FTR '+fmt(q.ftrOd)+'%'},{pct:q.repairPct,color:G[4],label:'Repair '+fmt(q.repairPct)+'%'},{pct:q.rejectPct,color:G[5],label:'Reject '+fmt(q.rejectPct)+'%'}
+  ],fmt(q.ftrOd)+'%','FTR — OD',q.ftrOdTgt,'Target '+q.ftrOdTgt+'%');
+  const idDial=buildDial('q-id',[
+    {pct:q.ftrId,color:G[0],label:'FTR '+fmt(q.ftrId)+'%'},{pct:q.idRejectPct,color:G[5],label:'Reject '+fmt(q.idRejectPct)+'%'}
+  ],fmt(q.ftrId)+'%','FTR — ID',q.ftrIdTgt,'Target '+q.ftrIdTgt+'%');
+  const odWarn=q.ftrOd<q.ftrOdTgt?`<span class="warnbadge"><span class="pulse-dot"></span>BELOW TARGET</span>`:'';
+  const idWarn=q.ftrId<q.ftrIdTgt?`<span class="warnbadge"><span class="pulse-dot"></span>BELOW TARGET</span>`:'';
+
+  const odRows=[['🔧','Repair Pipes (excl. sample)',q.repairPipes,G[4]],['⛔','Reject Pipes',q.rejectPipes,G[5]],
+    ['🔁','Two-Part Repairs',q.twoPartRepairs,G[0]],['🪓','Bevel Damages',q.bevel,G[2]],['🧪','Sample Testing',q.sample,G[6]],['🩹','Tape Damages',q.tape,G[3]]];
+  const idRows=[['⛔','ID Rejects',q.idRejects,G[5]],['🔢','Pipe Number Mismatch',q.pipeMismatch,G[2]],['⬇','Pipes to Ground (ID)',q.pipesToGroundId,G[4]]];
+  const rowsHtml=arr=>arr.map(r=>`<div class="brk-row"><div class="brk-ic" style="background:${r[3]}22;color:${r[3]}">${r[0]}</div><div class="bl">${r[1]}</div><div class="bv">${fmt(r[2])}</div></div>`).join('');
+
+  document.getElementById('snap-body').innerHTML=`
+    <div class="sechead"><span class="bar"></span><h2>Quality · Defects, Rework &amp; FTR</h2></div>
+    <div class="grid" style="grid-template-columns:1fr 1fr;gap:18px">
+      <div class="gauge-card fi"><div class="gtitle">OD Quality Composition ${odWarn}</div>${odDial}<div class="brk">${rowsHtml(odRows)}</div></div>
+      <div class="gauge-card fi" style="animation-delay:80ms"><div class="gtitle">ID Quality Composition ${idWarn}</div>${idDial}<div class="brk">${rowsHtml(idRows)}</div></div>
+    </div>`;
+  const b=document.getElementById('snap-body'); animateArcs(b); countUp(b);
+}
+
+function renderMaintenance(){
+  const m=DATA.maintenance, u=plantUtil();
+  const cards=[
+    statCard('SAP Notifications',m.sapNotif,'',null),
+    statCard('Planned Downtime',m.plannedDt,'hrs',null),
+    statCard('Unplanned Downtime',m.unplannedDt,'hrs',null),
+    statCard('Forklift Incidents',m.forklift,'',null)
+  ].map((c,i)=>`<div class="fi" style="animation-delay:${i*55}ms">${c}</div>`).join('');
+
+  const ev=m.downtimeEvents||[];
+  const table = ev.length ? `<table class="dtbl"><thead><tr><th>Description</th><th>Line</th><th>Start</th><th>Stop</th><th>Min</th><th>Shift</th><th>Root Cause</th></tr></thead>
+    <tbody>${ev.map(e=>`<tr><td>${e.desc||''}</td><td>${e.line||''}</td><td>${e.start||''}</td><td>${e.stop||''}</td><td>${e.durMin||0}</td><td>${e.shift||''}</td><td>${e.cause||''}</td></tr>`).join('')}</tbody></table>`
+    : `<div class="empty">No downtime events logged for this shift.</div>`;
+
+  document.getElementById('snap-body').innerHTML=`
+    <div class="sechead"><span class="bar"></span><h2>Maintenance · Plant Utilization</h2></div>
+    <div style="display:flex;justify-content:center;margin-bottom:16px"><div style="max-width:380px;width:100%">${buildDualGauge('mt-dual',u.id,u.od,u.plant,m.tgt,'Plant Utilization · ID vs OD')}</div></div>
+    <div style="font-size:11px;color:var(--muted);margin-bottom:14px">Utilization = (24 h − line downtime) ÷ 24 h · ID downtime <b style="color:var(--text)">${fmt(m.idDowntimeHrs)} h</b> · OD downtime <b style="color:var(--text)">${fmt(m.odDowntimeHrs)} h</b> · target ${m.tgt}%</div>
+    <div class="grid" style="grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px">${cards}</div>
+    <div class="card"><div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Downtime Event Log</div>${table}</div>`;
+  const b=document.getElementById('snap-body'); animateArcs(b); countUp(b);
+}
+
+function renderCrew(){
+  const m=DATA.meta, sp=m.speeds;
+  const speeds=[['Ext Blast',sp.extBlast],['Ext Coat',sp.extCoat],['Int Blast',sp.intBlast],['Int Coat',sp.intCoat]]
+    .map((s,i)=>`<div class="fi" style="animation-delay:${i*55}ms">${statCard(s[0]+' Line Speed',s[1],'ft/min',null)}</div>`).join('');
+  document.getElementById('snap-body').innerHTML=`
+    <div class="sechead"><span class="bar"></span><h2>Crew &amp; Line Speeds</h2></div>
+    <div class="grid" style="grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px">
+      <div class="crewc fi"><div class="ct">Day Shift · 06:00–18:00</div><div class="cn">Crew ${m.crewDay||'—'}</div><span class="shiftbadge sb-day">☀ DAY</span>
+        <div class="meta">Production Sup: <b>${(m.prodSup||'—').split('/')[0].trim()}</b><br>Quality Sup: <b>${(m.qualSup||'—').split('/')[0].trim()}</b><br>Maintenance Sup: <b>${(m.maintSup||'—').split('/')[0].trim()}</b></div></div>
+      <div class="crewc fi" style="animation-delay:80ms"><div class="ct">Night Shift · 18:00–06:00</div><div class="cn">Crew ${m.crewNight||'—'}</div><span class="shiftbadge sb-night">☾ NIGHT</span>
+        <div class="meta">Production Sup: <b>${(m.prodSup||'—').split('/')[1]?(m.prodSup).split('/')[1].trim():'—'}</b><br>Quality Sup: <b>${(m.qualSup||'—').split('/')[1]?(m.qualSup).split('/')[1].trim():'—'}</b><br>Maintenance Sup: <b>${(m.maintSup||'—').split('/')[1]?(m.maintSup).split('/')[1].trim():'—'}</b></div></div>
+    </div>
+    <div class="grid" style="grid-template-columns:repeat(4,1fr);gap:14px">${speeds}</div>
+    <div class="card" style="margin-top:16px"><div class="meta" style="color:var(--muted);line-height:1.9;font-size:12px">
+      <b style="color:var(--text)">Project:</b> ${m.project} &nbsp;·&nbsp; <b style="color:var(--text)">Pipe:</b> ${m.pipe} &nbsp;·&nbsp; <b style="color:var(--text)">Coating:</b> ${m.coating}</div></div>`;
+  countUp(document.getElementById('snap-body'));
+}
+
+/* ── plant utilization ──────────────────────────── */
+function plantUtil(){
+  const m=DATA.maintenance;
+  const id=(24-(m.idDowntimeHrs||0))/24*100;
+  const od=(24-(m.odDowntimeHrs||0))/24*100;
+  const plant=(48-((m.idDowntimeHrs||0)+(m.odDowntimeHrs||0)))/48*100;
+  return {id:Math.max(0,id), od:Math.max(0,od), plant:Math.max(0,plant)};
+}
+
+/* ── Chart.js ───────────────────────────────────── */
+const SCALE={grid:{color:'rgba(142,156,173,0.1)'},ticks:{color:'#8c9097',font:{family:'Space Grotesk',size:11}}};
+function drawDayNight(){
+  if(CH.dn)CH.dn.destroy();
+  const p=DATA.production;
+  const cats=['Bare','ID Coated','OD-TPI','OD Coated'];
+  const day=[p.bare.day,p.idCoated.day,p.odTpi.day,p.odCoated.day].map(v=>v||0);
+  const night=[p.bare.night,p.idCoated.night,p.odTpi.night,p.odCoated.night].map(v=>v||0);
+  CH.dn=new Chart(document.getElementById('ch-dn'),{type:'bar',
+    data:{labels:cats,datasets:[
+      {label:'Day',data:day,backgroundColor:'rgba(253,175,34,0.55)',borderColor:G[4],borderWidth:1,borderRadius:4},
+      {label:'Night',data:night,backgroundColor:'rgba(0,201,255,0.45)',borderColor:G[2],borderWidth:1,borderRadius:4}]},
+    options:{responsive:true,maintainAspectRatio:false,
+      animation:{duration:1000,easing:'easeOutQuart',delay(ctx){return ctx.type==='data'&&ctx.mode==='default'?ctx.dataIndex*70:0;}},
+      plugins:{legend:{labels:{color:'rgba(255,255,255,0.8)',font:{family:'Space Grotesk'}}}},
+      scales:{x:SCALE,y:{...SCALE,beginAtZero:true}}}});
+}
+
+/* ── inline isometric pipe SVG (industrial backdrop) ── */
+function pipeSVG(){
+  return `<svg class="herobg" viewBox="0 0 800 320" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2a44"/><stop offset="1" stop-color="#10101c"/></linearGradient>
+      <linearGradient id="pm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2f66"/><stop offset=".5" stop-color="#985ffd"/><stop offset="1" stop-color="#22203a"/></linearGradient>
+    </defs>
+    <rect width="800" height="320" fill="url(#pg)"/>
+    <g opacity="0.55">
+      ${[0,1,2,3,4].map(i=>{const y=60+i*52;return `<ellipse cx="120" cy="${y}" rx="46" ry="20" fill="url(#pm)"/><rect x="120" y="${y-20}" width="560" height="40" fill="url(#pm)" opacity="0.85"/><ellipse cx="680" cy="${y}" rx="46" ry="20" fill="#12101f"/><ellipse cx="680" cy="${y}" rx="30" ry="13" fill="#0d0d1a"/>`;}).join('')}
+    </g>
+    <g stroke="rgba(152,95,253,0.25)" stroke-width="1">${[0,1,2,3,4,5,6,7].map(i=>`<line x1="${i*110}" y1="0" x2="${i*110+80}" y2="320"/>`).join('')}</g>
+  </svg>`;
+}
+
+/* ── navigation / mode ──────────────────────────── */
+const RENDER={overview:renderOverview,production:renderProduction,quality:renderQuality,maintenance:renderMaintenance,crew:renderCrew};
+function showSnap(sec){
+  SEC=sec;
+  document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.sec===sec));
+  (RENDER[sec]||renderOverview)();
+}
+function setMode(m){
+  MODE=m;
+  document.querySelectorAll('#mode-tog button').forEach(b=>b.classList.toggle('active',b.dataset.m===m));
+  document.getElementById('hdr-shift').textContent = m==='24H'?'24-HR':m.toUpperCase()+' SHIFT';
+  (RENDER[SEC]||renderOverview)();   /* re-render; production-volume metrics follow MODE */
+}
+function toggleSidebar(){ document.getElementById('layout').classList.toggle('collapsed'); }
+
+/* ── init ───────────────────────────────────────── */
+async function init(){
+  /* Priority: inline JS snapshot (file:// safe) → JSON fetch → demo */
+  if(typeof window.DAILY_SNAPSHOT !== 'undefined'){
+    DATA = window.DAILY_SNAPSHOT;
+  } else {
+    try{
+      const r=await fetch('./daily_snapshot.json',{cache:'no-store'});
+      if(r.ok){ DATA=await r.json(); }
+      else throw new Error('not found');
+    }catch(e){ DATA=DEMO; document.getElementById('demo-banner').style.display='block'; }
+  }
+  document.getElementById('hdr-date').textContent=DATA.meta&&DATA.meta.date?DATA.meta.date:'—';
+  if(DATA.generated){
+    const d=new Date(DATA.generated);
+    document.getElementById('hdr-refresh').textContent=
+      'Updated '+d.toLocaleString('en-US',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+  }
+  showSnap('overview');
+}
+init();
+</script>
+</body>
+</html>
