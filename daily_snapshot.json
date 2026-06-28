@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-28T07:30:34.608462",
+  "generated": "2026-06-28T08:00:03.221328",
   "meta": {
     "date": "06/27/2026",
     "shift": "24H",
@@ -56,7 +56,7 @@
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 18.26,
+      "val": 87.93,
       "tgt": 75
     },
     "loadedRail": {
@@ -70,9 +70,9 @@
     }
   },
   "quality": {
-    "ftrOd": 96.15,
-    "repairPct": 2.75,
-    "rejectPct": 1.1,
+    "ftrOd": 95.98,
+    "repairPct": 2.87,
+    "rejectPct": 1.15,
     "ftrOdTgt": 96,
     "ftrId": 94.78,
     "idRejectPct": 5.22,

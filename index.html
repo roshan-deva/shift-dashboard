@@ -409,10 +409,10 @@ function renderOverview(){
   ].map((c,i)=>`<div class="chip fi" style="animation-delay:${i*60}ms"><div class="lab">${c[0]}</div><div class="val">${c[1]}</div><div class="sub">${c[2]}</div></div>`).join('');
 
   const odDial=buildDial('ov-od',[
-    {pct:q.ftrOd,color:G[0],label:'FTR'},{pct:q.repairPct,color:G[4],label:'Repair'},{pct:q.rejectPct,color:G[5],label:'Reject'}
+    {pct:q.ftrOd,color:G[0],label:'FTR '+fmt(q.ftrOd)+'%'},{pct:q.repairPct,color:G[4],label:'Repair '+fmt(q.repairPct)+'%'},{pct:q.rejectPct,color:G[5],label:'Reject '+fmt(q.rejectPct)+'%'}
   ],fmt(q.ftrOd)+'%','FTR — OD',q.ftrOdTgt,'Target '+q.ftrOdTgt+'%');
   const idDial=buildDial('ov-id',[
-    {pct:q.ftrId,color:G[0],label:'FTR'},{pct:q.idRejectPct,color:G[5],label:'Reject'}
+    {pct:q.ftrId,color:G[0],label:'FTR '+fmt(q.ftrId)+'%'},{pct:q.idRejectPct,color:G[5],label:'Reject '+fmt(q.idRejectPct)+'%'}
   ],fmt(q.ftrId)+'%','FTR — ID',q.ftrIdTgt,'Target '+q.ftrIdTgt+'%');
 
   document.getElementById('snap-body').innerHTML=`
