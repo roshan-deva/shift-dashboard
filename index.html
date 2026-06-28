@@ -56,6 +56,17 @@ header{position:sticky;top:0;z-index:50;background:#13131f;border-bottom:0.67px 
 .datebadge .s{font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
 .ldot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pdot 2s infinite;display:inline-block}
 @keyframes pdot{0%,100%{opacity:1}50%{opacity:.3}}
+@media(max-width:600px){
+  .hwrap{padding:8px 12px;gap:8px;flex-wrap:nowrap}
+  .hleft img{height:24px}
+  .hsep{display:none}
+  .htitle{font-size:11px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:140px}
+  .hsub{display:none}
+  .hright{gap:8px}
+  .datebadge .d{font-size:12px}
+  .datebadge .s{font-size:9px}
+  .sub-tog button{padding:5px 9px;font-size:10px}
+}
 
 .sub-tog{display:inline-flex;background:var(--card);border:0.67px solid var(--border);border-radius:100px;overflow:hidden;padding:2px;gap:2px}
 .sub-tog button{padding:6px 14px;font-weight:600;font-size:11px;letter-spacing:.05em;cursor:pointer;background:transparent;color:var(--muted);border:none;border-radius:100px;transition:all .15s;font-family:inherit}
