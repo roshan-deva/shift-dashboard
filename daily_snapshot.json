@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T07:42:30.427372",
+  "generated": "2026-06-29T20:09:26.995953",
   "meta": {
     "date": "06/29/2026",
     "shift": "24H",
@@ -20,35 +20,35 @@
   },
   "production": {
     "bare": {
-      "day": 0,
+      "day": 78,
       "night": 0,
-      "total": 0,
+      "total": 78,
       "tgt": 140
     },
     "idCoated": {
-      "day": 54,
-      "night": 53,
-      "total": 107,
+      "day": 104,
+      "night": 0,
+      "total": 104,
       "tgt": 140
     },
     "odTpi": {
-      "day": 1,
+      "day": 95,
       "night": 0,
-      "total": 1,
+      "total": 95,
       "tgt": 145
     },
     "odCoated": {
-      "day": 0,
+      "day": 85,
       "night": 0,
-      "total": 0,
+      "total": 85,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 293,
+      "total": 269,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 362,
+      "total": 389,
       "tgt": 400
     },
     "directFeedPct": {
@@ -56,13 +56,13 @@
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 100.0,
       "tgt": 75
     },
     "loadedRail": {
-      "day": 1,
+      "day": 95,
       "night": 0,
-      "total": 1,
+      "total": 95,
       "tgt": 145
     },
     "odFromGround": {
@@ -70,20 +70,20 @@
     }
   },
   "quality": {
-    "ftrOd": 0.0,
+    "ftrOd": 100.0,
     "repairPct": 0.0,
     "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 95.33,
-    "idRejectPct": 4.67,
+    "ftrId": 99.04,
+    "idRejectPct": 0.96,
     "ftrIdTgt": 98,
     "repairPipes": 0,
     "rejectPipes": 0,
-    "twoPartRepairs": 0,
+    "twoPartRepairs": 75,
     "bevel": 0,
-    "sample": 0,
+    "sample": 1,
     "tape": 0,
-    "idRejects": 5,
+    "idRejects": 1,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
