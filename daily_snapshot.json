@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-01T08:21:17.663495",
+  "generated": "2026-07-01T08:24:49.362029",
   "meta": {
     "date": "06/30/2026",
     "shift": "24H",
@@ -83,6 +83,8 @@
     "bevel": 1,
     "sample": 2,
     "tape": 0,
+    "repairsLoadout": 0,
+    "strippingOutput": 0,
     "idRejects": 8,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
