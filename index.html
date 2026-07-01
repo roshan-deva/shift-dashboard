@@ -21,6 +21,7 @@
                    loadedRail:{day,night,total,tgt}, odFromGround:{total} },
     "quality":{ ftrOd, repairPct, rejectPct, ftrOdTgt, ftrId, idRejectPct, ftrIdTgt,
                 repairPipes, rejectPipes, twoPartRepairs, bevel, sample, tape,
+                repairsLoadout, strippingOutput,
                 idRejects, pipeMismatch, pipesToGroundId },
     "maintenance":{ idDowntimeHrs, odDowntimeHrs, tgt, sapNotif, plannedDt, unplannedDt, forklift,
                     downtimeEvents:[ {desc,start,stop,durMin,dept,line,sap,shift,cause} ] }
@@ -268,6 +269,7 @@ const DEMO={
   quality:{ ftrOd:91.49,repairPct:6.38,rejectPct:2.13,ftrOdTgt:96,
             ftrId:98.53,idRejectPct:1.47,ftrIdTgt:98,
             repairPipes:6,rejectPipes:2,twoPartRepairs:70,bevel:2,sample:3,tape:0,
+            repairsLoadout:1,strippingOutput:9,
             idRejects:2,pipeMismatch:0,pipesToGroundId:0 },
   maintenance:{ idDowntimeHrs:0,odDowntimeHrs:0,tgt:85,sapNotif:0,plannedDt:0,unplannedDt:0,forklift:0,downtimeEvents:[] }
 };
@@ -489,7 +491,8 @@ function renderQuality(){
   const idWarn=q.ftrId<q.ftrIdTgt?`<span class="warnbadge"><span class="pulse-dot"></span>BELOW TARGET</span>`:'';
 
   const odRows=[['🔧','Repair Pipes (excl. sample)',q.repairPipes,G[4]],['⛔','Reject Pipes',q.rejectPipes,G[5]],
-    ['🔁','Two-Part Repairs',q.twoPartRepairs,G[0]],['🪓','Bevel Damages',q.bevel,G[2]],['🧪','Sample Testing',q.sample,G[6]],['🩹','Tape Damages',q.tape,G[3]]];
+    ['🔁','Two-Part Repairs',q.twoPartRepairs,G[0]],['🪓','Bevel Damages',q.bevel,G[2]],['🧪','Sample Testing',q.sample,G[6]],['🩹','Tape Damages',q.tape,G[3]],
+    ['🚛','Repairs at Loadout',q.repairsLoadout,G[1]],['📤','Stripping Station Output',q.strippingOutput,G[6]]];
   const idRows=[['⛔','ID Rejects',q.idRejects,G[5]],['🔢','Pipe Number Mismatch',q.pipeMismatch,G[2]],['⬇','Pipes to Ground (ID)',q.pipesToGroundId,G[4]]];
   const rowsHtml=arr=>arr.map(r=>`<div class="brk-row"><div class="brk-ic" style="background:${r[3]}22;color:${r[3]}">${r[0]}</div><div class="bl">${r[1]}</div><div class="bv">${fmt(r[2])}</div></div>`).join('');
 
