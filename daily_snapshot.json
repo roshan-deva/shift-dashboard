@@ -1,7 +1,7 @@
 {
-  "generated": "2026-06-30T20:49:09.190243",
+  "generated": "2026-06-30T21:23:05.965644",
   "meta": {
-    "date": "06/29/2026",
+    "date": "06/30/2026",
     "shift": "24H",
     "project": "Spiral Line LR-LDC - API 5L",
     "pipe": "42\" x 0.600\"",
@@ -20,31 +20,31 @@
   },
   "production": {
     "bare": {
-      "day": 78,
-      "night": 66,
-      "total": 144,
+      "day": 62,
+      "night": 0,
+      "total": 62,
       "tgt": 140
     },
     "idCoated": {
-      "day": 104,
-      "night": 70,
-      "total": 174,
+      "day": 66,
+      "night": 0,
+      "total": 66,
       "tgt": 140
     },
     "odTpi": {
-      "day": 91,
-      "night": 96,
-      "total": 187,
+      "day": 77,
+      "night": 0,
+      "total": 77,
       "tgt": 145
     },
     "odCoated": {
-      "day": 83,
-      "night": 98,
-      "total": 181,
+      "day": 76,
+      "night": 0,
+      "total": 76,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 264,
+      "total": 0,
       "tgt": 400
     },
     "wipIdOd": {
@@ -52,17 +52,17 @@
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 7.64,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 83.43,
+      "val": 100.0,
       "tgt": 75
     },
     "loadedRail": {
-      "day": 91,
-      "night": 96,
-      "total": 187,
+      "day": 77,
+      "night": 0,
+      "total": 77,
       "tgt": 145
     },
     "odFromGround": {
@@ -70,20 +70,20 @@
     }
   },
   "quality": {
-    "ftrOd": 95.58,
-    "repairPct": 1.66,
-    "rejectPct": 2.76,
+    "ftrOd": 100.0,
+    "repairPct": 0.0,
+    "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 95.4,
-    "idRejectPct": 4.6,
+    "ftrId": 100.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 3,
-    "rejectPipes": 5,
-    "twoPartRepairs": 148,
-    "bevel": 1,
-    "sample": 2,
-    "tape": 1,
-    "idRejects": 8,
+    "repairPipes": 0,
+    "rejectPipes": 0,
+    "twoPartRepairs": 0,
+    "bevel": 0,
+    "sample": 0,
+    "tape": 0,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
