@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30T07:35:47.527008",
+  "generated": "2026-06-30T20:49:09.190243",
   "meta": {
     "date": "06/29/2026",
     "shift": "24H",
@@ -44,11 +44,11 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 265,
+      "total": 264,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 367,
+      "total": 335,
       "tgt": 400
     },
     "directFeedPct": {
@@ -70,20 +70,20 @@
     }
   },
   "quality": {
-    "ftrOd": 96.69,
+    "ftrOd": 95.58,
     "repairPct": 1.66,
-    "rejectPct": 1.66,
+    "rejectPct": 2.76,
     "ftrOdTgt": 96,
-    "ftrId": 99.43,
-    "idRejectPct": 0.57,
+    "ftrId": 95.4,
+    "idRejectPct": 4.6,
     "ftrIdTgt": 98,
     "repairPipes": 3,
-    "rejectPipes": 3,
-    "twoPartRepairs": 157,
+    "rejectPipes": 5,
+    "twoPartRepairs": 148,
     "bevel": 1,
     "sample": 2,
     "tape": 1,
-    "idRejects": 1,
+    "idRejects": 8,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
