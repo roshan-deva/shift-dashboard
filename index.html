@@ -514,7 +514,7 @@ function renderMaintenance(){
     statCard('Forklift Incidents',m.forklift,'',null)
   ].map((c,i)=>`<div class="fi" style="animation-delay:${i*55}ms">${c}</div>`).join('');
 
-  const ev=m.downtimeEvents||[];
+  const ev=(m.downtimeEvents||[]).filter(e=>MODE==='24H'||e.shift===MODE);
   const table = ev.length ? `<table class="dtbl"><thead><tr><th>Description</th><th>Line</th><th>Start</th><th>Stop</th><th>Min</th><th>Shift</th><th>Root Cause</th></tr></thead>
     <tbody>${ev.map(e=>`<tr><td>${e.desc||''}</td><td>${e.line||''}</td><td>${e.start||''}</td><td>${e.stop||''}</td><td>${e.durMin||0}</td><td>${e.shift||''}</td><td>${e.cause||''}</td></tr>`).join('')}</tbody></table>`
     : `<div class="empty">No downtime events logged for this shift.</div>`;
@@ -522,7 +522,7 @@ function renderMaintenance(){
   document.getElementById('snap-body').innerHTML=`
     <div class="sechead"><span class="bar"></span><h2>Maintenance · Plant Utilization</h2></div>
     <div style="display:flex;justify-content:center;margin-bottom:16px"><div style="max-width:380px;width:100%">${buildDualGauge('mt-dual',u.id,u.od,u.plant,m.tgt,'Plant Utilization · ID vs OD')}</div></div>
-    <div style="font-size:11px;color:var(--muted);margin-bottom:14px">Utilization = (24 h − line downtime) ÷ 24 h · ID downtime <b style="color:var(--text)">${fmt(m.idDowntimeHrs)} h</b> · OD downtime <b style="color:var(--text)">${fmt(m.odDowntimeHrs)} h</b> · target ${m.tgt}%</div>
+    <div style="font-size:11px;color:var(--muted);margin-bottom:14px">Utilization = (${u.win} h − line downtime) ÷ ${u.win} h · ID downtime <b style="color:var(--text)">${fmt(u.idH)} h</b> · OD downtime <b style="color:var(--text)">${fmt(u.odH)} h</b> · target ${m.tgt}%</div>
     <div class="grid" style="grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px">${cards}</div>
     <div class="card"><div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Downtime Event Log</div>${table}</div>`;
   const b=document.getElementById('snap-body'); animateArcs(b); countUp(b);
@@ -548,11 +548,16 @@ function renderCrew(){
 
 /* ── plant utilization ──────────────────────────── */
 function plantUtil(){
-  const m=DATA.maintenance;
-  const id=(24-(m.idDowntimeHrs||0))/24*100;
-  const od=(24-(m.odDowntimeHrs||0))/24*100;
-  const plant=(48-((m.idDowntimeHrs||0)+(m.odDowntimeHrs||0)))/48*100;
-  return {id:Math.max(0,id), od:Math.max(0,od), plant:Math.max(0,plant)};
+  const m=DATA.maintenance, ev=m.downtimeEvents||[];
+  const win = MODE==='24H' ? 24 : 12;   /* single-shift view = 12-h window */
+  const inMode = e => MODE==='24H' || e.shift===MODE;
+  const sum = line => ev.filter(e=>e.line===line&&inMode(e)).reduce((a,e)=>a+(e.durMin||0),0)/60;
+  const idH = ev.length ? sum('ID') : (m.idDowntimeHrs||0);
+  const odH = ev.length ? sum('OD') : (m.odDowntimeHrs||0);
+  const id=(win-idH)/win*100;
+  const od=(win-odH)/win*100;
+  const plant=(2*win-(idH+odH))/(2*win)*100;
+  return {id:Math.max(0,id), od:Math.max(0,od), plant:Math.max(0,plant), idH, odH, win};
 }
 
 /* ── Chart.js ───────────────────────────────────── */
