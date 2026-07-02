@@ -17,7 +17,8 @@ window.DAILY_SNAPSHOT = {
       "extCoat": 12,
       "intBlast": 10,
       "intCoat": 12
-    }
+    },
+    "monthRolloverNeeded": true
   },
   "production": {
     "bare": {
