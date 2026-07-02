@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-01T23:58:25.757638",
+  "generated": "2026-07-02T07:30:39.871744",
   "meta": {
     "date": "07/01/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -21,48 +21,48 @@
   "production": {
     "bare": {
       "day": 67,
-      "night": 0,
-      "total": 67,
+      "night": 83,
+      "total": 150,
       "tgt": 140
     },
     "idCoated": {
-      "day": 67,
-      "night": 0,
-      "total": 67,
+      "day": 64,
+      "night": 65,
+      "total": 129,
       "tgt": 140
     },
     "odTpi": {
       "day": 75,
-      "night": 0,
-      "total": 75,
+      "night": 53,
+      "total": 128,
       "tgt": 145
     },
     "odCoated": {
       "day": 76,
-      "night": 0,
-      "total": 76,
+      "night": 48,
+      "total": 124,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 243,
+      "total": 261,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 319,
+      "total": 328,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 73.13,
+      "val": 20.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 57.89,
+      "val": 82.26,
       "tgt": 75
     },
     "loadedRail": {
       "day": 75,
-      "night": 0,
-      "total": 75,
+      "night": 53,
+      "total": 128,
       "tgt": 145
     },
     "odFromGround": {
@@ -70,18 +70,18 @@
     }
   },
   "quality": {
-    "ftrOd": 96.05,
-    "repairPct": 1.32,
-    "rejectPct": 2.63,
+    "ftrOd": 97.58,
+    "repairPct": 0.81,
+    "rejectPct": 1.61,
     "ftrOdTgt": 96,
-    "ftrId": 94.03,
-    "idRejectPct": 5.97,
+    "ftrId": 96.9,
+    "idRejectPct": 3.1,
     "ftrIdTgt": 98,
     "repairPipes": 1,
     "rejectPipes": 2,
-    "twoPartRepairs": 32,
+    "twoPartRepairs": 79,
     "bevel": 0,
-    "sample": 0,
+    "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
     "strippingOutput": 4,
