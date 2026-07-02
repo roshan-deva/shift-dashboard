@@ -201,12 +201,14 @@ main{flex:1;min-width:0;padding:22px 26px;max-width:1500px}
 ::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:4px}
 #tt{position:fixed;background:rgba(0,0,0,.88);border:0.67px solid var(--border);border-radius:5px;padding:6px 11px;font-size:11px;white-space:nowrap;z-index:9999;pointer-events:none;display:none;color:var(--text)}
 #demo-banner{background:rgba(253,175,34,.1);border-bottom:0.67px solid rgba(253,175,34,.3);color:var(--amber);font-size:11px;padding:6px;text-align:center;letter-spacing:.06em;display:none}
+#rollover-banner{background:rgba(253,175,34,.1);border-bottom:0.67px solid rgba(253,175,34,.3);color:var(--amber);font-size:11px;padding:6px;text-align:center;letter-spacing:.06em;display:none}
 @media(max-width:1100px){.chips{grid-template-columns:repeat(3,1fr)}.hero .herogrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div id="tt"></div>
 <div id="demo-banner">⚠ DEMO MODE — daily_snapshot.json not found · Displaying built-in sample data</div>
+<div id="rollover-banner">⚠ Month rollover needed — run run_month_rollover.py (StartNewMonth) before this month's Dashboard data will update</div>
 
 <header>
   <div class="hwrap">
@@ -630,6 +632,7 @@ async function init(){
      and targets match the data actually present (snapshot sets meta.shift). */
   const ms=DATA.meta&&DATA.meta.shift;
   if(ms==='Day'||ms==='Night') setMode(ms);
+  if(DATA.meta&&DATA.meta.monthRolloverNeeded) document.getElementById('rollover-banner').style.display='block';
   showSnap('overview');
 }
 init();
