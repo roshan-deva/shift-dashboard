@@ -621,6 +621,10 @@ async function init(){
     document.getElementById('hdr-refresh').textContent=
       'Updated '+d.toLocaleString('en-US',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
   }
+  /* Evening snapshots carry only the day shift — open in Day mode so totals
+     and targets match the data actually present (snapshot sets meta.shift). */
+  const ms=DATA.meta&&DATA.meta.shift;
+  if(ms==='Day'||ms==='Night') setMode(ms);
   showSnap('overview');
 }
 init();
