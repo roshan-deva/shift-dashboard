@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-01T19:30:33.267071",
+  "generated": "2026-07-01T21:18:23.615603",
   "meta": {
     "date": "07/01/2026",
-    "shift": "24H",
+    "shift": "Day",
     "project": "Spiral Line LR-LDC - API 5L",
     "pipe": "42\" x 0.600\"",
     "coating": "FBE+IFC",
@@ -21,26 +21,26 @@
   "production": {
     "bare": {
       "day": 67,
-      "night": 48,
-      "total": 115,
+      "night": 0,
+      "total": 67,
       "tgt": 140
     },
     "idCoated": {
       "day": 67,
-      "night": 75,
-      "total": 142,
+      "night": 0,
+      "total": 67,
       "tgt": 140
     },
     "odTpi": {
       "day": 75,
-      "night": 90,
-      "total": 165,
+      "night": 0,
+      "total": 75,
       "tgt": 145
     },
     "odCoated": {
       "day": 76,
-      "night": 89,
-      "total": 165,
+      "night": 0,
+      "total": 76,
       "tgt": 145
     },
     "wipBareId": {
@@ -52,17 +52,17 @@
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 42.61,
+      "val": 73.13,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 80.61,
+      "val": 57.89,
       "tgt": 75
     },
     "loadedRail": {
       "day": 75,
-      "night": 90,
-      "total": 165,
+      "night": 0,
+      "total": 75,
       "tgt": 145
     },
     "odFromGround": {
@@ -70,18 +70,18 @@
     }
   },
   "quality": {
-    "ftrOd": 97.58,
-    "repairPct": 1.21,
-    "rejectPct": 1.21,
+    "ftrOd": 96.05,
+    "repairPct": 1.32,
+    "rejectPct": 2.63,
     "ftrOdTgt": 96,
-    "ftrId": 97.18,
-    "idRejectPct": 2.82,
+    "ftrId": 94.03,
+    "idRejectPct": 5.97,
     "ftrIdTgt": 98,
-    "repairPipes": 2,
+    "repairPipes": 1,
     "rejectPipes": 2,
-    "twoPartRepairs": 139,
-    "bevel": 1,
-    "sample": 1,
+    "twoPartRepairs": 32,
+    "bevel": 0,
+    "sample": 0,
     "tape": 0,
     "repairsLoadout": 0,
     "strippingOutput": 4,
