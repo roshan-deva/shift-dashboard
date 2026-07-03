@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-02T20:23:05.456955",
+  "generated": "2026-07-03T07:30:33.087358",
   "meta": {
     "date": "07/02/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -21,48 +21,48 @@
   "production": {
     "bare": {
       "day": 53,
-      "night": 0,
-      "total": 53,
+      "night": 43,
+      "total": 96,
       "tgt": 140
     },
     "idCoated": {
       "day": 51,
-      "night": 0,
-      "total": 51,
+      "night": 55,
+      "total": 106,
       "tgt": 140
     },
     "odTpi": {
       "day": 87,
-      "night": 0,
-      "total": 87,
+      "night": 63,
+      "total": 150,
       "tgt": 145
     },
     "odCoated": {
-      "day": 90,
-      "night": 0,
-      "total": 90,
+      "day": 89,
+      "night": 62,
+      "total": 151,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 262,
+      "total": 260,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 298,
+      "total": 302,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 56.6,
+      "val": 15.62,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 75.56,
+      "val": 90.07,
       "tgt": 75
     },
     "loadedRail": {
       "day": 87,
-      "night": 0,
-      "total": 87,
+      "night": 63,
+      "total": 150,
       "tgt": 145
     },
     "odFromGround": {
@@ -70,32 +70,32 @@
     }
   },
   "quality": {
-    "ftrOd": 96.67,
-    "repairPct": 2.22,
-    "rejectPct": 1.11,
+    "ftrOd": 96.03,
+    "repairPct": 1.99,
+    "rejectPct": 1.99,
     "ftrOdTgt": 96,
-    "ftrId": 92.16,
-    "idRejectPct": 7.84,
+    "ftrId": 93.4,
+    "idRejectPct": 6.6,
     "ftrIdTgt": 98,
-    "repairPipes": 2,
-    "rejectPipes": 1,
-    "twoPartRepairs": 78,
-    "bevel": 0,
-    "sample": 1,
+    "repairPipes": 3,
+    "rejectPipes": 3,
+    "twoPartRepairs": 133,
+    "bevel": 1,
+    "sample": 2,
     "tape": 1,
     "repairsLoadout": 0,
     "strippingOutput": 6,
-    "idRejects": 4,
+    "idRejects": 7,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 1.08,
-    "odDowntimeHrs": 3.25,
+    "idDowntimeHrs": 3.83,
+    "odDowntimeHrs": 16.67,
     "tgt": 85,
-    "sapNotif": 4,
-    "plannedDt": 2.16,
-    "unplannedDt": 2.17,
+    "sapNotif": 14,
+    "plannedDt": 13.16,
+    "unplannedDt": 7.34,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -107,6 +107,36 @@
         "shift": "Day",
         "cause": "",
         "sap": "700087484"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "05:30",
+        "stop": "06:00",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700087428"
+      },
+      {
+        "desc": "Plant shutdown clearing for PMs",
+        "line": "ID",
+        "start": "04:45",
+        "stop": "06:00",
+        "durMin": 75,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700087493"
+      },
+      {
+        "desc": "gus track broken on paint line",
+        "line": "ID",
+        "start": "05:00",
+        "stop": "06:00",
+        "durMin": 60,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004181"
       },
       {
         "desc": "plant startup",
@@ -137,6 +167,76 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004180"
+      },
+      {
+        "desc": "Pitstop / Powder not transferring over",
+        "line": "OD",
+        "start": "00:05",
+        "stop": "01:00",
+        "durMin": 55,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700087423"
+      },
+      {
+        "desc": "Powder clumping stuck on shaker screen",
+        "line": "OD",
+        "start": "01:00",
+        "stop": "06:00",
+        "durMin": 300,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700087424"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "05:10",
+        "stop": "06:00",
+        "durMin": 50,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700087488"
+      },
+      {
+        "desc": "Plant shutdown - clearing plant / south",
+        "line": "OD",
+        "start": "03:30",
+        "stop": "06:00",
+        "durMin": 150,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700087492"
+      },
+      {
+        "desc": "Carrier 11/12 igus track broken",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "21:00",
+        "durMin": 180,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004191"
+      },
+      {
+        "desc": "Group 1 trip resulting in partial coat",
+        "line": "OD",
+        "start": "23:10",
+        "stop": "23:25",
+        "durMin": 15,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004192"
+      },
+      {
+        "desc": "Wheel marks - replacing wheel in quench",
+        "line": "OD",
+        "start": "01:05",
+        "stop": "02:00",
+        "durMin": 55,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004193"
       }
     ]
   }
