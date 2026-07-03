@@ -1,7 +1,7 @@
 {
-  "generated": "2026-07-02T16:13:04.116839",
+  "generated": "2026-07-02T20:23:05.456955",
   "meta": {
-    "date": "07/01/2026",
+    "date": "07/02/2026",
     "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
@@ -20,49 +20,49 @@
   },
   "production": {
     "bare": {
-      "day": 67,
+      "day": 53,
       "night": 0,
-      "total": 67,
+      "total": 53,
       "tgt": 140
     },
     "idCoated": {
-      "day": 64,
+      "day": 51,
       "night": 0,
-      "total": 64,
+      "total": 51,
       "tgt": 140
     },
     "odTpi": {
-      "day": 75,
+      "day": 87,
       "night": 0,
-      "total": 75,
+      "total": 87,
       "tgt": 145
     },
     "odCoated": {
-      "day": 76,
+      "day": 90,
       "night": 0,
-      "total": 76,
+      "total": 90,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 243,
+      "total": 262,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 319,
+      "total": 298,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 44.78,
+      "val": 56.6,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 71.05,
+      "val": 75.56,
       "tgt": 75
     },
     "loadedRail": {
-      "day": 75,
+      "day": 87,
       "night": 0,
-      "total": 75,
+      "total": 87,
       "tgt": 145
     },
     "odFromGround": {
@@ -70,103 +70,73 @@
     }
   },
   "quality": {
-    "ftrOd": 96.05,
-    "repairPct": 1.32,
-    "rejectPct": 2.63,
+    "ftrOd": 96.67,
+    "repairPct": 2.22,
+    "rejectPct": 1.11,
     "ftrOdTgt": 96,
-    "ftrId": 93.75,
-    "idRejectPct": 6.25,
+    "ftrId": 92.16,
+    "idRejectPct": 7.84,
     "ftrIdTgt": 98,
-    "repairPipes": 1,
-    "rejectPipes": 2,
-    "twoPartRepairs": 32,
+    "repairPipes": 2,
+    "rejectPipes": 1,
+    "twoPartRepairs": 78,
     "bevel": 0,
-    "sample": 0,
-    "tape": 0,
+    "sample": 1,
+    "tape": 1,
     "repairsLoadout": 0,
-    "strippingOutput": 4,
+    "strippingOutput": 6,
     "idRejects": 4,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 1.67,
-    "odDowntimeHrs": 4.33,
+    "idDowntimeHrs": 1.08,
+    "odDowntimeHrs": 3.25,
     "tgt": 85,
-    "sapNotif": 7,
-    "plannedDt": 4.57,
-    "unplannedDt": 1.42,
+    "sapNotif": 4,
+    "plannedDt": 2.16,
+    "unplannedDt": 2.17,
     "forklift": 0,
     "downtimeEvents": [
       {
         "desc": "plant startup",
         "line": "ID",
         "start": "06:00",
-        "stop": "06:35",
-        "durMin": 35,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700087400"
-      },
-      {
-        "desc": "pitstop/paint drops",
-        "line": "ID",
-        "start": "08:40",
-        "stop": "09:45",
+        "stop": "07:05",
         "durMin": 65,
         "shift": "Day",
         "cause": "",
-        "sap": "700087404"
+        "sap": "700087484"
       },
       {
         "desc": "plant startup",
         "line": "OD",
         "start": "06:00",
-        "stop": "06:35",
-        "durMin": 35,
+        "stop": "07:05",
+        "durMin": 65,
         "shift": "Day",
         "cause": "",
-        "sap": "700087401"
-      },
-      {
-        "desc": "final backed up ID repairs",
-        "line": "OD",
-        "start": "09:40",
-        "stop": "10:40",
-        "durMin": 60,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700087405"
-      },
-      {
-        "desc": "jeep station backed up",
-        "line": "OD",
-        "start": "14:35",
-        "stop": "15:35",
-        "durMin": 60,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700087406"
-      },
-      {
-        "desc": "low air pressure",
-        "line": "OD",
-        "start": "15:35",
-        "stop": "15:55",
-        "durMin": 20,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700087407"
+        "sap": "700087485"
       },
       {
         "desc": "south chain not picking up",
         "line": "OD",
-        "start": "11:55",
-        "stop": "13:20",
-        "durMin": 85,
+        "start": "10:15",
+        "stop": "11:15",
+        "durMin": 60,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004166"
+        "sap": "30000004179"
+      },
+      {
+        "desc": "Induction coil tripout result in partial",
+        "line": "OD",
+        "start": "15:00",
+        "stop": "16:10",
+        "durMin": 70,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004180"
       }
     ]
   }
