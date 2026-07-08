@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-07T20:00:18.998875",
+  "generated": "2026-07-08T07:30:41.849435",
   "meta": {
     "date": "07/07/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,49 +20,49 @@
   },
   "production": {
     "bare": {
-      "day": 60,
-      "night": 0,
-      "total": 60,
+      "day": 59,
+      "night": 77,
+      "total": 136,
       "tgt": 140
     },
     "idCoated": {
-      "day": 83,
-      "night": 0,
-      "total": 83,
+      "day": 80,
+      "night": 63,
+      "total": 143,
       "tgt": 140
     },
     "odTpi": {
       "day": 90,
-      "night": 0,
-      "total": 90,
+      "night": 93,
+      "total": 183,
       "tgt": 145
     },
     "odCoated": {
-      "day": 86,
-      "night": 0,
-      "total": 86,
+      "day": 85,
+      "night": 95,
+      "total": 180,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 277,
+      "total": 285,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 234,
+      "total": 188,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 19.12,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 100.0,
+      "val": 77.22,
       "tgt": 75
     },
     "loadedRail": {
       "day": 90,
-      "night": 0,
-      "total": 90,
+      "night": 93,
+      "total": 183,
       "tgt": 145
     },
     "odFromGround": {
@@ -70,32 +70,32 @@
     }
   },
   "quality": {
-    "ftrOd": 95.35,
-    "repairPct": 0.0,
-    "rejectPct": 4.65,
+    "ftrOd": 95.56,
+    "repairPct": 0.56,
+    "rejectPct": 3.89,
     "ftrOdTgt": 96,
-    "ftrId": 100.0,
-    "idRejectPct": 0.0,
+    "ftrId": 99.3,
+    "idRejectPct": 0.7,
     "ftrIdTgt": 98,
-    "repairPipes": 0,
-    "rejectPipes": 4,
-    "twoPartRepairs": 90,
+    "repairPipes": 1,
+    "rejectPipes": 7,
+    "twoPartRepairs": 243,
     "bevel": 0,
-    "sample": 1,
-    "tape": 0,
+    "sample": 2,
+    "tape": 1,
     "repairsLoadout": 0,
     "strippingOutput": 6,
-    "idRejects": 0,
+    "idRejects": 1,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 2.08,
-    "odDowntimeHrs": 4.33,
+    "idDowntimeHrs": 3.33,
+    "odDowntimeHrs": 7.92,
     "tgt": 85,
-    "sapNotif": 9,
-    "plannedDt": 4.08,
-    "unplannedDt": 2.34,
+    "sapNotif": 15,
+    "plannedDt": 7.91,
+    "unplannedDt": 3.34,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -127,6 +127,26 @@
         "shift": "Day",
         "cause": "",
         "sap": "700088051"
+      },
+      {
+        "desc": "Startup",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:15",
+        "durMin": 15,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088067"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "01:30",
+        "stop": "02:30",
+        "durMin": 60,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088068"
       },
       {
         "desc": "Plant start up",
@@ -187,6 +207,46 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004228"
+      },
+      {
+        "desc": "Filling coating line after carrier 11 go",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "18:50",
+        "durMin": 50,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088065"
+      },
+      {
+        "desc": "Excessive pinholes backing up jeep/thick",
+        "line": "OD",
+        "start": "19:50",
+        "stop": "20:45",
+        "durMin": 55,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088066"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "OD",
+        "start": "05:10",
+        "stop": "06:00",
+        "durMin": 50,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088069"
+      },
+      {
+        "desc": "Drive wheel came off in quench partial c",
+        "line": "OD",
+        "start": "23:10",
+        "stop": "00:10",
+        "durMin": 60,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004229"
       }
     ]
   }
