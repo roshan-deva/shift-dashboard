@@ -18,7 +18,7 @@
     "production":{ bare:{day,night,total,tgt}, idCoated:{...}, odTpi:{...}, odCoated:{...},
                    wipBareId:{total,tgt}, wipIdOd:{total,tgt},
                    directFeedPct:{val,tgt}, idOdFeedPct:{val,tgt},
-                   loadedRail:{day,night,total,tgt}, odFromGround:{total} },
+                   stripBalanceId:{val,tgt}, stripBalanceOd:{val,tgt}, odRepairBalance:{val,tgt} },
     "quality":{ ftrOd, repairPct, rejectPct, ftrOdTgt, ftrId, idRejectPct, ftrIdTgt,
                 repairPipes, rejectPipes, twoPartRepairs, bevel, sample, tape,
                 repairsLoadout, strippingOutput,
@@ -109,6 +109,10 @@ main{flex:1;min-width:0;padding:22px 26px;max-width:1500px}
 .statc .unit{font-size:14px;font-weight:600;color:var(--muted);margin-left:3px}
 .statc .delta{font-size:11px;font-weight:600;margin-top:7px;display:flex;align-items:center;gap:5px}
 .statc .spark{position:absolute;right:-6px;bottom:-6px;width:74px;height:42px;opacity:.5}
+.dualrow{display:flex;gap:18px;margin-top:8px}
+.dualcell{flex:1}
+.dsub{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.dval{font-weight:700;font-size:22px;line-height:1.05;margin-top:4px;text-shadow:0 0 14px rgba(152,95,253,.4)}
 .c-on{color:var(--green)}.c-off{color:var(--coral)}.c-watch{color:var(--amber)}.c-mut{color:var(--muted)}.c-violet{color:var(--violet)}
 
 /* headline chips */
@@ -267,7 +271,7 @@ const DEMO={
     odTpi:{day:28,night:65,total:93,tgt:145}, odCoated:{day:30,night:64,total:94,tgt:145},
     wipBareId:{total:478,tgt:400}, wipIdOd:{total:108,tgt:400},
     directFeedPct:{val:8.74,tgt:75}, idOdFeedPct:{val:57.45,tgt:75},
-    loadedRail:{day:28,night:65,total:93,tgt:93}, odFromGround:{total:40}},
+    stripBalanceId:{val:14,tgt:20}, stripBalanceOd:{val:23,tgt:20}, odRepairBalance:{val:31,tgt:40}},
   quality:{ ftrOd:91.49,repairPct:6.38,rejectPct:2.13,ftrOdTgt:96,
             ftrId:98.53,idRejectPct:1.47,ftrIdTgt:98,
             repairPipes:6,rejectPipes:2,twoPartRepairs:70,bevel:2,sample:3,tape:0,
@@ -402,6 +406,19 @@ function statCard(lab,val,unit,tgt,dir,sub){
   return `<div class="statc">${dot}<div class="lab">${lab}</div><div class="val">${fmt(val)}<span class="unit">${unit||''}</span></div>${delta}</div>`;
 }
 
+/* Two sub-values (e.g. ID/OD) inside one card — each gets its own target/status, both lower-is-better. */
+function dualStatCard(lab,parts){
+  let anyDot='';
+  const cells=parts.map(p=>{
+    const s=p.val<=p.tgt?'on':p.val<=p.tgt*1.1?'watch':'off';
+    if(s!=='on') anyDot=`<span class="pulse-dot" title="Below target"></span>`;
+    const diff=p.val-p.tgt, arrow=diff>=0?'▲':'▼';
+    return `<div class="dualcell"><div class="dsub">${p.sublabel}</div><div class="dval c-${s}">${fmt(p.val)}</div>
+      <div class="delta c-${s}">${arrow} ${fmt(Math.abs(diff))} vs ${fmt(p.tgt)} tgt</div></div>`;
+  }).join('');
+  return `<div class="statc">${anyDot}<div class="lab">${lab}</div><div class="dualrow">${cells}</div></div>`;
+}
+
 /* ── Section renderers ───────────────────────────── */
 function renderOverview(){
   const p=DATA.production, q=DATA.quality, m=DATA.maintenance;
@@ -459,8 +476,10 @@ function renderProduction(){
     statCard('WIP — ID→OD',p.wipIdOd.total,'',p.wipIdOd.tgt,'L'),
     statCard('Direct Feed → ID',p.directFeedPct.val,'%',p.directFeedPct.tgt,'H'),
     statCard('ID → OD Feeding',p.idOdFeedPct.val,'%',p.idOdFeedPct.tgt,'H'),
-    statCard('Loaded to Rail',pick(p.loadedRail),'',p.loadedRail.tgt,'H'),
-    statCard('OD From Ground',p.odFromGround.total,'',null)
+    dualStatCard('Balance for Stripping',[
+      {sublabel:'ID',val:p.stripBalanceId?.val??0,tgt:p.stripBalanceId?.tgt??20},
+      {sublabel:'OD',val:p.stripBalanceOd?.val??0,tgt:p.stripBalanceOd?.tgt??20}]),
+    statCard('Balance of OD Repair',p.odRepairBalance?.val??0,'',p.odRepairBalance?.tgt??40,'L')
   ].map((c,i)=>`<div class="fi" style="animation-delay:${i*55}ms">${c}</div>`).join('');
 
   document.getElementById('snap-body').innerHTML=`
