@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-10T19:30:39.807846",
+  "generated": "2026-07-11T07:30:38.561181",
   "meta": {
     "date": "07/10/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,47 +20,47 @@
   },
   "production": {
     "bare": {
-      "day": 72,
-      "night": 0,
-      "total": 72,
+      "day": 71,
+      "night": 65,
+      "total": 136,
       "tgt": 140
     },
     "idCoated": {
-      "day": 89,
-      "night": 0,
-      "total": 89,
+      "day": 86,
+      "night": 44,
+      "total": 130,
       "tgt": 140
     },
     "odTpi": {
-      "day": 107,
-      "night": 0,
-      "total": 107,
+      "day": 106,
+      "night": 97,
+      "total": 203,
       "tgt": 145
     },
     "odCoated": {
-      "day": 106,
-      "night": 0,
-      "total": 106,
+      "day": 103,
+      "night": 101,
+      "total": 204,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 243,
+      "total": 258,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 139,
+      "total": 107,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 11.76,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 100.0,
+      "val": 85.29,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 8,
+      "val": 9,
       "tgt": 20
     },
     "stripBalanceOd": {
@@ -68,37 +68,37 @@
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 1,
+      "val": 5,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 96.23,
-    "repairPct": 0.0,
-    "rejectPct": 3.77,
+    "ftrOd": 96.57,
+    "repairPct": 1.47,
+    "rejectPct": 1.96,
     "ftrOdTgt": 96,
-    "ftrId": 97.75,
-    "idRejectPct": 2.25,
+    "ftrId": 96.92,
+    "idRejectPct": 3.08,
     "ftrIdTgt": 98,
-    "repairPipes": 0,
+    "repairPipes": 3,
     "rejectPipes": 4,
-    "twoPartRepairs": 68,
-    "bevel": 0,
-    "sample": 1,
+    "twoPartRepairs": 128,
+    "bevel": 3,
+    "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "strippingOutput": 2,
-    "idRejects": 2,
+    "idRejects": 4,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 0.92,
-    "odDowntimeHrs": 2.92,
+    "idDowntimeHrs": 4.83,
+    "odDowntimeHrs": 4.67,
     "tgt": 85,
-    "sapNotif": 7,
-    "plannedDt": 3.34,
-    "unplannedDt": 0.5,
+    "sapNotif": 14,
+    "plannedDt": 5.18,
+    "unplannedDt": 4.33,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -120,6 +120,46 @@
         "shift": "Day",
         "cause": "",
         "sap": "700088385"
+      },
+      {
+        "desc": "plant startup",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:30",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088387"
+      },
+      {
+        "desc": "pitstop",
+        "line": "ID",
+        "start": "05:20",
+        "stop": "06:00",
+        "durMin": 40,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088477"
+      },
+      {
+        "desc": "Igus track broke carrier 3",
+        "line": "ID",
+        "start": "19:00",
+        "stop": "20:10",
+        "durMin": 70,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004247"
+      },
+      {
+        "desc": "blaster 1 elevator gear motor bolt broke",
+        "line": "ID",
+        "start": "01:10",
+        "stop": "02:45",
+        "durMin": 95,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004253"
       },
       {
         "desc": "Startup",
@@ -170,6 +210,36 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004246"
+      },
+      {
+        "desc": "pitstop/end of shift",
+        "line": "OD",
+        "start": "05:20",
+        "stop": "06:00",
+        "durMin": 40,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088475"
+      },
+      {
+        "desc": "crooked pipe on northwest buggy",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "18:30",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004248"
+      },
+      {
+        "desc": "transfer line tripout",
+        "line": "OD",
+        "start": "21:40",
+        "stop": "22:15",
+        "durMin": 35,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004249"
       }
     ]
   }
