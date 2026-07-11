@@ -27,6 +27,11 @@
                     downtimeEvents:[ {desc,start,stop,durMin,dept,line,sap,shift,cause} ] }
   }
   Utilization computed in JS: (24 - downtimeHrs)/24 * 100. Percentages stored already x100 (e.g. 91.49).
+
+  manpower_snapshot.json / manpower_snapshot_data.js — separate sibling contract, written by parse_kronos.py,
+  loaded via its own <script src> tag as window.MANPOWER_SNAPSHOT (or fetched as fallback). NOT merged into
+  the DATA/daily_snapshot.json contract above. See parse_kronos.py for the {meta,kpis,grid,exceptions} shape.
+  Contains employee names — local file only, never mirrored into the public GitHub Pages index.html.
 -->
 <style>
 :root{
@@ -206,6 +211,99 @@ main{flex:1;min-width:0;padding:22px 26px;max-width:1500px}
 #tt{position:fixed;background:rgba(0,0,0,.88);border:0.67px solid var(--border);border-radius:5px;padding:6px 11px;font-size:11px;white-space:nowrap;z-index:9999;pointer-events:none;display:none;color:var(--text)}
 #demo-banner{background:rgba(253,175,34,.1);border-bottom:0.67px solid rgba(253,175,34,.3);color:var(--amber);font-size:11px;padding:6px;text-align:center;letter-spacing:.06em;display:none}
 #rollover-banner{background:rgba(253,175,34,.1);border-bottom:0.67px solid rgba(253,175,34,.3);color:var(--amber);font-size:11px;padding:6px;text-align:center;letter-spacing:.06em;display:none}
+/* ── Manpower tab (Kronos) ───────────────────────── */
+.mp-matrix{overflow-x:auto}
+.mp-matrix table{border-collapse:collapse;width:100%;min-width:640px}
+.mp-matrix thead th{padding:0 12px 10px;text-align:left}
+.mp-hdr-chip{display:inline-block;background:rgba(255,255,255,.03);border-left:3px solid var(--teal);
+  border-radius:6px;padding:6px 12px;font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--text)}
+.mp-matrix td.rowhead{width:130px;padding:8px 10px 8px 0;vertical-align:top}
+.mp-rowhead-chip{display:block;background:rgba(255,255,255,.03);border-left:3px solid var(--violet);
+  border-radius:6px;padding:9px 12px;font-weight:700;font-size:13px;color:var(--text)}
+.mp-matrix td.rowhead .full{display:block;font-weight:400;font-size:10px;color:var(--muted);margin-top:2px}
+.mp-matrix td.cell{border-left:0.67px solid var(--border2);vertical-align:top;padding:0}
+.mp-matrix tr+tr td{border-top:0.67px solid var(--border2)}
+.mp-half{display:flex;align-items:center;gap:8px;padding:8px 12px;cursor:pointer;min-height:38px;border-radius:8px}
+.mp-half:hover{background:rgba(255,255,255,.04)}
+.mp-half.sel{background:rgba(152,95,253,.14)}
+.mp-fmark{width:19px;height:19px;border-radius:6px;color:#0d0d1a;font-size:10.5px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;flex:none}
+.mp-fmark.W{background:var(--violet)} .mp-fmark.E{background:var(--pink)}
+.mp-hc{font-variant-numeric:tabular-nums;font-weight:700;min-width:48px;font-size:12.5px}
+.mp-hc small{color:var(--muted);font-weight:400}
+.mp-chip{font-size:9.5px;font-weight:700;letter-spacing:.05em;padding:2px 7px;border-radius:20px;white-space:nowrap}
+.mp-chip.ok{background:rgba(50,212,132,.16);color:var(--green)}
+.mp-chip.warn{background:rgba(253,175,34,.16);color:var(--amber)}
+.mp-chip.crit{background:rgba(255,103,87,.18);color:var(--coral)}
+.mp-chip.nosched{background:rgba(0,201,255,.16);color:var(--cyan)}
+.mp-chip.empty{color:var(--muted);background:transparent}
+.mp-half .reason{font-size:10.5px;color:var(--muted);margin-left:auto;text-align:right}
+.mp-legend{display:flex;flex-wrap:wrap;gap:16px;font-size:11px;color:var(--muted);margin-top:14px;align-items:center}
+.mp-exc-row{display:flex;gap:12px;align-items:baseline;padding:9px 2px}
+.mp-exc-row+.mp-exc-row{border-top:0.67px solid var(--border2)}
+.mp-exc-dot{width:7px;height:7px;border-radius:50%;flex:none;margin-top:5px}
+.mp-exc-dot.crit{background:var(--coral)} .mp-exc-dot.warn{background:var(--amber)} .mp-exc-dot.nosched{background:var(--cyan)}
+.mp-exc-where{font-weight:700;min-width:220px;color:var(--text);font-size:12.5px}
+.mp-exc-what{color:var(--muted);font-size:12px}
+.mp-detail table{font-size:12.5px;width:100%}
+.mp-detail th{color:var(--muted);font-weight:600;padding:5px 10px;text-align:left;font-size:10.5px}
+.mp-detail td{padding:6px 10px;border-top:0.67px solid var(--border2)}
+.mp-detail td.num{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+.mp-pflag{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:20px}
+.mp-pflag.absent{background:rgba(255,103,87,.18);color:var(--coral)}
+.mp-pflag.unsched{background:rgba(0,201,255,.16);color:var(--cyan)}
+.mp-pflag.over{background:rgba(253,175,34,.16);color:var(--amber)}
+.mp-footnote{font-size:10.5px;color:var(--muted);margin-top:16px;padding-top:12px;border-top:0.67px solid var(--border2)}
+
+/* raw vs clean variance callout */
+.mp-vartiles{display:flex;gap:14px;margin-bottom:16px}
+.mp-vartile{flex:1;background:var(--card);border-left:4px solid var(--border);border-radius:8px;padding:14px 16px}
+.mp-vartile .lab{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.mp-vartile .val{font-size:24px;font-weight:800;margin-top:6px}
+.mp-vartile .note{font-size:11px;color:var(--muted);margin-top:4px}
+
+/* side by side on desktop, stacked on phone-width viewports */
+.mp-charts-row{display:flex;gap:16px;align-items:stretch}
+.mp-charts-row>.card{flex:1;min-width:0}
+@media(max-width:900px){.mp-charts-row{flex-direction:column}}
+
+/* per-line headcount+hours small multiples */
+.mp-linecards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.mp-linecard{background:var(--card);border-radius:10px;padding:14px}
+.mp-linecard .lctitle{font-size:13px;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.mp-linecard .lclabel{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.mp-linecard .lcrow{display:flex;align-items:flex-end;gap:14px;height:64px;margin-top:20px;margin-bottom:6px;
+  position:relative;cursor:pointer;border-radius:8px;transition:background .15s}
+.mp-linecard .lcrow:hover{background:rgba(255,255,255,.035)}
+.mp-schedact{flex:1;display:flex;flex-direction:column;align-items:center}
+.mp-stackbar{width:36px;height:44px;border-radius:4px 4px 0 0;position:relative;display:flex;flex-direction:column;justify-content:flex-end}
+.mp-stackbar .seg{width:100%;border-width:1.5px;border-style:solid;border-bottom:none;position:relative;transition:filter .15s}
+.mp-stackbar .seg.W{background:rgba(152,95,253,.28);border-color:var(--violet)}
+.mp-stackbar .seg.E{background:rgba(255,73,205,.28);border-color:var(--pink);margin-bottom:2px}
+.mp-linecard .lcrow:hover .seg{filter:brightness(1.5)}
+.mp-lcguide{position:absolute;left:50%;bottom:100%;width:0;height:26px;border-left:1px dashed rgba(255,255,255,.4);
+  opacity:0;transition:opacity .15s;pointer-events:none;transform:translateX(-50%)}
+.mp-linecard .lcrow:hover .mp-lcguide{opacity:1}
+.mp-schedact .sa-lbl{font-size:9px;color:var(--muted);margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
+.mp-tt-row{display:flex;align-items:center;gap:7px;padding:1.5px 0}
+.mp-tt-row .d{width:7px;height:7px;border-radius:50%;flex:none}
+.mp-tt-row b{margin-left:auto;padding-left:14px}
+.mp-tt-title{font-weight:700;margin-bottom:5px}
+.mp-tt-sep{height:5px}
+.mp-linecard .lcratio{font-size:10.5px;color:var(--muted);margin-top:2px}
+
+/* waterfall */
+.mp-waterfall{display:flex;align-items:flex-end;gap:22px;height:170px;margin:38px 8px 30px;position:relative}
+.mp-wf-col{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;position:relative}
+.mp-wf-bar{width:52px;position:absolute;border-radius:4px;border-width:1.5px;border-style:solid}
+.mp-wf-bar .wv{position:absolute;top:-32px;left:50%;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.mp-wf-bar .wv .n{font-size:12.5px;font-weight:800;display:block}
+.mp-wf-bar .wv .c{font-size:10px;color:var(--muted);display:block}
+.mp-wf-lbl{position:absolute;bottom:-24px;font-size:11px;font-weight:600;color:var(--text);white-space:nowrap}
+.mp-wf-conn{position:absolute;border-top:1px dashed rgba(255,255,255,.28);height:0}
+.mp-wf-axis{position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--border)}
+
 @media(max-width:1100px){.chips{grid-template-columns:repeat(3,1fr)}.hero .herogrid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -247,11 +345,13 @@ main{flex:1;min-width:0;padding:22px 26px;max-width:1500px}
     <button class="navbtn"        data-sec="quality"     onclick="showSnap('quality')"><span class="ic">◈</span><span class="lbl">Quality</span></button>
     <button class="navbtn"        data-sec="maintenance" onclick="showSnap('maintenance')"><span class="ic">⚙</span><span class="lbl">Maintenance</span></button>
     <button class="navbtn"        data-sec="crew"        onclick="showSnap('crew')"><span class="ic">⛑</span><span class="lbl">Crew &amp; Speeds</span></button>
+    <button class="navbtn"        data-sec="manpower"    onclick="showSnap('manpower')"><span class="ic">👥</span><span class="lbl">Manpower</span></button>
   </aside>
   <main id="snap-body"></main>
 </div>
 
 <script src="./daily_snapshot_data.js" onerror="void 0"></script>
+<script src="./manpower_snapshot_data.js" onerror="void 0"></script>
 <script>
 /* ─────────────────────────────────────────────────────────────
    WTL Coating — Daily Shift Snapshot (standalone)
@@ -567,6 +667,254 @@ function renderCrew(){
   countUp(document.getElementById('snap-body'));
 }
 
+/* ── Manpower (Kronos) ──────────────────────────── */
+const MP_LINES=[{k:"LEC1",full:"Large Dia External"},{k:"LIC1",full:"Large Dia Internal"},{k:"SDC",full:"Small Dia (LEC2)"}];
+const MP_DEPTS=["Production","Quality","Maintenance"];
+const MP_FORCES=["Welspun","Elite"];
+const MP_CHIP={ok:"OK",warn:"WARN",crit:"CRIT",nosched:"NO SCHED",empty:"–"};
+let MP=null, MP_SEL=null;
+
+function mpCell(line,dept,force){ return MP.grid.find(g=>g.line===line&&g.dept===dept&&g.force===force); }
+function mpSigned(v){ return (v>0?"+":"")+v.toFixed(1); }
+
+function mpHalf(g){
+  const key=`${g.line}|${g.dept}|${g.force}`;
+  const chip=`<span class="mp-chip ${g.status}">${MP_CHIP[g.status]}</span>`;
+  const hc=g.status==="empty" ? `<span class="mp-hc"><small>–</small></span>`
+    : `<span class="mp-hc">${g.workedHC}<small>/${g.schedHC}</small></span>`;
+  const reason=g.reason ? `<span class="reason">${g.reason}</span>` : "";
+  return `<div class="mp-half ${MP_SEL===key?"sel":""}" onclick="mpDrill('${key}')">
+    <span class="mp-fmark ${g.force[0]}">${g.force[0]}</span>${hc}${chip}${reason}</div>`;
+}
+
+function mpDrill(key){
+  MP_SEL=(MP_SEL===key)?null:key;
+  document.getElementById('mp-matrix').outerHTML=mpMatrixHtml();
+  const d=document.getElementById('mp-detail');
+  if(!MP_SEL){ d.style.display='none'; return; }
+  const [line,dept,force]=MP_SEL.split('|');
+  const g=mpCell(line,dept,force);
+  const flg=f=>f?`<span class="mp-pflag ${f}">${f==='unsched'?'no sched':f==='over'?'over hrs':'absent'}</span>`:'';
+  d.style.display='block';
+  d.innerHTML=`<div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">
+      ${line} ${dept} — ${force} &nbsp;<span style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">
+      roster ${g.roster} · worked ${g.workedHC}/${g.schedHC} scheduled · ${g.actHrs} h actual vs ${g.schedHrs} h scheduled</span></div>
+    <table><thead><tr><th>Name</th><th style="text-align:right">Sched h</th><th style="text-align:right">Actual h</th><th></th></tr></thead><tbody>` +
+    (g.people.length ? g.people.map(p=>
+      `<tr><td>${p.name}</td><td class="num">${p.sched||'–'}</td><td class="num">${p.actual||'–'}</td><td>${flg(p.flag)}</td></tr>`).join('')
+      : `<tr><td colspan="4" style="color:var(--muted)">No scheduled or worked people.</td></tr>`)
+    + `</tbody></table>`;
+}
+
+function mpMatrixHtml(){
+  let html=`<table id="mp-matrix"><thead><tr><th></th>${MP_DEPTS.map(d=>`<th><span class="mp-hdr-chip">${d}</span></th>`).join('')}</tr></thead><tbody>`;
+  for(const L of MP_LINES){
+    html+=`<tr><td class="rowhead"><span class="mp-rowhead-chip">${L.k}<span class="full">${L.full}</span></span></td>`;
+    for(const d of MP_DEPTS){ html+=`<td class="cell">`+MP_FORCES.map(f=>mpHalf(mpCell(L.k,d,f))).join('')+`</td>`; }
+    html+=`</tr>`;
+  }
+  return html+`</tbody></table>`;
+}
+
+function renderManpower(){
+  const body=document.getElementById('snap-body');
+  if(!MP){
+    body.innerHTML=`<div class="sechead"><span class="bar"></span><h2>Manpower</h2></div>
+      <div class="card"><div class="empty">No Kronos data yet — manpower_snapshot.json not found.
+      Runs automatically alongside the 7:30 AM SAP extract once today's Kronos report lands in Agent/Kronos/.</div></div>`;
+    return;
+  }
+  const k=MP.kpis, att=k.attendancePct;
+  const absW=MP.grid.filter(g=>g.force==='Welspun').reduce((s,g)=>s+g.absent,0);
+  const absE=MP.grid.filter(g=>g.force==='Elite').reduce((s,g)=>s+g.absent,0);
+  const chips=[
+    ['Worked Headcount',`${k.workedHC}`,`${k.schedHC} scheduled`],
+    ['Attendance',att==null?'–':`${att}%`,'of scheduled headcount'],
+    ['Absent',`${k.absent}`,`<b style="color:var(--text)">W ${absW}</b> · <b style="color:var(--text)">E ${absE}</b>`],
+    ['No Schedule Built',`${k.noSchedCells}`,`${k.noSchedWorkers} FTE worked with no schedule`],
+    ['Elite Share',k.elitePct==null?'–':`${k.elitePct}%`,'of worked headcount']
+  ].map((c,i)=>`<div class="chip fi" style="animation-delay:${i*60}ms">
+      <div class="lab">${c[0]}</div><div class="val">${c[1]}</div><div class="sub">${c[2]}</div></div>`).join('');
+
+  const excHtml = MP.exceptions.length
+    ? MP.exceptions.map(x=>`<div class="mp-exc-row"><span class="mp-exc-dot ${x.sev}"></span>
+        <span class="mp-exc-where">${x.where}</span><span class="mp-exc-what">${x.what}</span></div>`).join('')
+    : `<div class="empty" style="padding:10px;text-align:left">No exceptions — all groups OK.</div>`;
+
+  const raw=k.rawVarHrs, clean=k.cleanVarHrs, noSchedHrs=Math.round((raw-clean)*10)/10;
+
+  body.innerHTML=`
+    <div class="sechead"><span class="bar"></span><h2>Manpower · Kronos Daily</h2></div>
+    <div class="chips" style="grid-template-columns:repeat(5,1fr)">${chips}</div>
+    <div class="mp-vartiles">
+      <div class="mp-vartile" style="border-color:var(--coral)">
+        <div class="lab">Raw Variance</div><div class="val">${mpSigned(raw)}h</div>
+        <div class="note">includes ${mpSigned(noSchedHrs)}h from zero-schedule groups</div></div>
+      <div class="mp-vartile" style="border-color:var(--green)">
+        <div class="lab">Clean Variance</div><div class="val">${mpSigned(clean)}h</div>
+        <div class="note">excludes cells with no schedule built — the real signal</div></div>
+    </div>
+    <div class="mp-charts-row">
+    <div class="card" style="margin-bottom:16px">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Headcount and Hours by Line — Welspun vs Elite</div>
+      <div class="mp-linecards" id="mp-linecards"></div>
+    </div>
+    <div class="card" style="margin-bottom:16px">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Individual Hours Variance — ${MP.meta.hourlyRows} comparable employees</div>
+      <div id="mp-waterfall"></div>
+    </div>
+    </div>
+    <div class="card mp-matrix" style="margin-bottom:16px">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Where Issues Are — click any row for people detail</div>
+      ${mpMatrixHtml()}
+      <div class="mp-legend">
+        <span><span class="mp-fmark W" style="display:inline-flex">W</span>&nbsp;Welspun (permanent)</span>
+        <span><span class="mp-fmark E" style="display:inline-flex">E</span>&nbsp;Elite (temporary)</span>
+        <span><span class="mp-chip ok">OK</span> <span class="mp-chip warn">WARN</span> <span class="mp-chip crit">CRIT</span> <span class="mp-chip nosched">NO SCHED</span></span>
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:16px">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">What to Chase Today</div>
+      ${excHtml}
+    </div>
+    <div class="card mp-detail" id="mp-detail" style="display:none"></div>
+    <div class="mp-footnote">Hourly workforce only — ${MP.meta.salariedExcluded} salaried excluded, ${MP.meta.hourlyRows} hourly on roster ·
+      data date ${MP.meta.dataDate} · generated ${MP.meta.generated}<br>
+      Contains employee names — local file only, not mirrored to the public dashboard.</div>`;
+  countUp(body);
+  renderMpLineCards();
+  renderMpWaterfall();
+}
+
+/* Scheduled vs Actual per line, each bar stacked Welspun+Elite — makes an
+   overrun or a never-scheduled group visible at a glance (short/tall bar next
+   to its own schedule), not just the workforce split. Deliberately NOT a
+   dual-axis chart (two y-scales is the #1 chart mistake) — small multiples
+   instead, same x-order, stacked so the eye compares vertically. */
+function mpStackPair(schedW,schedE,actW,actE,maxTotal,unit,title){
+  const seg=(w,e)=>{
+    const wPct=maxTotal?Math.round(w/maxTotal*100):0, ePct=maxTotal?Math.round(e/maxTotal*100):0;
+    return `<div class="mp-stackbar">
+      <div class="seg E" style="height:${ePct}%"></div>
+      <div class="seg W" style="height:${wPct}%"></div>
+    </div>`;
+  };
+  return `<div class="lcrow" data-title="${title}" data-unit="${unit}"
+      data-sw="${fmt(schedW)}" data-se="${fmt(schedE)}" data-aw="${fmt(actW)}" data-ae="${fmt(actE)}">
+    <div class="mp-schedact">${seg(schedW,schedE)}<span class="sa-lbl">Scheduled</span></div>
+    <div class="mp-schedact">${seg(actW,actE)}<span class="sa-lbl">Actual</span></div>
+    <div class="mp-lcguide"></div>
+  </div>`;
+}
+
+/* Hover tooltip for the Schedule-vs-Actual rows — reuses this file's existing
+   dark #tt element (tip()/untip(), defined for chart hover but never wired
+   up before now). Numbers travel via data-* attrs, not inline HTML strings,
+   so there's no quote-escaping fragility building the tooltip content. */
+function mpDotRow(color,label,val,unit){
+  return `<div class="mp-tt-row"><span class="d" style="background:${color}"></span>${label}<b>${val}${unit}</b></div>`;
+}
+function wireLcRowTooltips(root){
+  root.querySelectorAll('.lcrow[data-title]').forEach(row=>{
+    const d=row.dataset, u=d.unit;
+    const html=`<div style="min-width:180px">
+      <div class="mp-tt-title">${d.title}</div>
+      ${mpDotRow('var(--violet)','Welspun sched',d.sw,u)}
+      ${mpDotRow('var(--pink)','Elite sched',d.se,u)}
+      <div class="mp-tt-sep"></div>
+      ${mpDotRow('var(--violet)','Welspun actual',d.aw,u)}
+      ${mpDotRow('var(--pink)','Elite actual',d.ae,u)}
+    </div>`;
+    row.addEventListener('mouseenter',e=>tip(e,html));
+    row.addEventListener('mousemove',e=>tip(e,html));
+    row.addEventListener('mouseleave',untip);
+  });
+}
+function renderMpLineCards(){
+  const el=document.getElementById('mp-linecards');
+  if(!el) return;
+  const totals=MP_LINES.map(L=>{
+    let wSHC=0,eSHC=0,wHC=0,eHC=0,wSH=0,eSH=0,wH=0,eH=0;
+    for(const d of MP_DEPTS){
+      const w=mpCell(L.k,d,'Welspun'), e=mpCell(L.k,d,'Elite');
+      wSHC+=w.schedHC; eSHC+=e.schedHC; wHC+=w.workedHC; eHC+=e.workedHC;
+      wSH+=w.schedHrs; eSH+=e.schedHrs; wH+=w.actHrs; eH+=e.actHrs;
+    }
+    return {line:L,wSHC,eSHC,wHC,eHC,wSH,eSH,wH,eH};
+  });
+  const maxHC=Math.max(1,...totals.flatMap(t=>[t.wSHC+t.eSHC,t.wHC+t.eHC]));
+  const maxH=Math.max(1,...totals.flatMap(t=>[t.wSH+t.eSH,t.wH+t.eH]));
+  el.innerHTML=totals.map(t=>{
+    const noSched = MP_DEPTS.some(d=>MP_FORCES.some(f=>mpCell(t.line.k,d,f).status==='nosched'));
+    const wRatio = t.wHC ? (t.wH/t.wHC).toFixed(1) : '–';
+    const eRatio = t.eHC ? (t.eH/t.eHC).toFixed(1) : '–';
+    return `<div class="mp-linecard">
+      <div class="lctitle">${t.line.k}${noSched?' <span class="mp-chip nosched">NO SCHED</span>':''}</div>
+      <div class="lclabel">Headcount <span style="text-transform:none;font-weight:400;opacity:.7">— hover for detail</span></div>
+      ${mpStackPair(t.wSHC,t.eSHC,t.wHC,t.eHC,maxHC,'',`${t.line.k} — Headcount`)}
+      <div class="lclabel">Hours <span style="text-transform:none;font-weight:400;opacity:.7">— hover for detail</span></div>
+      ${mpStackPair(t.wSH,t.eSH,t.wH,t.eH,maxH,'h',`${t.line.k} — Hours`)}
+      <div class="lcratio">hrs/person &nbsp;<b style="color:var(--text)">W ${wRatio}</b> · <b style="color:var(--text)">E ${eRatio}</b></div>
+    </div>`;
+  }).join('') + `
+    <div style="grid-column:1/-1;display:flex;gap:16px;font-size:11px;color:var(--muted);margin-top:2px">
+      <span><span style="display:inline-block;width:9px;height:9px;border-radius:3px;background:var(--violet);margin-right:5px;vertical-align:-1px"></span>Welspun (permanent)</span>
+      <span><span style="display:inline-block;width:9px;height:9px;border-radius:3px;background:var(--pink);margin-right:5px;vertical-align:-1px"></span>Elite (temporary)</span>
+    </div>`;
+  wireLcRowTooltips(el);
+}
+
+/* Floating waterfall: Over → On target → Under bridges to Net variance, using
+   the exact bucket definitions and totals from the user's own "Hours Pivot"
+   Excel tab (Over >1h, On target 0-1h, Under <0h) — reconciles to rawVarHrs. */
+function renderMpWaterfall(){
+  const el=document.getElementById('mp-waterfall');
+  if(!el || !MP.varianceBuckets) { if(el) el.innerHTML=`<div class="empty">No variance-bucket data in this snapshot.</div>`; return; }
+  const b=MP.varianceBuckets;
+  const steps=[
+    {key:'over',  label:'Over Scheduled',  color:'var(--amber)',  delta:b.over.hours,  count:b.over.count},
+    {key:'on',    label:'On Target',       color:'var(--green)',  delta:b.on.hours,    count:b.on.count},
+    {key:'under', label:'Under Scheduled', color:'var(--coral)',  delta:b.under.hours, count:b.under.count},
+  ];
+  let cum=0; const bars=[];
+  steps.forEach(s=>{ const before=cum, after=cum+s.delta; bars.push({...s,before,after}); cum=after; });
+  const net=cum;
+  const maxCum=Math.max(...bars.flatMap(x=>[x.before,x.after]), net, 1);
+  const H=170; // px, matches .mp-waterfall container height minus label margins
+  const scale=H/maxCum;
+  const barHtml=(top,bottom,color,label,val,count)=>{
+    const y0=Math.min(top,bottom)*scale, y1=Math.max(top,bottom)*scale;
+    return `<div class="mp-wf-bar" style="bottom:${y0}px;height:${Math.max(2,y1-y0)}px;background:color-mix(in srgb, ${color} 22%, transparent);border-color:${color}">
+      <span class="wv"><span class="n">${mpSigned(val)}h</span><span class="c">${count} emp</span></span></div>
+      <span class="mp-wf-lbl">${label}</span>`;
+  };
+  el.innerHTML=`<div class="mp-waterfall">
+    <div class="mp-wf-axis"></div>
+    ${bars.map(x=>`<div class="mp-wf-col">${barHtml(x.before,x.after,x.color,x.label,x.delta,x.count)}</div>`).join('')}
+    <div class="mp-wf-col">${barHtml(0,net,'var(--violet)','Net Variance',net,MP.meta.hourlyRows)}</div>
+  </div>`;
+
+  /* dashed connectors between each bar's landing height and the next bar's
+     start (they're equal - cumulative carries over) - measured post-layout
+     since column widths depend on the card's actual rendered width. */
+  requestAnimationFrame(()=>{
+    const container=el.querySelector('.mp-waterfall');
+    const cols=[...container.querySelectorAll('.mp-wf-col')];
+    const cRect=container.getBoundingClientRect();
+    const connectHeights=[bars[0].after, bars[1].after, bars[2].after];
+    for(let i=0;i<3;i++){
+      const leftRect=cols[i].getBoundingClientRect(), rightRect=cols[i+1].getBoundingClientRect();
+      const y=cRect.bottom - connectHeights[i]*scale;
+      const conn=document.createElement('div');
+      conn.className='mp-wf-conn';
+      conn.style.left=(leftRect.right-cRect.left)+'px';
+      conn.style.width=Math.max(0,rightRect.left-leftRect.right)+'px';
+      conn.style.top=(y-cRect.top)+'px';
+      container.appendChild(conn);
+    }
+  });
+}
+
 /* ── plant utilization ──────────────────────────── */
 function plantUtil(){
   const m=DATA.maintenance, ev=m.downtimeEvents||[];
@@ -615,7 +963,7 @@ function pipeSVG(){
 }
 
 /* ── navigation / mode ──────────────────────────── */
-const RENDER={overview:renderOverview,production:renderProduction,quality:renderQuality,maintenance:renderMaintenance,crew:renderCrew};
+const RENDER={overview:renderOverview,production:renderProduction,quality:renderQuality,maintenance:renderMaintenance,crew:renderCrew,manpower:renderManpower};
 function showSnap(sec){
   SEC=sec;
   document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.sec===sec));
@@ -640,6 +988,15 @@ async function init(){
       if(r.ok){ DATA=await r.json(); }
       else throw new Error('not found');
     }catch(e){ DATA=DEMO; document.getElementById('demo-banner').style.display='block'; }
+  }
+  /* Manpower — independent source, own script tag / own JSON. Absent = tab shows an empty-state card, not the DEMO banner. */
+  if(typeof window.MANPOWER_SNAPSHOT !== 'undefined'){
+    MP = window.MANPOWER_SNAPSHOT;
+  } else {
+    try{
+      const r=await fetch('./manpower_snapshot.json',{cache:'no-store'});
+      if(r.ok) MP=await r.json();
+    }catch(e){ /* MP stays null; renderManpower() shows its own empty state */ }
   }
   document.getElementById('hdr-date').textContent=DATA.meta&&DATA.meta.date?DATA.meta.date:'—';
   if(DATA.generated){
