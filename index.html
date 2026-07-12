@@ -344,7 +344,7 @@ main{flex:1;min-width:0;padding:22px 26px;max-width:1500px}
 .score-val{font-size:20px;font-weight:700}
 .score-tgt{font-size:10px;color:var(--muted)}
 .score-delta{font-size:10px;margin-bottom:4px}
-.score-spark{height:44px}
+.score-spark{height:44px;max-height:44px;width:100%;max-width:100%;display:block}
 .wow-top-row{display:grid;grid-template-columns:380px minmax(0,1fr);gap:16px;align-items:start}
 .wow-chart-col{display:flex;flex-direction:column;gap:16px;min-width:0}
 .wow-chart-col canvas{max-height:200px;max-width:100%}
@@ -400,7 +400,7 @@ main{flex:1;min-width:0;padding:22px 26px;max-width:1500px}
 </div>
 
 <script src="./daily_snapshot_data.js" onerror="void 0"></script>
-<script src="./manpower_snapshot_data.js" onerror="void 0"></script>
+<script src="./manpower_snapshot_public_data.js" onerror="void 0"></script>
 <script src="./wow_mom_snapshot_data.js" onerror="void 0"></script>
 <script>
 /* ─────────────────────────────────────────────────────────────
@@ -1056,8 +1056,8 @@ function renderManpower(){
   const body=document.getElementById('snap-body');
   if(!MP){
     body.innerHTML=`<div class="sechead"><span class="bar"></span><h2>Manpower</h2></div>
-      <div class="card"><div class="empty">No Kronos data yet — manpower_snapshot.json not found.
-      Runs automatically alongside the 7:30 AM SAP extract once today's Kronos report lands in Agent/Kronos/.</div></div>`;
+      <div class="card"><div class="empty">No Kronos data yet — manpower_snapshot_public.json not found.
+      Publishes automatically alongside the 7:30 AM SAP extract once today's Kronos report lands in Agent/Kronos/.</div></div>`;
     return;
   }
   const k=MP.kpis, att=k.attendancePct;
@@ -1116,7 +1116,7 @@ function renderManpower(){
     <div class="card mp-detail" id="mp-detail" style="display:none"></div>
     <div class="mp-footnote">Hourly workforce only — ${MP.meta.salariedExcluded} salaried excluded, ${MP.meta.hourlyRows} hourly on roster ·
       data date ${MP.meta.dataDate} · generated ${MP.meta.generated}<br>
-      Contains employee names — local file only, not mirrored to the public dashboard.</div>`;
+      Aggregated view — names shown only on the local dashboard, never published here.</div>`;
   countUp(body);
   renderMpLineCards();
   renderMpWaterfall();
@@ -1330,7 +1330,7 @@ async function init(){
     MP = window.MANPOWER_SNAPSHOT;
   } else {
     try{
-      const r=await fetch('./manpower_snapshot.json',{cache:'no-store'});
+      const r=await fetch('./manpower_snapshot_public.json',{cache:'no-store'});
       if(r.ok) MP=await r.json();
     }catch(e){ /* MP stays null; renderManpower() shows its own empty state */ }
   }
