@@ -118,7 +118,7 @@ main{flex:1;min-width:0;padding:22px 26px;max-width:1500px}
 .dualcell{flex:1}
 .dsub{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .dval{font-weight:700;font-size:22px;line-height:1.05;margin-top:4px;text-shadow:0 0 14px rgba(152,95,253,.4)}
-.c-on{color:var(--green)}.c-off{color:var(--coral)}.c-watch{color:var(--amber)}.c-mut{color:var(--muted)}.c-violet{color:var(--violet)}
+.c-on{color:var(--green)}.c-off{color:var(--coral)}.c-watch{color:var(--amber)}.c-mut{color:var(--muted)}.c-violet{color:var(--violet)}.c-neutral{color:var(--muted)}
 
 /* headline chips */
 .chips{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:20px}
@@ -305,6 +305,54 @@ main{flex:1;min-width:0;padding:22px 26px;max-width:1500px}
 .mp-wf-axis{position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--border)}
 
 @media(max-width:1100px){.chips{grid-template-columns:repeat(3,1fr)}.hero .herogrid{grid-template-columns:1fr}}
+
+/* ── Trends tab (WOW/MOM), ported from wow_mom_bullet_prototype.html ── */
+.mill-badge{font-size:9px;font-weight:700;letter-spacing:.06em;padding:1.5px 6px;border-radius:2px;display:inline-block;margin-right:6px}
+.b-spiral{background:rgba(152,95,253,.18);color:#b98aff}
+.b-yard{background:rgba(0,201,255,.15);color:#5dd7ff}
+.b-id{background:rgba(50,212,132,.15);color:#5de8a5}
+.b-od{background:rgba(253,175,34,.15);color:#ffc84d}
+.bullet-name{font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hm-cell{width:22px;height:22px;border-radius:50%;margin:auto;border:0.67px solid transparent}
+.hm-on{background:rgba(50,212,132,.2);border-color:rgba(50,212,132,.6)}
+.hm-watch{background:rgba(253,175,34,.2);border-color:rgba(253,175,34,.6)}
+.hm-off{background:rgba(255,103,87,.2);border-color:rgba(255,103,87,.6)}
+.hm-neutral{background:rgba(140,144,151,.1);border-color:rgba(140,144,151,.25)}
+.pbullet-group{margin-bottom:12px;padding-bottom:10px;border-bottom:0.67px solid var(--border2)}
+.pbullet-head{font-size:12px;font-weight:600;margin-bottom:5px;display:flex;justify-content:space-between}
+.pbullet-row{display:grid;grid-template-columns:48px 1fr 60px;gap:6px;align-items:center;margin-bottom:2px}
+.pbullet-lbl{font-size:9px;font-weight:700;text-align:right}
+.pbullet-track{position:relative;height:11px;background:rgba(255,255,255,.05);border-radius:2px}
+.pbullet-fill{position:absolute;left:0;top:0;height:100%;border-radius:2px;transition:width .3s}
+.pbullet-tick{position:absolute;top:-2px;width:2px;height:15px;background:#fff;box-shadow:0 0 3px rgba(255,255,255,.6)}
+.pbullet-val{font-size:10px;text-align:left}
+.sec-mini{font-weight:700;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:10px 0 4px}
+.score-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-bottom:18px}
+.score-card{background:var(--card);border:0.67px solid var(--border);border-left:2.5px solid rgba(255,255,255,.12);border-radius:4.8px;padding:12px 14px}
+.score-card.s-on{border-left-color:var(--green)}
+.score-card.s-watch{border-left-color:var(--amber)}
+.score-card.s-off{border-left-color:var(--coral)}
+.score-card.s-neutral{border-left-color:rgba(255,255,255,.12)}
+.score-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.status-pill{font-size:8px;font-weight:700;letter-spacing:.06em;padding:2px 7px;border-radius:100px;text-transform:uppercase}
+.status-on{background:rgba(50,212,132,.15);color:var(--green)}
+.status-watch{background:rgba(253,175,34,.15);color:var(--amber)}
+.status-off{background:rgba(255,103,87,.15);color:var(--coral)}
+.status-neutral{background:rgba(140,144,151,.12);color:var(--muted)}
+.score-name{font-size:12px;font-weight:600;margin-bottom:6px;min-height:32px}
+.score-valrow{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:2px}
+.score-val{font-size:20px;font-weight:700}
+.score-tgt{font-size:10px;color:var(--muted)}
+.score-delta{font-size:10px;margin-bottom:4px}
+.score-spark{height:44px}
+.wow-top-row{display:grid;grid-template-columns:380px minmax(0,1fr);gap:16px;align-items:start}
+.wow-chart-col{display:flex;flex-direction:column;gap:16px;min-width:0}
+.wow-chart-col canvas{max-height:200px;max-width:100%}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:900px){.wow-top-row{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}
+.ch-lbl{font-weight:700;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.sec-title{font-weight:700;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin:18px 0 8px}
+.placeholder{border:1px dashed rgba(253,175,34,.4);border-radius:6px;padding:18px;color:var(--amber);font-size:12px;text-align:center}
 </style>
 </head>
 <body>
@@ -346,12 +394,14 @@ main{flex:1;min-width:0;padding:22px 26px;max-width:1500px}
     <button class="navbtn"        data-sec="maintenance" onclick="showSnap('maintenance')"><span class="ic">⚙</span><span class="lbl">Maintenance</span></button>
     <button class="navbtn"        data-sec="crew"        onclick="showSnap('crew')"><span class="ic">⛑</span><span class="lbl">Crew &amp; Speeds</span></button>
     <button class="navbtn"        data-sec="manpower"    onclick="showSnap('manpower')"><span class="ic">👥</span><span class="lbl">Manpower</span></button>
+    <button class="navbtn"        data-sec="trends"      onclick="showSnap('trends')"><span class="ic">📈</span><span class="lbl">Trends</span></button>
   </aside>
   <main id="snap-body"></main>
 </div>
 
 <script src="./daily_snapshot_data.js" onerror="void 0"></script>
 <script src="./manpower_snapshot_data.js" onerror="void 0"></script>
+<script src="./wow_mom_snapshot_data.js" onerror="void 0"></script>
 <script>
 /* ─────────────────────────────────────────────────────────────
    WTL Coating — Daily Shift Snapshot (standalone)
@@ -673,6 +723,292 @@ const MP_DEPTS=["Production","Quality","Maintenance"];
 const MP_FORCES=["Welspun","Elite"];
 const MP_CHIP={ok:"OK",warn:"WARN",crit:"CRIT",nosched:"NO SCHED",empty:"–"};
 let MP=null, MP_SEL=null;
+let WM=null, WM_VIEW='wow';
+
+const WM_PROD_ORDER=[2,4,5,6,12,13,16,17,33], WM_QUAL_ORDER=[8,11,18,20,22,24,26,30,31,32];
+const GB=['rgba(152,95,253,.15)','rgba(255,73,205,.15)','rgba(0,201,255,.15)','rgba(50,212,132,.15)','rgba(253,175,34,.15)','rgba(255,103,87,.15)','rgba(53,181,170,.15)'];
+const WM_SCALE={x:{grid:{color:'rgba(142,156,173,0.1)'},ticks:{color:'#8c9097',font:{size:10}}},
+                y:{grid:{color:'rgba(142,156,173,0.1)'},ticks:{color:'#8c9097',font:{size:10}}}};
+
+function setWmView(v){ WM_VIEW=v; renderTrends(); }
+
+function renderTrends(){
+  const body=document.getElementById('snap-body');
+  if(!WM){
+    body.innerHTML=`<div class="sechead"><span class="bar"></span><h2>Trends</h2></div>
+      <div class="card"><div class="empty">No WOW/MOM data yet — wow_mom_snapshot.json not found.
+      Runs automatically alongside the SAP extract once Coating KPI Dashboard.xlsm has at least one month tab.</div></div>`;
+    return;
+  }
+  body.innerHTML=`
+    <div class="sechead"><span class="bar"></span><h2>Trends</h2></div>
+    <div class="sub-tog" id="wm-tog" style="margin-bottom:14px">
+      <button data-v="wow" class="${WM_VIEW==='wow'?'active':''}" onclick="setWmView('wow')">◧ Week-on-Week</button>
+      <button data-v="mom" class="${WM_VIEW==='mom'?'active':''}" onclick="setWmView('mom')">◩ Month-on-Month</button>
+    </div>
+    <div id="wm-pane"></div>`;
+  document.getElementById('wm-pane').innerHTML = WM_VIEW==='wow' ? wmWowHtml() : wmMomHtml();
+  if(WM_VIEW==='wow') wmRenderWowCharts(); else wmRenderMomCharts();
+}
+
+function wmWowHtml(){
+  return `
+  <div class="sec-title">Overview — Plant Health</div>
+  <div class="wow-top-row">
+    <div class="card">
+      <div class="ch-lbl">KPI STATUS HEATMAP (this week to date)</div>
+      <div id="wm-heatmap"></div>
+    </div>
+    <div class="wow-chart-col">
+      <div class="card"><div class="ch-lbl">Production Volume — Bare / ID Coated / OD TPI Cleared</div><canvas id="wm-volume"></canvas></div>
+      <div class="card"><div class="ch-lbl">Inventory Level — WIP Bare→ID / WIP ID→OD</div><canvas id="wm-inventory"></canvas></div>
+      <div class="card"><div class="ch-lbl">FTR — ID vs OD</div><canvas id="wm-ftr"></canvas></div>
+      <div class="card"><div class="ch-lbl">Defect Rate — ID Reject % / OD Repair % / OD Reject %</div><canvas id="wm-defect"></canvas></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ch-lbl">TARGET VS ACTUAL — WEEK-OVER-WEEK COMPARISON (last 4 weeks)</div>
+    <div class="grid2">
+      <div id="wm-bullets-prod"></div>
+      <div id="wm-bullets-qual"></div>
+    </div>
+  </div>
+  <div class="sec-title">Maintenance</div>
+  <div class="card"><div class="placeholder">Efficiency / OEE (ID + OD) — no source row exists yet in Coating KPI Dashboard.xlsm.<br>Need OEE formula (Availability × Performance × FTR?) confirmed before this section gets real numbers.</div></div>`;
+}
+
+function wmFmtVal(kpi,v){
+  if(v===null||v===undefined)return '—';
+  if(kpi.unit==='p')return (v*100).toFixed(1)+'%';
+  if(kpi.unit==='ratio')return v.toFixed(2);
+  return (Number.isInteger(v)?v:v.toFixed(1)).toString();
+}
+function wmStatus(kpi,v){
+  if(kpi.tgt===null||v===null||v===undefined)return 'neutral';
+  if(kpi.dir==='H')return v>=kpi.tgt?'on':(v>=kpi.tgt*0.9?'watch':'off');
+  return v<=kpi.tgt?'on':(v<=kpi.tgt*1.1?'watch':'off');
+}
+function wmStatusColor(s){return {on:'var(--green)',watch:'var(--amber)',off:'var(--coral)',neutral:'var(--muted)'}[s];}
+function wmMillBadge(m){const c={Spiral:'b-spiral',Yard:'b-yard',ID:'b-id',OD:'b-od'}[m]||'b-yard';return `<span class="mill-badge ${c}">${m}</span>`;}
+
+function wmPeriodBulletGroup(id,periods){
+  const kpi=WM.kpis[id];
+  const domain=Math.max(kpi.tgt||0,...periods.map(p=>p.val||0),0.0001)*1.2;
+  const tgtPct=kpi.tgt!==null?Math.min(100,(kpi.tgt/domain)*100):null;
+  const rows=periods.map(p=>{
+    const pct=Math.min(100,((p.val||0)/domain)*100);
+    return `<div class="pbullet-row">
+      <div class="pbullet-lbl" style="color:${p.color}">${p.label}</div>
+      <div class="pbullet-track">
+        <div class="pbullet-fill" style="width:${pct}%;background:${p.color}"></div>
+        ${tgtPct!==null?`<div class="pbullet-tick" style="left:${tgtPct}%"></div>`:''}
+      </div>
+      <div class="pbullet-val">${wmFmtVal(kpi,p.val)}</div>
+    </div>`;
+  }).join('');
+  return `<div class="pbullet-group">
+    <div class="pbullet-head"><span>${wmMillBadge(kpi.mill)}${kpi.name}</span><span class="c-mut" style="font-weight:400">tgt ${kpi.tgt!==null?wmFmtVal(kpi,kpi.tgt):'—'}</span></div>
+    ${rows}
+  </div>`;
+}
+function wmPeriodBulletPanel(containerId,order,periodsFn){
+  let html='';
+  ['Production','Quality'].forEach(sec=>{
+    const ids=order.filter(id=>WM.kpis[id].sec===sec);
+    if(!ids.length)return;
+    html+=`<div class="sec-mini">${sec}</div>`;
+    ids.forEach(id=>html+=wmPeriodBulletGroup(id,periodsFn(id)));
+  });
+  document.getElementById(containerId).innerHTML=html;
+}
+
+/* Walk week blocks in reverse chronological order (current month's weeks
+   newest-to-oldest, then the prior month tab's weeks newest-to-oldest, and
+   so on), skipping any block with zero data, until 4 collected or history
+   runs out (e.g. April's first-ever week has no predecessor). */
+function wmLast4Weeks(){
+  const months=Object.keys(WM.months);
+  const weekLetters=['AI','AA','S','K']; // week4..week1, newest-first within a month
+  const out=[];
+  for(let m=months.length-1; m>=0 && out.length<4; m--){
+    const month=months[m];
+    const weeks=WM.months[month].weeks;
+    for(const wl of weekLetters){
+      if(out.length>=4) break;
+      if(weeks[wl]) out.unshift({month,wl,data:weeks[wl]});
+    }
+  }
+  return out;
+}
+function wmWeekLabel(month,wl){
+  const wn={AI:4,AA:3,S:2,K:1}[wl];
+  return month.slice(0,3)+' W'+wn;
+}
+function wmRenderWowBullets(){
+  const last4=wmLast4Weeks();
+  const colors=[G[0],G[2],G[4],G[6]];
+  const periodsFn=id=>last4.map((w,i)=>({label:wmWeekLabel(w.month,w.wl),val:w.data[id],color:colors[i]||G[i%G.length]}));
+  wmPeriodBulletPanel('wm-bullets-prod',WM_PROD_ORDER,periodsFn);
+  wmPeriodBulletPanel('wm-bullets-qual',WM_QUAL_ORDER,periodsFn);
+}
+
+function wmRenderHeatmap(){
+  const labels=WM.currentWeekLabels||[];
+  let html=`<div style="display:grid;grid-template-columns:220px repeat(${labels.length||1},1fr);gap:4px;align-items:center"><div></div>`;
+  labels.forEach(d=>html+=`<div style="text-align:center;font-size:9px;color:var(--muted)">${d||''}</div>`);
+  [...WM_PROD_ORDER,...WM_QUAL_ORDER].forEach(id=>{
+    const kpi=WM.kpis[id];
+    html+=`<div class="bullet-name" style="font-size:11px">${wmMillBadge(kpi.mill)}${kpi.name}</div>`;
+    const vals=WM.currentWeekDaily[id]||[];
+    labels.forEach((_,i)=>{
+      const v=vals[i];
+      const s=wmStatus(kpi,v);
+      html+=`<div class="hm-cell hm-${s}" title="${wmFmtVal(kpi,v)}"></div>`;
+    });
+  });
+  html+='</div>';
+  document.getElementById('wm-heatmap').innerHTML=html;
+}
+
+function wmRenderVolume(){
+  if(CH.wmVol)CH.wmVol.destroy();
+  const labels=WM.currentWeekLabels;
+  CH.wmVol=new Chart(document.getElementById('wm-volume').getContext('2d'),{
+    type:'line',
+    data:{labels,datasets:[
+      {label:'Bare Pipes',data:WM.currentWeekDaily[2],borderColor:G[0],backgroundColor:GB[0],tension:.35,pointRadius:4},
+      {label:'ID Coated',data:WM.currentWeekDaily[6],borderColor:G[3],backgroundColor:GB[3],tension:.35,pointRadius:4},
+      {label:'OD TPI Cleared',data:WM.currentWeekDaily[17],borderColor:G[2],backgroundColor:GB[2],tension:.35,pointRadius:4},
+    ]},
+    options:{responsive:true,plugins:{legend:{labels:{color:'#8c9097'}}},scales:{x:{...WM_SCALE.x},y:{...WM_SCALE.y}}}
+  });
+}
+function wmRenderInventory(){
+  if(CH.wmInv)CH.wmInv.destroy();
+  CH.wmInv=new Chart(document.getElementById('wm-inventory').getContext('2d'),{
+    type:'bar',
+    data:{labels:WM.currentWeekLabels,datasets:[
+      {label:'WIP Bare→ID',data:WM.currentWeekDaily[5],backgroundColor:GB[0],borderColor:G[0],borderWidth:1.5,borderRadius:4},
+      {label:'WIP ID→OD',data:WM.currentWeekDaily[13],backgroundColor:GB[4],borderColor:G[4],borderWidth:1.5,borderRadius:4},
+    ]},
+    options:{responsive:true,plugins:{legend:{labels:{color:'#8c9097'}}},scales:{x:{...WM_SCALE.x},y:{...WM_SCALE.y}}}
+  });
+}
+function wmRenderFtr(){
+  if(CH.wmFtr)CH.wmFtr.destroy();
+  CH.wmFtr=new Chart(document.getElementById('wm-ftr').getContext('2d'),{
+    type:'line',
+    data:{labels:WM.currentWeekLabels,datasets:[
+      {label:'FTR ID',data:(WM.currentWeekDaily[11]||[]).map(v=>v==null?null:v*100),borderColor:G[0],backgroundColor:GB[0],tension:.35,pointRadius:4,fill:true},
+      {label:'FTR OD',data:(WM.currentWeekDaily[18]||[]).map(v=>v==null?null:v*100),borderColor:G[2],backgroundColor:GB[2],tension:.35,pointRadius:4,fill:true},
+    ]},
+    options:{responsive:true,plugins:{legend:{labels:{color:'#8c9097'}},tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.parsed.y.toFixed(1)+'%'}}},
+      scales:{x:{...WM_SCALE.x},y:{min:80,max:100,...WM_SCALE.y,ticks:{...WM_SCALE.y.ticks,callback:v=>v+'%'}}}}
+  });
+}
+function wmRenderDefect(){
+  if(CH.wmDef)CH.wmDef.destroy();
+  CH.wmDef=new Chart(document.getElementById('wm-defect').getContext('2d'),{
+    type:'line',
+    data:{labels:WM.currentWeekLabels,datasets:[
+      {label:'ID Reject %',data:(WM.currentWeekDaily[8]||[]).map(v=>v==null?null:v*100),borderColor:G[3],backgroundColor:GB[3],tension:.35,pointRadius:4},
+      {label:'OD Repair %',data:(WM.currentWeekDaily[22]||[]).map(v=>v==null?null:v*100),borderColor:G[4],backgroundColor:GB[4],tension:.35,pointRadius:4},
+      {label:'OD Reject %',data:(WM.currentWeekDaily[24]||[]).map(v=>v==null?null:v*100),borderColor:G[5],backgroundColor:GB[5],tension:.35,pointRadius:4},
+    ]},
+    options:{responsive:true,plugins:{legend:{labels:{color:'#8c9097'}},tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.parsed.y.toFixed(2)+'%'}}},
+      scales:{x:{...WM_SCALE.x},y:{...WM_SCALE.y,ticks:{...WM_SCALE.y.ticks,callback:v=>v+'%'}}}}
+  });
+}
+function wmRenderWowCharts(){
+  wmRenderHeatmap(); wmRenderWowBullets();
+  wmRenderVolume(); wmRenderInventory(); wmRenderFtr(); wmRenderDefect();
+}
+
+function wmMomHtml(){
+  const months=Object.keys(WM.months);
+  const latest=months[months.length-1] || '—';
+  return `
+  <div style="margin-bottom:14px;color:var(--muted);font-size:11px">${months[0]||'—'} — ${latest} · each card trends monthly avg vs target</div>
+  <div class="sec-title">Production</div>
+  <div id="wm-mom-prod" class="score-grid"></div>
+  <div class="sec-title">Quality</div>
+  <div id="wm-mom-qual" class="score-grid"></div>
+  <div class="sec-title">Maintenance</div>
+  <div class="card"><div class="placeholder">Efficiency / OEE (ID + OD) — no source row exists yet. Once added to the workbook, cards go here matching the same layout.</div></div>
+  <div class="card">
+    <div class="ch-lbl">All KPIs — Monthly Average Table</div>
+    <div style="overflow-x:auto"><table class="dtbl" id="wm-mom-table"></table></div>
+  </div>`;
+}
+
+function wmMonthAvg(month,id){
+  const wk=WM.months[month].weeks;
+  const vals=Object.values(wk).map(w=>w[id]).filter(v=>typeof v==='number');
+  if(!vals.length)return null;
+  return vals.reduce((a,b)=>a+b,0)/vals.length;
+}
+const WM_STATUS_LABEL={on:'ON TARGET',watch:'WATCH',off:'OFF TARGET',neutral:'—'};
+function wmRenderMomScorecard(containerId,order){
+  const months=Object.keys(WM.months);
+  document.getElementById(containerId).innerHTML=order.map(id=>{
+    const kpi=WM.kpis[id];
+    const vals=months.map(mo=>wmMonthAvg(mo,id));
+    const latest=vals[vals.length-1], prev=vals[vals.length-2];
+    const s=wmStatus(kpi,latest);
+    const delta=(prev!=null && latest!=null && prev!==0)?((latest-prev)/prev*100):null;
+    const improving=delta===null?null:(kpi.dir==='H'?delta>=0:delta<=0);
+    return `<div class="score-card s-${s}">
+      <div class="score-top">${wmMillBadge(kpi.mill)}<span class="status-pill status-${s}">${WM_STATUS_LABEL[s]}</span></div>
+      <div class="score-name">${kpi.name}</div>
+      <div class="score-valrow">
+        <span class="score-val">${wmFmtVal(kpi,latest)}</span>
+        <span class="score-tgt">${kpi.tgt!==null?(kpi.dir==='H'?'↑ ':'↓ ')+wmFmtVal(kpi,kpi.tgt):'no tgt'}</span>
+      </div>
+      <div class="score-delta ${delta===null?'c-mut':(improving?'c-on':'c-off')}">${delta===null?'—':(delta>=0?'+':'')+delta.toFixed(1)+'% vs prev'}</div>
+      <canvas class="score-spark" id="wm-spark-${id}"></canvas>
+    </div>`;
+  }).join('');
+  order.forEach(id=>wmRenderSparkline(id,months));
+}
+function wmRenderSparkline(id,months){
+  const kpi=WM.kpis[id];
+  const vals=months.map(mo=>wmMonthAvg(mo,id));
+  const el=document.getElementById('wm-spark-'+id);
+  if(!el)return;
+  if(CH['wmSpark'+id])CH['wmSpark'+id].destroy();
+  const s=wmStatus(kpi,vals[vals.length-1]);
+  const hex={on:'#32d484',watch:'#fdaf22',off:'#ff6757',neutral:'#8c9097'}[s];
+  const datasets=[{data:vals,borderColor:hex,backgroundColor:'transparent',borderWidth:2,tension:.3,pointRadius:2,pointBackgroundColor:hex}];
+  if(kpi.tgt!==null)datasets.push({data:months.map(()=>kpi.tgt),borderColor:'rgba(255,255,255,.35)',borderWidth:1,borderDash:[3,3],pointRadius:0,tension:0});
+  CH['wmSpark'+id]=new Chart(el.getContext('2d'),{
+    type:'line',
+    data:{labels:months.map(mo=>mo.slice(0,3)),datasets},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>wmFmtVal(kpi,c.parsed.y)}}},
+      scales:{x:{display:true,grid:{display:false},ticks:{color:'#8c9097',font:{size:8}}},
+              y:{display:false}}}
+  });
+}
+function wmRenderMomTable(){
+  const months=Object.keys(WM.months);
+  let html='<thead><tr><th>KPI</th><th>Mill</th>'+months.map(mo=>`<th>${mo}</th>`).join('')+'<th>Target</th></tr></thead><tbody>';
+  ['Production','Quality'].forEach(sec=>{
+    html+=`<tr><td colspan="${months.length+3}" style="padding-top:10px;font-weight:700;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">${sec}</td></tr>`;
+    [...WM_PROD_ORDER,...WM_QUAL_ORDER].filter(id=>WM.kpis[id].sec===sec).forEach(id=>{
+      const kpi=WM.kpis[id];
+      html+=`<tr><td>${kpi.name}</td><td>${wmMillBadge(kpi.mill)}</td>`;
+      months.forEach(mo=>{const v=wmMonthAvg(mo,id);const s=wmStatus(kpi,v);html+=`<td class="c-${s}">${wmFmtVal(kpi,v)}</td>`;});
+      html+=`<td class="c-mut">${kpi.tgt!==null?wmFmtVal(kpi,kpi.tgt):'—'}</td></tr>`;
+    });
+  });
+  html+='</tbody>';
+  document.getElementById('wm-mom-table').innerHTML=html;
+}
+function wmRenderMomCharts(){
+  wmRenderMomScorecard('wm-mom-prod',WM_PROD_ORDER);
+  wmRenderMomScorecard('wm-mom-qual',WM_QUAL_ORDER);
+  wmRenderMomTable();
+}
 
 function mpCell(line,dept,force){ return MP.grid.find(g=>g.line===line&&g.dept===dept&&g.force===force); }
 function mpSigned(v){ return (v>0?"+":"")+v.toFixed(1); }
@@ -963,7 +1299,7 @@ function pipeSVG(){
 }
 
 /* ── navigation / mode ──────────────────────────── */
-const RENDER={overview:renderOverview,production:renderProduction,quality:renderQuality,maintenance:renderMaintenance,crew:renderCrew,manpower:renderManpower};
+const RENDER={overview:renderOverview,production:renderProduction,quality:renderQuality,maintenance:renderMaintenance,crew:renderCrew,manpower:renderManpower,trends:renderTrends};
 function showSnap(sec){
   SEC=sec;
   document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.sec===sec));
@@ -997,6 +1333,15 @@ async function init(){
       const r=await fetch('./manpower_snapshot.json',{cache:'no-store'});
       if(r.ok) MP=await r.json();
     }catch(e){ /* MP stays null; renderManpower() shows its own empty state */ }
+  }
+  /* WOW/MOM Trends — same independent-source pattern as Manpower. */
+  if(typeof window.WOW_MOM_SNAPSHOT !== 'undefined'){
+    WM = window.WOW_MOM_SNAPSHOT;
+  } else {
+    try{
+      const r=await fetch('./wow_mom_snapshot.json',{cache:'no-store'});
+      if(r.ok) WM=await r.json();
+    }catch(e){ /* WM stays null; renderTrends() shows its own empty state */ }
   }
   document.getElementById('hdr-date').textContent=DATA.meta&&DATA.meta.date?DATA.meta.date:'—';
   if(DATA.generated){
