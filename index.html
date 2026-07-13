@@ -314,7 +314,10 @@ main{flex:1;min-width:0;padding:22px 26px;max-width:1500px}
 .b-id{background:rgba(50,212,132,.15);color:#5de8a5}
 .b-od{background:rgba(253,175,34,.15);color:#ffc84d}
 .bullet-name{font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.hm-cell{width:22px;height:22px;border-radius:50%;margin:auto;border:0.67px solid transparent}
+.hm-wrap{width:100%;max-width:100%;overflow-x:auto}
+.hm-grid{display:grid;gap:4px;align-items:center;width:100%;box-sizing:border-box}
+.hm-grid .bullet-name{min-width:0}
+.hm-cell{width:100%;max-width:22px;aspect-ratio:1;border-radius:50%;margin:auto;border:0.67px solid transparent}
 .hm-on{background:rgba(50,212,132,.2);border-color:rgba(50,212,132,.6)}
 .hm-watch{background:rgba(253,175,34,.2);border-color:rgba(253,175,34,.6)}
 .hm-off{background:rgba(255,103,87,.2);border-color:rgba(255,103,87,.6)}
@@ -912,14 +915,14 @@ function wmWowHtml(){
   <div class="sec-title">Overview — Plant Health</div>
   <div class="wow-top-row">
     <div class="card">
-      <div class="ch-lbl">KPI STATUS HEATMAP (this week to date)</div>
-      <div id="wm-heatmap"></div>
+      <div class="ch-lbl">KPI STATUS HEATMAP (last 4 weeks, rolling)</div>
+      <div class="hm-wrap"><div id="wm-heatmap"></div></div>
     </div>
     <div class="wow-chart-col">
-      <div class="card"><div class="ch-lbl">Production Volume — Bare / ID Coated / OD TPI Cleared</div><canvas id="wm-volume"></canvas></div>
-      <div class="card"><div class="ch-lbl">Inventory Level — WIP Bare→ID / WIP ID→OD</div><canvas id="wm-inventory"></canvas></div>
-      <div class="card"><div class="ch-lbl">FTR — ID vs OD</div><canvas id="wm-ftr"></canvas></div>
-      <div class="card"><div class="ch-lbl">Defect Rate — ID Reject % / OD Repair % / OD Reject %</div><canvas id="wm-defect"></canvas></div>
+      <div class="card"><div class="ch-lbl">Production Volume (WOW) — Bare / ID Coated / OD TPI Cleared</div><canvas id="wm-volume"></canvas></div>
+      <div class="card"><div class="ch-lbl">Inventory Level (WOW) — WIP Bare→ID / WIP ID→OD</div><canvas id="wm-inventory"></canvas></div>
+      <div class="card"><div class="ch-lbl">FTR (WOW) — ID vs OD</div><canvas id="wm-ftr"></canvas></div>
+      <div class="card"><div class="ch-lbl">Defect Rate (WOW) — ID Reject % / OD Repair % / OD Reject %</div><canvas id="wm-defect"></canvas></div>
     </div>
   </div>
   <div class="card">
@@ -1000,84 +1003,87 @@ function wmWeekLabel(month,wl){
   const wn={AI:4,AA:3,S:2,K:1}[wl];
   return month.slice(0,3)+' W'+wn;
 }
-function wmRenderWowBullets(){
-  const last4=wmLast4Weeks();
+function wmRenderWowBullets(last4){
   const colors=[G[0],G[2],G[4],G[6]];
   const periodsFn=id=>last4.map((w,i)=>({label:wmWeekLabel(w.month,w.wl),val:w.data[id],color:colors[i]||G[i%G.length]}));
   wmPeriodBulletPanel('wm-bullets-prod',WM_PROD_ORDER,periodsFn);
   wmPeriodBulletPanel('wm-bullets-qual',WM_QUAL_ORDER,periodsFn);
 }
 
-function wmRenderHeatmap(){
-  const labels=WM.currentWeekLabels||[];
-  let html=`<div style="display:grid;grid-template-columns:220px repeat(${labels.length||1},1fr);gap:4px;align-items:center"><div></div>`;
-  labels.forEach(d=>html+=`<div style="text-align:center;font-size:9px;color:var(--muted)">${d||''}</div>`);
+function wmRenderHeatmap(last4){
+  const labels=last4.map(w=>wmWeekLabel(w.month,w.wl));
+  const n=labels.length||1;
+  let html=`<div class="hm-grid" style="grid-template-columns:minmax(0,130px) repeat(${n},minmax(0,1fr))"><div></div>`;
+  labels.forEach(d=>html+=`<div style="text-align:center;font-size:9px;color:var(--muted)">${d}</div>`);
   [...WM_PROD_ORDER,...WM_QUAL_ORDER].forEach(id=>{
     const kpi=WM.kpis[id];
-    html+=`<div class="bullet-name" style="font-size:11px">${wmMillBadge(kpi.mill)}${kpi.name}</div>`;
-    const vals=WM.currentWeekDaily[id]||[];
-    labels.forEach((_,i)=>{
-      const v=vals[i];
+    html+=`<div class="bullet-name" style="font-size:11px" title="${kpi.name}">${wmMillBadge(kpi.mill)}${kpi.name}</div>`;
+    last4.forEach(w=>{
+      const v=w.data[id];
       const s=wmStatus(kpi,v);
-      html+=`<div class="hm-cell hm-${s}" title="${wmFmtVal(kpi,v)}"></div>`;
+      html+=`<div class="hm-cell hm-${s}" title="${wmWeekLabel(w.month,w.wl)}: ${wmFmtVal(kpi,v)}"></div>`;
     });
   });
   html+='</div>';
   document.getElementById('wm-heatmap').innerHTML=html;
 }
 
-function wmRenderVolume(){
+function wmRenderVolume(last4){
   if(CH.wmVol)CH.wmVol.destroy();
-  const labels=WM.currentWeekLabels;
+  const labels=last4.map(w=>wmWeekLabel(w.month,w.wl));
   CH.wmVol=new Chart(document.getElementById('wm-volume').getContext('2d'),{
     type:'line',
     data:{labels,datasets:[
-      {label:'Bare Pipes',data:WM.currentWeekDaily[2],borderColor:G[0],backgroundColor:GB[0],tension:.35,pointRadius:4},
-      {label:'ID Coated',data:WM.currentWeekDaily[6],borderColor:G[3],backgroundColor:GB[3],tension:.35,pointRadius:4},
-      {label:'OD TPI Cleared',data:WM.currentWeekDaily[17],borderColor:G[2],backgroundColor:GB[2],tension:.35,pointRadius:4},
+      {label:'Bare Pipes',data:last4.map(w=>w.data[2]),borderColor:G[0],backgroundColor:GB[0],tension:.35,pointRadius:4},
+      {label:'ID Coated',data:last4.map(w=>w.data[6]),borderColor:G[3],backgroundColor:GB[3],tension:.35,pointRadius:4},
+      {label:'OD TPI Cleared',data:last4.map(w=>w.data[17]),borderColor:G[2],backgroundColor:GB[2],tension:.35,pointRadius:4},
     ]},
     options:{responsive:true,plugins:{legend:{labels:{color:'#8c9097'}}},scales:{x:{...WM_SCALE.x},y:{...WM_SCALE.y}}}
   });
 }
-function wmRenderInventory(){
+function wmRenderInventory(last4){
   if(CH.wmInv)CH.wmInv.destroy();
+  const labels=last4.map(w=>wmWeekLabel(w.month,w.wl));
   CH.wmInv=new Chart(document.getElementById('wm-inventory').getContext('2d'),{
     type:'bar',
-    data:{labels:WM.currentWeekLabels,datasets:[
-      {label:'WIP Bare→ID',data:WM.currentWeekDaily[5],backgroundColor:GB[0],borderColor:G[0],borderWidth:1.5,borderRadius:4},
-      {label:'WIP ID→OD',data:WM.currentWeekDaily[13],backgroundColor:GB[4],borderColor:G[4],borderWidth:1.5,borderRadius:4},
+    data:{labels,datasets:[
+      {label:'WIP Bare→ID',data:last4.map(w=>w.data[5]),backgroundColor:GB[0],borderColor:G[0],borderWidth:1.5,borderRadius:4},
+      {label:'WIP ID→OD',data:last4.map(w=>w.data[13]),backgroundColor:GB[4],borderColor:G[4],borderWidth:1.5,borderRadius:4},
     ]},
     options:{responsive:true,plugins:{legend:{labels:{color:'#8c9097'}}},scales:{x:{...WM_SCALE.x},y:{...WM_SCALE.y}}}
   });
 }
-function wmRenderFtr(){
+function wmRenderFtr(last4){
   if(CH.wmFtr)CH.wmFtr.destroy();
+  const labels=last4.map(w=>wmWeekLabel(w.month,w.wl));
   CH.wmFtr=new Chart(document.getElementById('wm-ftr').getContext('2d'),{
     type:'line',
-    data:{labels:WM.currentWeekLabels,datasets:[
-      {label:'FTR ID',data:(WM.currentWeekDaily[11]||[]).map(v=>v==null?null:v*100),borderColor:G[0],backgroundColor:GB[0],tension:.35,pointRadius:4,fill:true},
-      {label:'FTR OD',data:(WM.currentWeekDaily[18]||[]).map(v=>v==null?null:v*100),borderColor:G[2],backgroundColor:GB[2],tension:.35,pointRadius:4,fill:true},
+    data:{labels,datasets:[
+      {label:'FTR ID',data:last4.map(w=>w.data[11]==null?null:w.data[11]*100),borderColor:G[0],backgroundColor:GB[0],tension:.35,pointRadius:4,fill:true},
+      {label:'FTR OD',data:last4.map(w=>w.data[18]==null?null:w.data[18]*100),borderColor:G[2],backgroundColor:GB[2],tension:.35,pointRadius:4,fill:true},
     ]},
     options:{responsive:true,plugins:{legend:{labels:{color:'#8c9097'}},tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.parsed.y.toFixed(1)+'%'}}},
       scales:{x:{...WM_SCALE.x},y:{min:80,max:100,...WM_SCALE.y,ticks:{...WM_SCALE.y.ticks,callback:v=>v+'%'}}}}
   });
 }
-function wmRenderDefect(){
+function wmRenderDefect(last4){
   if(CH.wmDef)CH.wmDef.destroy();
+  const labels=last4.map(w=>wmWeekLabel(w.month,w.wl));
   CH.wmDef=new Chart(document.getElementById('wm-defect').getContext('2d'),{
     type:'line',
-    data:{labels:WM.currentWeekLabels,datasets:[
-      {label:'ID Reject %',data:(WM.currentWeekDaily[8]||[]).map(v=>v==null?null:v*100),borderColor:G[3],backgroundColor:GB[3],tension:.35,pointRadius:4},
-      {label:'OD Repair %',data:(WM.currentWeekDaily[22]||[]).map(v=>v==null?null:v*100),borderColor:G[4],backgroundColor:GB[4],tension:.35,pointRadius:4},
-      {label:'OD Reject %',data:(WM.currentWeekDaily[24]||[]).map(v=>v==null?null:v*100),borderColor:G[5],backgroundColor:GB[5],tension:.35,pointRadius:4},
+    data:{labels,datasets:[
+      {label:'ID Reject %',data:last4.map(w=>w.data[8]==null?null:w.data[8]*100),borderColor:G[3],backgroundColor:GB[3],tension:.35,pointRadius:4},
+      {label:'OD Repair %',data:last4.map(w=>w.data[22]==null?null:w.data[22]*100),borderColor:G[4],backgroundColor:GB[4],tension:.35,pointRadius:4},
+      {label:'OD Reject %',data:last4.map(w=>w.data[24]==null?null:w.data[24]*100),borderColor:G[5],backgroundColor:GB[5],tension:.35,pointRadius:4},
     ]},
     options:{responsive:true,plugins:{legend:{labels:{color:'#8c9097'}},tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.parsed.y.toFixed(2)+'%'}}},
       scales:{x:{...WM_SCALE.x},y:{...WM_SCALE.y,ticks:{...WM_SCALE.y.ticks,callback:v=>v+'%'}}}}
   });
 }
 function wmRenderWowCharts(){
-  wmRenderHeatmap(); wmRenderWowBullets();
-  wmRenderVolume(); wmRenderInventory(); wmRenderFtr(); wmRenderDefect();
+  const last4=wmLast4Weeks();
+  wmRenderHeatmap(last4); wmRenderWowBullets(last4);
+  wmRenderVolume(last4); wmRenderInventory(last4); wmRenderFtr(last4); wmRenderDefect(last4);
 }
 
 function wmMomHtml(){
@@ -1252,7 +1258,7 @@ function renderManpower(){
       <div class="mp-linecards" id="mp-linecards"></div>
     </div>
     <div class="card" style="margin-bottom:16px">
-      <div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Individual Hours Variance — ${MP.meta.hourlyRows} comparable employees</div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Individual Hours Variance — ${MP.meta.comparableRows??MP.meta.hourlyRows} comparable employees</div>
       <div id="mp-waterfall"></div>
     </div>
     </div>
@@ -1371,19 +1377,30 @@ function renderMpWaterfall(){
   let cum=0; const bars=[];
   steps.forEach(s=>{ const before=cum, after=cum+s.delta; bars.push({...s,before,after}); cum=after; });
   const net=cum;
-  const maxCum=Math.max(...bars.flatMap(x=>[x.before,x.after]), net, 1);
+  /* Range must span BOTH signs -- a net-negative bucket (e.g. Under Scheduled
+     dragging cumulative well below 0) means plain Math.max() of the raw values
+     silently ignores the negative extent, undersizes the scale, and blows
+     bar heights up to thousands of px (was rendering bars that bled straight
+     through the card below). Scale against the full min..max span instead,
+     and position everything (bars + the zero-line) relative to that span's
+     floor -- 0 is not guaranteed to sit at the container's bottom edge. */
+  const allVals=[0,...bars.flatMap(x=>[x.before,x.after]),net];
+  const minV=Math.min(...allVals), maxV=Math.max(...allVals);
+  const range=(maxV-minV)||1;
   const H=170; // px, matches .mp-waterfall container height minus label margins
-  const scale=H/maxCum;
+  const scale=H/range;
+  const toY=v=>(v-minV)*scale;
+  const axisY=toY(0);
   const barHtml=(top,bottom,color,label,val,count)=>{
-    const y0=Math.min(top,bottom)*scale, y1=Math.max(top,bottom)*scale;
+    const y0=toY(Math.min(top,bottom)), y1=toY(Math.max(top,bottom));
     return `<div class="mp-wf-bar" style="bottom:${y0}px;height:${Math.max(2,y1-y0)}px;background:color-mix(in srgb, ${color} 22%, transparent);border-color:${color}">
       <span class="wv"><span class="n">${mpSigned(val)}h</span><span class="c">${count} emp</span></span></div>
       <span class="mp-wf-lbl">${label}</span>`;
   };
   el.innerHTML=`<div class="mp-waterfall">
-    <div class="mp-wf-axis"></div>
+    <div class="mp-wf-axis" style="bottom:${axisY}px"></div>
     ${bars.map(x=>`<div class="mp-wf-col">${barHtml(x.before,x.after,x.color,x.label,x.delta,x.count)}</div>`).join('')}
-    <div class="mp-wf-col">${barHtml(0,net,'var(--violet)','Net Variance',net,MP.meta.hourlyRows)}</div>
+    <div class="mp-wf-col">${barHtml(0,net,'var(--violet)','Net Variance',net,MP.meta.comparableRows??MP.meta.hourlyRows)}</div>
   </div>`;
 
   /* dashed connectors between each bar's landing height and the next bar's
@@ -1396,7 +1413,7 @@ function renderMpWaterfall(){
     const connectHeights=[bars[0].after, bars[1].after, bars[2].after];
     for(let i=0;i<3;i++){
       const leftRect=cols[i].getBoundingClientRect(), rightRect=cols[i+1].getBoundingClientRect();
-      const y=cRect.bottom - connectHeights[i]*scale;
+      const y=cRect.bottom - toY(connectHeights[i]);
       const conn=document.createElement('div');
       conn.className='mp-wf-conn';
       conn.style.left=(leftRect.right-cRect.left)+'px';
