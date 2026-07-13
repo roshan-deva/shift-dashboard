@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-12T11:50:55.626889",
+  "generated": "2026-07-12T19:30:31.338904",
   "meta": {
-    "date": "07/11/2026",
-    "shift": "24H",
+    "date": "07/12/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,15 +20,15 @@
   },
   "production": {
     "bare": {
-      "day": 56,
-      "night": 61,
-      "total": 117,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 140
     },
     "idCoated": {
-      "day": 63,
-      "night": 64,
-      "total": 127,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 140
     },
     "odTpi": {
@@ -44,7 +44,7 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 259,
+      "total": 265,
       "tgt": 400
     },
     "wipIdOd": {
@@ -52,7 +52,7 @@
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 23.93,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
@@ -77,8 +77,8 @@
     "repairPct": 0.0,
     "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 97.64,
-    "idRejectPct": 2.36,
+    "ftrId": 0.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
     "repairPipes": 0,
     "rejectPipes": 0,
@@ -88,69 +88,18 @@
     "tape": 0,
     "repairsLoadout": 0,
     "strippingOutput": 0,
-    "idRejects": 3,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 4.67,
+    "idDowntimeHrs": 0.0,
     "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 5,
-    "plannedDt": 0.84,
-    "unplannedDt": 3.83,
+    "sapNotif": 0,
+    "plannedDt": 0.0,
+    "unplannedDt": 0.0,
     "forklift": 0,
-    "downtimeEvents": [
-      {
-        "desc": "Startup",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "06:25",
-        "durMin": 25,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088481"
-      },
-      {
-        "desc": "Blaster 1 elevator gear motor bolt broke",
-        "line": "ID",
-        "start": "06:25",
-        "stop": "08:00",
-        "durMin": 95,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004254"
-      },
-      {
-        "desc": "blaster 2 boom crack",
-        "line": "ID",
-        "start": "16:25",
-        "stop": "18:00",
-        "durMin": 95,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004256"
-      },
-      {
-        "desc": "plant startup",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:25",
-        "durMin": 25,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088488"
-      },
-      {
-        "desc": "carrier 8 malfunction",
-        "line": "ID",
-        "start": "21:10",
-        "stop": "21:50",
-        "durMin": 40,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004257"
-      }
-    ]
+    "downtimeEvents": []
   }
 }
