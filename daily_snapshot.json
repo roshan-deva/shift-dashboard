@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-13T20:30:47.883170",
+  "generated": "2026-07-14T07:34:53.934916",
   "meta": {
     "date": "07/13/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -21,70 +21,70 @@
   "production": {
     "bare": {
       "day": 54,
-      "night": 0,
-      "total": 54,
+      "night": 47,
+      "total": 101,
       "tgt": 140
     },
     "idCoated": {
       "day": 45,
-      "night": 0,
-      "total": 45,
+      "night": 89,
+      "total": 134,
       "tgt": 140
     },
     "odTpi": {
-      "day": 75,
-      "night": 0,
-      "total": 75,
+      "day": 71,
+      "night": 98,
+      "total": 169,
       "tgt": 145
     },
     "odCoated": {
-      "day": 73,
-      "night": 0,
-      "total": 73,
+      "day": 69,
+      "night": 102,
+      "total": 171,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 304,
+      "total": 263,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 195,
+      "total": 176,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 25.74,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 100.0,
+      "val": 67.84,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 5,
+      "val": 2,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 7,
+      "val": 10,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 1,
+      "val": 4,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 98.63,
-    "repairPct": 0.0,
-    "rejectPct": 1.37,
+    "ftrOd": 96.49,
+    "repairPct": 1.17,
+    "rejectPct": 2.34,
     "ftrOdTgt": 96,
-    "ftrId": 97.78,
-    "idRejectPct": 2.22,
+    "ftrId": 99.25,
+    "idRejectPct": 0.75,
     "ftrIdTgt": 98,
-    "repairPipes": 0,
-    "rejectPipes": 1,
-    "twoPartRepairs": 77,
-    "bevel": 0,
-    "sample": 1,
+    "repairPipes": 2,
+    "rejectPipes": 4,
+    "twoPartRepairs": 184,
+    "bevel": 1,
+    "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "strippingOutput": 3,
@@ -93,12 +93,12 @@
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 4.0,
-    "odDowntimeHrs": 6.08,
+    "idDowntimeHrs": 6.0,
+    "odDowntimeHrs": 9.5,
     "tgt": 85,
-    "sapNotif": 9,
-    "plannedDt": 9.83,
-    "unplannedDt": 0.25,
+    "sapNotif": 18,
+    "plannedDt": 13.74,
+    "unplannedDt": 1.75,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -152,6 +152,36 @@
         "sap": "30000004262"
       },
       {
+        "desc": "Plant start up",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:30",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088658"
+      },
+      {
+        "desc": "reset password on SAP",
+        "line": "ID",
+        "start": "18:45",
+        "stop": "19:30",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088659"
+      },
+      {
+        "desc": "reset password on SAP",
+        "line": "ID",
+        "start": "18:45",
+        "stop": "19:30",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088661"
+      },
+      {
         "desc": "Plant start up from shut down",
         "line": "OD",
         "start": "06:00",
@@ -190,6 +220,66 @@
         "shift": "Day",
         "cause": "",
         "sap": "700088653"
+      },
+      {
+        "desc": "plant start up",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "18:20",
+        "durMin": 20,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088656"
+      },
+      {
+        "desc": "removing coupling out the roll line",
+        "line": "OD",
+        "start": "18:45",
+        "stop": "19:15",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088657"
+      },
+      {
+        "desc": "removing coupling out the roll line",
+        "line": "OD",
+        "start": "18:45",
+        "stop": "18:45",
+        "durMin": 0,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088660"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "20:50",
+        "stop": "21:10",
+        "durMin": 20,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088662"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "05:15",
+        "stop": "06:00",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088723"
+      },
+      {
+        "desc": "repairing coupling for coating line",
+        "line": "OD",
+        "start": "21:15",
+        "stop": "22:45",
+        "durMin": 90,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004264"
       }
     ]
   }
