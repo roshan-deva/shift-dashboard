@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-14T07:34:53.934916",
+  "generated": "2026-07-14T19:30:34.458173",
   "meta": {
-    "date": "07/13/2026",
-    "shift": "24H",
+    "date": "07/14/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,266 +20,176 @@
   },
   "production": {
     "bare": {
-      "day": 54,
-      "night": 47,
-      "total": 101,
+      "day": 70,
+      "night": 0,
+      "total": 70,
       "tgt": 140
     },
     "idCoated": {
-      "day": 45,
-      "night": 89,
-      "total": 134,
+      "day": 80,
+      "night": 0,
+      "total": 80,
       "tgt": 140
     },
     "odTpi": {
-      "day": 71,
-      "night": 98,
-      "total": 169,
+      "day": 87,
+      "night": 0,
+      "total": 87,
       "tgt": 145
     },
     "odCoated": {
-      "day": 69,
-      "night": 102,
-      "total": 171,
+      "day": 78,
+      "night": 0,
+      "total": 78,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 263,
+      "total": 258,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 176,
+      "total": 171,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 25.74,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 67.84,
+      "val": 100.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 2,
+      "val": 0,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 10,
+      "val": 4,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 4,
+      "val": 2,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 96.49,
-    "repairPct": 1.17,
-    "rejectPct": 2.34,
+    "ftrOd": 98.72,
+    "repairPct": 1.28,
+    "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 99.25,
-    "idRejectPct": 0.75,
+    "ftrId": 100.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 2,
-    "rejectPipes": 4,
-    "twoPartRepairs": 184,
+    "repairPipes": 1,
+    "rejectPipes": 0,
+    "twoPartRepairs": 72,
     "bevel": 1,
-    "sample": 2,
+    "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
-    "strippingOutput": 3,
-    "idRejects": 1,
+    "strippingOutput": 0,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 6.0,
-    "odDowntimeHrs": 9.5,
+    "idDowntimeHrs": 3.0,
+    "odDowntimeHrs": 2.75,
     "tgt": 85,
-    "sapNotif": 18,
-    "plannedDt": 13.74,
-    "unplannedDt": 1.75,
+    "sapNotif": 9,
+    "plannedDt": 2.83,
+    "unplannedDt": 2.91,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "Plant start up",
+        "desc": "Plant Startup",
         "line": "ID",
         "start": "06:00",
-        "stop": "07:05",
-        "durMin": 65,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088646"
-      },
-      {
-        "desc": "hole in paint line/ housekeeping",
-        "line": "ID",
-        "start": "08:30",
-        "stop": "10:15",
-        "durMin": 105,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088647"
-      },
-      {
-        "desc": "pitstop/blast 1 overheated",
-        "line": "ID",
-        "start": "15:30",
-        "stop": "16:00",
+        "stop": "06:30",
         "durMin": 30,
         "shift": "Day",
         "cause": "",
-        "sap": "700088648"
+        "sap": "700088728"
+      },
+      {
+        "desc": "Cleaning out stationary cabinets",
+        "line": "ID",
+        "start": "06:45",
+        "stop": "06:50",
+        "durMin": 5,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700088729"
       },
       {
         "desc": "Pitstop",
         "line": "ID",
-        "start": "17:35",
+        "start": "17:25",
         "stop": "18:00",
-        "durMin": 25,
+        "durMin": 35,
         "shift": "Day",
         "cause": "",
-        "sap": "700088654"
+        "sap": "700088736"
       },
       {
-        "desc": "welding Pipe carrier 8",
+        "desc": "Power out at ID Blast/Paint control pane",
         "line": "ID",
-        "start": "13:10",
-        "stop": "13:25",
+        "start": "06:50",
+        "stop": "07:05",
         "durMin": 15,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004262"
+        "sap": "30000004269"
       },
       {
-        "desc": "Plant start up",
+        "desc": "Maint welding blast boom and wheels on B",
         "line": "ID",
-        "start": "18:00",
-        "stop": "18:30",
-        "durMin": 30,
-        "shift": "Night",
+        "start": "14:30",
+        "stop": "16:05",
+        "durMin": 95,
+        "shift": "Day",
         "cause": "",
-        "sap": "700088658"
+        "sap": "30000004273"
       },
       {
-        "desc": "reset password on SAP",
-        "line": "ID",
-        "start": "18:45",
-        "stop": "19:30",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088659"
-      },
-      {
-        "desc": "reset password on SAP",
-        "line": "ID",
-        "start": "18:45",
-        "stop": "19:30",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088661"
-      },
-      {
-        "desc": "Plant start up from shut down",
+        "desc": "Plant Startup",
         "line": "OD",
         "start": "06:00",
-        "stop": "10:05",
-        "durMin": 245,
+        "stop": "06:25",
+        "durMin": 25,
         "shift": "Day",
         "cause": "",
-        "sap": "700088643"
+        "sap": "700088730"
       },
       {
-        "desc": "Ran out of pipes",
+        "desc": "Online Jeeper Malfunction/Out of paint",
         "line": "OD",
-        "start": "13:05",
-        "stop": "13:35",
-        "durMin": 30,
+        "start": "06:40",
+        "stop": "07:05",
+        "durMin": 25,
         "shift": "Day",
         "cause": "",
-        "sap": "700088644"
-      },
-      {
-        "desc": "Ran out of pipes",
-        "line": "OD",
-        "start": "15:15",
-        "stop": "16:05",
-        "durMin": 50,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088645"
+        "sap": "700088731"
       },
       {
         "desc": "Pitstop",
         "line": "OD",
-        "start": "17:20",
-        "stop": "18:00",
-        "durMin": 40,
+        "start": "13:00",
+        "stop": "13:50",
+        "durMin": 50,
         "shift": "Day",
         "cause": "",
-        "sap": "700088653"
+        "sap": "700088733"
       },
       {
-        "desc": "plant start up",
+        "desc": "Working on grinding station group 1",
         "line": "OD",
-        "start": "18:00",
-        "stop": "18:20",
-        "durMin": 20,
-        "shift": "Night",
+        "start": "09:30",
+        "stop": "10:35",
+        "durMin": 65,
+        "shift": "Day",
         "cause": "",
-        "sap": "700088656"
-      },
-      {
-        "desc": "removing coupling out the roll line",
-        "line": "OD",
-        "start": "18:45",
-        "stop": "19:15",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088657"
-      },
-      {
-        "desc": "removing coupling out the roll line",
-        "line": "OD",
-        "start": "18:45",
-        "stop": "18:45",
-        "durMin": 0,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088660"
-      },
-      {
-        "desc": "pitstop",
-        "line": "OD",
-        "start": "20:50",
-        "stop": "21:10",
-        "durMin": 20,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088662"
-      },
-      {
-        "desc": "pitstop",
-        "line": "OD",
-        "start": "05:15",
-        "stop": "06:00",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088723"
-      },
-      {
-        "desc": "repairing coupling for coating line",
-        "line": "OD",
-        "start": "21:15",
-        "stop": "22:45",
-        "durMin": 90,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004264"
+        "sap": "30000004270"
       }
     ]
   }
