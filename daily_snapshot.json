@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-15T19:31:43.782849",
+  "generated": "2026-07-16T07:35:25.611999",
   "meta": {
     "date": "07/15/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -21,42 +21,42 @@
   "production": {
     "bare": {
       "day": 68,
-      "night": 0,
-      "total": 68,
+      "night": 57,
+      "total": 125,
       "tgt": 140
     },
     "idCoated": {
-      "day": 92,
-      "night": 0,
-      "total": 92,
+      "day": 85,
+      "night": 82,
+      "total": 167,
       "tgt": 140
     },
     "odTpi": {
-      "day": 52,
-      "night": 0,
-      "total": 52,
+      "day": 46,
+      "night": 84,
+      "total": 130,
       "tgt": 145
     },
     "odCoated": {
-      "day": 54,
-      "night": 0,
-      "total": 54,
+      "day": 45,
+      "night": 99,
+      "total": 144,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 233,
+      "total": 212,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 228,
+      "total": 220,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 16.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 100.0,
+      "val": 79.17,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -64,27 +64,27 @@
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 4,
+      "val": 8,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 0,
+      "val": 1,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 96.3,
+    "ftrOd": 95.83,
     "repairPct": 0.0,
-    "rejectPct": 3.7,
+    "rejectPct": 4.17,
     "ftrOdTgt": 96,
     "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
     "repairPipes": 0,
-    "rejectPipes": 2,
-    "twoPartRepairs": 47,
+    "rejectPipes": 6,
+    "twoPartRepairs": 154,
     "bevel": 0,
-    "sample": 1,
+    "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "strippingOutput": 0,
@@ -93,12 +93,12 @@
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 1.92,
-    "odDowntimeHrs": 7.75,
+    "idDowntimeHrs": 2.25,
+    "odDowntimeHrs": 9.33,
     "tgt": 85,
-    "sapNotif": 9,
-    "plannedDt": 5.16,
-    "unplannedDt": 4.5,
+    "sapNotif": 12,
+    "plannedDt": 6.66,
+    "unplannedDt": 4.92,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -130,6 +130,16 @@
         "shift": "Day",
         "cause": "",
         "sap": "700088811"
+      },
+      {
+        "desc": "plant startup",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:20",
+        "durMin": 20,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088814"
       },
       {
         "desc": "No Railcars",
@@ -190,6 +200,26 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004279"
+      },
+      {
+        "desc": "induction coil tripout",
+        "line": "OD",
+        "start": "12:45",
+        "stop": "13:10",
+        "durMin": 25,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004281"
+      },
+      {
+        "desc": "online jeeper stop spraying/rejeep pipes",
+        "line": "OD",
+        "start": "19:45",
+        "stop": "20:55",
+        "durMin": 70,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700088815"
       }
     ]
   }
