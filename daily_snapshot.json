@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-17T07:30:32.841228",
+  "generated": "2026-07-17T19:30:36.957669",
   "meta": {
-    "date": "07/16/2026",
-    "shift": "24H",
+    "date": "07/17/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,43 +20,43 @@
   },
   "production": {
     "bare": {
-      "day": 72,
-      "night": 75,
-      "total": 147,
+      "day": 55,
+      "night": 0,
+      "total": 55,
       "tgt": 140
     },
     "idCoated": {
-      "day": 82,
-      "night": 64,
-      "total": 146,
+      "day": 79,
+      "night": 0,
+      "total": 79,
       "tgt": 140
     },
     "odTpi": {
-      "day": 86,
-      "night": 43,
-      "total": 129,
+      "day": 100,
+      "night": 0,
+      "total": 100,
       "tgt": 145
     },
     "odCoated": {
-      "day": 74,
-      "night": 47,
-      "total": 121,
+      "day": 102,
+      "night": 0,
+      "total": 102,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 204,
+      "total": 191,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 240,
+      "total": 220,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 12.24,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 92.56,
+      "val": 100.0,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -64,222 +64,102 @@
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 6,
+      "val": 7,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 4,
+      "val": 2,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 92.56,
-    "repairPct": 3.31,
-    "rejectPct": 4.13,
+    "ftrOd": 98.04,
+    "repairPct": 0.98,
+    "rejectPct": 0.98,
     "ftrOdTgt": 96,
-    "ftrId": 99.32,
-    "idRejectPct": 0.68,
+    "ftrId": 100.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 4,
-    "rejectPipes": 5,
-    "twoPartRepairs": 102,
-    "bevel": 2,
+    "repairPipes": 1,
+    "rejectPipes": 1,
+    "twoPartRepairs": 72,
+    "bevel": 0,
     "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
-    "strippingOutput": 6,
-    "idRejects": 1,
+    "strippingOutput": 0,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 4.83,
-    "odDowntimeHrs": 10.17,
+    "idDowntimeHrs": 4.25,
+    "odDowntimeHrs": 2.67,
     "tgt": 85,
-    "sapNotif": 18,
-    "plannedDt": 11.24,
-    "unplannedDt": 3.74,
+    "sapNotif": 6,
+    "plannedDt": 6.33,
+    "unplannedDt": 0.58,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "Plant Startup/Blaster 2 Empty from previ",
+        "desc": "changing cheese cloth",
         "line": "ID",
+        "start": "06:00",
+        "stop": "08:55",
+        "durMin": 175,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700088906"
+      },
+      {
+        "desc": "pitstop",
+        "line": "ID",
+        "start": "13:10",
+        "stop": "13:55",
+        "durMin": 45,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700088909"
+      },
+      {
+        "desc": "carrier 1 off track",
+        "line": "ID",
+        "start": "08:20",
+        "stop": "08:55",
+        "durMin": 35,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004295"
+      },
+      {
+        "desc": "final table backed up",
+        "line": "OD",
         "start": "06:00",
         "stop": "06:35",
         "durMin": 35,
         "shift": "Day",
         "cause": "",
-        "sap": "700088877"
+        "sap": "700088905"
       },
       {
-        "desc": "Pitstop",
-        "line": "ID",
-        "start": "12:55",
-        "stop": "13:30",
-        "durMin": 35,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088883"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "ID",
-        "start": "17:30",
-        "stop": "18:00",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088886"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "ID",
-        "start": "17:30",
-        "stop": "18:00",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088887"
-      },
-      {
-        "desc": "plant startup",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:50",
-        "durMin": 50,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088889"
-      },
-      {
-        "desc": "green screen stop working",
-        "line": "ID",
-        "start": "19:00",
-        "stop": "20:00",
-        "durMin": 60,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088890"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "01:25",
-        "stop": "02:15",
-        "durMin": 50,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088901"
-      },
-      {
-        "desc": "Plant Startup/Adjusting Manpower",
+        "desc": "final table backed up id repairs",
         "line": "OD",
-        "start": "06:00",
-        "stop": "06:55",
-        "durMin": 55,
+        "start": "10:40",
+        "stop": "11:45",
+        "durMin": 65,
         "shift": "Day",
         "cause": "",
-        "sap": "700088878"
+        "sap": "700088908"
       },
       {
-        "desc": "Checking Spray Guns due to powder mounds",
+        "desc": "final table backed up id repairs",
         "line": "OD",
-        "start": "10:00",
-        "stop": "10:30",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088879"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "17:00",
-        "stop": "18:00",
+        "start": "14:50",
+        "stop": "15:50",
         "durMin": 60,
         "shift": "Day",
         "cause": "",
-        "sap": "700088888"
-      },
-      {
-        "desc": "Broken tac weld on shaft at grinding sta",
-        "line": "OD",
-        "start": "12:55",
-        "stop": "14:15",
-        "durMin": 80,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004288"
-      },
-      {
-        "desc": "Electrial issue at grinding station",
-        "line": "OD",
-        "start": "14:15",
-        "stop": "15:15",
-        "durMin": 60,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004289"
-      },
-      {
-        "desc": "crooked pipe south chain",
-        "line": "OD",
-        "start": "11:30",
-        "stop": "12:20",
-        "durMin": 50,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004294"
-      },
-      {
-        "desc": "no blast or thickness sap",
-        "line": "OD",
-        "start": "18:00",
-        "stop": "18:45",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088891"
-      },
-      {
-        "desc": "sap at thickness crash",
-        "line": "OD",
-        "start": "19:25",
-        "stop": "20:15",
-        "durMin": 50,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088892"
-      },
-      {
-        "desc": "final table backed up",
-        "line": "OD",
-        "start": "22:05",
-        "stop": "23:30",
-        "durMin": 85,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088897"
-      },
-      {
-        "desc": "thickness and jeep station backed up",
-        "line": "OD",
-        "start": "01:45",
-        "stop": "02:45",
-        "durMin": 60,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088902"
-      },
-      {
-        "desc": "torque arm bolt broke group 10",
-        "line": "OD",
-        "start": "20:45",
-        "stop": "21:20",
-        "durMin": 35,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004292"
+        "sap": "700088910"
       }
     ]
   }
