@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-18T07:30:32.906345",
+  "generated": "2026-07-18T19:30:33.206193",
   "meta": {
-    "date": "07/17/2026",
-    "shift": "24H",
+    "date": "07/18/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,256 +20,196 @@
   },
   "production": {
     "bare": {
-      "day": 55,
-      "night": 75,
-      "total": 130,
+      "day": 76,
+      "night": 0,
+      "total": 76,
       "tgt": 140
     },
     "idCoated": {
-      "day": 79,
-      "night": 82,
-      "total": 161,
+      "day": 67,
+      "night": 0,
+      "total": 67,
       "tgt": 140
     },
     "odTpi": {
-      "day": 99,
-      "night": 80,
-      "total": 179,
+      "day": 60,
+      "night": 0,
+      "total": 60,
       "tgt": 145
     },
     "odCoated": {
-      "day": 97,
-      "night": 88,
-      "total": 185,
+      "day": 65,
+      "night": 0,
+      "total": 65,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 173,
+      "total": 179,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 210,
+      "total": 211,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 23.85,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 85.95,
+      "val": 100.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 1,
+      "val": 2,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 9,
+      "val": 10,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 7,
+      "val": 8,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 95.14,
-    "repairPct": 3.24,
-    "rejectPct": 1.62,
+    "ftrOd": 96.92,
+    "repairPct": 0.0,
+    "rejectPct": 3.08,
     "ftrOdTgt": 96,
-    "ftrId": 100.0,
-    "idRejectPct": 0.0,
+    "ftrId": 98.51,
+    "idRejectPct": 1.49,
     "ftrIdTgt": 98,
-    "repairPipes": 6,
-    "rejectPipes": 3,
-    "twoPartRepairs": 111,
-    "bevel": 1,
+    "repairPipes": 0,
+    "rejectPipes": 2,
+    "twoPartRepairs": 61,
+    "bevel": 0,
     "sample": 1,
-    "tape": 4,
+    "tape": 0,
     "repairsLoadout": 0,
     "strippingOutput": 0,
-    "idRejects": 0,
+    "idRejects": 1,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 6.42,
-    "odDowntimeHrs": -4.17,
+    "idDowntimeHrs": 3.67,
+    "odDowntimeHrs": 6.5,
     "tgt": 85,
-    "sapNotif": 17,
-    "plannedDt": 22.34,
-    "unplannedDt": 3.91,
+    "sapNotif": 11,
+    "plannedDt": 4.82,
+    "unplannedDt": 5.33,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "changing cheese cloth",
+        "desc": "plant start up",
         "line": "ID",
         "start": "06:00",
-        "stop": "08:55",
-        "durMin": 175,
+        "stop": "06:20",
+        "durMin": 20,
         "shift": "Day",
         "cause": "",
-        "sap": "700088906"
+        "sap": "700088969"
       },
       {
-        "desc": "pitstop",
+        "desc": "blaster 2 crack boom down running on bla",
         "line": "ID",
-        "start": "13:10",
-        "stop": "13:55",
-        "durMin": 45,
+        "start": "11:10",
+        "stop": "13:25",
+        "durMin": 135,
         "shift": "Day",
         "cause": "",
-        "sap": "700088909"
+        "sap": "30000004337"
       },
       {
-        "desc": "pitstop",
+        "desc": "blaster 2 reclaim not working",
         "line": "ID",
-        "start": "17:30",
-        "stop": "18:00",
-        "durMin": 30,
+        "start": "14:40",
+        "stop": "15:45",
+        "durMin": 65,
         "shift": "Day",
         "cause": "",
-        "sap": "700088912"
+        "sap": "30000004338"
       },
       {
-        "desc": "carrier 1 off track",
-        "line": "ID",
-        "start": "08:20",
-        "stop": "08:55",
-        "durMin": 35,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004295"
-      },
-      {
-        "desc": "plant startup",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:25",
-        "durMin": 25,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088913"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "01:30",
-        "stop": "02:15",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088924"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "05:30",
-        "stop": "06:00",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088961"
-      },
-      {
-        "desc": "final table backed up",
+        "desc": "plant start up",
         "line": "OD",
         "start": "06:00",
         "stop": "06:35",
         "durMin": 35,
         "shift": "Day",
         "cause": "",
-        "sap": "700088905"
+        "sap": "700088967"
       },
       {
-        "desc": "final table backed up id repairs",
+        "desc": "final table backed up due to manpower",
         "line": "OD",
-        "start": "10:40",
-        "stop": "11:45",
+        "start": "07:40",
+        "stop": "08:45",
         "durMin": 65,
         "shift": "Day",
         "cause": "",
-        "sap": "700088908"
-      },
-      {
-        "desc": "final table backed up id repairs",
-        "line": "OD",
-        "start": "14:50",
-        "stop": "15:50",
-        "durMin": 60,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088910"
+        "sap": "700088968"
       },
       {
         "desc": "pitstop",
         "line": "OD",
-        "start": "17:15",
-        "stop": "18:00",
+        "start": "11:30",
+        "stop": "12:00",
+        "durMin": 30,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700088970"
+      },
+      {
+        "desc": "pipe got stuck on the backstop on coatin",
+        "line": "OD",
+        "start": "13:15",
+        "stop": "14:00",
         "durMin": 45,
         "shift": "Day",
         "cause": "",
-        "sap": "700088911"
+        "sap": "700088971"
       },
       {
-        "desc": "pitstop",
+        "desc": "clean blast line wheels on group 3 an 4",
         "line": "OD",
-        "start": "12:45",
-        "stop": "01:25",
-        "durMin": -680,
+        "start": "14:35",
+        "stop": "15:40",
+        "durMin": 65,
         "shift": "Day",
         "cause": "",
-        "sap": "700088925"
+        "sap": "700088972"
       },
       {
-        "desc": "plant startup",
+        "desc": "final table computer down",
         "line": "OD",
-        "start": "18:00",
-        "stop": "18:25",
-        "durMin": 25,
-        "shift": "Night",
+        "start": "16:00",
+        "stop": "16:30",
+        "durMin": 30,
+        "shift": "Day",
         "cause": "",
-        "sap": "700088914"
+        "sap": "700088973"
       },
       {
-        "desc": "powder not transferring reclaim hopper",
+        "desc": "online stencil machine stop working",
         "line": "OD",
-        "start": "19:25",
-        "stop": "19:45",
-        "durMin": 20,
-        "shift": "Night",
+        "start": "12:00",
+        "stop": "13:00",
+        "durMin": 60,
+        "shift": "Day",
         "cause": "",
-        "sap": "30000004296"
+        "sap": "30000004336"
       },
       {
-        "desc": "pipe fell off southwest buggy",
+        "desc": "south west chain saddle broken still dow",
         "line": "OD",
-        "start": "01:25",
-        "stop": "02:20",
-        "durMin": 55,
-        "shift": "Night",
+        "start": "17:00",
+        "stop": "18:00",
+        "durMin": 60,
+        "shift": "Day",
         "cause": "",
-        "sap": "30000004321"
-      },
-      {
-        "desc": "carrier 16 northwest arm not picking up",
-        "line": "OD",
-        "start": "03:10",
-        "stop": "03:25",
-        "durMin": 15,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004322"
-      },
-      {
-        "desc": "carrier 16 northwest arm not picking up",
-        "line": "OD",
-        "start": "04:10",
-        "stop": "06:00",
-        "durMin": 110,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004323"
+        "sap": "30000004339"
       }
     ]
   }
