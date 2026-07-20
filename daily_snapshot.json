@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-19T19:30:29.113743",
+  "generated": "2026-07-20T07:30:30.059938",
   "meta": {
-    "date": "07/19/2026",
-    "shift": "Day",
+    "date": "07/20/2026",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,9 +20,9 @@
   },
   "production": {
     "bare": {
-      "day": 0,
-      "night": 0,
-      "total": 0,
+      "day": 1,
+      "night": 45,
+      "total": 46,
       "tgt": 140
     },
     "idCoated": {
@@ -44,7 +44,7 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 178,
+      "total": 220,
       "tgt": 400
     },
     "wipIdOd": {
