@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-19T08:36:10.207366",
+  "generated": "2026-07-19T19:30:29.113743",
   "meta": {
-    "date": "07/18/2026",
-    "shift": "24H",
+    "date": "07/19/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,31 +20,31 @@
   },
   "production": {
     "bare": {
-      "day": 76,
-      "night": 54,
-      "total": 130,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 140
     },
     "idCoated": {
-      "day": 61,
-      "night": 79,
-      "total": 140,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 140
     },
     "odTpi": {
-      "day": 60,
-      "night": 60,
-      "total": 120,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 145
     },
     "odCoated": {
-      "day": 65,
-      "night": 61,
-      "total": 126,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 177,
+      "total": 178,
       "tgt": 400
     },
     "wipIdOd": {
@@ -52,11 +52,11 @@
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 47.69,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 95.24,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -73,234 +73,33 @@
     }
   },
   "quality": {
-    "ftrOd": 97.62,
-    "repairPct": 0.79,
-    "rejectPct": 1.59,
+    "ftrOd": 0.0,
+    "repairPct": 0.0,
+    "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 98.57,
-    "idRejectPct": 1.43,
+    "ftrId": 0.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 1,
-    "rejectPipes": 2,
-    "twoPartRepairs": 141,
-    "bevel": 1,
-    "sample": 2,
+    "repairPipes": 0,
+    "rejectPipes": 0,
+    "twoPartRepairs": 0,
+    "bevel": 0,
+    "sample": 0,
     "tape": 0,
     "repairsLoadout": 0,
     "strippingOutput": 0,
-    "idRejects": 2,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 6.75,
-    "odDowntimeHrs": 13.17,
+    "idDowntimeHrs": 0.0,
+    "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 20,
-    "plannedDt": 12.07,
-    "unplannedDt": 7.83,
+    "sapNotif": 0,
+    "plannedDt": 0.0,
+    "unplannedDt": 0.0,
     "forklift": 0,
-    "downtimeEvents": [
-      {
-        "desc": "plant start up",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "06:20",
-        "durMin": 20,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088969"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "17:30",
-        "stop": "18:00",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088974"
-      },
-      {
-        "desc": "blaster 2 crack boom down running on bla",
-        "line": "ID",
-        "start": "11:10",
-        "stop": "13:25",
-        "durMin": 135,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004337"
-      },
-      {
-        "desc": "blaster 2 reclaim not working",
-        "line": "ID",
-        "start": "14:40",
-        "stop": "15:45",
-        "durMin": 65,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004338"
-      },
-      {
-        "desc": "plant startup",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:35",
-        "durMin": 35,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088975"
-      },
-      {
-        "desc": "pitstop/end of shift",
-        "line": "ID",
-        "start": "04:00",
-        "stop": "06:00",
-        "durMin": 120,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700089031"
-      },
-      {
-        "desc": "plant start up",
-        "line": "OD",
-        "start": "06:00",
-        "stop": "06:35",
-        "durMin": 35,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088967"
-      },
-      {
-        "desc": "final table backed up due to manpower",
-        "line": "OD",
-        "start": "07:40",
-        "stop": "08:45",
-        "durMin": 65,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088968"
-      },
-      {
-        "desc": "pitstop",
-        "line": "OD",
-        "start": "11:30",
-        "stop": "12:00",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088970"
-      },
-      {
-        "desc": "pipe got stuck on the backstop on coatin",
-        "line": "OD",
-        "start": "13:15",
-        "stop": "14:00",
-        "durMin": 45,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088971"
-      },
-      {
-        "desc": "clean blast line wheels on group 3 an 4",
-        "line": "OD",
-        "start": "14:35",
-        "stop": "15:40",
-        "durMin": 65,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088972"
-      },
-      {
-        "desc": "final table computer down",
-        "line": "OD",
-        "start": "16:00",
-        "stop": "16:30",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700088973"
-      },
-      {
-        "desc": "online stencil machine stop working",
-        "line": "OD",
-        "start": "12:00",
-        "stop": "13:00",
-        "durMin": 60,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004336"
-      },
-      {
-        "desc": "south west chain saddle broken still dow",
-        "line": "OD",
-        "start": "17:00",
-        "stop": "18:00",
-        "durMin": 60,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004339"
-      },
-      {
-        "desc": "low air pressure",
-        "line": "OD",
-        "start": "20:30",
-        "stop": "20:40",
-        "durMin": 10,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088976"
-      },
-      {
-        "desc": "thickness and jeep station backed up",
-        "line": "OD",
-        "start": "22:25",
-        "stop": "23:25",
-        "durMin": 60,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700088977"
-      },
-      {
-        "desc": "thickness and jeep station backed up",
-        "line": "OD",
-        "start": "01:05",
-        "stop": "01:55",
-        "durMin": 50,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700089004"
-      },
-      {
-        "desc": "crooked pipe carrier 15 oper error",
-        "line": "OD",
-        "start": "03:30",
-        "stop": "04:15",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700089005"
-      },
-      {
-        "desc": "pitstop/end of shift",
-        "line": "OD",
-        "start": "04:35",
-        "stop": "06:00",
-        "durMin": 85,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700089033"
-      },
-      {
-        "desc": "saddle broke on southwest chain",
-        "line": "OD",
-        "start": "18:00",
-        "stop": "20:30",
-        "durMin": 150,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004340"
-      }
-    ]
+    "downtimeEvents": []
   }
 }
