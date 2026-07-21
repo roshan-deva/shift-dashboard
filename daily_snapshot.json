@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-20T19:30:39.689212",
+  "generated": "2026-07-21T07:30:51.284045",
   "meta": {
     "date": "07/20/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -21,84 +21,84 @@
   "production": {
     "bare": {
       "day": 67,
-      "night": 0,
-      "total": 67,
+      "night": 78,
+      "total": 145,
       "tgt": 140
     },
     "idCoated": {
-      "day": 67,
-      "night": 0,
-      "total": 67,
+      "day": 64,
+      "night": 60,
+      "total": 124,
       "tgt": 140
     },
     "odTpi": {
-      "day": 86,
-      "night": 0,
-      "total": 86,
+      "day": 80,
+      "night": 85,
+      "total": 165,
       "tgt": 145
     },
     "odCoated": {
-      "day": 86,
-      "night": 0,
-      "total": 86,
+      "day": 77,
+      "night": 90,
+      "total": 167,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 197,
+      "total": 226,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 217,
+      "total": 185,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 9.66,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 100.0,
+      "val": 77.84,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 8,
+      "val": 12,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 13,
+      "val": 16,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 4,
+      "val": 6,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 94.19,
-    "repairPct": 2.33,
-    "rejectPct": 3.49,
+    "ftrOd": 94.61,
+    "repairPct": 1.8,
+    "rejectPct": 3.59,
     "ftrOdTgt": 96,
-    "ftrId": 92.54,
-    "idRejectPct": 7.46,
+    "ftrId": 92.74,
+    "idRejectPct": 7.26,
     "ftrIdTgt": 98,
-    "repairPipes": 2,
-    "rejectPipes": 3,
-    "twoPartRepairs": 58,
+    "repairPipes": 3,
+    "rejectPipes": 6,
+    "twoPartRepairs": 131,
     "bevel": 2,
-    "sample": 1,
+    "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "strippingOutput": 0,
-    "idRejects": 5,
+    "idRejects": 9,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 2.17,
-    "odDowntimeHrs": 5.17,
+    "idDowntimeHrs": 4.17,
+    "odDowntimeHrs": 9.67,
     "tgt": 85,
-    "sapNotif": 7,
-    "plannedDt": 6.67,
-    "unplannedDt": 0.67,
+    "sapNotif": 15,
+    "plannedDt": 10.5,
+    "unplannedDt": 3.34,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -130,6 +130,26 @@
         "shift": "Day",
         "cause": "",
         "sap": "700089158"
+      },
+      {
+        "desc": "plant startup",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:50",
+        "durMin": 50,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089159"
+      },
+      {
+        "desc": "carrier 1 off track",
+        "line": "ID",
+        "start": "04:50",
+        "stop": "06:00",
+        "durMin": 70,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004352"
       },
       {
         "desc": "plant start up",
@@ -170,6 +190,66 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004344"
+      },
+      {
+        "desc": "final table backed up",
+        "line": "OD",
+        "start": "01:00",
+        "stop": "02:00",
+        "durMin": 60,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089178"
+      },
+      {
+        "desc": "final table backed up",
+        "line": "OD",
+        "start": "03:35",
+        "stop": "04:35",
+        "durMin": 60,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089179"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "05:00",
+        "stop": "06:00",
+        "durMin": 60,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089192"
+      },
+      {
+        "desc": "induction coil tripout result in partial",
+        "line": "OD",
+        "start": "20:15",
+        "stop": "20:30",
+        "durMin": 15,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004345"
+      },
+      {
+        "desc": "induction coil tripout result in partial",
+        "line": "OD",
+        "start": "20:50",
+        "stop": "21:35",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004346"
+      },
+      {
+        "desc": "crooked pipe carrier 14",
+        "line": "OD",
+        "start": "22:10",
+        "stop": "22:40",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004351"
       }
     ]
   }
