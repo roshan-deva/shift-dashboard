@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-20T07:30:30.059938",
+  "generated": "2026-07-20T19:30:39.689212",
   "meta": {
     "date": "07/20/2026",
-    "shift": "24H",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,35 +20,35 @@
   },
   "production": {
     "bare": {
-      "day": 1,
-      "night": 45,
-      "total": 46,
+      "day": 67,
+      "night": 0,
+      "total": 67,
       "tgt": 140
     },
     "idCoated": {
-      "day": 0,
+      "day": 67,
       "night": 0,
-      "total": 0,
+      "total": 67,
       "tgt": 140
     },
     "odTpi": {
-      "day": 0,
+      "day": 86,
       "night": 0,
-      "total": 0,
+      "total": 86,
       "tgt": 145
     },
     "odCoated": {
-      "day": 0,
+      "day": 86,
       "night": 0,
-      "total": 0,
+      "total": 86,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 220,
+      "total": 197,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 248,
+      "total": 217,
       "tgt": 400
     },
     "directFeedPct": {
@@ -56,50 +56,121 @@
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 100.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 3,
+      "val": 8,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 10,
+      "val": 13,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 10,
+      "val": 4,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 0.0,
-    "repairPct": 0.0,
-    "rejectPct": 0.0,
+    "ftrOd": 94.19,
+    "repairPct": 2.33,
+    "rejectPct": 3.49,
     "ftrOdTgt": 96,
-    "ftrId": 0.0,
-    "idRejectPct": 0.0,
+    "ftrId": 92.54,
+    "idRejectPct": 7.46,
     "ftrIdTgt": 98,
-    "repairPipes": 0,
-    "rejectPipes": 0,
-    "twoPartRepairs": 0,
-    "bevel": 0,
-    "sample": 0,
+    "repairPipes": 2,
+    "rejectPipes": 3,
+    "twoPartRepairs": 58,
+    "bevel": 2,
+    "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
     "strippingOutput": 0,
-    "idRejects": 0,
+    "idRejects": 5,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 0.0,
-    "odDowntimeHrs": 0.0,
+    "idDowntimeHrs": 2.17,
+    "odDowntimeHrs": 5.17,
     "tgt": 85,
-    "sapNotif": 0,
-    "plannedDt": 0.0,
-    "unplannedDt": 0.0,
+    "sapNotif": 7,
+    "plannedDt": 6.67,
+    "unplannedDt": 0.67,
     "forklift": 0,
-    "downtimeEvents": []
+    "downtimeEvents": [
+      {
+        "desc": "plant start up",
+        "line": "ID",
+        "start": "06:00",
+        "stop": "07:25",
+        "durMin": 85,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089155"
+      },
+      {
+        "desc": "pitstop",
+        "line": "ID",
+        "start": "13:30",
+        "stop": "13:45",
+        "durMin": 15,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089156"
+      },
+      {
+        "desc": "pitstop",
+        "line": "ID",
+        "start": "17:30",
+        "stop": "18:00",
+        "durMin": 30,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089158"
+      },
+      {
+        "desc": "plant start up",
+        "line": "OD",
+        "start": "06:00",
+        "stop": "08:45",
+        "durMin": 165,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089153"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "12:25",
+        "stop": "13:30",
+        "durMin": 65,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089154"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "17:20",
+        "stop": "18:00",
+        "durMin": 40,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089157"
+      },
+      {
+        "desc": "maintenance working on the online jeeper",
+        "line": "OD",
+        "start": "16:00",
+        "stop": "16:40",
+        "durMin": 40,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004344"
+      }
+    ]
   }
 }
