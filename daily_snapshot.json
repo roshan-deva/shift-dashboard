@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-22T23:15:28.260373",
+  "generated": "2026-07-23T07:30:34.172947",
   "meta": {
     "date": "07/22/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -44,47 +44,47 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 301,
+      "total": 286,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 114,
+      "total": 86,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 53.23,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 100.0,
+      "val": 36.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 11,
+      "val": 1,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 19,
+      "val": 20,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 2,
+      "val": 4,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 90.67,
-    "repairPct": 0.0,
-    "rejectPct": 9.33,
+    "ftrOd": 85.33,
+    "repairPct": 1.33,
+    "rejectPct": 13.33,
     "ftrOdTgt": 96,
     "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 0,
-    "rejectPipes": 7,
-    "twoPartRepairs": 71,
+    "repairPipes": 1,
+    "rejectPipes": 10,
+    "twoPartRepairs": 241,
     "bevel": 0,
-    "sample": 1,
+    "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
@@ -94,12 +94,12 @@
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 6.83,
-    "odDowntimeHrs": 5.25,
+    "idDowntimeHrs": 9.75,
+    "odDowntimeHrs": 8.42,
     "tgt": 85,
-    "sapNotif": 9,
-    "plannedDt": 6.51,
-    "unplannedDt": 5.58,
+    "sapNotif": 15,
+    "plannedDt": 10.35,
+    "unplannedDt": 7.83,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -131,6 +131,26 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004380"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "05:20",
+        "stop": "06:00",
+        "durMin": 40,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089398"
+      },
+      {
+        "desc": "Blasters Down at start up",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "20:15",
+        "durMin": 135,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004384"
       },
       {
         "desc": "Startup",
@@ -191,6 +211,46 @@
         "shift": "Day",
         "cause": "",
         "sap": "700089342"
+      },
+      {
+        "desc": "Plant start up",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "18:45",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089379"
+      },
+      {
+        "desc": "Powder Mounts",
+        "line": "OD",
+        "start": "21:50",
+        "stop": "22:45",
+        "durMin": 55,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089380"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "03:05",
+        "stop": "03:50",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089381"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "05:15",
+        "stop": "06:00",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089395"
       }
     ]
   }
