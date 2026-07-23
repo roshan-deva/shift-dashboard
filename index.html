@@ -784,7 +784,7 @@ function renderProduction(){
     statCard('WIP — Bare→ID',p.wipBareId.total,'',p.wipBareId.tgt,'L'),
     statCard('WIP — ID→OD',p.wipIdOd.total,'',p.wipIdOd.tgt,'L'),
     statCard('Direct Feed → ID',p.directFeedPct.val,'%',p.directFeedPct.tgt,'H'),
-    statCard('ID → OD Feeding',p.idOdFeedPct.val,'%',p.idOdFeedPct.tgt,'H'),
+    statCard('ID → OD Direct Feed',p.idOdFeedPct.val,'%',p.idOdFeedPct.tgt,'H'),
     dualStatCard('Balance for Stripping',[
       {sublabel:'ID',val:p.stripBalanceId?.val??0,tgt:p.stripBalanceId?.tgt??20},
       {sublabel:'OD',val:p.stripBalanceOd?.val??0,tgt:p.stripBalanceOd?.tgt??20}]),
