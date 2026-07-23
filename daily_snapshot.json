@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-22T22:36:56.588481",
+  "generated": "2026-07-22T23:15:28.260373",
   "meta": {
     "date": "07/22/2026",
     "shift": "Day",
@@ -20,27 +20,27 @@
   },
   "production": {
     "bare": {
-      "day": 0,
+      "day": 62,
       "night": 0,
-      "total": 0,
+      "total": 62,
       "tgt": 140
     },
     "idCoated": {
-      "day": 0,
+      "day": 38,
       "night": 0,
-      "total": 0,
+      "total": 38,
       "tgt": 140
     },
     "odTpi": {
-      "day": 0,
+      "day": 77,
       "night": 0,
-      "total": 0,
+      "total": 77,
       "tgt": 145
     },
     "odCoated": {
-      "day": 0,
+      "day": 75,
       "night": 0,
-      "total": 0,
+      "total": 75,
       "tgt": 145
     },
     "wipBareId": {
@@ -56,7 +56,7 @@
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 100.0,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -73,11 +73,11 @@
     }
   },
   "quality": {
-    "ftrOd": 0.0,
+    "ftrOd": 90.67,
     "repairPct": 0.0,
-    "rejectPct": 0.0,
+    "rejectPct": 9.33,
     "ftrOdTgt": 96,
-    "ftrId": 0.0,
+    "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
     "repairPipes": 0,
