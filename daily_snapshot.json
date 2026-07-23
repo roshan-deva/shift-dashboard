@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-22T07:30:33.909667",
+  "generated": "2026-07-22T19:30:44.297654",
   "meta": {
-    "date": "07/21/2026",
-    "shift": "24H",
+    "date": "07/22/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,43 +20,43 @@
   },
   "production": {
     "bare": {
-      "day": 66,
-      "night": 47,
-      "total": 113,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 140
     },
     "idCoated": {
-      "day": 37,
-      "night": 37,
-      "total": 74,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 140
     },
     "odTpi": {
-      "day": 72,
-      "night": 44,
-      "total": 116,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 145
     },
     "odCoated": {
-      "day": 67,
-      "night": 49,
-      "total": 116,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 261,
+      "total": 301,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 148,
+      "total": 114,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 11.5,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 59.48,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -68,239 +68,129 @@
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 3,
+      "val": 2,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 91.38,
-    "repairPct": 1.72,
-    "rejectPct": 6.9,
+    "ftrOd": 0.0,
+    "repairPct": 0.0,
+    "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 93.24,
-    "idRejectPct": 6.76,
+    "ftrId": 0.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 2,
-    "rejectPipes": 8,
-    "twoPartRepairs": 107,
+    "repairPipes": 0,
+    "rejectPipes": 7,
+    "twoPartRepairs": 71,
     "bevel": 0,
-    "sample": 2,
+    "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
     "strippingOutput": 5,
-    "idRejects": 5,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 7.08,
-    "odDowntimeHrs": 8.0,
+    "idDowntimeHrs": 6.83,
+    "odDowntimeHrs": 5.25,
     "tgt": 85,
-    "sapNotif": 24,
-    "plannedDt": 7.34,
-    "unplannedDt": 14.33,
+    "sapNotif": 9,
+    "plannedDt": 6.51,
+    "unplannedDt": 5.58,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "Carrier 1 off track at shift change",
+        "desc": "Lack of manpower - no operators",
         "line": "ID",
         "start": "06:00",
-        "stop": "08:15",
-        "durMin": 135,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004356"
-      },
-      {
-        "desc": "Welding cracks in blaster 2 boom - run 1",
-        "line": "ID",
-        "start": "10:05",
-        "stop": "11:20",
+        "stop": "07:15",
         "durMin": 75,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004357"
+        "sap": "700089336"
       },
       {
-        "desc": "Blaster 2 grit valve and belt issues",
+        "desc": "Carrier 3 SW arm not going up/down",
         "line": "ID",
-        "start": "13:30",
-        "stop": "14:30",
-        "durMin": 60,
+        "start": "08:35",
+        "stop": "09:10",
+        "durMin": 35,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004361"
+        "sap": "30000004379"
       },
       {
-        "desc": "plant startup",
+        "desc": "Replacing grit belt on blaster 2",
         "line": "ID",
-        "start": "18:00",
-        "stop": "18:40",
-        "durMin": 40,
-        "shift": "Night",
+        "start": "13:00",
+        "stop": "18:00",
+        "durMin": 300,
+        "shift": "Day",
         "cause": "",
-        "sap": "700089258"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "05:15",
-        "stop": "06:00",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700089290"
-      },
-      {
-        "desc": "carrier 3 east arm up/down",
-        "line": "ID",
-        "start": "02:50",
-        "stop": "04:00",
-        "durMin": 70,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004368"
+        "sap": "30000004380"
       },
       {
         "desc": "Startup",
         "line": "OD",
         "start": "06:00",
-        "stop": "06:20",
-        "durMin": 20,
+        "stop": "06:10",
+        "durMin": 10,
         "shift": "Day",
         "cause": "",
-        "sap": "700089250"
-      },
-      {
-        "desc": "Powder mounds",
-        "line": "OD",
-        "start": "07:40",
-        "stop": "08:10",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700089251"
-      },
-      {
-        "desc": "Pipe on carrier 15 hitting stopper",
-        "line": "OD",
-        "start": "10:00",
-        "stop": "11:30",
-        "durMin": 90,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700089252"
-      },
-      {
-        "desc": "Low air pressure",
-        "line": "OD",
-        "start": "13:10",
-        "stop": "13:35",
-        "durMin": 25,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700089253"
+        "sap": "700089337"
       },
       {
         "desc": "Online jeeper not working",
         "line": "OD",
-        "start": "14:10",
-        "stop": "14:45",
-        "durMin": 35,
+        "start": "07:00",
+        "stop": "07:45",
+        "durMin": 45,
         "shift": "Day",
         "cause": "",
-        "sap": "700089254"
+        "sap": "700089338"
       },
       {
-        "desc": "Low air pressure",
+        "desc": "Safety meeting regarding heat",
         "line": "OD",
-        "start": "14:45",
-        "stop": "15:10",
-        "durMin": 25,
+        "start": "08:30",
+        "stop": "09:00",
+        "durMin": 30,
         "shift": "Day",
         "cause": "",
-        "sap": "700089255"
+        "sap": "700089339"
       },
       {
-        "desc": "HSE heat incident on final table/pitstop",
+        "desc": "Replace shaker screen and fluid beds",
         "line": "OD",
-        "start": "16:50",
-        "stop": "18:00",
-        "durMin": 70,
+        "start": "09:00",
+        "stop": "11:10",
+        "durMin": 130,
         "shift": "Day",
         "cause": "",
-        "sap": "700089256"
+        "sap": "700089340"
       },
       {
-        "desc": "Inbound conveyor not working - ran out",
+        "desc": "Pitstop / checking quench",
         "line": "OD",
-        "start": "08:40",
-        "stop": "09:20",
+        "start": "13:40",
+        "stop": "14:20",
         "durMin": 40,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004358"
+        "sap": "700089341"
       },
       {
-        "desc": "Elotherm trip resulting in partial coat",
+        "desc": "Pitstop / clearing final table for next",
         "line": "OD",
-        "start": "12:50",
-        "stop": "13:10",
-        "durMin": 20,
+        "start": "17:00",
+        "stop": "18:00",
+        "durMin": 60,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004359"
-      },
-      {
-        "desc": "Elotherm trip resulting in partial coat",
-        "line": "OD",
-        "start": "16:20",
-        "stop": "16:50",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004360"
-      },
-      {
-        "desc": "low air pressure",
-        "line": "OD",
-        "start": "18:00",
-        "stop": "18:30",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700089259"
-      },
-      {
-        "desc": "scanner on thickness battery exchange",
-        "line": "OD",
-        "start": "03:05",
-        "stop": "03:35",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700089269"
-      },
-      {
-        "desc": "auto jeeper clogged",
-        "line": "OD",
-        "start": "19:05",
-        "stop": "19:20",
-        "durMin": 15,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004362"
-      },
-      {
-        "desc": "induction coil tripout result in partial",
-        "line": "OD",
-        "start": "19:50",
-        "stop": "20:10",
-        "durMin": 20,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004363"
+        "sap": "700089342"
       }
     ]
   }
