@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-24T19:30:30.880690",
+  "generated": "2026-07-25T07:30:34.361168",
   "meta": {
     "date": "07/24/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,86 +20,86 @@
   },
   "production": {
     "bare": {
-      "day": 54,
-      "night": 0,
-      "total": 54,
+      "day": 51,
+      "night": 86,
+      "total": 137,
       "tgt": 140
     },
     "idCoated": {
-      "day": 33,
-      "night": 0,
-      "total": 33,
+      "day": 23,
+      "night": 101,
+      "total": 124,
       "tgt": 140
     },
     "odTpi": {
-      "day": 76,
-      "night": 0,
-      "total": 76,
+      "day": 74,
+      "night": 90,
+      "total": 164,
       "tgt": 145
     },
     "odCoated": {
-      "day": 73,
-      "night": 0,
-      "total": 73,
+      "day": 69,
+      "night": 95,
+      "total": 164,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 282,
+      "total": 267,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 30,
+      "total": 49,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 6.57,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 91.94,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 8,
+      "val": 5,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 17,
+      "val": 20,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 1,
+      "val": 3,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 93.15,
-    "repairPct": 4.11,
-    "rejectPct": 2.74,
+    "ftrOd": 94.51,
+    "repairPct": 2.44,
+    "rejectPct": 3.05,
     "ftrOdTgt": 96,
-    "ftrId": 87.88,
-    "idRejectPct": 12.12,
+    "ftrId": 96.77,
+    "idRejectPct": 3.23,
     "ftrIdTgt": 98,
-    "repairPipes": 3,
-    "rejectPipes": 2,
-    "twoPartRepairs": 61,
-    "bevel": 0,
-    "sample": 1,
+    "repairPipes": 4,
+    "rejectPipes": 5,
+    "twoPartRepairs": 202,
+    "bevel": 1,
+    "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 0,
+    "strippingOutput": 4,
     "idRejects": 4,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 7.92,
-    "odDowntimeHrs": 6.17,
+    "idDowntimeHrs": 9.25,
+    "odDowntimeHrs": 10.0,
     "tgt": 85,
-    "sapNotif": 11,
-    "plannedDt": 9.66,
-    "unplannedDt": 4.41,
+    "sapNotif": 17,
+    "plannedDt": 14.08,
+    "unplannedDt": 5.16,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -141,6 +141,26 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004393"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "00:45",
+        "stop": "01:15",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089523"
+      },
+      {
+        "desc": "pitstop",
+        "line": "ID",
+        "start": "05:10",
+        "stop": "06:00",
+        "durMin": 50,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089551"
       },
       {
         "desc": "qc meeting",
@@ -211,6 +231,46 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004392"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "OD",
+        "start": "22:35",
+        "stop": "23:30",
+        "durMin": 55,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089521"
+      },
+      {
+        "desc": "Start up",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "18:30",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089524"
+      },
+      {
+        "desc": "Plant shut down",
+        "line": "OD",
+        "start": "04:20",
+        "stop": "06:00",
+        "durMin": 100,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089549"
+      },
+      {
+        "desc": "Changing motor and gearbox on V- Conveyo",
+        "line": "OD",
+        "start": "02:10",
+        "stop": "02:55",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004394"
       }
     ]
   }
