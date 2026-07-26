@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-25T07:30:34.361168",
+  "generated": "2026-07-25T19:30:44.366161",
   "meta": {
-    "date": "07/24/2026",
-    "shift": "24H",
+    "date": "07/25/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,47 +20,47 @@
   },
   "production": {
     "bare": {
-      "day": 51,
-      "night": 86,
-      "total": 137,
+      "day": 76,
+      "night": 0,
+      "total": 76,
       "tgt": 140
     },
     "idCoated": {
-      "day": 23,
-      "night": 101,
-      "total": 124,
+      "day": 64,
+      "night": 0,
+      "total": 64,
       "tgt": 140
     },
     "odTpi": {
-      "day": 74,
-      "night": 90,
-      "total": 164,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 145
     },
     "odCoated": {
-      "day": 69,
-      "night": 95,
-      "total": 164,
+      "day": 1,
+      "night": 0,
+      "total": 1,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 267,
+      "total": 282,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 49,
+      "total": 103,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 6.57,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 91.94,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 5,
+      "val": 3,
       "tgt": 20
     },
     "stripBalanceOd": {
@@ -73,54 +73,64 @@
     }
   },
   "quality": {
-    "ftrOd": 94.51,
-    "repairPct": 2.44,
-    "rejectPct": 3.05,
+    "ftrOd": 100.0,
+    "repairPct": 0.0,
+    "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 96.77,
-    "idRejectPct": 3.23,
+    "ftrId": 100.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 4,
-    "rejectPipes": 5,
-    "twoPartRepairs": 202,
-    "bevel": 1,
-    "sample": 2,
+    "repairPipes": 0,
+    "rejectPipes": 0,
+    "twoPartRepairs": 0,
+    "bevel": 0,
+    "sample": 0,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 4,
-    "idRejects": 4,
+    "strippingOutput": 3,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 9.25,
-    "odDowntimeHrs": 10.0,
+    "idDowntimeHrs": 2.92,
+    "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 17,
-    "plannedDt": 14.08,
-    "unplannedDt": 5.16,
+    "sapNotif": 5,
+    "plannedDt": 2.33,
+    "unplannedDt": 0.58,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "on blast or inbound sap",
+        "desc": "plant startup",
         "line": "ID",
         "start": "06:00",
-        "stop": "08:35",
-        "durMin": 155,
+        "stop": "06:15",
+        "durMin": 15,
         "shift": "Day",
         "cause": "",
-        "sap": "700089494"
+        "sap": "700089567"
       },
       {
-        "desc": "paint sprayer stop spraying",
+        "desc": "pitstop",
         "line": "ID",
-        "start": "08:35",
-        "stop": "12:20",
-        "durMin": 225,
+        "start": "12:00",
+        "stop": "13:00",
+        "durMin": 60,
         "shift": "Day",
         "cause": "",
-        "sap": "700089496"
+        "sap": "700089568"
+      },
+      {
+        "desc": "final table backed up due repairs",
+        "line": "ID",
+        "start": "14:50",
+        "stop": "15:25",
+        "durMin": 35,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089569"
       },
       {
         "desc": "pitstop",
@@ -130,147 +140,17 @@
         "durMin": 30,
         "shift": "Day",
         "cause": "",
-        "sap": "700089497"
+        "sap": "700089570"
       },
       {
-        "desc": "carrier 2 hydralic leak",
+        "desc": "tighten chain bllaster 1 reclaim",
         "line": "ID",
-        "start": "13:35",
-        "stop": "14:40",
-        "durMin": 65,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004393"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "ID",
-        "start": "00:45",
-        "stop": "01:15",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700089523"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "05:10",
-        "stop": "06:00",
-        "durMin": 50,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700089551"
-      },
-      {
-        "desc": "qc meeting",
-        "line": "OD",
-        "start": "06:00",
-        "stop": "06:50",
-        "durMin": 50,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700089492"
-      },
-      {
-        "desc": "sap crash at thickness station",
-        "line": "OD",
-        "start": "10:45",
-        "stop": "11:20",
-        "durMin": 35,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700089493"
-      },
-      {
-        "desc": "sap lockout all station by user",
-        "line": "OD",
-        "start": "12:40",
-        "stop": "13:05",
-        "durMin": 25,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700089495"
-      },
-      {
-        "desc": "pitstop",
-        "line": "OD",
-        "start": "17:00",
-        "stop": "18:00",
-        "durMin": 60,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700089498"
-      },
-      {
-        "desc": "maint. welding leak on blaster 2",
-        "line": "OD",
-        "start": "07:55",
-        "stop": "10:25",
-        "durMin": 150,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004390"
-      },
-      {
-        "desc": "induction coil tripout result in partial",
-        "line": "OD",
         "start": "16:10",
-        "stop": "16:25",
-        "durMin": 15,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004391"
-      },
-      {
-        "desc": "final conveyor line tripout",
-        "line": "OD",
-        "start": "16:25",
-        "stop": "17:00",
+        "stop": "16:45",
         "durMin": 35,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004392"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "22:35",
-        "stop": "23:30",
-        "durMin": 55,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700089521"
-      },
-      {
-        "desc": "Start up",
-        "line": "OD",
-        "start": "18:00",
-        "stop": "18:30",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700089524"
-      },
-      {
-        "desc": "Plant shut down",
-        "line": "OD",
-        "start": "04:20",
-        "stop": "06:00",
-        "durMin": 100,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700089549"
-      },
-      {
-        "desc": "Changing motor and gearbox on V- Conveyo",
-        "line": "OD",
-        "start": "02:10",
-        "stop": "02:55",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004394"
+        "sap": "30000004395"
       }
     ]
   }
