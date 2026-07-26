@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-25T19:30:44.366161",
+  "generated": "2026-07-26T07:30:31.361223",
   "meta": {
     "date": "07/25/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -21,14 +21,14 @@
   "production": {
     "bare": {
       "day": 76,
-      "night": 0,
-      "total": 76,
+      "night": 68,
+      "total": 144,
       "tgt": 140
     },
     "idCoated": {
-      "day": 64,
-      "night": 0,
-      "total": 64,
+      "day": 53,
+      "night": 117,
+      "total": 170,
       "tgt": 140
     },
     "odTpi": {
@@ -44,15 +44,15 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 282,
+      "total": 257,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 103,
+      "total": 219,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 9.03,
       "tgt": 75
     },
     "idOdFeedPct": {
@@ -60,7 +60,7 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 3,
+      "val": 2,
       "tgt": 20
     },
     "stripBalanceOd": {
@@ -94,11 +94,11 @@
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 2.92,
+    "idDowntimeHrs": 5.42,
     "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 5,
-    "plannedDt": 2.33,
+    "sapNotif": 7,
+    "plannedDt": 4.83,
     "unplannedDt": 0.58,
     "forklift": 0,
     "downtimeEvents": [
@@ -151,6 +151,26 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004395"
+      },
+      {
+        "desc": "start up",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:10",
+        "durMin": 10,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089571"
+      },
+      {
+        "desc": "Pitstop/Shutdown",
+        "line": "ID",
+        "start": "03:40",
+        "stop": "06:00",
+        "durMin": 140,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700089638"
       }
     ]
   }
