@@ -1,7 +1,7 @@
 {
-  "generated": "2026-07-26T07:30:31.361223",
+  "generated": "2026-07-27T07:30:34.957959",
   "meta": {
-    "date": "07/25/2026",
+    "date": "07/27/2026",
     "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
@@ -20,15 +20,15 @@
   },
   "production": {
     "bare": {
-      "day": 76,
-      "night": 68,
-      "total": 144,
+      "day": 0,
+      "night": 56,
+      "total": 56,
       "tgt": 140
     },
     "idCoated": {
-      "day": 53,
-      "night": 117,
-      "total": 170,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 140
     },
     "odTpi": {
@@ -38,13 +38,13 @@
       "tgt": 145
     },
     "odCoated": {
-      "day": 1,
+      "day": 0,
       "night": 0,
-      "total": 1,
+      "total": 0,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 257,
+      "total": 312,
       "tgt": 400
     },
     "wipIdOd": {
@@ -52,7 +52,7 @@
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 9.03,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
@@ -73,11 +73,11 @@
     }
   },
   "quality": {
-    "ftrOd": 100.0,
+    "ftrOd": 0.0,
     "repairPct": 0.0,
     "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 100.0,
+    "ftrId": 0.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
     "repairPipes": 0,
@@ -88,90 +88,19 @@
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 3,
+    "strippingOutput": 1,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 5.42,
+    "idDowntimeHrs": 0.0,
     "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 7,
-    "plannedDt": 4.83,
-    "unplannedDt": 0.58,
+    "sapNotif": 0,
+    "plannedDt": 0.0,
+    "unplannedDt": 0.0,
     "forklift": 0,
-    "downtimeEvents": [
-      {
-        "desc": "plant startup",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "06:15",
-        "durMin": 15,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700089567"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "12:00",
-        "stop": "13:00",
-        "durMin": 60,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700089568"
-      },
-      {
-        "desc": "final table backed up due repairs",
-        "line": "ID",
-        "start": "14:50",
-        "stop": "15:25",
-        "durMin": 35,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700089569"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "17:30",
-        "stop": "18:00",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700089570"
-      },
-      {
-        "desc": "tighten chain bllaster 1 reclaim",
-        "line": "ID",
-        "start": "16:10",
-        "stop": "16:45",
-        "durMin": 35,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004395"
-      },
-      {
-        "desc": "start up",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:10",
-        "durMin": 10,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700089571"
-      },
-      {
-        "desc": "Pitstop/Shutdown",
-        "line": "ID",
-        "start": "03:40",
-        "stop": "06:00",
-        "durMin": 140,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700089638"
-      }
-    ]
+    "downtimeEvents": []
   }
 }
