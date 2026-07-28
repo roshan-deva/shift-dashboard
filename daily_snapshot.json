@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-27T07:30:34.957959",
+  "generated": "2026-07-27T19:30:31.876492",
   "meta": {
     "date": "07/27/2026",
-    "shift": "24H",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,35 +20,35 @@
   },
   "production": {
     "bare": {
-      "day": 0,
-      "night": 56,
+      "day": 56,
+      "night": 0,
       "total": 56,
       "tgt": 140
     },
     "idCoated": {
-      "day": 0,
+      "day": 42,
       "night": 0,
-      "total": 0,
+      "total": 42,
       "tgt": 140
     },
     "odTpi": {
-      "day": 0,
+      "day": 62,
       "night": 0,
-      "total": 0,
+      "total": 62,
       "tgt": 145
     },
     "odCoated": {
-      "day": 0,
+      "day": 65,
       "night": 0,
-      "total": 0,
+      "total": 65,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 312,
+      "total": 320,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 219,
+      "total": 182,
       "tgt": 400
     },
     "directFeedPct": {
@@ -60,7 +60,7 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 2,
+      "val": 3,
       "tgt": 20
     },
     "stripBalanceOd": {
@@ -68,39 +68,180 @@
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 3,
+      "val": 1,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 0.0,
+    "ftrOd": 95.38,
     "repairPct": 0.0,
-    "rejectPct": 0.0,
+    "rejectPct": 4.62,
     "ftrOdTgt": 96,
-    "ftrId": 0.0,
-    "idRejectPct": 0.0,
+    "ftrId": 97.62,
+    "idRejectPct": 2.38,
     "ftrIdTgt": 98,
     "repairPipes": 0,
-    "rejectPipes": 0,
-    "twoPartRepairs": 0,
+    "rejectPipes": 3,
+    "twoPartRepairs": 95,
     "bevel": 0,
-    "sample": 0,
+    "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 1,
-    "idRejects": 0,
+    "strippingOutput": 2,
+    "idRejects": 1,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 0.0,
-    "odDowntimeHrs": 0.0,
+    "idDowntimeHrs": 3.17,
+    "odDowntimeHrs": 7.42,
     "tgt": 85,
-    "sapNotif": 0,
-    "plannedDt": 0.0,
-    "unplannedDt": 0.0,
+    "sapNotif": 14,
+    "plannedDt": 8.84,
+    "unplannedDt": 1.75,
     "forklift": 0,
-    "downtimeEvents": []
+    "downtimeEvents": [
+      {
+        "desc": "Startup",
+        "line": "ID",
+        "start": "06:00",
+        "stop": "06:30",
+        "durMin": 30,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089767"
+      },
+      {
+        "desc": "Majority pipes are reblast due to clean",
+        "line": "ID",
+        "start": "06:30",
+        "stop": "08:00",
+        "durMin": 90,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089768"
+      },
+      {
+        "desc": "Adjusting control cages",
+        "line": "ID",
+        "start": "09:35",
+        "stop": "10:00",
+        "durMin": 25,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089769"
+      },
+      {
+        "desc": "Checking blaster heads",
+        "line": "ID",
+        "start": "12:10",
+        "stop": "12:25",
+        "durMin": 15,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089770"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "17:30",
+        "stop": "18:00",
+        "durMin": 30,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089772"
+      },
+      {
+        "desc": "Monday startup - filling coating line",
+        "line": "OD",
+        "start": "06:00",
+        "stop": "07:25",
+        "durMin": 85,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089762"
+      },
+      {
+        "desc": "Low air pressure",
+        "line": "OD",
+        "start": "07:25",
+        "stop": "07:45",
+        "durMin": 20,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089763"
+      },
+      {
+        "desc": "Wheels marks resulting in partial coat",
+        "line": "OD",
+        "start": "07:50",
+        "stop": "08:00",
+        "durMin": 10,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089764"
+      },
+      {
+        "desc": "Auto stenciler not working",
+        "line": "OD",
+        "start": "08:55",
+        "stop": "10:15",
+        "durMin": 80,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089765"
+      },
+      {
+        "desc": "Ground mat broken off",
+        "line": "OD",
+        "start": "13:15",
+        "stop": "13:55",
+        "durMin": 40,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089766"
+      },
+      {
+        "desc": "Replacing head on auto stenciler",
+        "line": "OD",
+        "start": "14:40",
+        "stop": "15:40",
+        "durMin": 60,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089771"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "OD",
+        "start": "17:15",
+        "stop": "18:00",
+        "durMin": 45,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700089773"
+      },
+      {
+        "desc": "Carrier 10 not working",
+        "line": "OD",
+        "start": "12:00",
+        "stop": "13:15",
+        "durMin": 75,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004402"
+      },
+      {
+        "desc": "Elotherm trip resulting in partial coat",
+        "line": "OD",
+        "start": "16:45",
+        "stop": "17:15",
+        "durMin": 30,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004403"
+      }
+    ]
   }
 }
