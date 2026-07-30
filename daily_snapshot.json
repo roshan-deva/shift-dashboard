@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-29T07:30:44.703254",
+  "generated": "2026-07-29T21:16:53.348799",
   "meta": {
-    "date": "07/28/2026",
-    "shift": "24H",
+    "date": "07/29/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,117 +20,97 @@
   },
   "production": {
     "bare": {
-      "day": 57,
-      "night": 70,
-      "total": 127,
+      "day": 53,
+      "night": 0,
+      "total": 53,
       "tgt": 140
     },
     "idCoated": {
-      "day": 59,
-      "night": 88,
-      "total": 147,
+      "day": 86,
+      "night": 0,
+      "total": 86,
       "tgt": 140
     },
     "odTpi": {
-      "day": 90,
-      "night": 82,
-      "total": 172,
+      "day": 84,
+      "night": 0,
+      "total": 84,
       "tgt": 145
     },
     "odCoated": {
-      "day": 84,
-      "night": 88,
-      "total": 172,
+      "day": 75,
+      "night": 0,
+      "total": 75,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 270,
+      "total": 243,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 143,
+      "total": 152,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 18.11,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 93.88,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 5,
+      "val": 4,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 19,
+      "val": 16,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 8,
+      "val": 2,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 93.02,
-    "repairPct": 3.49,
-    "rejectPct": 3.49,
+    "ftrOd": 93.33,
+    "repairPct": 1.33,
+    "rejectPct": 5.33,
     "ftrOdTgt": 96,
-    "ftrId": 97.96,
-    "idRejectPct": 2.04,
+    "ftrId": 100.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 6,
-    "rejectPipes": 6,
-    "twoPartRepairs": 259,
-    "bevel": 4,
-    "sample": 2,
+    "repairPipes": 1,
+    "rejectPipes": 4,
+    "twoPartRepairs": 126,
+    "bevel": 0,
+    "sample": 1,
     "tape": 1,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
     "strippingOutput": 6,
-    "idRejects": 3,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 5.0,
-    "odDowntimeHrs": 21.58,
+    "idDowntimeHrs": 1.83,
+    "odDowntimeHrs": 5.5,
     "tgt": 85,
-    "sapNotif": 18,
-    "plannedDt": 7.51,
-    "unplannedDt": 19.08,
+    "sapNotif": 10,
+    "plannedDt": 3.08,
+    "unplannedDt": 4.25,
     "forklift": 0,
     "downtimeEvents": [
       {
         "desc": "Startup",
         "line": "ID",
         "start": "06:00",
-        "stop": "06:30",
-        "durMin": 30,
+        "stop": "06:20",
+        "durMin": 20,
         "shift": "Day",
         "cause": "",
-        "sap": "700089922"
-      },
-      {
-        "desc": "Final table not moving - tolerance",
-        "line": "ID",
-        "start": "11:00",
-        "stop": "12:10",
-        "durMin": 70,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700089923"
-      },
-      {
-        "desc": "Maintenance checking heads / repairs",
-        "line": "ID",
-        "start": "13:10",
-        "stop": "13:55",
-        "durMin": 45,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700089924"
+        "sap": "700090016"
       },
       {
         "desc": "Pitstop",
@@ -140,147 +120,87 @@
         "durMin": 30,
         "shift": "Day",
         "cause": "",
-        "sap": "700089925"
+        "sap": "700090050"
       },
       {
-        "desc": "Blaster 2 boom welding crack",
+        "desc": "Welding crack in paint line boom",
         "line": "ID",
-        "start": "06:30",
-        "stop": "07:20",
-        "durMin": 50,
+        "start": "11:45",
+        "stop": "12:45",
+        "durMin": 60,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004421"
-      },
-      {
-        "desc": "Grit belt not moving",
-        "line": "ID",
-        "start": "14:20",
-        "stop": "14:35",
-        "durMin": 15,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004422"
-      },
-      {
-        "desc": "plant startup",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:30",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700089934"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "05:30",
-        "stop": "06:00",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700090004"
+        "sap": "30000004435"
       },
       {
         "desc": "Startup",
         "line": "OD",
         "start": "06:00",
-        "stop": "06:10",
-        "durMin": 10,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700089926"
-      },
-      {
-        "desc": "Moisture in powder - cleaning out fluid",
-        "line": "OD",
-        "start": "16:05",
-        "stop": "18:00",
-        "durMin": 115,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700089927"
-      },
-      {
-        "desc": "Carrier 13 off track. Ran out of pipes",
-        "line": "OD",
-        "start": "08:05",
-        "stop": "09:15",
-        "durMin": 70,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004423"
-      },
-      {
-        "desc": "Powder not transferring over - partial",
-        "line": "OD",
-        "start": "09:35",
-        "stop": "10:00",
+        "stop": "06:25",
         "durMin": 25,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004424"
+        "sap": "700090011"
       },
       {
-        "desc": "Elotherm trip resulting in partial coat",
+        "desc": "Online jeeper not working",
         "line": "OD",
-        "start": "12:55",
-        "stop": "13:45",
+        "start": "10:00",
+        "stop": "11:00",
+        "durMin": 60,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700090046"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "OD",
+        "start": "17:10",
+        "stop": "18:00",
         "durMin": 50,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004425"
+        "sap": "700090049"
+      },
+      {
+        "desc": "Wheel locked up in quench",
+        "line": "OD",
+        "start": "07:45",
+        "stop": "09:00",
+        "durMin": 75,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004436"
       },
       {
         "desc": "Elotherm trip resulting in partial coat",
         "line": "OD",
-        "start": "15:15",
-        "stop": "15:35",
-        "durMin": 20,
+        "start": "12:45",
+        "stop": "13:20",
+        "durMin": 35,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004426"
+        "sap": "30000004437"
       },
       {
-        "desc": "plant startup",
+        "desc": "Elotherm trip resulting in partial coat",
         "line": "OD",
-        "start": "18:00",
-        "stop": "19:30",
-        "durMin": 90,
-        "shift": "Night",
+        "start": "14:10",
+        "stop": "14:40",
+        "durMin": 30,
+        "shift": "Day",
         "cause": "",
-        "sap": "700089937"
+        "sap": "30000004438"
       },
       {
-        "desc": "induction coil tripout result in partial",
+        "desc": "2 pipes fell off saddles on south chain",
         "line": "OD",
-        "start": "21:10",
-        "stop": "22:10",
-        "durMin": 60,
-        "shift": "Night",
+        "start": "14:40",
+        "stop": "15:35",
+        "durMin": 55,
+        "shift": "Day",
         "cause": "",
-        "sap": "30000004430"
-      },
-      {
-        "desc": "induction coil tripout result in partial",
-        "line": "OD",
-        "start": "23:20",
-        "stop": "12:10",
-        "durMin": 770,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004433"
-      },
-      {
-        "desc": "pipe fell off saddle southchain",
-        "line": "OD",
-        "start": "04:35",
-        "stop": "06:00",
-        "durMin": 85,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004434"
+        "sap": "30000004439"
       }
     ]
   }
