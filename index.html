@@ -986,23 +986,33 @@ function wmPeriodBulletPanel(containerId,order,periodsFn){
    newest-to-oldest, then the prior month tab's weeks newest-to-oldest, and
    so on), skipping any block with zero data, until 4 collected or history
    runs out (e.g. April's first-ever week has no predecessor). */
+/* Week-letter list is read from the data itself (Object.keys, reversed --
+   Python writes weeks_out in week-number order, so this is newest-first),
+   NOT a hardcoded ['AI','AA','S','K'] -- that 4-letter list silently
+   stopped advancing once a month tab grew a real 5th/6th week (fixed
+   2026-07-29, same day as the underlying Python export's own range(1,5)
+   cap on the same bug). */
 function wmLast4Weeks(){
   const months=Object.keys(WM.months);
-  const weekLetters=['AI','AA','S','K']; // week4..week1, newest-first within a month
   const out=[];
   for(let m=months.length-1; m>=0 && out.length<4; m--){
     const month=months[m];
     const weeks=WM.months[month].weeks;
-    for(const wl of weekLetters){
+    const letters=Object.keys(weeks).reverse();
+    for(const wl of letters){
       if(out.length>=4) break;
-      if(weeks[wl]) out.unshift({month,wl,data:weeks[wl]});
+      out.unshift({month,wl,data:weeks[wl]});
     }
   }
   return out;
 }
 function wmWeekLabel(month,wl){
-  const wn={AI:4,AA:3,S:2,K:1}[wl];
-  return month.slice(0,3)+' W'+wn;
+  // K/S/AA/AI/AQ/AY = weeks 1-6's summary columns (11/19/27/35/43/51) --
+  // 6 covers the real max (4 usually, 5 most other months, 6 only for a
+  // 31-day month starting Sat/Sun). Was hardcoded to weeks 1-4 only; a
+  // real week 5/6 label came out as "Jul Wundefined".
+  const wn={K:1,S:2,AA:3,AI:4,AQ:5,AY:6}[wl];
+  return month.slice(0,3)+' W'+(wn||'?');
 }
 function wmRenderWowBullets(last4){
   const colors=[G[0],G[2],G[4],G[6]];
