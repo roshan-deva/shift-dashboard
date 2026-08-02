@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-01T23:55:55.062899",
+  "generated": "2026-08-02T08:24:23.404945",
   "meta": {
-    "date": "08/01/2026",
-    "shift": "Day",
+    "date": "08/02/2026",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,15 +20,15 @@
   },
   "production": {
     "bare": {
-      "day": 0,
+      "day": 46,
       "night": 0,
-      "total": 0,
+      "total": 46,
       "tgt": 140
     },
     "idCoated": {
-      "day": 0,
-      "night": 0,
-      "total": 0,
+      "day": 56,
+      "night": 6,
+      "total": 62,
       "tgt": 140
     },
     "odTpi": {
@@ -44,11 +44,11 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 132,
+      "total": 0,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 257,
+      "total": 0,
       "tgt": 400
     },
     "directFeedPct": {
@@ -60,15 +60,15 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 3,
+      "val": 0,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 11,
+      "val": 0,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 4,
+      "val": 0,
       "tgt": 40
     }
   },
@@ -77,7 +77,7 @@
     "repairPct": 0.0,
     "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 0.0,
+    "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
     "repairPipes": 0,
@@ -89,39 +89,18 @@
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
     "strippingOutput": 0,
-    "idRejects": 2,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 1.5,
+    "idDowntimeHrs": 0.0,
     "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 2,
-    "plannedDt": 1.5,
+    "sapNotif": 0,
+    "plannedDt": 0.0,
     "unplannedDt": 0.0,
     "forklift": 0,
-    "downtimeEvents": [
-      {
-        "desc": "plant startup",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "07:00",
-        "durMin": 60,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700090413"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "17:30",
-        "stop": "18:00",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700090414"
-      }
-    ]
+    "downtimeEvents": []
   }
 }
