@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-08T12:46:35.359281",
+  "generated": "2026-08-08T13:24:44.856788",
   "meta": {
-    "date": "08/08/2026",
-    "shift": "Day",
+    "date": "08/07/2026",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -21,42 +21,42 @@
   "production": {
     "bare": {
       "day": 69,
-      "night": 0,
-      "total": 69,
+      "night": 78,
+      "total": 147,
       "tgt": 140
     },
     "idCoated": {
       "day": 82,
-      "night": 0,
-      "total": 82,
+      "night": 81,
+      "total": 163,
       "tgt": 140
     },
     "odTpi": {
       "day": 96,
-      "night": 0,
-      "total": 96,
+      "night": 88,
+      "total": 184,
       "tgt": 145
     },
     "odCoated": {
       "day": 89,
-      "night": 0,
-      "total": 89,
+      "night": 86,
+      "total": 175,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 0,
+      "total": 94,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 312,
+      "total": 274,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 105.8,
+      "val": 49.66,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 100,
+      "val": 81.6,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -68,23 +68,23 @@
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 0,
+      "val": 4,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 96.63,
-    "repairPct": 2.25,
-    "rejectPct": 1.12,
+    "ftrOd": 98.29,
+    "repairPct": 1.14,
+    "rejectPct": 0.57,
     "ftrOdTgt": 96,
-    "ftrId": 98.78,
-    "idRejectPct": 1.22,
+    "ftrId": 99.39,
+    "idRejectPct": 0.61,
     "ftrIdTgt": 98,
     "repairPipes": 2,
     "rejectPipes": 1,
-    "twoPartRepairs": 121,
+    "twoPartRepairs": 245,
     "bevel": 0,
-    "sample": 2,
+    "sample": 3,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
@@ -94,13 +94,24 @@
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 0.0,
+    "idDowntimeHrs": 0.5,
     "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 8,
-    "plannedDt": 4.17,
+    "sapNotif": 9,
+    "plannedDt": 4.67,
     "unplannedDt": 1.42,
     "forklift": 0,
-    "downtimeEvents": []
+    "downtimeEvents": [
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "05:30",
+        "stop": "06:00",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700091053"
+      }
+    ]
   }
 }
