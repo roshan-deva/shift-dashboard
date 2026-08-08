@@ -212,6 +212,7 @@ main{flex:1;min-width:0;padding:22px 26px;max-width:1500px}
 #tt{position:fixed;background:rgba(0,0,0,.88);border:0.67px solid var(--border);border-radius:5px;padding:6px 11px;font-size:11px;white-space:nowrap;z-index:9999;pointer-events:none;display:none;color:var(--text)}
 #demo-banner{background:rgba(253,175,34,.1);border-bottom:0.67px solid rgba(253,175,34,.3);color:var(--amber);font-size:11px;padding:6px;text-align:center;letter-spacing:.06em;display:none}
 #rollover-banner{background:rgba(253,175,34,.1);border-bottom:0.67px solid rgba(253,175,34,.3);color:var(--amber);font-size:11px;padding:6px;text-align:center;letter-spacing:.06em;display:none}
+#backlog-banner{background:rgba(255,103,87,.12);border-bottom:0.67px solid rgba(255,103,87,.35);color:var(--coral);font-size:11px;padding:6px;text-align:center;letter-spacing:.06em;display:none}
 /* ── Manpower tab (Kronos) ───────────────────────── */
 .mp-matrix{overflow-x:auto}
 .mp-matrix table{border-collapse:collapse;width:100%;min-width:640px}
@@ -363,6 +364,7 @@ main{flex:1;min-width:0;padding:22px 26px;max-width:1500px}
 <div id="tt"></div>
 <div id="demo-banner">⚠ DEMO MODE — daily_snapshot.json not found · Displaying built-in sample data</div>
 <div id="rollover-banner">⚠ Month rollover needed — run run_month_rollover.py (StartNewMonth) before this month's Dashboard data will update</div>
+<div id="backlog-banner"></div>
 
 <header>
   <canvas id="hdr-shader"></canvas>
@@ -1538,6 +1540,12 @@ async function init(){
   const ms=DATA.meta&&DATA.meta.shift;
   if(ms==='Day'||ms==='Night') setMode(ms);
   if(DATA.meta&&DATA.meta.monthRolloverNeeded) document.getElementById('rollover-banner').style.display='block';
+  const bl=DATA.meta&&DATA.meta.backlogReplayed;
+  if(bl&&bl.length){
+    const el=document.getElementById('backlog-banner');
+    el.textContent='⚠ Backlog auto-replayed — '+bl.length+' day(s) pushed to the Dashboard unattended ('+bl.join(', ')+'). Spot-check before reporting.';
+    el.style.display='block';
+  }
   showSnap('overview');
 }
 init();
