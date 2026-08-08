@@ -1,7 +1,7 @@
 {
-  "generated": "2026-08-05T10:46:54.019910",
+  "generated": "2026-08-08T08:54:44.251616",
   "meta": {
-    "date": "08/04/2026",
+    "date": "08/07/2026",
     "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
@@ -20,51 +20,51 @@
   },
   "production": {
     "bare": {
-      "day": 54,
-      "night": 67,
-      "total": 121,
+      "day": 69,
+      "night": 78,
+      "total": 147,
       "tgt": 140
     },
     "idCoated": {
-      "day": 72,
-      "night": 65,
-      "total": 137,
+      "day": 82,
+      "night": 81,
+      "total": 163,
       "tgt": 140
     },
     "odTpi": {
-      "day": 86,
-      "night": 94,
-      "total": 180,
+      "day": 96,
+      "night": 88,
+      "total": 184,
       "tgt": 145
     },
     "odCoated": {
-      "day": 83,
-      "night": 99,
-      "total": 182,
+      "day": 89,
+      "night": 86,
+      "total": 175,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 161,
+      "total": 94,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 186,
+      "total": 274,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 16.53,
+      "val": 49.66,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 87.59,
+      "val": 81.6,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 2,
+      "val": 4,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 4,
+      "val": 8,
       "tgt": 20
     },
     "odRepairBalance": {
@@ -73,94 +73,44 @@
     }
   },
   "quality": {
-    "ftrOd": 98.35,
-    "repairPct": 1.1,
-    "rejectPct": 0.55,
+    "ftrOd": 98.29,
+    "repairPct": 1.14,
+    "rejectPct": 0.57,
     "ftrOdTgt": 96,
-    "ftrId": 98.54,
-    "idRejectPct": 1.46,
+    "ftrId": 99.39,
+    "idRejectPct": 0.61,
     "ftrIdTgt": 98,
     "repairPipes": 2,
     "rejectPipes": 1,
-    "twoPartRepairs": 389,
-    "bevel": 1,
-    "sample": 2,
+    "twoPartRepairs": 245,
+    "bevel": 0,
+    "sample": 3,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 2,
-    "idRejects": 2,
+    "strippingOutput": 9,
+    "idRejects": 1,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 2.75,
-    "odDowntimeHrs": 2.25,
+    "idDowntimeHrs": 0.5,
+    "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 15,
-    "plannedDt": 7.66,
-    "unplannedDt": 6.33,
+    "sapNotif": 9,
+    "plannedDt": 4.67,
+    "unplannedDt": 1.42,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "replacing cylinder carrier 2",
+        "desc": "Pitstop",
         "line": "ID",
-        "start": "18:00",
-        "stop": "19:30",
-        "durMin": 90,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004483"
-      },
-      {
-        "desc": "changed movable cabin brake pad",
-        "line": "ID",
-        "start": "02:20",
-        "stop": "02:50",
+        "start": "05:30",
+        "stop": "06:00",
         "durMin": 30,
         "shift": "Night",
         "cause": "",
-        "sap": "30000004484"
-      },
-      {
-        "desc": "Curing Chamber chain out of alignment",
-        "line": "ID",
-        "start": "05:15",
-        "stop": "06:00",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004485"
-      },
-      {
-        "desc": "Start up",
-        "line": "OD",
-        "start": "18:00",
-        "stop": "18:20",
-        "durMin": 20,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700090712"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "01:00",
-        "stop": "02:05",
-        "durMin": 65,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700090713"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "05:10",
-        "stop": "06:00",
-        "durMin": 50,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700090764"
+        "sap": "700091053"
       }
     ]
   }
