@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-09T19:34:06.774067",
+  "generated": "2026-08-10T07:30:37.639536",
   "meta": {
     "date": "08/09/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -48,7 +48,7 @@
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 383,
+      "total": 380,
       "tgt": 400
     },
     "directFeedPct": {
