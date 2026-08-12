@@ -1540,12 +1540,10 @@ async function init(){
   const ms=DATA.meta&&DATA.meta.shift;
   if(ms==='Day'||ms==='Night') setMode(ms);
   if(DATA.meta&&DATA.meta.monthRolloverNeeded) document.getElementById('rollover-banner').style.display='block';
-  const bl=DATA.meta&&DATA.meta.backlogReplayed;
-  if(bl&&bl.length){
-    const el=document.getElementById('backlog-banner');
-    el.textContent='⚠ Backlog auto-replayed — '+bl.length+' day(s) pushed to the Dashboard unattended ('+bl.join(', ')+'). Spot-check before reporting.';
-    el.style.display='block';
-  }
+  /* backlogReplayed intentionally NOT rendered on the public page (2026-08-11)
+     -- an internal ops signal, not meant for external viewers. The field
+     stays in this JSON either way (the health-check routine reads it from
+     here); Agent/daily_snapshot.html still shows the banner locally. */
   showSnap('overview');
 }
 init();
