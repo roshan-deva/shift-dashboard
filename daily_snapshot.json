@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-11T19:30:34.496546",
+  "generated": "2026-08-12T08:22:55.590810",
   "meta": {
     "date": "08/11/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -16,50 +16,47 @@
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    },
-    "backlogReplayed": [
-      "2026-08-10"
-    ]
+    }
   },
   "production": {
     "bare": {
-      "day": 78,
-      "night": 0,
-      "total": 78,
+      "day": 75,
+      "night": 41,
+      "total": 116,
       "tgt": 140
     },
     "idCoated": {
-      "day": 95,
-      "night": 0,
-      "total": 95,
+      "day": 87,
+      "night": 82,
+      "total": 169,
       "tgt": 140
     },
     "odTpi": {
-      "day": 65,
-      "night": 0,
-      "total": 65,
+      "day": 62,
+      "night": 90,
+      "total": 152,
       "tgt": 145
     },
     "odCoated": {
-      "day": 66,
-      "night": 0,
-      "total": 66,
+      "day": 62,
+      "night": 93,
+      "total": 155,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 39,
+      "total": 16,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 354,
+      "total": 351,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 36.21,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 83.43,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -67,27 +64,27 @@
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 5,
+      "val": 9,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 3,
+      "val": 5,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 93.94,
-    "repairPct": 4.55,
-    "rejectPct": 1.52,
+    "ftrOd": 94.19,
+    "repairPct": 2.58,
+    "rejectPct": 3.23,
     "ftrOdTgt": 96,
     "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 3,
-    "rejectPipes": 1,
-    "twoPartRepairs": 83,
-    "bevel": 1,
-    "sample": 1,
+    "repairPipes": 4,
+    "rejectPipes": 5,
+    "twoPartRepairs": 205,
+    "bevel": 2,
+    "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
@@ -97,12 +94,12 @@
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 2.33,
-    "odDowntimeHrs": 6.67,
+    "idDowntimeHrs": 3.83,
+    "odDowntimeHrs": 9.58,
     "tgt": 85,
-    "sapNotif": 9,
-    "plannedDt": 5.66,
-    "unplannedDt": 3.33,
+    "sapNotif": 16,
+    "plannedDt": 9.32,
+    "unplannedDt": 4.08,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -144,6 +141,36 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004562"
+      },
+      {
+        "desc": "Start Up",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:20",
+        "durMin": 20,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700091436"
+      },
+      {
+        "desc": "pitstop",
+        "line": "ID",
+        "start": "01:10",
+        "stop": "01:45",
+        "durMin": 35,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700091442"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "05:25",
+        "stop": "06:00",
+        "durMin": 35,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700091472"
       },
       {
         "desc": "plant start up",
@@ -194,6 +221,46 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004563"
+      },
+      {
+        "desc": "Start up",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "18:25",
+        "durMin": 25,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700091437"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "OD",
+        "start": "01:00",
+        "stop": "01:55",
+        "durMin": 55,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700091443"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "05:10",
+        "stop": "06:00",
+        "durMin": 50,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700091473"
+      },
+      {
+        "desc": "Welding Keyway and Sprocket on V-Roller",
+        "line": "OD",
+        "start": "20:05",
+        "stop": "20:50",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004564"
       }
     ]
   }
