@@ -1,7 +1,7 @@
 {
-  "generated": "2026-08-13T07:30:33.020249",
+  "generated": "2026-08-14T08:12:43.678078",
   "meta": {
-    "date": "08/12/2026",
+    "date": "08/13/2026",
     "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
@@ -16,54 +16,51 @@
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    },
-    "needsReview": [
-      "Job LR-LDC-ID-WIP-REP, Step 1_20260813_110617.pdf"
-    ]
+    }
   },
   "production": {
     "bare": {
-      "day": 66,
-      "night": 51,
-      "total": 117,
+      "day": 50,
+      "night": 69,
+      "total": 119,
       "tgt": 140
     },
     "idCoated": {
-      "day": 26,
-      "night": 56,
-      "total": 82,
+      "day": 23,
+      "night": 61,
+      "total": 84,
       "tgt": 140
     },
     "odTpi": {
-      "day": 79,
-      "night": 71,
-      "total": 150,
+      "day": 53,
+      "night": 70,
+      "total": 123,
       "tgt": 145
     },
     "odCoated": {
-      "day": 75,
-      "night": 73,
-      "total": 148,
+      "day": 46,
+      "night": 70,
+      "total": 116,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 46,
+      "total": 61,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 272,
+      "total": 255,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 32.48,
+      "val": 48.74,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 100,
+      "val": 90.48,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 8,
+      "val": 11,
       "tgt": 20
     },
     "stripBalanceOd": {
@@ -76,74 +73,54 @@
     }
   },
   "quality": {
-    "ftrOd": 96.62,
-    "repairPct": 3.38,
-    "rejectPct": 0.0,
+    "ftrOd": 93.1,
+    "repairPct": 3.45,
+    "rejectPct": 3.45,
     "ftrOdTgt": 96,
-    "ftrId": 93.9,
-    "idRejectPct": 6.1,
+    "ftrId": 95.24,
+    "idRejectPct": 4.76,
     "ftrIdTgt": 98,
-    "repairPipes": 5,
-    "rejectPipes": 0,
-    "twoPartRepairs": 188,
-    "bevel": 2,
+    "repairPipes": 4,
+    "rejectPipes": 4,
+    "twoPartRepairs": 135,
+    "bevel": 0,
     "sample": 2,
-    "tape": 1,
+    "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
     "strippingOutput": 12,
-    "idRejects": 5,
+    "idRejects": 4,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 9.75,
-    "odDowntimeHrs": 10.42,
+    "idDowntimeHrs": 1.58,
+    "odDowntimeHrs": 5.67,
     "tgt": 85,
-    "sapNotif": 19,
-    "plannedDt": 16.59,
-    "unplannedDt": 3.59,
+    "sapNotif": 16,
+    "plannedDt": 20.92,
+    "unplannedDt": 0.83,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "plant start up",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "06:25",
-        "durMin": 25,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700091516"
-      },
-      {
-        "desc": "final table backed up",
-        "line": "ID",
-        "start": "09:30",
-        "stop": "09:55",
-        "durMin": 25,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700091517"
-      },
-      {
-        "desc": "shift called off no pipes",
-        "line": "ID",
-        "start": "12:30",
-        "stop": "18:00",
-        "durMin": 330,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700091520"
-      },
-      {
-        "desc": "Startup",
+        "desc": "Lack of pipes - letting pipes build up",
         "line": "ID",
         "start": "18:00",
-        "stop": "18:20",
+        "stop": "18:45",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700091729"
+      },
+      {
+        "desc": "Nozzle clogged resulting in 3 strip",
+        "line": "ID",
+        "start": "00:55",
+        "stop": "01:15",
         "durMin": 20,
         "shift": "Night",
         "cause": "",
-        "sap": "700091629"
+        "sap": "700091828"
       },
       {
         "desc": "Pitstop",
@@ -153,137 +130,57 @@
         "durMin": 30,
         "shift": "Night",
         "cause": "",
-        "sap": "700091639"
+        "sap": "700091829"
       },
       {
-        "desc": "Carrier 2 arms not working",
-        "line": "ID",
-        "start": "18:30",
-        "stop": "18:45",
-        "durMin": 15,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004571"
-      },
-      {
-        "desc": "Carrier 2 igus track broken",
-        "line": "ID",
-        "start": "21:30",
-        "stop": "22:40",
-        "durMin": 70,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004572"
-      },
-      {
-        "desc": "Carrier 2 arms not working",
-        "line": "ID",
-        "start": "23:20",
-        "stop": "00:30",
-        "durMin": 70,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004573"
-      },
-      {
-        "desc": "plant start up",
-        "line": "OD",
-        "start": "06:00",
-        "stop": "06:30",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700091518"
-      },
-      {
-        "desc": "inbound scanner malfunction",
-        "line": "OD",
-        "start": "08:20",
-        "stop": "08:50",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700091519"
-      },
-      {
-        "desc": "pitstop",
-        "line": "OD",
-        "start": "12:30",
-        "stop": "13:10",
-        "durMin": 40,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700091521"
-      },
-      {
-        "desc": "final table backed up ID repairs",
-        "line": "OD",
-        "start": "14:25",
-        "stop": "16:20",
-        "durMin": 115,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700091522"
-      },
-      {
-        "desc": "pitstop",
-        "line": "OD",
-        "start": "17:10",
-        "stop": "18:00",
-        "durMin": 50,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700091523"
-      },
-      {
-        "desc": "north west buggy not picking up",
-        "line": "OD",
-        "start": "09:55",
-        "stop": "10:55",
-        "durMin": 60,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004568"
-      },
-      {
-        "desc": "Startup",
+        "desc": "Lack of manpower on final table",
         "line": "OD",
         "start": "18:00",
-        "stop": "18:25",
-        "durMin": 25,
+        "stop": "18:40",
+        "durMin": 40,
         "shift": "Night",
         "cause": "",
-        "sap": "700091627"
+        "sap": "700091730"
       },
       {
-        "desc": "Final table full - manpower issues",
+        "desc": "Wrong pipes loaded to od inbound (ETC)",
         "line": "OD",
-        "start": "22:20",
-        "stop": "00:05",
-        "durMin": 105,
+        "start": "20:20",
+        "stop": "21:00",
+        "durMin": 40,
         "shift": "Night",
         "cause": "",
-        "sap": "700091628"
+        "sap": "700091765"
       },
       {
-        "desc": "Final table full - manpower issues",
+        "desc": "Clearing final table to restart",
         "line": "OD",
-        "start": "01:50",
-        "stop": "03:00",
+        "start": "21:00",
+        "stop": "22:10",
         "durMin": 70,
         "shift": "Night",
         "cause": "",
-        "sap": "700091630"
+        "sap": "700091766"
       },
       {
-        "desc": "Final table full - manpower issues",
+        "desc": "South loadout full - vac down",
         "line": "OD",
-        "start": "03:40",
-        "stop": "04:30",
-        "durMin": 50,
+        "start": "00:40",
+        "stop": "02:30",
+        "durMin": 110,
         "shift": "Night",
         "cause": "",
-        "sap": "700091637"
+        "sap": "700091831"
+      },
+      {
+        "desc": "Resolving several guns clogged on restar",
+        "line": "OD",
+        "start": "02:30",
+        "stop": "03:00",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700091834"
       },
       {
         "desc": "Pitstop",
@@ -293,7 +190,7 @@
         "durMin": 50,
         "shift": "Night",
         "cause": "",
-        "sap": "700091638"
+        "sap": "700091836"
       }
     ]
   }
