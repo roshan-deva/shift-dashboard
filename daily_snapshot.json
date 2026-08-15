@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-14T08:12:43.678078",
+  "generated": "2026-08-14T19:40:41.549799",
   "meta": {
-    "date": "08/13/2026",
-    "shift": "24H",
+    "date": "08/14/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,177 +20,187 @@
   },
   "production": {
     "bare": {
-      "day": 50,
-      "night": 69,
-      "total": 119,
+      "day": 80,
+      "night": 0,
+      "total": 80,
       "tgt": 140
     },
     "idCoated": {
-      "day": 23,
-      "night": 61,
-      "total": 84,
+      "day": 80,
+      "night": 0,
+      "total": 80,
       "tgt": 140
     },
     "odTpi": {
-      "day": 53,
-      "night": 70,
-      "total": 123,
+      "day": 82,
+      "night": 0,
+      "total": 82,
       "tgt": 145
     },
     "odCoated": {
-      "day": 46,
-      "night": 70,
-      "total": 116,
+      "day": 87,
+      "night": 0,
+      "total": 87,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 61,
+      "total": 76,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 255,
+      "total": 244,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 48.74,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 90.48,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 11,
+      "val": 5,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 4,
+      "val": 8,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 6,
+      "val": 1,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 93.1,
-    "repairPct": 3.45,
-    "rejectPct": 3.45,
+    "ftrOd": 94.25,
+    "repairPct": 1.15,
+    "rejectPct": 4.6,
     "ftrOdTgt": 96,
-    "ftrId": 95.24,
-    "idRejectPct": 4.76,
+    "ftrId": 100.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 4,
+    "repairPipes": 1,
     "rejectPipes": 4,
-    "twoPartRepairs": 135,
+    "twoPartRepairs": 158,
     "bevel": 0,
-    "sample": 2,
+    "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 12,
-    "idRejects": 4,
+    "strippingOutput": 6,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 1.58,
-    "odDowntimeHrs": 5.67,
+    "idDowntimeHrs": 1.92,
+    "odDowntimeHrs": 4.08,
     "tgt": 85,
-    "sapNotif": 16,
-    "plannedDt": 20.92,
-    "unplannedDt": 0.83,
+    "sapNotif": 10,
+    "plannedDt": 3.92,
+    "unplannedDt": 2.08,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "Lack of pipes - letting pipes build up",
+        "desc": "Start up",
         "line": "ID",
-        "start": "18:00",
-        "stop": "18:45",
-        "durMin": 45,
-        "shift": "Night",
+        "start": "06:00",
+        "stop": "06:25",
+        "durMin": 25,
+        "shift": "Day",
         "cause": "",
-        "sap": "700091729"
+        "sap": "700091889"
       },
       {
-        "desc": "Nozzle clogged resulting in 3 strip",
+        "desc": "Pitstop",
         "line": "ID",
-        "start": "00:55",
-        "stop": "01:15",
+        "start": "13:50",
+        "stop": "14:30",
+        "durMin": 40,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700091892"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "17:30",
+        "stop": "18:00",
+        "durMin": 30,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700091893"
+      },
+      {
+        "desc": "blast 2 hydro unit high tamp.",
+        "line": "ID",
+        "start": "15:10",
+        "stop": "15:30",
         "durMin": 20,
-        "shift": "Night",
+        "shift": "Day",
         "cause": "",
-        "sap": "700091828"
+        "sap": "30000004586"
       },
       {
-        "desc": "Pitstop",
-        "line": "ID",
-        "start": "05:30",
-        "stop": "06:00",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700091829"
-      },
-      {
-        "desc": "Lack of manpower on final table",
+        "desc": "Start Up",
         "line": "OD",
-        "start": "18:00",
-        "stop": "18:40",
-        "durMin": 40,
-        "shift": "Night",
+        "start": "06:00",
+        "stop": "06:35",
+        "durMin": 35,
+        "shift": "Day",
         "cause": "",
-        "sap": "700091730"
-      },
-      {
-        "desc": "Wrong pipes loaded to od inbound (ETC)",
-        "line": "OD",
-        "start": "20:20",
-        "stop": "21:00",
-        "durMin": 40,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700091765"
-      },
-      {
-        "desc": "Clearing final table to restart",
-        "line": "OD",
-        "start": "21:00",
-        "stop": "22:10",
-        "durMin": 70,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700091766"
-      },
-      {
-        "desc": "South loadout full - vac down",
-        "line": "OD",
-        "start": "00:40",
-        "stop": "02:30",
-        "durMin": 110,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700091831"
-      },
-      {
-        "desc": "Resolving several guns clogged on restar",
-        "line": "OD",
-        "start": "02:30",
-        "stop": "03:00",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700091834"
+        "sap": "700091888"
       },
       {
         "desc": "Pitstop",
         "line": "OD",
-        "start": "05:10",
-        "stop": "06:00",
+        "start": "12:50",
+        "stop": "13:50",
+        "durMin": 60,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700091890"
+      },
+      {
+        "desc": "thickness station backed up",
+        "line": "OD",
+        "start": "15:20",
+        "stop": "16:05",
+        "durMin": 45,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700091891"
+      },
+      {
+        "desc": "replace idle wheel on coating line",
+        "line": "OD",
+        "start": "07:30",
+        "stop": "08:00",
+        "durMin": 30,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004583"
+      },
+      {
+        "desc": "welding roller stand on coating line",
+        "line": "OD",
+        "start": "13:50",
+        "stop": "14:15",
+        "durMin": 25,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004584"
+      },
+      {
+        "desc": "south chain down buggies uneven",
+        "line": "OD",
+        "start": "17:10",
+        "stop": "18:00",
         "durMin": 50,
-        "shift": "Night",
+        "shift": "Day",
         "cause": "",
-        "sap": "700091836"
+        "sap": "30000004587"
       }
     ]
   }
