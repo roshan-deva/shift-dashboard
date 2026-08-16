@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-15T21:15:49.190371",
+  "generated": "2026-08-16T07:30:50.342250",
   "meta": {
     "date": "08/15/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -16,50 +16,47 @@
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    },
-    "backlogReplayed": [
-      "2026-08-14"
-    ]
+    }
   },
   "production": {
     "bare": {
-      "day": 52,
-      "night": 0,
-      "total": 52,
+      "day": 51,
+      "night": 47,
+      "total": 98,
       "tgt": 140
     },
     "idCoated": {
-      "day": 67,
-      "night": 0,
-      "total": 67,
+      "day": 65,
+      "night": 81,
+      "total": 146,
       "tgt": 140
     },
     "odTpi": {
       "day": 75,
-      "night": 0,
-      "total": 75,
+      "night": 48,
+      "total": 123,
       "tgt": 145
     },
     "odCoated": {
-      "day": 85,
-      "night": 0,
-      "total": 85,
+      "day": 82,
+      "night": 53,
+      "total": 135,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 86,
+      "total": 68,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 189,
+      "total": 230,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 40.82,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 67.81,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -67,42 +64,42 @@
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 15,
+      "val": 19,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 5,
+      "val": 6,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 92.94,
-    "repairPct": 1.18,
-    "rejectPct": 5.88,
+    "ftrOd": 92.59,
+    "repairPct": 0.74,
+    "rejectPct": 6.67,
     "ftrOdTgt": 96,
     "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
     "repairPipes": 1,
-    "rejectPipes": 5,
-    "twoPartRepairs": 70,
+    "rejectPipes": 9,
+    "twoPartRepairs": 143,
     "bevel": 1,
-    "sample": 1,
+    "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 6,
+    "strippingOutput": 12,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 5.67,
-    "odDowntimeHrs": 2.75,
+    "idDowntimeHrs": 8.17,
+    "odDowntimeHrs": 10.33,
     "tgt": 85,
-    "sapNotif": 9,
-    "plannedDt": 1.99,
-    "unplannedDt": 6.42,
+    "sapNotif": 16,
+    "plannedDt": 7.57,
+    "unplannedDt": 10.92,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -156,6 +153,26 @@
         "sap": "30000004605"
       },
       {
+        "desc": "Startup",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:30",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700092041"
+      },
+      {
+        "desc": "Plant shutdown for PMs - clearing plant",
+        "line": "ID",
+        "start": "04:00",
+        "stop": "06:00",
+        "durMin": 120,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700092042"
+      },
+      {
         "desc": "Start Up",
         "line": "OD",
         "start": "06:00",
@@ -194,6 +211,56 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004606"
+      },
+      {
+        "desc": "2 guns clogged on startup",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "18:35",
+        "durMin": 35,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700091972"
+      },
+      {
+        "desc": "Plant shutdown for PMs - clearing plant",
+        "line": "OD",
+        "start": "03:30",
+        "stop": "06:00",
+        "durMin": 150,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700092040"
+      },
+      {
+        "desc": "Coating line group 4 trip - partial",
+        "line": "OD",
+        "start": "19:15",
+        "stop": "19:50",
+        "durMin": 35,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004607"
+      },
+      {
+        "desc": "Coating line group 4 trip - partial",
+        "line": "OD",
+        "start": "20:55",
+        "stop": "21:10",
+        "durMin": 15,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004608"
+      },
+      {
+        "desc": "Coating line group 4 trip - partial",
+        "line": "OD",
+        "start": "21:10",
+        "stop": "00:50",
+        "durMin": 220,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004609"
       }
     ]
   }
