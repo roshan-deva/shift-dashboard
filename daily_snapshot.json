@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-16T07:30:50.342250",
+  "generated": "2026-08-16T19:30:33.018227",
   "meta": {
-    "date": "08/15/2026",
-    "shift": "24H",
+    "date": "08/16/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,31 +20,31 @@
   },
   "production": {
     "bare": {
-      "day": 51,
-      "night": 47,
-      "total": 98,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 140
     },
     "idCoated": {
-      "day": 65,
-      "night": 81,
-      "total": 146,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 140
     },
     "odTpi": {
-      "day": 75,
-      "night": 48,
-      "total": 123,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 145
     },
     "odCoated": {
-      "day": 82,
-      "night": 53,
-      "total": 135,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 68,
+      "total": 70,
       "tgt": 400
     },
     "wipIdOd": {
@@ -52,11 +52,11 @@
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 40.82,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 67.81,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -73,195 +73,34 @@
     }
   },
   "quality": {
-    "ftrOd": 92.59,
-    "repairPct": 0.74,
-    "rejectPct": 6.67,
+    "ftrOd": 0.0,
+    "repairPct": 0.0,
+    "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 100.0,
+    "ftrId": 0.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 1,
-    "rejectPipes": 9,
-    "twoPartRepairs": 143,
-    "bevel": 1,
-    "sample": 2,
+    "repairPipes": 0,
+    "rejectPipes": 0,
+    "twoPartRepairs": 0,
+    "bevel": 0,
+    "sample": 0,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 12,
+    "strippingOutput": 0,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 8.17,
-    "odDowntimeHrs": 10.33,
+    "idDowntimeHrs": 0.0,
+    "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 16,
-    "plannedDt": 7.57,
-    "unplannedDt": 10.92,
+    "sapNotif": 0,
+    "plannedDt": 0.0,
+    "unplannedDt": 0.0,
     "forklift": 0,
-    "downtimeEvents": [
-      {
-        "desc": "Start Up",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "06:20",
-        "durMin": 20,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700091968"
-      },
-      {
-        "desc": "Start Up",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "06:20",
-        "durMin": 20,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700091970"
-      },
-      {
-        "desc": "welding crack boom on blaster 2",
-        "line": "ID",
-        "start": "09:40",
-        "stop": "10:35",
-        "durMin": 55,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004601"
-      },
-      {
-        "desc": "Carrier 2 malfunction",
-        "line": "ID",
-        "start": "11:10",
-        "stop": "11:40",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004602"
-      },
-      {
-        "desc": "replacing pump on carrier 2",
-        "line": "ID",
-        "start": "14:25",
-        "stop": "18:00",
-        "durMin": 215,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004605"
-      },
-      {
-        "desc": "Startup",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:30",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700092041"
-      },
-      {
-        "desc": "Plant shutdown for PMs - clearing plant",
-        "line": "ID",
-        "start": "04:00",
-        "stop": "06:00",
-        "durMin": 120,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700092042"
-      },
-      {
-        "desc": "Start Up",
-        "line": "OD",
-        "start": "06:00",
-        "stop": "07:20",
-        "durMin": 80,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700091967"
-      },
-      {
-        "desc": "Induction over heat",
-        "line": "OD",
-        "start": "15:20",
-        "stop": "16:15",
-        "durMin": 55,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004603"
-      },
-      {
-        "desc": "reset group 4 on coating line",
-        "line": "OD",
-        "start": "16:30",
-        "stop": "16:50",
-        "durMin": 20,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004604"
-      },
-      {
-        "desc": "replace broken bearing",
-        "line": "OD",
-        "start": "17:50",
-        "stop": "18:00",
-        "durMin": 10,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004606"
-      },
-      {
-        "desc": "2 guns clogged on startup",
-        "line": "OD",
-        "start": "18:00",
-        "stop": "18:35",
-        "durMin": 35,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700091972"
-      },
-      {
-        "desc": "Plant shutdown for PMs - clearing plant",
-        "line": "OD",
-        "start": "03:30",
-        "stop": "06:00",
-        "durMin": 150,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700092040"
-      },
-      {
-        "desc": "Coating line group 4 trip - partial",
-        "line": "OD",
-        "start": "19:15",
-        "stop": "19:50",
-        "durMin": 35,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004607"
-      },
-      {
-        "desc": "Coating line group 4 trip - partial",
-        "line": "OD",
-        "start": "20:55",
-        "stop": "21:10",
-        "durMin": 15,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004608"
-      },
-      {
-        "desc": "Coating line group 4 trip - partial",
-        "line": "OD",
-        "start": "21:10",
-        "stop": "00:50",
-        "durMin": 220,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004609"
-      }
-    ]
+    "downtimeEvents": []
   }
 }
