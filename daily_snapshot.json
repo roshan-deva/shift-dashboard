@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-17T20:06:12.091076",
+  "generated": "2026-08-18T08:13:05.756882",
   "meta": {
     "date": "08/17/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,43 +20,43 @@
   },
   "production": {
     "bare": {
-      "day": 45,
-      "night": 0,
-      "total": 45,
+      "day": 44,
+      "night": 46,
+      "total": 90,
       "tgt": 140
     },
     "idCoated": {
-      "day": 70,
-      "night": 0,
-      "total": 70,
+      "day": 65,
+      "night": 81,
+      "total": 146,
       "tgt": 140
     },
     "odTpi": {
       "day": 59,
-      "night": 0,
-      "total": 59,
+      "night": 91,
+      "total": 150,
       "tgt": 145
     },
     "odCoated": {
-      "day": 65,
-      "night": 0,
-      "total": 65,
+      "day": 59,
+      "night": 102,
+      "total": 161,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 75,
+      "total": 43,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 221,
+      "total": 202,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 20.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 100,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -64,42 +64,42 @@
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 22,
+      "val": 25,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 2,
+      "val": 11,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 92.31,
-    "repairPct": 3.08,
-    "rejectPct": 4.62,
+    "ftrOd": 90.06,
+    "repairPct": 6.21,
+    "rejectPct": 3.73,
     "ftrOdTgt": 96,
-    "ftrId": 98.57,
-    "idRejectPct": 1.43,
+    "ftrId": 98.63,
+    "idRejectPct": 1.37,
     "ftrIdTgt": 98,
-    "repairPipes": 2,
-    "rejectPipes": 3,
-    "twoPartRepairs": 84,
-    "bevel": 1,
-    "sample": 1,
-    "tape": 0,
+    "repairPipes": 10,
+    "rejectPipes": 6,
+    "twoPartRepairs": 224,
+    "bevel": 6,
+    "sample": 2,
+    "tape": 2,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
     "strippingOutput": 6,
-    "idRejects": 1,
+    "idRejects": 2,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 1.92,
-    "odDowntimeHrs": 4.25,
+    "idDowntimeHrs": 4.58,
+    "odDowntimeHrs": 7.42,
     "tgt": 85,
-    "sapNotif": 6,
-    "plannedDt": 5.74,
-    "unplannedDt": 0.42,
+    "sapNotif": 14,
+    "plannedDt": 9.66,
+    "unplannedDt": 2.34,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -133,6 +133,36 @@
         "sap": "30000004613"
       },
       {
+        "desc": "Startup",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:15",
+        "durMin": 15,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700092226"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "05:30",
+        "stop": "06:00",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700092341"
+      },
+      {
+        "desc": "Replacing turbine belt - both blast down",
+        "line": "ID",
+        "start": "21:30",
+        "stop": "23:25",
+        "durMin": 115,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004615"
+      },
+      {
         "desc": "Plant Start Up",
         "line": "OD",
         "start": "06:00",
@@ -161,6 +191,56 @@
         "shift": "Day",
         "cause": "",
         "sap": "700092222"
+      },
+      {
+        "desc": "Startup",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "18:15",
+        "durMin": 15,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700092225"
+      },
+      {
+        "desc": "Jeep/thickness backed up due auto jeeper",
+        "line": "OD",
+        "start": "20:00",
+        "stop": "21:00",
+        "durMin": 60,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700092229"
+      },
+      {
+        "desc": "Coupling fell out resulting in partial",
+        "line": "OD",
+        "start": "22:15",
+        "stop": "22:25",
+        "durMin": 10,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700092304"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "OD",
+        "start": "01:00",
+        "stop": "01:45",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700092305"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "OD",
+        "start": "05:00",
+        "stop": "06:00",
+        "durMin": 60,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700092340"
       }
     ]
   }
