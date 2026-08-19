@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-18T08:13:05.756882",
+  "generated": "2026-08-18T19:33:14.855281",
   "meta": {
-    "date": "08/17/2026",
-    "shift": "24H",
+    "date": "08/18/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,227 +20,157 @@
   },
   "production": {
     "bare": {
-      "day": 44,
-      "night": 46,
-      "total": 90,
+      "day": 71,
+      "night": 0,
+      "total": 71,
       "tgt": 140
     },
     "idCoated": {
-      "day": 65,
-      "night": 81,
-      "total": 146,
+      "day": 70,
+      "night": 0,
+      "total": 70,
       "tgt": 140
     },
     "odTpi": {
-      "day": 59,
-      "night": 91,
-      "total": 150,
+      "day": 95,
+      "night": 0,
+      "total": 95,
       "tgt": 145
     },
     "odCoated": {
-      "day": 59,
-      "night": 102,
-      "total": 161,
+      "day": 93,
+      "night": 0,
+      "total": 93,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 43,
+      "total": 40,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 202,
+      "total": 175,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 20.0,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 100,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 5,
+      "val": 4,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 25,
+      "val": 26,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 11,
+      "val": 5,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 90.06,
-    "repairPct": 6.21,
-    "rejectPct": 3.73,
+    "ftrOd": 96.77,
+    "repairPct": 2.15,
+    "rejectPct": 1.08,
     "ftrOdTgt": 96,
-    "ftrId": 98.63,
-    "idRejectPct": 1.37,
+    "ftrId": 100.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 10,
-    "rejectPipes": 6,
-    "twoPartRepairs": 224,
-    "bevel": 6,
-    "sample": 2,
-    "tape": 2,
+    "repairPipes": 2,
+    "rejectPipes": 1,
+    "twoPartRepairs": 108,
+    "bevel": 1,
+    "sample": 1,
+    "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 6,
-    "idRejects": 2,
+    "strippingOutput": 0,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 4.58,
-    "odDowntimeHrs": 7.42,
+    "idDowntimeHrs": 1.92,
+    "odDowntimeHrs": 3.0,
     "tgt": 85,
-    "sapNotif": 14,
-    "plannedDt": 9.66,
-    "unplannedDt": 2.34,
+    "sapNotif": 7,
+    "plannedDt": 4.5,
+    "unplannedDt": 0.42,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "Plant Start Up",
+        "desc": "plant start up",
         "line": "ID",
         "start": "06:00",
-        "stop": "06:35",
-        "durMin": 35,
+        "stop": "06:20",
+        "durMin": 20,
         "shift": "Day",
         "cause": "",
-        "sap": "700092210"
+        "sap": "700092397"
       },
       {
-        "desc": "Dust Storm",
+        "desc": "paint boom fell down in stationary cabin",
         "line": "ID",
-        "start": "14:00",
-        "stop": "14:55",
-        "durMin": 55,
+        "start": "15:15",
+        "stop": "16:25",
+        "durMin": 70,
         "shift": "Day",
         "cause": "",
-        "sap": "700092221"
+        "sap": "700092398"
       },
       {
-        "desc": "welding paint line boom",
+        "desc": "blaster #2 movable cabin won\"t move back",
         "line": "ID",
-        "start": "06:55",
-        "stop": "07:20",
+        "start": "12:40",
+        "stop": "13:05",
         "durMin": 25,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004613"
+        "sap": "30000004616"
       },
       {
-        "desc": "Startup",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:15",
-        "durMin": 15,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700092226"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "ID",
-        "start": "05:30",
-        "stop": "06:00",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700092341"
-      },
-      {
-        "desc": "Replacing turbine belt - both blast down",
-        "line": "ID",
-        "start": "21:30",
-        "stop": "23:25",
-        "durMin": 115,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004615"
-      },
-      {
-        "desc": "Plant Start Up",
+        "desc": "plant start up",
         "line": "OD",
         "start": "06:00",
-        "stop": "08:05",
-        "durMin": 125,
+        "stop": "06:20",
+        "durMin": 20,
         "shift": "Day",
         "cause": "",
-        "sap": "700092208"
+        "sap": "700092394"
       },
       {
-        "desc": "Checking guns",
+        "desc": "pitstop",
         "line": "OD",
-        "start": "09:55",
-        "stop": "10:30",
-        "durMin": 35,
+        "start": "12:30",
+        "stop": "13:35",
+        "durMin": 65,
         "shift": "Day",
         "cause": "",
-        "sap": "700092209"
+        "sap": "700092395"
       },
       {
-        "desc": "Dust Storm",
+        "desc": "thickness backed up due to forklirt malf",
         "line": "OD",
-        "start": "14:00",
-        "stop": "15:35",
-        "durMin": 95,
+        "start": "14:20",
+        "stop": "15:00",
+        "durMin": 40,
         "shift": "Day",
         "cause": "",
-        "sap": "700092222"
+        "sap": "700092396"
       },
       {
-        "desc": "Startup",
+        "desc": "coating ran out of pipes",
         "line": "OD",
-        "start": "18:00",
-        "stop": "18:15",
-        "durMin": 15,
-        "shift": "Night",
+        "start": "15:55",
+        "stop": "16:50",
+        "durMin": 55,
+        "shift": "Day",
         "cause": "",
-        "sap": "700092225"
-      },
-      {
-        "desc": "Jeep/thickness backed up due auto jeeper",
-        "line": "OD",
-        "start": "20:00",
-        "stop": "21:00",
-        "durMin": 60,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700092229"
-      },
-      {
-        "desc": "Coupling fell out resulting in partial",
-        "line": "OD",
-        "start": "22:15",
-        "stop": "22:25",
-        "durMin": 10,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700092304"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "01:00",
-        "stop": "01:45",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700092305"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "05:00",
-        "stop": "06:00",
-        "durMin": 60,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700092340"
+        "sap": "700092399"
       }
     ]
   }
