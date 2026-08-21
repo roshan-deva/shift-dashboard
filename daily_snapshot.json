@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-20T19:30:40.742988",
+  "generated": "2026-08-21T08:23:45.964928",
   "meta": {
     "date": "08/20/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -21,46 +21,46 @@
   "production": {
     "bare": {
       "day": 16,
-      "night": 0,
-      "total": 16,
+      "night": 42,
+      "total": 58,
       "tgt": 140
     },
     "idCoated": {
       "day": 48,
-      "night": 0,
-      "total": 48,
+      "night": 13,
+      "total": 61,
       "tgt": 140
     },
     "odTpi": {
-      "day": 75,
-      "night": 0,
-      "total": 75,
+      "day": 74,
+      "night": 69,
+      "total": 143,
       "tgt": 145
     },
     "odCoated": {
-      "day": 79,
-      "night": 0,
-      "total": 79,
+      "day": 78,
+      "night": 73,
+      "total": 151,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 33,
+      "total": 50,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 62,
+      "total": 8,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 12.07,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 100,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 4,
+      "val": 3,
       "tgt": 20
     },
     "stripBalanceOd": {
@@ -68,23 +68,23 @@
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 6,
+      "val": 10,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 97.47,
-    "repairPct": 1.27,
-    "rejectPct": 1.27,
+    "ftrOd": 95.36,
+    "repairPct": 2.65,
+    "rejectPct": 1.99,
     "ftrOdTgt": 96,
-    "ftrId": 97.92,
-    "idRejectPct": 2.08,
+    "ftrId": 98.36,
+    "idRejectPct": 1.64,
     "ftrIdTgt": 98,
-    "repairPipes": 1,
-    "rejectPipes": 1,
-    "twoPartRepairs": 136,
-    "bevel": 1,
-    "sample": 1,
+    "repairPipes": 4,
+    "rejectPipes": 3,
+    "twoPartRepairs": 227,
+    "bevel": 3,
+    "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
@@ -94,12 +94,12 @@
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 4.75,
-    "odDowntimeHrs": 4.58,
+    "idDowntimeHrs": 15.0,
+    "odDowntimeHrs": 10.33,
     "tgt": 85,
-    "sapNotif": 9,
-    "plannedDt": 8.67,
-    "unplannedDt": 0.67,
+    "sapNotif": 16,
+    "plannedDt": 19.59,
+    "unplannedDt": 5.75,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -131,6 +131,36 @@
         "shift": "Day",
         "cause": "",
         "sap": "700092618"
+      },
+      {
+        "desc": "no available pipes",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "23:10",
+        "durMin": 310,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700092670"
+      },
+      {
+        "desc": "blaster 1 east buggy igus track broke",
+        "line": "ID",
+        "start": "23:10",
+        "stop": "00:25",
+        "durMin": 75,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004638"
+      },
+      {
+        "desc": "blaster 1 turbine belt broke",
+        "line": "ID",
+        "start": "02:10",
+        "stop": "06:00",
+        "durMin": 230,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004639"
       },
       {
         "desc": "Start up",
@@ -191,6 +221,46 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004625"
+      },
+      {
+        "desc": "plant start up",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "18:40",
+        "durMin": 40,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700092673"
+      },
+      {
+        "desc": "thickness and jeep backed up",
+        "line": "OD",
+        "start": "19:55",
+        "stop": "21:00",
+        "durMin": 65,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700092675"
+      },
+      {
+        "desc": "changeover mj to A pipes",
+        "line": "OD",
+        "start": "23:40",
+        "stop": "01:40",
+        "durMin": 120,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700092677"
+      },
+      {
+        "desc": "thickness and jeep backed up",
+        "line": "OD",
+        "start": "04:00",
+        "stop": "06:00",
+        "durMin": 120,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700092698"
       }
     ]
   }
