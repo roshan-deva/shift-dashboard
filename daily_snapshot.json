@@ -1,7 +1,7 @@
 {
-  "generated": "2026-08-22T10:01:35.597664",
+  "generated": "2026-08-23T09:33:50.383505",
   "meta": {
-    "date": "08/21/2026",
+    "date": "08/22/2026",
     "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
@@ -20,31 +20,31 @@
   },
   "production": {
     "bare": {
-      "day": 41,
-      "night": 48,
-      "total": 89,
-      "tgt": 140
-    },
-    "idCoated": {
-      "day": 52,
-      "night": 42,
+      "day": 50,
+      "night": 44,
       "total": 94,
       "tgt": 140
     },
+    "idCoated": {
+      "day": 0,
+      "night": 0,
+      "total": 0,
+      "tgt": 140
+    },
     "odTpi": {
-      "day": 67,
-      "night": 55,
-      "total": 122,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 145
     },
     "odCoated": {
-      "day": 57,
-      "night": 55,
-      "total": 112,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 54,
+      "total": 146,
       "tgt": 400
     },
     "wipIdOd": {
@@ -52,11 +52,11 @@
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 52.81,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 91.49,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -73,114 +73,44 @@
     }
   },
   "quality": {
-    "ftrOd": 96.43,
-    "repairPct": 0.89,
-    "rejectPct": 2.68,
+    "ftrOd": 0.0,
+    "repairPct": 0.0,
+    "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 97.87,
-    "idRejectPct": 2.13,
+    "ftrId": 0.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 1,
-    "rejectPipes": 3,
-    "twoPartRepairs": 158,
+    "repairPipes": 0,
+    "rejectPipes": 0,
+    "twoPartRepairs": 0,
     "bevel": 0,
-    "sample": 2,
+    "sample": 0,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 14,
-    "idRejects": 2,
+    "strippingOutput": 0,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 5.92,
-    "odDowntimeHrs": 5.83,
+    "idDowntimeHrs": 0.0,
+    "odDowntimeHrs": 0.83,
     "tgt": 85,
-    "sapNotif": 15,
-    "plannedDt": 69.91,
-    "unplannedDt": 1.0,
+    "sapNotif": 3,
+    "plannedDt": 48.0,
+    "unplannedDt": 0.83,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "plant start up",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:45",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700092820"
-      },
-      {
-        "desc": "no available pipes",
-        "line": "ID",
-        "start": "22:25",
-        "stop": "01:00",
-        "durMin": 155,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700092916"
-      },
-      {
-        "desc": "no available pipes",
-        "line": "ID",
-        "start": "03:25",
-        "stop": "06:00",
-        "durMin": 155,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700092917"
-      },
-      {
-        "desc": "Shift called off due to no pipes avail",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "06:00",
-        "durMin": 0,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700092807"
-      },
-      {
-        "desc": "plant start up/accumulating pipes",
+        "desc": "northwest buggy pickup to early",
         "line": "OD",
-        "start": "18:00",
-        "stop": "19:10",
-        "durMin": 70,
+        "start": "21:55",
+        "stop": "22:45",
+        "durMin": 50,
         "shift": "Night",
         "cause": "",
-        "sap": "700092822"
-      },
-      {
-        "desc": "no available pipes",
-        "line": "OD",
-        "start": "02:00",
-        "stop": "06:00",
-        "durMin": 240,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700092918"
-      },
-      {
-        "desc": "powder not transferring",
-        "line": "OD",
-        "start": "20:00",
-        "stop": "20:40",
-        "durMin": 40,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004644"
-      },
-      {
-        "desc": "Shift called off due to no pipes avail",
-        "line": "OD",
-        "start": "06:00",
-        "stop": "06:00",
-        "durMin": 0,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700092805"
+        "sap": "30000004646"
       }
     ]
   }
