@@ -1,7 +1,7 @@
 {
-  "generated": "2026-08-23T09:33:50.383505",
+  "generated": "2026-08-24T10:01:59.033285",
   "meta": {
-    "date": "08/22/2026",
+    "date": "08/23/2026",
     "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
@@ -20,9 +20,9 @@
   },
   "production": {
     "bare": {
-      "day": 50,
-      "night": 44,
-      "total": 94,
+      "day": 75,
+      "night": 0,
+      "total": 75,
       "tgt": 140
     },
     "idCoated": {
@@ -44,7 +44,7 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 146,
+      "total": 212,
       "tgt": 400
     },
     "wipIdOd": {
@@ -95,23 +95,12 @@
   },
   "maintenance": {
     "idDowntimeHrs": 0.0,
-    "odDowntimeHrs": 0.83,
+    "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 3,
-    "plannedDt": 48.0,
-    "unplannedDt": 0.83,
+    "sapNotif": 0,
+    "plannedDt": 0.0,
+    "unplannedDt": 0.0,
     "forklift": 0,
-    "downtimeEvents": [
-      {
-        "desc": "northwest buggy pickup to early",
-        "line": "OD",
-        "start": "21:55",
-        "stop": "22:45",
-        "durMin": 50,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004646"
-      }
-    ]
+    "downtimeEvents": []
   }
 }
