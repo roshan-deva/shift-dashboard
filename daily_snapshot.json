@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-25T19:31:51.406105",
+  "generated": "2026-08-26T08:37:53.584091",
   "meta": {
     "date": "08/25/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -44,62 +44,62 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 247,
+      "total": 252,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 14,
+      "total": 12,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 87.93,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 100,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 5,
+      "val": 4,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 10,
+      "val": 12,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 3,
+      "val": 5,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 85.25,
-    "repairPct": 3.28,
-    "rejectPct": 11.48,
+    "ftrOd": 80.33,
+    "repairPct": 4.92,
+    "rejectPct": 14.75,
     "ftrOdTgt": 96,
-    "ftrId": 98.18,
-    "idRejectPct": 1.82,
+    "ftrId": 96.36,
+    "idRejectPct": 3.64,
     "ftrIdTgt": 98,
-    "repairPipes": 2,
-    "rejectPipes": 7,
-    "twoPartRepairs": 52,
-    "bevel": 1,
-    "sample": 1,
+    "repairPipes": 3,
+    "rejectPipes": 9,
+    "twoPartRepairs": 153,
+    "bevel": 2,
+    "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 6,
-    "idRejects": 1,
+    "strippingOutput": 14,
+    "idRejects": 2,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 6.92,
-    "odDowntimeHrs": 6.75,
+    "idDowntimeHrs": 9.33,
+    "odDowntimeHrs": 13.5,
     "tgt": 85,
-    "sapNotif": 12,
-    "plannedDt": 6.84,
-    "unplannedDt": 6.83,
+    "sapNotif": 19,
+    "plannedDt": 14.51,
+    "unplannedDt": 8.33,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -163,6 +163,36 @@
         "sap": "30000004661"
       },
       {
+        "desc": "Startup",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:25",
+        "durMin": 25,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700093258"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "05:30",
+        "stop": "06:00",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700093303"
+      },
+      {
+        "desc": "Blaster 2 boom belt loose - stops moving",
+        "line": "ID",
+        "start": "19:35",
+        "stop": "21:05",
+        "durMin": 90,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004672"
+      },
+      {
         "desc": "STARTUP",
         "line": "OD",
         "start": "06:00",
@@ -221,6 +251,46 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004657"
+      },
+      {
+        "desc": "No pipes available",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "20:00",
+        "durMin": 120,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700093259"
+      },
+      {
+        "desc": "No pipes available",
+        "line": "OD",
+        "start": "21:30",
+        "stop": "23:05",
+        "durMin": 95,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700093260"
+      },
+      {
+        "desc": "No pipes available",
+        "line": "OD",
+        "start": "00:10",
+        "stop": "02:25",
+        "durMin": 135,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700093261"
+      },
+      {
+        "desc": "Pitstop / lack of pipes",
+        "line": "OD",
+        "start": "05:05",
+        "stop": "06:00",
+        "durMin": 55,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700093302"
       }
     ]
   }
