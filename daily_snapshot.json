@@ -1,7 +1,7 @@
 {
-  "generated": "2026-08-28T07:30:56.419052",
+  "generated": "2026-08-29T10:05:52.579375",
   "meta": {
-    "date": "08/27/2026",
+    "date": "08/28/2026",
     "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
@@ -20,277 +20,147 @@
   },
   "production": {
     "bare": {
-      "day": 61,
-      "night": 75,
-      "total": 136,
+      "day": 63,
+      "night": 46,
+      "total": 109,
       "tgt": 140
     },
     "idCoated": {
-      "day": 77,
-      "night": 78,
-      "total": 155,
+      "day": 71,
+      "night": 74,
+      "total": 145,
       "tgt": 140
     },
     "odTpi": {
-      "day": 61,
-      "night": 83,
-      "total": 144,
-      "tgt": 145
-    },
-    "odCoated": {
-      "day": 66,
-      "night": 85,
+      "day": 73,
+      "night": 78,
       "total": 151,
       "tgt": 145
     },
+    "odCoated": {
+      "day": 69,
+      "night": 80,
+      "total": 149,
+      "tgt": 145
+    },
     "wipBareId": {
-      "total": 218,
+      "total": 177,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 13,
+      "total": 19,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 11.76,
+      "val": 28.44,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 82.58,
+      "val": 44.14,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 5,
+      "val": 8,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 16,
+      "val": 17,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 6,
+      "val": 10,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 95.36,
-    "repairPct": 1.99,
-    "rejectPct": 2.65,
+    "ftrOd": 91.28,
+    "repairPct": 4.7,
+    "rejectPct": 4.03,
     "ftrOdTgt": 96,
-    "ftrId": 98.71,
-    "idRejectPct": 1.29,
+    "ftrId": 96.55,
+    "idRejectPct": 3.45,
     "ftrIdTgt": 98,
-    "repairPipes": 3,
-    "rejectPipes": 4,
-    "twoPartRepairs": 193,
-    "bevel": 1,
+    "repairPipes": 7,
+    "rejectPipes": 6,
+    "twoPartRepairs": 164,
+    "bevel": 2,
     "sample": 2,
-    "tape": 0,
+    "tape": 1,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 10,
-    "idRejects": 2,
+    "strippingOutput": 11,
+    "idRejects": 5,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 3.42,
-    "odDowntimeHrs": 9.67,
+    "idDowntimeHrs": 1.42,
+    "odDowntimeHrs": 4.83,
     "tgt": 85,
-    "sapNotif": 19,
-    "plannedDt": 9.83,
-    "unplannedDt": 3.14,
+    "sapNotif": 14,
+    "plannedDt": 11.93,
+    "unplannedDt": 1.58,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "STARTUP",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "06:25",
-        "durMin": 25,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093443"
-      },
-      {
-        "desc": "WELDING BLASTER-1 BOOM CRACK",
-        "line": "ID",
-        "start": "07:05",
-        "stop": "08:00",
-        "durMin": 55,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004685"
-      },
-      {
-        "desc": "WELDIMG BLASTER-2 BOOM CRACK",
-        "line": "ID",
-        "start": "08:30",
-        "stop": "08:50",
-        "durMin": 20,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004686"
-      },
-      {
-        "desc": "REPAIRED ID PAINT CABLE DRAG CHAIN",
-        "line": "ID",
-        "start": "11:00",
-        "stop": "11:20",
-        "durMin": 20,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004687"
-      },
-      {
-        "desc": "plant start up",
+        "desc": "Startup",
         "line": "ID",
         "start": "18:00",
-        "stop": "18:20",
-        "durMin": 20,
+        "stop": "18:30",
+        "durMin": 30,
         "shift": "Night",
         "cause": "",
-        "sap": "700093447"
+        "sap": "700093541"
       },
       {
-        "desc": "pitstop",
+        "desc": "Pitstop",
         "line": "ID",
         "start": "01:30",
         "stop": "02:00",
         "durMin": 30,
         "shift": "Night",
         "cause": "",
-        "sap": "700093502"
+        "sap": "700093579"
       },
       {
-        "desc": "pitstop",
+        "desc": "Pitstop",
         "line": "ID",
-        "start": "05:25",
+        "start": "05:35",
         "stop": "06:00",
-        "durMin": 35,
+        "durMin": 25,
         "shift": "Night",
         "cause": "",
-        "sap": "700093507"
+        "sap": "700093585"
       },
       {
-        "desc": "START UP",
-        "line": "OD",
-        "start": "06:00",
-        "stop": "06:25",
-        "durMin": 25,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093437"
-      },
-      {
-        "desc": "PIPES NOT AVAILABLOE FOR PRODUCTION",
-        "line": "OD",
-        "start": "07:10",
-        "stop": "07:55",
-        "durMin": 45,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093438"
-      },
-      {
-        "desc": "PIPES NOT AVAILABLOE FOR PRODUCTION",
-        "line": "OD",
-        "start": "09:05",
-        "stop": "10:15",
-        "durMin": 70,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093439"
-      },
-      {
-        "desc": "PIPES NOT AVAILABLOE FOR PRODUCTION",
-        "line": "OD",
-        "start": "11:25",
-        "stop": "12:30",
-        "durMin": 65,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093440"
-      },
-      {
-        "desc": "OPERATOR ERROR ( THICKNESS STATION)",
-        "line": "OD",
-        "start": "13:05",
-        "stop": "13:15",
-        "durMin": 10,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093441"
-      },
-      {
-        "desc": "SHORT PIPE OF CENTER/ CLEARING FINAL TA",
-        "line": "OD",
-        "start": "14:15",
-        "stop": "15:50",
-        "durMin": 95,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093442"
-      },
-      {
-        "desc": "plant start up",
+        "desc": "Startup",
         "line": "OD",
         "start": "18:00",
-        "stop": "18:35",
-        "durMin": 35,
+        "stop": "18:40",
+        "durMin": 40,
         "shift": "Night",
         "cause": "",
-        "sap": "700093446"
+        "sap": "700093543"
       },
       {
-        "desc": "pitstop",
+        "desc": "SAP Running Slow/Final Backed Up",
         "line": "OD",
-        "start": "02:00",
-        "stop": "03:00",
+        "start": "22:00",
+        "stop": "23:00",
         "durMin": 60,
         "shift": "Night",
         "cause": "",
-        "sap": "700093508"
+        "sap": "700093577"
       },
       {
-        "desc": "no available pipes",
+        "desc": "Out of Pipes/Plant Shutdown Out of Pip",
         "line": "OD",
-        "start": "04:00",
-        "stop": "04:35",
-        "durMin": 35,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700093509"
-      },
-      {
-        "desc": "pitstop",
-        "line": "OD",
-        "start": "05:15",
+        "start": "02:50",
         "stop": "06:00",
-        "durMin": 45,
+        "durMin": 190,
         "shift": "Night",
         "cause": "",
-        "sap": "700093510"
-      },
-      {
-        "desc": "north east saddle off track",
-        "line": "OD",
-        "start": "19:45",
-        "stop": "21:10",
-        "durMin": 85,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004688"
-      },
-      {
-        "desc": "pipe travel to far group 10",
-        "line": "OD",
-        "start": "23:15",
-        "stop": "23:25",
-        "durMin": 10,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004690"
+        "sap": "700093578"
       }
     ]
   }
