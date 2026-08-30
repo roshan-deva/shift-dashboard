@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-29T19:30:43.158935",
+  "generated": "2026-08-30T07:30:51.180598",
   "meta": {
     "date": "08/29/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,15 +20,15 @@
   },
   "production": {
     "bare": {
-      "day": 55,
-      "night": 0,
-      "total": 55,
+      "day": 54,
+      "night": 66,
+      "total": 120,
       "tgt": 140
     },
     "idCoated": {
-      "day": 65,
-      "night": 0,
-      "total": 65,
+      "day": 56,
+      "night": 52,
+      "total": 108,
       "tgt": 140
     },
     "odTpi": {
@@ -44,15 +44,15 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 171,
+      "total": 182,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 75,
+      "total": 127,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 8.33,
       "tgt": 75
     },
     "idOdFeedPct": {
@@ -60,7 +60,7 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 9,
+      "val": 11,
       "tgt": 20
     },
     "stripBalanceOd": {
@@ -77,8 +77,8 @@
     "repairPct": 0.0,
     "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 92.31,
-    "idRejectPct": 7.69,
+    "ftrId": 91.67,
+    "idRejectPct": 8.33,
     "ftrIdTgt": 98,
     "repairPipes": 1,
     "rejectPipes": 0,
@@ -89,17 +89,17 @@
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
     "strippingOutput": 6,
-    "idRejects": 5,
+    "idRejects": 9,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 2.92,
+    "idDowntimeHrs": 8.25,
     "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 4,
-    "plannedDt": 26.92,
-    "unplannedDt": 0.0,
+    "sapNotif": 8,
+    "plannedDt": 29.75,
+    "unplannedDt": 2.5,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -131,6 +131,46 @@
         "shift": "Day",
         "cause": "",
         "sap": "700093601"
+      },
+      {
+        "desc": "Startup",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:20",
+        "durMin": 20,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700093627"
+      },
+      {
+        "desc": "Plant Shutdown",
+        "line": "ID",
+        "start": "03:30",
+        "stop": "06:00",
+        "durMin": 150,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700093667"
+      },
+      {
+        "desc": "No Movement/Movable Cabin 1",
+        "line": "ID",
+        "start": "19:35",
+        "stop": "20:05",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004695"
+      },
+      {
+        "desc": "Replaced Carrier 1 Motor and Gearbox",
+        "line": "ID",
+        "start": "20:45",
+        "stop": "22:45",
+        "durMin": 120,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004697"
       },
       {
         "desc": "Shift called off due to no pipes avail",
