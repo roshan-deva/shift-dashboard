@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-01T19:33:01.539639",
+  "generated": "2026-09-02T08:36:19.973198",
   "meta": {
     "date": "09/01/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -21,42 +21,42 @@
   "production": {
     "bare": {
       "day": 72,
-      "night": 0,
-      "total": 72,
+      "night": 76,
+      "total": 148,
       "tgt": 140
     },
     "idCoated": {
-      "day": 93,
-      "night": 0,
-      "total": 93,
+      "day": 88,
+      "night": 44,
+      "total": 132,
       "tgt": 140
     },
     "odTpi": {
       "day": 49,
-      "night": 0,
-      "total": 49,
+      "night": 54,
+      "total": 103,
       "tgt": 145
     },
     "odCoated": {
       "day": 53,
-      "night": 0,
-      "total": 53,
+      "night": 50,
+      "total": 103,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 243,
+      "total": 287,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 141,
+      "total": 140,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 28.38,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 65.91,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -68,38 +68,38 @@
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 4,
+      "val": 5,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 88.68,
-    "repairPct": 5.66,
-    "rejectPct": 5.66,
+    "ftrOd": 94.17,
+    "repairPct": 2.91,
+    "rejectPct": 2.91,
     "ftrOdTgt": 96,
     "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
     "repairPipes": 3,
     "rejectPipes": 3,
-    "twoPartRepairs": 113,
+    "twoPartRepairs": 216,
     "bevel": 0,
-    "sample": 1,
+    "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 3,
+    "strippingOutput": 6,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 1.67,
-    "odDowntimeHrs": 7.42,
+    "idDowntimeHrs": 10.75,
+    "odDowntimeHrs": 14.92,
     "tgt": 85,
-    "sapNotif": 10,
-    "plannedDt": 8.79,
-    "unplannedDt": 0.25,
+    "sapNotif": 18,
+    "plannedDt": 12.2,
+    "unplannedDt": 37.41,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -141,6 +141,46 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004712"
+      },
+      {
+        "desc": "plant start up",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:20",
+        "durMin": 20,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700093953"
+      },
+      {
+        "desc": "carrier 5 not picking up",
+        "line": "ID",
+        "start": "19:30",
+        "stop": "20:05",
+        "durMin": 35,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004713"
+      },
+      {
+        "desc": "curing chamber drive chain broke",
+        "line": "ID",
+        "start": "20:35",
+        "stop": "23:25",
+        "durMin": 170,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004715"
+      },
+      {
+        "desc": "curing chamber drive chain broke",
+        "line": "ID",
+        "start": "00:40",
+        "stop": "06:00",
+        "durMin": 320,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004717"
       },
       {
         "desc": "startup",
@@ -201,6 +241,46 @@
         "shift": "Day",
         "cause": "",
         "sap": "700093952"
+      },
+      {
+        "desc": "final table sap stop working",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "20:15",
+        "durMin": 135,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700093954"
+      },
+      {
+        "desc": "online jeeper miss holidays",
+        "line": "OD",
+        "start": "02:40",
+        "stop": "03:30",
+        "durMin": 50,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700093968"
+      },
+      {
+        "desc": "north west saddle off track",
+        "line": "OD",
+        "start": "21:00",
+        "stop": "00:00",
+        "durMin": 180,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004716"
+      },
+      {
+        "desc": "carrier 13 tripout",
+        "line": "OD",
+        "start": "04:35",
+        "stop": "06:00",
+        "durMin": 85,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004718"
       }
     ]
   }
