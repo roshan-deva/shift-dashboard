@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-01T08:29:40.919069",
+  "generated": "2026-09-01T19:33:01.539639",
   "meta": {
-    "date": "08/31/2026",
-    "shift": "24H",
+    "date": "09/01/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,237 +20,187 @@
   },
   "production": {
     "bare": {
-      "day": 76,
-      "night": 61,
-      "total": 137,
+      "day": 72,
+      "night": 0,
+      "total": 72,
       "tgt": 140
     },
     "idCoated": {
-      "day": 65,
-      "night": 91,
-      "total": 156,
+      "day": 93,
+      "night": 0,
+      "total": 93,
       "tgt": 140
     },
     "odTpi": {
-      "day": 53,
-      "night": 102,
-      "total": 155,
+      "day": 49,
+      "night": 0,
+      "total": 49,
       "tgt": 145
     },
     "odCoated": {
-      "day": 54,
-      "night": 101,
-      "total": 155,
+      "day": 53,
+      "night": 0,
+      "total": 53,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 261,
+      "total": 243,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 112,
+      "total": 141,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 15.33,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 92.95,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 6,
+      "val": 4,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 11,
+      "val": 10,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 3,
+      "val": 4,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 98.71,
-    "repairPct": 1.29,
-    "rejectPct": 0.0,
+    "ftrOd": 88.68,
+    "repairPct": 5.66,
+    "rejectPct": 5.66,
     "ftrOdTgt": 96,
-    "ftrId": 99.36,
-    "idRejectPct": 0.64,
+    "ftrId": 100.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 2,
-    "rejectPipes": 0,
-    "twoPartRepairs": 263,
+    "repairPipes": 3,
+    "rejectPipes": 3,
+    "twoPartRepairs": 113,
     "bevel": 0,
     "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 7,
-    "idRejects": 1,
+    "strippingOutput": 3,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 3.5,
-    "odDowntimeHrs": 10.0,
+    "idDowntimeHrs": 1.67,
+    "odDowntimeHrs": 7.42,
     "tgt": 85,
-    "sapNotif": 15,
-    "plannedDt": 13.27,
+    "sapNotif": 10,
+    "plannedDt": 8.79,
     "unplannedDt": 0.25,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "Startup",
+        "desc": "startup",
         "line": "ID",
         "start": "06:00",
-        "stop": "06:25",
-        "durMin": 25,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093831"
-      },
-      {
-        "desc": "Pipes not being roped on ID outbound",
-        "line": "ID",
-        "start": "10:30",
-        "stop": "11:20",
-        "durMin": 50,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093832"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "ID",
-        "start": "17:30",
-        "stop": "18:00",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093837"
-      },
-      {
-        "desc": "WeldIng crack boom on blaster-2",
-        "line": "ID",
-        "start": "06:25",
         "stop": "06:40",
+        "durMin": 40,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700093944"
+      },
+      {
+        "desc": "Blaster-1 drag chain broken",
+        "line": "ID",
+        "start": "10:25",
+        "stop": "10:40",
         "durMin": 15,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004705"
-      },
-      {
-        "desc": "plant start up",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:25",
-        "durMin": 25,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700093838"
+        "sap": "700093945"
       },
       {
         "desc": "pitstop",
         "line": "ID",
-        "start": "01:30",
-        "stop": "01:55",
-        "durMin": 25,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700093892"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "05:20",
-        "stop": "06:00",
-        "durMin": 40,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700093904"
-      },
-      {
-        "desc": "Startup",
-        "line": "OD",
-        "start": "06:00",
-        "stop": "07:25",
-        "durMin": 85,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093830"
-      },
-      {
-        "desc": "Final table full ( TPI inspecting pipe)",
-        "line": "OD",
-        "start": "08:55",
-        "stop": "11:00",
-        "durMin": 125,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093833"
-      },
-      {
-        "desc": "Final table full (coating damage - roll)",
-        "line": "OD",
-        "start": "12:50",
-        "stop": "14:30",
-        "durMin": 100,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093834"
-      },
-      {
-        "desc": "Crooked pipe on final table",
-        "line": "OD",
-        "start": "15:25",
-        "stop": "16:50",
-        "durMin": 85,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093835"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
         "start": "17:30",
         "stop": "18:00",
         "durMin": 30,
         "shift": "Day",
         "cause": "",
-        "sap": "700093836"
+        "sap": "700093951"
       },
       {
-        "desc": "final table full previous shift",
-        "line": "OD",
-        "start": "18:00",
-        "stop": "18:45",
-        "durMin": 45,
-        "shift": "Night",
+        "desc": "Blaster-1 drag chain broken",
+        "line": "ID",
+        "start": "10:25",
+        "stop": "10:40",
+        "durMin": 15,
+        "shift": "Day",
         "cause": "",
-        "sap": "700093839"
+        "sap": "30000004712"
       },
       {
-        "desc": "pitstop",
+        "desc": "startup",
         "line": "OD",
-        "start": "01:25",
-        "stop": "02:25",
-        "durMin": 60,
-        "shift": "Night",
+        "start": "06:00",
+        "stop": "06:10",
+        "durMin": 10,
+        "shift": "Day",
         "cause": "",
-        "sap": "700093893"
+        "sap": "700093946"
       },
       {
-        "desc": "final backed up miss 2parts",
+        "desc": "stencil & auto jeeper are not working",
         "line": "OD",
-        "start": "04:50",
-        "stop": "06:00",
-        "durMin": 70,
-        "shift": "Night",
+        "start": "06:45",
+        "stop": "09:00",
+        "durMin": 135,
+        "shift": "Day",
         "cause": "",
-        "sap": "700093906"
+        "sap": "700093947"
+      },
+      {
+        "desc": "TPI is identifying additional holidays d",
+        "line": "OD",
+        "start": "11:10",
+        "stop": "12:25",
+        "durMin": 75,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700093948"
+      },
+      {
+        "desc": "TPI is identifying additional holidays",
+        "line": "OD",
+        "start": "13:50",
+        "stop": "16:00",
+        "durMin": 130,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700093949"
+      },
+      {
+        "desc": "SAP not working in final table.",
+        "line": "OD",
+        "start": "16:25",
+        "stop": "16:45",
+        "durMin": 20,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700093950"
+      },
+      {
+        "desc": "Clearing final table after SAP fixed",
+        "line": "OD",
+        "start": "16:45",
+        "stop": "18:00",
+        "durMin": 75,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700093952"
       }
     ]
   }
