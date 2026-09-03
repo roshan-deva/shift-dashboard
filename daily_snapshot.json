@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-02T08:36:19.973198",
+  "generated": "2026-09-02T19:30:48.346773",
   "meta": {
-    "date": "09/01/2026",
-    "shift": "24H",
+    "date": "09/02/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,267 +20,177 @@
   },
   "production": {
     "bare": {
-      "day": 72,
-      "night": 76,
-      "total": 148,
+      "day": 52,
+      "night": 0,
+      "total": 52,
       "tgt": 140
     },
     "idCoated": {
-      "day": 88,
-      "night": 44,
-      "total": 132,
+      "day": 56,
+      "night": 0,
+      "total": 56,
       "tgt": 140
     },
     "odTpi": {
-      "day": 49,
-      "night": 54,
-      "total": 103,
+      "day": 59,
+      "night": 0,
+      "total": 59,
       "tgt": 145
     },
     "odCoated": {
-      "day": 53,
-      "night": 50,
-      "total": 103,
+      "day": 58,
+      "night": 0,
+      "total": 58,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 287,
+      "total": 297,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 140,
+      "total": 132,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 28.38,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 65.91,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 4,
+      "val": 7,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 10,
+      "val": 9,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 5,
+      "val": 3,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 94.17,
-    "repairPct": 2.91,
-    "rejectPct": 2.91,
+    "ftrOd": 93.1,
+    "repairPct": 3.45,
+    "rejectPct": 3.45,
     "ftrOdTgt": 96,
-    "ftrId": 100.0,
-    "idRejectPct": 0.0,
+    "ftrId": 98.21,
+    "idRejectPct": 1.79,
     "ftrIdTgt": 98,
-    "repairPipes": 3,
-    "rejectPipes": 3,
-    "twoPartRepairs": 216,
+    "repairPipes": 2,
+    "rejectPipes": 2,
+    "twoPartRepairs": 95,
     "bevel": 0,
-    "sample": 2,
-    "tape": 0,
+    "sample": 1,
+    "tape": 2,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 6,
-    "idRejects": 0,
+    "strippingOutput": 5,
+    "idRejects": 1,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 10.75,
-    "odDowntimeHrs": 14.92,
+    "idDowntimeHrs": 3.5,
+    "odDowntimeHrs": 6.67,
     "tgt": 85,
-    "sapNotif": 18,
-    "plannedDt": 12.2,
-    "unplannedDt": 37.41,
+    "sapNotif": 9,
+    "plannedDt": 7.61,
+    "unplannedDt": 10.66,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "startup",
+        "desc": "Startup",
         "line": "ID",
         "start": "06:00",
-        "stop": "06:40",
-        "durMin": 40,
+        "stop": "06:25",
+        "durMin": 25,
         "shift": "Day",
         "cause": "",
-        "sap": "700093944"
-      },
-      {
-        "desc": "Blaster-1 drag chain broken",
-        "line": "ID",
-        "start": "10:25",
-        "stop": "10:40",
-        "durMin": 15,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093945"
+        "sap": "700093983"
       },
       {
         "desc": "pitstop",
         "line": "ID",
-        "start": "17:30",
+        "start": "17:25",
         "stop": "18:00",
+        "durMin": 35,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700094017"
+      },
+      {
+        "desc": "ID blaster Curing chamber chain guide",
+        "line": "ID",
+        "start": "10:00",
+        "stop": "12:00",
+        "durMin": 120,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004720"
+      },
+      {
+        "desc": "blaster-2 drag chain broken",
+        "line": "ID",
+        "start": "12:00",
+        "stop": "12:30",
         "durMin": 30,
         "shift": "Day",
         "cause": "",
-        "sap": "700093951"
+        "sap": "30000004721"
       },
       {
-        "desc": "Blaster-1 drag chain broken",
-        "line": "ID",
-        "start": "10:25",
-        "stop": "10:40",
-        "durMin": 15,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004712"
-      },
-      {
-        "desc": "plant start up",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:20",
-        "durMin": 20,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700093953"
-      },
-      {
-        "desc": "carrier 5 not picking up",
-        "line": "ID",
-        "start": "19:30",
-        "stop": "20:05",
-        "durMin": 35,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004713"
-      },
-      {
-        "desc": "curing chamber drive chain broke",
-        "line": "ID",
-        "start": "20:35",
-        "stop": "23:25",
-        "durMin": 170,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004715"
-      },
-      {
-        "desc": "curing chamber drive chain broke",
-        "line": "ID",
-        "start": "00:40",
-        "stop": "06:00",
-        "durMin": 320,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004717"
-      },
-      {
-        "desc": "startup",
+        "desc": "Startup",
         "line": "OD",
         "start": "06:00",
-        "stop": "06:10",
-        "durMin": 10,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093946"
-      },
-      {
-        "desc": "stencil & auto jeeper are not working",
-        "line": "OD",
-        "start": "06:45",
-        "stop": "09:00",
-        "durMin": 135,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093947"
-      },
-      {
-        "desc": "TPI is identifying additional holidays d",
-        "line": "OD",
-        "start": "11:10",
-        "stop": "12:25",
-        "durMin": 75,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093948"
-      },
-      {
-        "desc": "TPI is identifying additional holidays",
-        "line": "OD",
-        "start": "13:50",
-        "stop": "16:00",
-        "durMin": 130,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093949"
-      },
-      {
-        "desc": "SAP not working in final table.",
-        "line": "OD",
-        "start": "16:25",
-        "stop": "16:45",
-        "durMin": 20,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700093950"
-      },
-      {
-        "desc": "Clearing final table after SAP fixed",
-        "line": "OD",
-        "start": "16:45",
-        "stop": "18:00",
-        "durMin": 75,
+        "stop": "06:25",
+        "durMin": 25,
         "shift": "Day",
         "cause": "",
         "sap": "700093952"
       },
       {
-        "desc": "final table sap stop working",
+        "desc": "Final table full . TPI checking jeeps",
         "line": "OD",
-        "start": "18:00",
-        "stop": "20:15",
-        "durMin": 135,
-        "shift": "Night",
+        "start": "08:05",
+        "stop": "09:00",
+        "durMin": 55,
+        "shift": "Day",
         "cause": "",
-        "sap": "700093954"
+        "sap": "700094013"
       },
       {
-        "desc": "online jeeper miss holidays",
+        "desc": "Final table full . TPI checking jeeps",
         "line": "OD",
-        "start": "02:40",
-        "stop": "03:30",
+        "start": "10:00",
+        "stop": "12:50",
+        "durMin": 170,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700094014"
+      },
+      {
+        "desc": "Final table full . TPI checking jeeps",
+        "line": "OD",
+        "start": "14:25",
+        "stop": "16:05",
+        "durMin": 100,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700094015"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "17:10",
+        "stop": "18:00",
         "durMin": 50,
-        "shift": "Night",
+        "shift": "Day",
         "cause": "",
-        "sap": "700093968"
-      },
-      {
-        "desc": "north west saddle off track",
-        "line": "OD",
-        "start": "21:00",
-        "stop": "00:00",
-        "durMin": 180,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004716"
-      },
-      {
-        "desc": "carrier 13 tripout",
-        "line": "OD",
-        "start": "04:35",
-        "stop": "06:00",
-        "durMin": 85,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004718"
+        "sap": "700094016"
       }
     ]
   }
