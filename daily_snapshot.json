@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-02T19:30:48.346773",
+  "generated": "2026-09-03T19:30:36.432169",
   "meta": {
-    "date": "09/02/2026",
+    "date": "09/03/2026",
     "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
@@ -20,35 +20,35 @@
   },
   "production": {
     "bare": {
-      "day": 52,
+      "day": 70,
       "night": 0,
-      "total": 52,
+      "total": 70,
       "tgt": 140
     },
     "idCoated": {
-      "day": 56,
+      "day": 65,
       "night": 0,
-      "total": 56,
+      "total": 65,
       "tgt": 140
     },
     "odTpi": {
-      "day": 59,
+      "day": 64,
       "night": 0,
-      "total": 59,
+      "total": 64,
       "tgt": 145
     },
     "odCoated": {
-      "day": 58,
+      "day": 72,
       "night": 0,
-      "total": 58,
+      "total": 72,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 297,
+      "total": 271,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 132,
+      "total": 134,
       "tgt": 400
     },
     "directFeedPct": {
@@ -60,87 +60,107 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 7,
+      "val": 4,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 9,
+      "val": 11,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 3,
+      "val": 8,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 93.1,
-    "repairPct": 3.45,
-    "rejectPct": 3.45,
+    "ftrOd": 81.94,
+    "repairPct": 11.11,
+    "rejectPct": 6.94,
     "ftrOdTgt": 96,
-    "ftrId": 98.21,
-    "idRejectPct": 1.79,
+    "ftrId": 100.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 2,
-    "rejectPipes": 2,
-    "twoPartRepairs": 95,
-    "bevel": 0,
+    "repairPipes": 8,
+    "rejectPipes": 5,
+    "twoPartRepairs": 146,
+    "bevel": 3,
     "sample": 1,
-    "tape": 2,
+    "tape": 1,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 5,
-    "idRejects": 1,
+    "strippingOutput": 3,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 3.5,
-    "odDowntimeHrs": 6.67,
+    "idDowntimeHrs": 3.58,
+    "odDowntimeHrs": 5.42,
     "tgt": 85,
-    "sapNotif": 9,
-    "plannedDt": 7.61,
-    "unplannedDt": 10.66,
+    "sapNotif": 11,
+    "plannedDt": 6.65,
+    "unplannedDt": 1.92,
     "forklift": 0,
     "downtimeEvents": [
       {
         "desc": "Startup",
         "line": "ID",
         "start": "06:00",
-        "stop": "06:25",
-        "durMin": 25,
+        "stop": "06:30",
+        "durMin": 30,
         "shift": "Day",
         "cause": "",
-        "sap": "700093983"
+        "sap": "700094127"
       },
       {
         "desc": "pitstop",
         "line": "ID",
-        "start": "17:25",
+        "start": "17:15",
         "stop": "18:00",
-        "durMin": 35,
+        "durMin": 45,
         "shift": "Day",
         "cause": "",
-        "sap": "700094017"
+        "sap": "700094138"
       },
       {
-        "desc": "ID blaster Curing chamber chain guide",
+        "desc": "Welding on blaster 1 boom crack - runnin",
         "line": "ID",
-        "start": "10:00",
-        "stop": "12:00",
-        "durMin": 120,
+        "start": "06:30",
+        "stop": "07:25",
+        "durMin": 55,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004720"
+        "sap": "30000004725"
       },
       {
-        "desc": "blaster-2 drag chain broken",
+        "desc": "Chain misalighment on sensors - carriers",
         "line": "ID",
-        "start": "12:00",
-        "stop": "12:30",
-        "durMin": 30,
+        "start": "09:20",
+        "stop": "09:35",
+        "durMin": 15,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004721"
+        "sap": "30000004726"
+      },
+      {
+        "desc": "Grit valve and Turbine belt adjustment",
+        "line": "ID",
+        "start": "11:20",
+        "stop": "12:05",
+        "durMin": 45,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004727"
+      },
+      {
+        "desc": "Grit valve and Turbine belt adjustment",
+        "line": "ID",
+        "start": "13:50",
+        "stop": "14:15",
+        "durMin": 25,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004728"
       },
       {
         "desc": "Startup",
@@ -150,47 +170,47 @@
         "durMin": 25,
         "shift": "Day",
         "cause": "",
-        "sap": "700093952"
+        "sap": "700094128"
       },
       {
-        "desc": "Final table full . TPI checking jeeps",
+        "desc": "Final table full - TPI/jeeps",
         "line": "OD",
-        "start": "08:05",
+        "start": "08:00",
         "stop": "09:00",
-        "durMin": 55,
+        "durMin": 60,
         "shift": "Day",
         "cause": "",
-        "sap": "700094013"
+        "sap": "700094135"
       },
       {
-        "desc": "Final table full . TPI checking jeeps",
+        "desc": "Final table full - TPI/jeeps",
         "line": "OD",
-        "start": "10:00",
-        "stop": "12:50",
-        "durMin": 170,
+        "start": "10:55",
+        "stop": "12:30",
+        "durMin": 95,
         "shift": "Day",
         "cause": "",
-        "sap": "700094014"
+        "sap": "700094136"
       },
       {
-        "desc": "Final table full . TPI checking jeeps",
+        "desc": "Final table full - TPI/jeeps",
         "line": "OD",
-        "start": "14:25",
+        "start": "14:40",
         "stop": "16:05",
-        "durMin": 100,
+        "durMin": 85,
         "shift": "Day",
         "cause": "",
-        "sap": "700094015"
+        "sap": "700094137"
       },
       {
         "desc": "pitstop",
         "line": "OD",
-        "start": "17:10",
+        "start": "17:00",
         "stop": "18:00",
-        "durMin": 50,
+        "durMin": 60,
         "shift": "Day",
         "cause": "",
-        "sap": "700094016"
+        "sap": "700094139"
       }
     ]
   }
