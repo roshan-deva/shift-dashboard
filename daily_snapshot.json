@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-03T19:30:36.432169",
+  "generated": "2026-09-04T08:08:48.260136",
   "meta": {
     "date": "09/03/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -21,70 +21,70 @@
   "production": {
     "bare": {
       "day": 70,
-      "night": 0,
-      "total": 70,
+      "night": 53,
+      "total": 123,
       "tgt": 140
     },
     "idCoated": {
-      "day": 65,
-      "night": 0,
-      "total": 65,
+      "day": 61,
+      "night": 70,
+      "total": 131,
       "tgt": 140
     },
     "odTpi": {
-      "day": 64,
-      "night": 0,
-      "total": 64,
+      "day": 63,
+      "night": 61,
+      "total": 124,
       "tgt": 145
     },
     "odCoated": {
-      "day": 72,
-      "night": 0,
-      "total": 72,
+      "day": 70,
+      "night": 65,
+      "total": 135,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 271,
+      "total": 263,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 134,
+      "total": 141,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 51.22,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 100,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 4,
+      "val": 3,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 11,
+      "val": 13,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 8,
+      "val": 9,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 81.94,
-    "repairPct": 11.11,
-    "rejectPct": 6.94,
+    "ftrOd": 88.15,
+    "repairPct": 5.93,
+    "rejectPct": 5.93,
     "ftrOdTgt": 96,
     "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
     "repairPipes": 8,
-    "rejectPipes": 5,
-    "twoPartRepairs": 146,
+    "rejectPipes": 8,
+    "twoPartRepairs": 279,
     "bevel": 3,
-    "sample": 1,
+    "sample": 2,
     "tape": 1,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
@@ -94,12 +94,12 @@
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 3.58,
-    "odDowntimeHrs": 5.42,
+    "idDowntimeHrs": 5.42,
+    "odDowntimeHrs": 11.42,
     "tgt": 85,
-    "sapNotif": 11,
-    "plannedDt": 6.65,
-    "unplannedDt": 1.92,
+    "sapNotif": 20,
+    "plannedDt": 10.06,
+    "unplannedDt": 6.33,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -164,6 +164,36 @@
       },
       {
         "desc": "Startup",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:30",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700094208"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "05:25",
+        "stop": "06:00",
+        "durMin": 35,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700094224"
+      },
+      {
+        "desc": "Head Locked up on 2/Boom cracked on 1",
+        "line": "ID",
+        "start": "18:30",
+        "stop": "19:15",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004746"
+      },
+      {
+        "desc": "Startup",
         "line": "OD",
         "start": "06:00",
         "stop": "06:25",
@@ -211,6 +241,66 @@
         "shift": "Day",
         "cause": "",
         "sap": "700094139"
+      },
+      {
+        "desc": "Startup",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "18:30",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700094206"
+      },
+      {
+        "desc": "Final Table Backed up due to ID repairs",
+        "line": "OD",
+        "start": "22:45",
+        "stop": "23:15",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700094207"
+      },
+      {
+        "desc": "Final Table Backed up",
+        "line": "OD",
+        "start": "04:40",
+        "stop": "06:00",
+        "durMin": 80,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700094223"
+      },
+      {
+        "desc": "Hole in Powder Room hopper 1 hose",
+        "line": "OD",
+        "start": "19:50",
+        "stop": "20:25",
+        "durMin": 35,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004742"
+      },
+      {
+        "desc": "Bearing on Blaster 1 auger being replace",
+        "line": "OD",
+        "start": "23:15",
+        "stop": "23:35",
+        "durMin": 20,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004743"
+      },
+      {
+        "desc": "Bearing on Blaster 1 auger being replace",
+        "line": "OD",
+        "start": "00:20",
+        "stop": "03:05",
+        "durMin": 165,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004744"
       }
     ]
   }
