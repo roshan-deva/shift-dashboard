@@ -194,6 +194,46 @@ window.DAILY_SNAPSHOT = {
         "sap": "30000004746"
       },
       {
+        "desc": "Start up",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:25",
+        "durMin": 25,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700094020"
+      },
+      {
+        "desc": "pitstop",
+        "line": "ID",
+        "start": "01:05",
+        "stop": "01:35",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700094107"
+      },
+      {
+        "desc": "pitstop",
+        "line": "ID",
+        "start": "05:20",
+        "stop": "06:00",
+        "durMin": 40,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700094122"
+      },
+      {
+        "desc": "adjusted long belt on blaster 2",
+        "line": "ID",
+        "start": "18:50",
+        "stop": "19:15",
+        "durMin": 25,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004722"
+      },
+      {
         "desc": "Startup",
         "line": "OD",
         "start": "06:00",
