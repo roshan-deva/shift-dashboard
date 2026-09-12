@@ -1,19 +1,19 @@
 {
  "meta": {
-  "dataDate": "9/10/2026",
-  "generated": "2026-09-11 09:37:51",
+  "dataDate": "9/11/2026",
+  "generated": "2026-09-12 11:06:42",
   "salariedExcluded": 25,
   "hourlyRows": 37,
-  "comparableRows": 27
+  "comparableRows": 29
  },
  "kpis": {
-  "workedHC": 27,
+  "workedHC": 29,
   "schedHC": 19,
   "attendancePct": 100.0,
   "absent": 0,
-  "cleanVarHrs": 70.3,
-  "cleanSchedHrs": 226.0,
-  "rawVarHrs": 82.8,
+  "cleanVarHrs": 46.1,
+  "cleanSchedHrs": 220.0,
+  "rawVarHrs": 48.7,
   "noSchedCells": 1,
   "noSchedWorkers": 1,
   "elitePct": 100.0
@@ -39,14 +39,14 @@
    "dept": "Production",
    "force": "Elite",
    "status": "warn",
-   "reason": "hours +15 vs schedule",
-   "roster": 7,
-   "schedHC": 5,
-   "workedHC": 6,
+   "reason": "hours +14 vs schedule",
+   "roster": 5,
+   "schedHC": 2,
+   "workedHC": 4,
    "absent": 0,
-   "unsched": 1,
-   "schedHrs": 58.0,
-   "actHrs": 73.1,
+   "unsched": 2,
+   "schedHrs": 24.0,
+   "actHrs": 37.7,
    "people": []
   },
   {
@@ -71,12 +71,12 @@
    "status": "ok",
    "reason": "",
    "roster": 12,
-   "schedHC": 8,
-   "workedHC": 8,
+   "schedHC": 9,
+   "workedHC": 10,
    "absent": 0,
-   "unsched": 0,
-   "schedHrs": 96.0,
-   "actHrs": 96.8,
+   "unsched": 1,
+   "schedHrs": 100.0,
+   "actHrs": 91.4,
    "people": []
   },
   {
@@ -128,15 +128,15 @@
    "line": "LIC1",
    "dept": "Production",
    "force": "Elite",
-   "status": "empty",
+   "status": "ok",
    "reason": "",
-   "roster": 2,
-   "schedHC": 0,
-   "workedHC": 0,
+   "roster": 4,
+   "schedHC": 3,
+   "workedHC": 3,
    "absent": 0,
    "unsched": 0,
-   "schedHrs": 0.0,
-   "actHrs": 0.0,
+   "schedHrs": 36.0,
+   "actHrs": 33.7,
    "people": []
   },
   {
@@ -161,12 +161,12 @@
    "status": "ok",
    "reason": "",
    "roster": 6,
-   "schedHC": 5,
-   "workedHC": 5,
+   "schedHC": 4,
+   "workedHC": 4,
    "absent": 0,
    "unsched": 0,
-   "schedHrs": 60.0,
-   "actHrs": 58.8,
+   "schedHrs": 48.0,
+   "actHrs": 48.9,
    "people": []
   },
   {
@@ -219,14 +219,14 @@
    "dept": "Production",
    "force": "Elite",
    "status": "warn",
-   "reason": "hours +56 vs schedule",
+   "reason": "hours +42 vs schedule",
    "roster": 8,
    "schedHC": 1,
    "workedHC": 7,
    "absent": 0,
    "unsched": 6,
    "schedHrs": 12.0,
-   "actHrs": 67.6,
+   "actHrs": 54.4,
    "people": []
   },
   {
@@ -256,7 +256,7 @@
    "absent": 0,
    "unsched": 1,
    "schedHrs": 0.0,
-   "actHrs": 12.5,
+   "actHrs": 2.6,
    "people": []
   },
   {
@@ -299,26 +299,26 @@
   {
    "sev": "warn",
    "where": "LEC1 Production - Elite",
-   "what": "hours +15 vs schedule"
+   "what": "hours +14 vs schedule"
   },
   {
    "sev": "warn",
    "where": "SDC Production - Elite",
-   "what": "hours +56 vs schedule"
+   "what": "hours +42 vs schedule"
   }
  ],
  "varianceBuckets": {
   "over": {
    "count": 10,
-   "hours": 85.7
+   "hours": 67.3
   },
   "on": {
-   "count": 15,
-   "hours": 3.3
+   "count": 13,
+   "hours": 2.6
   },
   "under": {
-   "count": 2,
-   "hours": -6.2
+   "count": 6,
+   "hours": -21.1
   }
  }
 }
