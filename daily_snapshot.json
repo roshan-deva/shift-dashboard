@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-14T08:25:34.100190",
+  "generated": "2026-09-14T19:30:34.479725",
   "meta": {
-    "date": "09/13/2026",
-    "shift": "24H",
+    "date": "09/14/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,39 +20,39 @@
   },
   "production": {
     "bare": {
-      "day": 0,
-      "night": 52,
-      "total": 52,
+      "day": 55,
+      "night": 0,
+      "total": 55,
       "tgt": 140
     },
     "idCoated": {
-      "day": 0,
-      "night": 68,
-      "total": 68,
+      "day": 53,
+      "night": 0,
+      "total": 53,
       "tgt": 140
     },
     "odTpi": {
-      "day": 0,
+      "day": 71,
       "night": 0,
-      "total": 0,
+      "total": 71,
       "tgt": 145
     },
     "odCoated": {
-      "day": 0,
+      "day": 72,
       "night": 0,
-      "total": 0,
+      "total": 72,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 314,
+      "total": 331,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 177,
+      "total": 142,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 9.62,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
@@ -60,97 +60,137 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 8,
+      "val": 17,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 11,
+      "val": 2,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 6,
+      "val": 8,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 0.0,
-    "repairPct": 0.0,
+    "ftrOd": 98.61,
+    "repairPct": 1.39,
     "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 100.0,
-    "idRejectPct": 0.0,
+    "ftrId": 90.57,
+    "idRejectPct": 9.43,
     "ftrIdTgt": 98,
-    "repairPipes": 0,
+    "repairPipes": 1,
     "rejectPipes": 0,
-    "twoPartRepairs": 0,
+    "twoPartRepairs": 75,
     "bevel": 0,
-    "sample": 0,
+    "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 5,
-    "idRejects": 0,
+    "strippingOutput": 0,
+    "idRejects": 5,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 2.42,
-    "odDowntimeHrs": 0.0,
+    "idDowntimeHrs": 6.75,
+    "odDowntimeHrs": 5.58,
     "tgt": 85,
-    "sapNotif": 5,
-    "plannedDt": 1.25,
-    "unplannedDt": 1.15,
+    "sapNotif": 9,
+    "plannedDt": 6.66,
+    "unplannedDt": 5.67,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "Start up",
+        "desc": "low air pressure",
         "line": "ID",
-        "start": "18:00",
-        "stop": "18:25",
-        "durMin": 25,
-        "shift": "Night",
+        "start": "06:00",
+        "stop": "07:30",
+        "durMin": 90,
+        "shift": "Day",
         "cause": "",
-        "sap": "700094963"
+        "sap": "700095031"
       },
       {
         "desc": "pitstop",
         "line": "ID",
-        "start": "05:10",
-        "stop": "06:00",
+        "start": "17:30",
+        "stop": "18:00",
+        "durMin": 30,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700095043"
+      },
+      {
+        "desc": "curing chamber chain and sprocket replac",
+        "line": "ID",
+        "start": "09:15",
+        "stop": "14:00",
+        "durMin": 285,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004854"
+      },
+      {
+        "desc": "low air pressure",
+        "line": "OD",
+        "start": "06:00",
+        "stop": "07:30",
+        "durMin": 90,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700095032"
+      },
+      {
+        "desc": "lack of manpower",
+        "line": "OD",
+        "start": "07:30",
+        "stop": "08:35",
+        "durMin": 65,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700095033"
+      },
+      {
+        "desc": "low air pressure",
+        "line": "OD",
+        "start": "08:45",
+        "stop": "09:35",
         "durMin": 50,
-        "shift": "Night",
+        "shift": "Day",
         "cause": "",
-        "sap": "700094988"
+        "sap": "700095034"
       },
       {
-        "desc": "cleaned Prox sensor on blaster 1",
-        "line": "ID",
-        "start": "01:50",
-        "stop": "02:10",
-        "durMin": 20,
-        "shift": "Night",
+        "desc": "pitstop/gunspit",
+        "line": "OD",
+        "start": "16:05",
+        "stop": "16:35",
+        "durMin": 30,
+        "shift": "Day",
         "cause": "",
-        "sap": "30000004843"
+        "sap": "700095041"
       },
       {
-        "desc": "Carrier 2 malfunction",
-        "line": "ID",
-        "start": "03:15",
-        "stop": "03:40",
-        "durMin": 25,
-        "shift": "Night",
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "17:15",
+        "stop": "18:00",
+        "durMin": 45,
+        "shift": "Day",
         "cause": "",
-        "sap": "30000004844"
+        "sap": "700095042"
       },
       {
-        "desc": "west arm sensor on carrier 3",
-        "line": "ID",
-        "start": "04:25",
-        "stop": "04:50",
-        "durMin": 25,
-        "shift": "Night",
+        "desc": "idle wheel replace group 2",
+        "line": "OD",
+        "start": "12:45",
+        "stop": "13:40",
+        "durMin": 55,
+        "shift": "Day",
         "cause": "",
-        "sap": "30000004845"
+        "sap": "30000004855"
       }
     ]
   }
