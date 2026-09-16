@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-15T08:32:17.684040",
+  "generated": "2026-09-15T19:31:00.717038",
   "meta": {
-    "date": "09/14/2026",
-    "shift": "24H",
+    "date": "09/15/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,247 +20,187 @@
   },
   "production": {
     "bare": {
-      "day": 54,
-      "night": 63,
-      "total": 117,
+      "day": 75,
+      "night": 0,
+      "total": 75,
       "tgt": 140
     },
     "idCoated": {
-      "day": 53,
-      "night": 78,
-      "total": 131,
+      "day": 70,
+      "night": 0,
+      "total": 70,
       "tgt": 140
     },
     "odTpi": {
-      "day": 71,
-      "night": 93,
-      "total": 164,
+      "day": 72,
+      "night": 0,
+      "total": 72,
       "tgt": 145
     },
     "odCoated": {
-      "day": 70,
-      "night": 92,
-      "total": 162,
+      "day": 66,
+      "night": 0,
+      "total": 66,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 313,
+      "total": 325,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 136,
+      "total": 124,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 9.4,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 91.6,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 16,
+      "val": 13,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 2,
+      "val": 5,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 9,
+      "val": 3,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 98.77,
-    "repairPct": 1.23,
-    "rejectPct": 0.0,
+    "ftrOd": 89.39,
+    "repairPct": 4.55,
+    "rejectPct": 6.06,
     "ftrOdTgt": 96,
-    "ftrId": 96.18,
-    "idRejectPct": 3.82,
+    "ftrId": 97.14,
+    "idRejectPct": 2.86,
     "ftrIdTgt": 98,
-    "repairPipes": 2,
-    "rejectPipes": 0,
-    "twoPartRepairs": 216,
-    "bevel": 0,
+    "repairPipes": 3,
+    "rejectPipes": 4,
+    "twoPartRepairs": 84,
+    "bevel": 1,
     "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
     "strippingOutput": 0,
-    "idRejects": 5,
+    "idRejects": 2,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 8.5,
-    "odDowntimeHrs": 8.92,
+    "idDowntimeHrs": 2.83,
+    "odDowntimeHrs": 6.0,
     "tgt": 85,
-    "sapNotif": 16,
-    "plannedDt": 11.68,
-    "unplannedDt": 5.67,
+    "sapNotif": 10,
+    "plannedDt": 7.16,
+    "unplannedDt": 1.67,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "low air pressure",
+        "desc": "plant start up",
         "line": "ID",
         "start": "06:00",
-        "stop": "07:30",
-        "durMin": 90,
+        "stop": "06:35",
+        "durMin": 35,
         "shift": "Day",
         "cause": "",
-        "sap": "700095031"
+        "sap": "700095081"
       },
       {
         "desc": "pitstop",
         "line": "ID",
-        "start": "17:30",
+        "start": "13:30",
+        "stop": "14:30",
+        "durMin": 60,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700095084"
+      },
+      {
+        "desc": "traceability issue with pipes",
+        "line": "ID",
+        "start": "16:45",
+        "stop": "17:00",
+        "durMin": 15,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700095087"
+      },
+      {
+        "desc": "outbound kicker not up/down",
+        "line": "ID",
+        "start": "17:00",
         "stop": "18:00",
-        "durMin": 30,
+        "durMin": 60,
         "shift": "Day",
         "cause": "",
-        "sap": "700095043"
+        "sap": "30000004866"
       },
       {
-        "desc": "curing chamber chain and sprocket replac",
-        "line": "ID",
-        "start": "09:15",
-        "stop": "14:00",
-        "durMin": 285,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004854"
-      },
-      {
-        "desc": "Start Up",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:35",
-        "durMin": 35,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095047"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "ID",
-        "start": "01:00",
-        "stop": "01:30",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095071"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "ID",
-        "start": "05:20",
-        "stop": "06:00",
-        "durMin": 40,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095079"
-      },
-      {
-        "desc": "low air pressure",
+        "desc": "lack of manpower on final & sap",
         "line": "OD",
         "start": "06:00",
-        "stop": "07:30",
-        "durMin": 90,
+        "stop": "06:55",
+        "durMin": 55,
         "shift": "Day",
         "cause": "",
-        "sap": "700095032"
-      },
-      {
-        "desc": "lack of manpower",
-        "line": "OD",
-        "start": "07:30",
-        "stop": "08:35",
-        "durMin": 65,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700095033"
-      },
-      {
-        "desc": "low air pressure",
-        "line": "OD",
-        "start": "08:45",
-        "stop": "09:35",
-        "durMin": 50,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700095034"
+        "sap": "700095082"
       },
       {
         "desc": "pitstop/gunspit",
         "line": "OD",
-        "start": "16:05",
-        "stop": "16:35",
+        "start": "08:25",
+        "stop": "09:30",
+        "durMin": 65,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700095083"
+      },
+      {
+        "desc": "pitstop/powdermounds",
+        "line": "OD",
+        "start": "11:20",
+        "stop": "11:50",
         "durMin": 30,
         "shift": "Day",
         "cause": "",
-        "sap": "700095041"
+        "sap": "700095085"
       },
       {
-        "desc": "pitstop",
+        "desc": "employees overheated",
         "line": "OD",
-        "start": "17:15",
+        "start": "13:30",
+        "stop": "14:30",
+        "durMin": 60,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700095086"
+      },
+      {
+        "desc": "pipes not process on final",
+        "line": "OD",
+        "start": "16:10",
         "stop": "18:00",
-        "durMin": 45,
+        "durMin": 110,
         "shift": "Day",
         "cause": "",
-        "sap": "700095042"
+        "sap": "700095088"
       },
       {
-        "desc": "idle wheel replace group 2",
+        "desc": "replace wheel northwest saddle",
         "line": "OD",
-        "start": "12:45",
-        "stop": "13:40",
-        "durMin": 55,
+        "start": "11:50",
+        "stop": "12:30",
+        "durMin": 40,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004855"
-      },
-      {
-        "desc": "Start Up",
-        "line": "OD",
-        "start": "18:00",
-        "stop": "18:40",
-        "durMin": 40,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095046"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "00:15",
-        "stop": "01:15",
-        "durMin": 60,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095070"
-      },
-      {
-        "desc": "Final table backed up",
-        "line": "OD",
-        "start": "04:20",
-        "stop": "05:20",
-        "durMin": 60,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095078"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "05:20",
-        "stop": "06:00",
-        "durMin": 40,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095080"
+        "sap": "30000004865"
       }
     ]
   }
