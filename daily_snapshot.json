@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-17T07:43:15.838330",
+  "generated": "2026-09-17T19:30:42.576716",
   "meta": {
-    "date": "09/16/2026",
-    "shift": "24H",
+    "date": "09/17/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,35 +20,35 @@
   },
   "production": {
     "bare": {
-      "day": 65,
+      "day": 86,
       "night": 0,
-      "total": 65,
+      "total": 86,
       "tgt": 140
     },
     "idCoated": {
-      "day": 73,
-      "night": 2,
-      "total": 75,
+      "day": 90,
+      "night": 0,
+      "total": 90,
       "tgt": 140
     },
     "odTpi": {
-      "day": 70,
+      "day": 101,
       "night": 0,
-      "total": 70,
+      "total": 101,
       "tgt": 145
     },
     "odCoated": {
-      "day": 67,
+      "day": 92,
       "night": 0,
-      "total": 67,
+      "total": 92,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 337,
+      "total": 347,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 115,
+      "total": 76,
       "tgt": 400
     },
     "directFeedPct": {
@@ -60,47 +60,68 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 15,
+      "val": 13,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 7,
+      "val": 8,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 6,
+      "val": 3,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 97.01,
-    "repairPct": 1.49,
-    "rejectPct": 1.49,
+    "ftrOd": 93.48,
+    "repairPct": 1.09,
+    "rejectPct": 5.43,
     "ftrOdTgt": 96,
     "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
     "repairPipes": 1,
-    "rejectPipes": 1,
-    "twoPartRepairs": 115,
+    "rejectPipes": 5,
+    "twoPartRepairs": 126,
     "bevel": 1,
-    "sample": 0,
+    "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 7,
+    "strippingOutput": 2,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 0.0,
-    "odDowntimeHrs": 0.0,
+    "idDowntimeHrs": 0.33,
+    "odDowntimeHrs": 0.67,
     "tgt": 85,
-    "sapNotif": 0,
-    "plannedDt": 0.0,
+    "sapNotif": 2,
+    "plannedDt": 1.0,
     "unplannedDt": 0.0,
     "forklift": 0,
-    "downtimeEvents": []
+    "downtimeEvents": [
+      {
+        "desc": "plant start up",
+        "line": "ID",
+        "start": "06:00",
+        "stop": "06:20",
+        "durMin": 20,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700095221"
+      },
+      {
+        "desc": "plant start up",
+        "line": "OD",
+        "start": "06:00",
+        "stop": "06:40",
+        "durMin": 40,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700095222"
+      }
+    ]
   }
 }
