@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T19:38:40Z",
+  "generatedAt": "2026-09-22T20:01:17Z",
   "plants": {
     "LR": {
       "Powder": [
@@ -7,8 +7,11 @@
           "batch": "CV2316TV",
           "component": "Powder",
           "qtyReceived": 18,
+          "remaining": 18,
           "unit": "bags",
-          "receivedDate": "2026-09-16"
+          "receivedDate": "2026-09-16",
+          "manufacturer": "Sherwin Williams",
+          "grade": "Pipeclad 2000 NT Slow"
         }
       ],
       "Part A": [
@@ -16,15 +19,21 @@
           "batch": "MQ2296CK",
           "component": "Part A",
           "qtyReceived": 36,
+          "remaining": 36,
           "unit": "barrels",
-          "receivedDate": "2026-09-18"
+          "receivedDate": "2026-09-18",
+          "manufacturer": "Sherwin Williams",
+          "grade": "930R UHS Part A"
         },
         {
           "batch": "MQ2456PU",
           "component": "Part A",
           "qtyReceived": 39,
+          "remaining": 39,
           "unit": "barrels",
-          "receivedDate": "2026-09-17"
+          "receivedDate": "2026-09-17",
+          "manufacturer": "Sherwin Williams",
+          "grade": "930R UHS Part A"
         }
       ],
       "Part B": [
@@ -32,15 +41,21 @@
           "batch": "XM2296UG",
           "component": "Part B",
           "qtyReceived": 10,
+          "remaining": 10,
           "unit": "barrels",
-          "receivedDate": "2026-09-19"
+          "receivedDate": "2026-09-19",
+          "manufacturer": "Sherwin Williams",
+          "grade": "930R UHS Part B"
         },
         {
           "batch": "XM2316ES",
           "component": "Part B",
           "qtyReceived": 10,
+          "remaining": 10,
           "unit": "barrels",
-          "receivedDate": "2026-09-19"
+          "receivedDate": "2026-09-19",
+          "manufacturer": "Sherwin Williams",
+          "grade": "930R UHS Part B"
         }
       ]
     }
