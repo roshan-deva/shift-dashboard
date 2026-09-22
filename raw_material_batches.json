@@ -1,0 +1,48 @@
+{
+  "generatedAt": "2026-09-22T19:38:40Z",
+  "plants": {
+    "LR": {
+      "Powder": [
+        {
+          "batch": "CV2316TV",
+          "component": "Powder",
+          "qtyReceived": 18,
+          "unit": "bags",
+          "receivedDate": "2026-09-16"
+        }
+      ],
+      "Part A": [
+        {
+          "batch": "MQ2296CK",
+          "component": "Part A",
+          "qtyReceived": 36,
+          "unit": "barrels",
+          "receivedDate": "2026-09-18"
+        },
+        {
+          "batch": "MQ2456PU",
+          "component": "Part A",
+          "qtyReceived": 39,
+          "unit": "barrels",
+          "receivedDate": "2026-09-17"
+        }
+      ],
+      "Part B": [
+        {
+          "batch": "XM2296UG",
+          "component": "Part B",
+          "qtyReceived": 10,
+          "unit": "barrels",
+          "receivedDate": "2026-09-19"
+        },
+        {
+          "batch": "XM2316ES",
+          "component": "Part B",
+          "qtyReceived": 10,
+          "unit": "barrels",
+          "receivedDate": "2026-09-19"
+        }
+      ]
+    }
+  }
+}
