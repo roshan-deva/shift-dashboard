@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-22T19:44:36.750242",
+  "generated": "2026-09-23T08:19:58.721228",
   "meta": {
     "date": "09/22/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -44,62 +44,62 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 304,
+      "total": 281,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 124,
+      "total": 155,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 11.69,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 100,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 16,
+      "val": 13,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 19,
+      "val": 21,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 16,
+      "val": 21,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 94.83,
-    "repairPct": 1.72,
-    "rejectPct": 3.45,
+    "ftrOd": 84.48,
+    "repairPct": 8.62,
+    "rejectPct": 6.9,
     "ftrOdTgt": 96,
     "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 1,
-    "rejectPipes": 2,
-    "twoPartRepairs": 98,
-    "bevel": 0,
-    "sample": 1,
-    "tape": 0,
+    "repairPipes": 5,
+    "rejectPipes": 4,
+    "twoPartRepairs": 233,
+    "bevel": 1,
+    "sample": 2,
+    "tape": 1,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 6,
+    "strippingOutput": 13,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 2.08,
-    "odDowntimeHrs": 7.0,
+    "idDowntimeHrs": 3.33,
+    "odDowntimeHrs": 9.42,
     "tgt": 85,
-    "sapNotif": 7,
-    "plannedDt": 9.08,
-    "unplannedDt": 0.0,
+    "sapNotif": 13,
+    "plannedDt": 12.38,
+    "unplannedDt": 0.33,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -131,6 +131,26 @@
         "shift": "Day",
         "cause": "",
         "sap": "700095546"
+      },
+      {
+        "desc": "pitstop",
+        "line": "ID",
+        "start": "01:00",
+        "stop": "01:55",
+        "durMin": 55,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700095576"
+      },
+      {
+        "desc": "reset chain in the curing chamber",
+        "line": "ID",
+        "start": "21:40",
+        "stop": "22:00",
+        "durMin": 20,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004913"
       },
       {
         "desc": "plant start up",
@@ -171,6 +191,46 @@
         "shift": "Day",
         "cause": "",
         "sap": "700095550"
+      },
+      {
+        "desc": "Start up",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "18:30",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700095553"
+      },
+      {
+        "desc": "SAP update",
+        "line": "OD",
+        "start": "20:10",
+        "stop": "20:50",
+        "durMin": 40,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700095556"
+      },
+      {
+        "desc": "Cleaning coating booth",
+        "line": "OD",
+        "start": "03:05",
+        "stop": "03:25",
+        "durMin": 20,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700095609"
+      },
+      {
+        "desc": "Final table backed up due to missed 2pts",
+        "line": "OD",
+        "start": "05:05",
+        "stop": "06:00",
+        "durMin": 55,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700095625"
       }
     ]
   }
