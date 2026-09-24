@@ -1,22 +1,22 @@
 {
  "meta": {
-  "dataDate": "9/06/2026",
-  "generated": "2026-09-24 09:54:51",
+  "dataDate": "9/07/2026",
+  "generated": "2026-09-24 09:55:05",
   "salariedExcluded": 25,
   "hourlyRows": 180,
-  "comparableRows": 27
+  "comparableRows": 16
  },
  "kpis": {
-  "workedHC": 25,
-  "schedHC": 9,
-  "attendancePct": 77.8,
-  "absent": 2,
-  "cleanVarHrs": -22.0,
-  "cleanSchedHrs": 108.0,
-  "rawVarHrs": 161.1,
-  "noSchedCells": 7,
-  "noSchedWorkers": 18,
-  "elitePct": 16.0
+  "workedHC": 15,
+  "schedHC": 10,
+  "attendancePct": 90.0,
+  "absent": 1,
+  "cleanVarHrs": -16.5,
+  "cleanSchedHrs": 120.0,
+  "rawVarHrs": 45.9,
+  "noSchedCells": 2,
+  "noSchedWorkers": 6,
+  "elitePct": 0.0
  },
  "grid": [
   {
@@ -24,29 +24,29 @@
    "dept": "Production",
    "force": "Welspun",
    "status": "nosched",
-   "reason": "10 worked, no schedule built",
+   "reason": "5 worked, no schedule built",
    "roster": 45,
    "schedHC": 0,
-   "workedHC": 10,
+   "workedHC": 5,
    "absent": 0,
-   "unsched": 10,
+   "unsched": 5,
    "schedHrs": 0.0,
-   "actHrs": 113.1,
+   "actHrs": 50.2,
    "people": []
   },
   {
    "line": "LEC1",
    "dept": "Production",
    "force": "Elite",
-   "status": "nosched",
-   "reason": "1 worked, no schedule built",
+   "status": "empty",
+   "reason": "",
    "roster": 7,
    "schedHC": 0,
-   "workedHC": 1,
+   "workedHC": 0,
    "absent": 0,
-   "unsched": 1,
+   "unsched": 0,
    "schedHrs": 0.0,
-   "actHrs": 6.5,
+   "actHrs": 0.0,
    "people": []
   },
   {
@@ -54,14 +54,14 @@
    "dept": "Quality",
    "force": "Welspun",
    "status": "nosched",
-   "reason": "2 worked, no schedule built",
+   "reason": "1 worked, no schedule built",
    "roster": 29,
    "schedHC": 0,
-   "workedHC": 2,
+   "workedHC": 1,
    "absent": 0,
-   "unsched": 2,
+   "unsched": 1,
    "schedHrs": 0.0,
-   "actHrs": 24.3,
+   "actHrs": 12.2,
    "people": []
   },
   {
@@ -83,15 +83,15 @@
    "line": "LEC1",
    "dept": "Maintenance",
    "force": "Welspun",
-   "status": "warn",
-   "reason": "2 of 9 scheduled absent",
+   "status": "ok",
+   "reason": "",
    "roster": 12,
-   "schedHC": 9,
-   "workedHC": 7,
-   "absent": 2,
+   "schedHC": 10,
+   "workedHC": 9,
+   "absent": 1,
    "unsched": 0,
-   "schedHrs": 108.0,
-   "actHrs": 86.0,
+   "schedHrs": 120.0,
+   "actHrs": 103.5,
    "people": []
   },
   {
@@ -113,30 +113,30 @@
    "line": "LIC1",
    "dept": "Production",
    "force": "Welspun",
-   "status": "nosched",
-   "reason": "2 worked, no schedule built",
+   "status": "empty",
+   "reason": "",
    "roster": 23,
    "schedHC": 0,
-   "workedHC": 2,
+   "workedHC": 0,
    "absent": 0,
-   "unsched": 2,
+   "unsched": 0,
    "schedHrs": 0.0,
-   "actHrs": 22.7,
+   "actHrs": 0.0,
    "people": []
   },
   {
    "line": "LIC1",
    "dept": "Production",
    "force": "Elite",
-   "status": "nosched",
-   "reason": "1 worked, no schedule built",
+   "status": "empty",
+   "reason": "",
    "roster": 2,
    "schedHC": 0,
-   "workedHC": 1,
+   "workedHC": 0,
    "absent": 0,
-   "unsched": 1,
+   "unsched": 0,
    "schedHrs": 0.0,
-   "actHrs": 6.5,
+   "actHrs": 0.0,
    "people": []
   },
   {
@@ -158,15 +158,15 @@
    "line": "LIC1",
    "dept": "Quality",
    "force": "Elite",
-   "status": "nosched",
-   "reason": "1 worked, no schedule built",
+   "status": "empty",
+   "reason": "",
    "roster": 6,
    "schedHC": 0,
-   "workedHC": 1,
+   "workedHC": 0,
    "absent": 0,
-   "unsched": 1,
+   "unsched": 0,
    "schedHrs": 0.0,
-   "actHrs": 0.2,
+   "actHrs": 0.0,
    "people": []
   },
   {
@@ -218,15 +218,15 @@
    "line": "SDC",
    "dept": "Production",
    "force": "Elite",
-   "status": "nosched",
-   "reason": "1 worked, no schedule built",
+   "status": "empty",
+   "reason": "",
    "roster": 8,
    "schedHC": 0,
-   "workedHC": 1,
+   "workedHC": 0,
    "absent": 0,
-   "unsched": 1,
+   "unsched": 0,
    "schedHrs": 0.0,
-   "actHrs": 9.8,
+   "actHrs": 0.0,
    "people": []
   },
   {
@@ -294,56 +294,26 @@
   {
    "sev": "nosched",
    "where": "LEC1 Production - Welspun",
-   "what": "10 worked, no schedule built"
-  },
-  {
-   "sev": "nosched",
-   "where": "LEC1 Production - Elite",
-   "what": "1 worked, no schedule built"
+   "what": "5 worked, no schedule built"
   },
   {
    "sev": "nosched",
    "where": "LEC1 Quality - Welspun",
-   "what": "2 worked, no schedule built"
-  },
-  {
-   "sev": "nosched",
-   "where": "LIC1 Production - Welspun",
-   "what": "2 worked, no schedule built"
-  },
-  {
-   "sev": "nosched",
-   "where": "LIC1 Production - Elite",
    "what": "1 worked, no schedule built"
-  },
-  {
-   "sev": "nosched",
-   "where": "LIC1 Quality - Elite",
-   "what": "1 worked, no schedule built"
-  },
-  {
-   "sev": "nosched",
-   "where": "SDC Production - Elite",
-   "what": "1 worked, no schedule built"
-  },
-  {
-   "sev": "warn",
-   "where": "LEC1 Maintenance - Welspun",
-   "what": "2 of 9 scheduled absent"
   }
  ],
  "varianceBuckets": {
   "over": {
-   "count": 17,
-   "hours": 182.9
+   "count": 5,
+   "hours": 61.9
   },
   "on": {
-   "count": 8,
-   "hours": 2.2
+   "count": 7,
+   "hours": 2.3
   },
   "under": {
-   "count": 2,
-   "hours": -24.0
+   "count": 4,
+   "hours": -18.3
   }
  }
 }
