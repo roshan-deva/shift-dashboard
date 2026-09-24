@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-23T08:19:58.721228",
+  "generated": "2026-09-23T19:30:36.181845",
   "meta": {
-    "date": "09/22/2026",
-    "shift": "24H",
+    "date": "09/23/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,217 +20,157 @@
   },
   "production": {
     "bare": {
-      "day": 77,
+      "day": 34,
       "night": 0,
-      "total": 77,
+      "total": 34,
       "tgt": 140
     },
     "idCoated": {
-      "day": 70,
+      "day": 72,
       "night": 0,
-      "total": 70,
+      "total": 72,
       "tgt": 140
     },
     "odTpi": {
-      "day": 54,
+      "day": 61,
       "night": 0,
-      "total": 54,
+      "total": 61,
       "tgt": 145
     },
     "odCoated": {
-      "day": 58,
+      "day": 50,
       "night": 0,
-      "total": 58,
+      "total": 50,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 281,
+      "total": 265,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 155,
+      "total": 170,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 11.69,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 100,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 13,
+      "val": 17,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 21,
+      "val": 23,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 21,
+      "val": 6,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 84.48,
-    "repairPct": 8.62,
-    "rejectPct": 6.9,
+    "ftrOd": 80.0,
+    "repairPct": 2.0,
+    "rejectPct": 18.0,
     "ftrOdTgt": 96,
     "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 5,
-    "rejectPipes": 4,
-    "twoPartRepairs": 233,
-    "bevel": 1,
-    "sample": 2,
-    "tape": 1,
+    "repairPipes": 1,
+    "rejectPipes": 9,
+    "twoPartRepairs": 119,
+    "bevel": 0,
+    "sample": 1,
+    "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 13,
+    "strippingOutput": 0,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 3.33,
-    "odDowntimeHrs": 9.42,
+    "idDowntimeHrs": 2.58,
+    "odDowntimeHrs": 7.0,
     "tgt": 85,
-    "sapNotif": 13,
-    "plannedDt": 12.38,
-    "unplannedDt": 0.33,
+    "sapNotif": 7,
+    "plannedDt": 9.58,
+    "unplannedDt": 0.0,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "plant start up",
+        "desc": "lack of manpower on final",
         "line": "ID",
         "start": "06:00",
-        "stop": "06:35",
-        "durMin": 35,
+        "stop": "07:15",
+        "durMin": 75,
         "shift": "Day",
         "cause": "",
-        "sap": "700095542"
+        "sap": "700095635"
       },
       {
-        "desc": "pitstop",
+        "desc": "no blast operator due earlyout",
         "line": "ID",
-        "start": "13:30",
-        "stop": "14:30",
-        "durMin": 60,
+        "start": "12:40",
+        "stop": "14:00",
+        "durMin": 80,
         "shift": "Day",
         "cause": "",
-        "sap": "700095545"
+        "sap": "700095636"
       },
       {
-        "desc": "final table backed up",
-        "line": "ID",
-        "start": "15:30",
-        "stop": "16:00",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700095546"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "01:00",
-        "stop": "01:55",
-        "durMin": 55,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095576"
-      },
-      {
-        "desc": "reset chain in the curing chamber",
-        "line": "ID",
-        "start": "21:40",
-        "stop": "22:00",
-        "durMin": 20,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004913"
-      },
-      {
-        "desc": "plant start up",
+        "desc": "plant startup",
         "line": "OD",
         "start": "06:00",
-        "stop": "06:45",
+        "stop": "06:25",
+        "durMin": 25,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700095637"
+      },
+      {
+        "desc": "final table backed up training",
+        "line": "OD",
+        "start": "07:35",
+        "stop": "10:10",
+        "durMin": 155,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700095638"
+      },
+      {
+        "desc": "final table backed up 2parts redo",
+        "line": "OD",
+        "start": "10:55",
+        "stop": "13:05",
+        "durMin": 130,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700095639"
+      },
+      {
+        "desc": "final table backed up 2parts redo",
+        "line": "OD",
+        "start": "15:00",
+        "stop": "16:05",
+        "durMin": 65,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700095640"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "17:15",
+        "stop": "18:00",
         "durMin": 45,
         "shift": "Day",
         "cause": "",
-        "sap": "700095543"
-      },
-      {
-        "desc": "final table backed up north rotator",
-        "line": "OD",
-        "start": "09:10",
-        "stop": "11:00",
-        "durMin": 110,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700095547"
-      },
-      {
-        "desc": "jeep and thickness backed up",
-        "line": "OD",
-        "start": "11:45",
-        "stop": "13:30",
-        "durMin": 105,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700095548"
-      },
-      {
-        "desc": "final table backed up north rotator",
-        "line": "OD",
-        "start": "15:20",
-        "stop": "18:00",
-        "durMin": 160,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700095550"
-      },
-      {
-        "desc": "Start up",
-        "line": "OD",
-        "start": "18:00",
-        "stop": "18:30",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095553"
-      },
-      {
-        "desc": "SAP update",
-        "line": "OD",
-        "start": "20:10",
-        "stop": "20:50",
-        "durMin": 40,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095556"
-      },
-      {
-        "desc": "Cleaning coating booth",
-        "line": "OD",
-        "start": "03:05",
-        "stop": "03:25",
-        "durMin": 20,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095609"
-      },
-      {
-        "desc": "Final table backed up due to missed 2pts",
-        "line": "OD",
-        "start": "05:05",
-        "stop": "06:00",
-        "durMin": 55,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095625"
+        "sap": "700095641"
       }
     ]
   }
