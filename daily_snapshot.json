@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T09:15:12.087908",
+  "generated": "2026-09-25T09:21:56.171646",
   "meta": {
     "date": "09/24/2026",
     "shift": "24H",
@@ -21,26 +21,26 @@
   "production": {
     "bare": {
       "day": 0,
-      "night": 0,
-      "total": 0,
+      "night": 29,
+      "total": 29,
       "tgt": 140
     },
     "idCoated": {
-      "day": 73,
-      "night": 0,
-      "total": 73,
+      "day": 70,
+      "night": 36,
+      "total": 106,
       "tgt": 140
     },
     "odTpi": {
       "day": 58,
-      "night": 0,
-      "total": 58,
+      "night": 82,
+      "total": 140,
       "tgt": 145
     },
     "odCoated": {
       "day": 58,
-      "night": 0,
-      "total": 58,
+      "night": 83,
+      "total": 141,
       "tgt": 145
     },
     "wipBareId": {
@@ -52,7 +52,7 @@
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 37.93,
       "tgt": 75
     },
     "idOdFeedPct": {
@@ -73,12 +73,12 @@
     }
   },
   "quality": {
-    "ftrOd": 63.79,
-    "repairPct": 8.62,
-    "rejectPct": 27.59,
+    "ftrOd": 85.11,
+    "repairPct": 3.55,
+    "rejectPct": 11.35,
     "ftrOdTgt": 96,
-    "ftrId": 91.78,
-    "idRejectPct": 8.22,
+    "ftrId": 94.34,
+    "idRejectPct": 5.66,
     "ftrIdTgt": 98,
     "repairPipes": 5,
     "rejectPipes": 16,
