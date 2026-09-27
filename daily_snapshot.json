@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-25T09:21:56.171646",
+  "generated": "2026-09-26T19:50:22.874068",
   "meta": {
-    "date": "09/24/2026",
-    "shift": "24H",
+    "date": "09/26/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,277 +20,147 @@
   },
   "production": {
     "bare": {
-      "day": 0,
-      "night": 29,
-      "total": 29,
+      "day": 68,
+      "night": 0,
+      "total": 68,
       "tgt": 140
     },
     "idCoated": {
-      "day": 70,
-      "night": 36,
-      "total": 106,
+      "day": 9,
+      "night": 0,
+      "total": 9,
       "tgt": 140
     },
     "odTpi": {
-      "day": 58,
-      "night": 82,
-      "total": 140,
+      "day": 39,
+      "night": 0,
+      "total": 39,
       "tgt": 145
     },
     "odCoated": {
-      "day": 58,
-      "night": 83,
-      "total": 141,
+      "day": 27,
+      "night": 0,
+      "total": 27,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 98,
+      "total": 194,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 144,
+      "total": 89,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 37.93,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 100,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 20,
+      "val": 15,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 36,
+      "val": 30,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 15,
+      "val": 9,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 85.11,
-    "repairPct": 3.55,
-    "rejectPct": 11.35,
+    "ftrOd": 70.37,
+    "repairPct": 11.11,
+    "rejectPct": 18.52,
     "ftrOdTgt": 96,
-    "ftrId": 94.34,
-    "idRejectPct": 5.66,
+    "ftrId": 100.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 5,
-    "rejectPipes": 16,
-    "twoPartRepairs": 252,
+    "repairPipes": 3,
+    "rejectPipes": 5,
+    "twoPartRepairs": 45,
     "bevel": 1,
-    "sample": 2,
+    "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 7,
-    "idRejects": 6,
+    "strippingOutput": 6,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 9.5,
-    "odDowntimeHrs": 9.92,
+    "idDowntimeHrs": 12.0,
+    "odDowntimeHrs": 8.5,
     "tgt": 85,
-    "sapNotif": 19,
-    "plannedDt": 13.0,
-    "unplannedDt": 6.33,
+    "sapNotif": 6,
+    "plannedDt": 13.65,
+    "unplannedDt": 6.84,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "plant start up",
+        "desc": "Stripping pipes",
         "line": "ID",
         "start": "06:00",
-        "stop": "06:30",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700095733"
-      },
-      {
-        "desc": "paint chips",
-        "line": "ID",
-        "start": "09:30",
-        "stop": "10:00",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700095734"
-      },
-      {
-        "desc": "Plan startup",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:20",
-        "durMin": 20,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095836"
-      },
-      {
-        "desc": "Final table full",
-        "line": "ID",
-        "start": "20:35",
-        "stop": "21:15",
-        "durMin": 40,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095837"
-      },
-      {
-        "desc": "Pipes not available",
-        "line": "ID",
-        "start": "22:25",
-        "stop": "23:00",
-        "durMin": 35,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095838"
-      },
-      {
-        "desc": "Pipes not available and blasting strippe",
-        "line": "ID",
-        "start": "00:20",
-        "stop": "03:50",
-        "durMin": 210,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095839"
-      },
-      {
-        "desc": "Change over",
-        "line": "ID",
-        "start": "03:50",
-        "stop": "04:15",
-        "durMin": 25,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095840"
-      },
-      {
-        "desc": "Blaster buggy drag chain broken",
-        "line": "ID",
-        "start": "23:05",
-        "stop": "00:00",
-        "durMin": 55,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004933"
-      },
-      {
-        "desc": "Blaster-1Grid belt sensor cable damage",
-        "line": "ID",
-        "start": "04:15",
-        "stop": "06:00",
-        "durMin": 105,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004934"
-      },
-      {
-        "desc": "Blaster Grid belt sensor cable damage",
-        "line": "ID",
-        "start": "05:40",
-        "stop": "06:00",
-        "durMin": 20,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004935"
-      },
-      {
-        "desc": "plant start up",
-        "line": "OD",
-        "start": "06:00",
-        "stop": "07:25",
-        "durMin": 85,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700095731"
-      },
-      {
-        "desc": "final table backed up 2parts redo",
-        "line": "OD",
-        "start": "11:35",
-        "stop": "12:20",
-        "durMin": 45,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700095732"
-      },
-      {
-        "desc": "pitstop",
-        "line": "OD",
-        "start": "17:30",
         "stop": "18:00",
-        "durMin": 30,
+        "durMin": 720,
         "shift": "Day",
         "cause": "",
-        "sap": "700095737"
+        "sap": "700096004"
       },
       {
-        "desc": "replace idle wheel group 7",
+        "desc": "final table backed up from pervious shif",
         "line": "OD",
-        "start": "07:45",
-        "stop": "08:25",
+        "start": "06:00",
+        "stop": "06:50",
+        "durMin": 50,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700096005"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "OD",
+        "start": "17:10",
+        "stop": "18:00",
+        "durMin": 50,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700096007"
+      },
+      {
+        "desc": "auto Jeeper malfunction",
+        "line": "OD",
+        "start": "07:15",
+        "stop": "08:30",
+        "durMin": 75,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004943"
+      },
+      {
+        "desc": "overvoltage tripped out on induction",
+        "line": "OD",
+        "start": "08:30",
+        "stop": "13:25",
+        "durMin": 295,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004944"
+      },
+      {
+        "desc": "replaced hoist battery",
+        "line": "OD",
+        "start": "14:05",
+        "stop": "14:45",
         "durMin": 40,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004931"
-      },
-      {
-        "desc": "southeast buggy malfunction",
-        "line": "OD",
-        "start": "14:20",
-        "stop": "17:00",
-        "durMin": 160,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000004932"
-      },
-      {
-        "desc": "final table full",
-        "line": "OD",
-        "start": "18:00",
-        "stop": "19:15",
-        "durMin": 75,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095832"
-      },
-      {
-        "desc": "Pitstop (powder monds)",
-        "line": "OD",
-        "start": "22:50",
-        "stop": "23:55",
-        "durMin": 65,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095833"
-      },
-      {
-        "desc": "Pitstop (powder monds)",
-        "line": "OD",
-        "start": "01:55",
-        "stop": "02:40",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095834"
-      },
-      {
-        "desc": "Pitstop (powder monds)",
-        "line": "OD",
-        "start": "05:10",
-        "stop": "06:00",
-        "durMin": 50,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700095835"
+        "sap": "30000004945"
       }
     ]
   }
