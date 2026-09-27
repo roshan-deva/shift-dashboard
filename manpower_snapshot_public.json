@@ -1,22 +1,22 @@
 {
  "meta": {
-  "dataDate": "9/24/2026",
-  "generated": "2026-09-25 09:16:24",
+  "dataDate": "9/25/2026",
+  "generated": "2026-09-26 19:51:31",
   "salariedExcluded": 24,
   "hourlyRows": 217,
-  "comparableRows": 160
+  "comparableRows": 155
  },
  "kpis": {
-  "workedHC": 138,
-  "schedHC": 131,
-  "attendancePct": 83.2,
-  "absent": 22,
-  "cleanVarHrs": 150.9,
-  "cleanSchedHrs": 1409.0,
-  "rawVarHrs": 150.9,
+  "workedHC": 135,
+  "schedHC": 129,
+  "attendancePct": 84.5,
+  "absent": 20,
+  "cleanVarHrs": 81.7,
+  "cleanSchedHrs": 1449.0,
+  "rawVarHrs": 81.7,
   "noSchedCells": 0,
   "noSchedWorkers": 0,
-  "elitePct": 19.6
+  "elitePct": 18.5
  },
  "grid": [
   {
@@ -26,12 +26,12 @@
    "status": "ok",
    "reason": "",
    "roster": 47,
-   "schedHC": 34,
-   "workedHC": 34,
+   "schedHC": 33,
+   "workedHC": 35,
    "absent": 1,
-   "unsched": 1,
-   "schedHrs": 404.0,
-   "actHrs": 445.8,
+   "unsched": 3,
+   "schedHrs": 392.0,
+   "actHrs": 428.5,
    "people": []
   },
   {
@@ -45,8 +45,8 @@
    "workedHC": 2,
    "absent": 2,
    "unsched": 0,
-   "schedHrs": 40.0,
-   "actHrs": 24.6,
+   "schedHrs": 48.0,
+   "actHrs": 24.4,
    "people": []
   },
   {
@@ -57,11 +57,11 @@
    "reason": "",
    "roster": 28,
    "schedHC": 18,
-   "workedHC": 17,
-   "absent": 3,
-   "unsched": 2,
+   "workedHC": 16,
+   "absent": 2,
+   "unsched": 0,
    "schedHrs": 213.0,
-   "actHrs": 203.5,
+   "actHrs": 185.6,
    "people": []
   },
   {
@@ -69,14 +69,14 @@
    "dept": "Quality",
    "force": "Elite",
    "status": "warn",
-   "reason": "3 of 9 scheduled absent",
+   "reason": "2 of 8 scheduled absent",
    "roster": 13,
-   "schedHC": 9,
+   "schedHC": 8,
    "workedHC": 6,
-   "absent": 3,
+   "absent": 2,
    "unsched": 0,
-   "schedHrs": 68.0,
-   "actHrs": 39.7,
+   "schedHrs": 96.0,
+   "actHrs": 53.1,
    "people": []
   },
   {
@@ -91,7 +91,7 @@
    "absent": 0,
    "unsched": 0,
    "schedHrs": 84.0,
-   "actHrs": 86.5,
+   "actHrs": 84.6,
    "people": []
   },
   {
@@ -116,57 +116,57 @@
    "status": "ok",
    "reason": "",
    "roster": 22,
-   "schedHC": 15,
-   "workedHC": 14,
-   "absent": 2,
+   "schedHC": 14,
+   "workedHC": 15,
+   "absent": 0,
    "unsched": 1,
-   "schedHrs": 180.0,
-   "actHrs": 169.2,
+   "schedHrs": 168.0,
+   "actHrs": 181.7,
    "people": []
   },
   {
    "line": "LIC1",
    "dept": "Production",
    "force": "Elite",
-   "status": "crit",
-   "reason": "2 of 4 scheduled absent",
+   "status": "ok",
+   "reason": "",
    "roster": 7,
-   "schedHC": 4,
+   "schedHC": 2,
    "workedHC": 2,
-   "absent": 2,
+   "absent": 0,
    "unsched": 0,
-   "schedHrs": 24.0,
-   "actHrs": 15.6,
+   "schedHrs": 16.0,
+   "actHrs": 15.7,
    "people": []
   },
   {
    "line": "LIC1",
    "dept": "Quality",
    "force": "Welspun",
-   "status": "warn",
-   "reason": "hours +15 vs schedule",
+   "status": "ok",
+   "reason": "",
    "roster": 9,
    "schedHC": 6,
-   "workedHC": 7,
+   "workedHC": 6,
    "absent": 0,
-   "unsched": 1,
+   "unsched": 0,
    "schedHrs": 72.0,
-   "actHrs": 87.1,
+   "actHrs": 75.2,
    "people": []
   },
   {
    "line": "LIC1",
    "dept": "Quality",
    "force": "Elite",
-   "status": "warn",
-   "reason": "1 of 3 scheduled absent",
+   "status": "crit",
+   "reason": "3 of 5 scheduled absent",
    "roster": 6,
-   "schedHC": 3,
-   "workedHC": 3,
-   "absent": 1,
-   "unsched": 1,
-   "schedHrs": 28.0,
-   "actHrs": 26.9,
+   "schedHC": 5,
+   "workedHC": 2,
+   "absent": 3,
+   "unsched": 0,
+   "schedHrs": 52.0,
+   "actHrs": 24.6,
    "people": []
   },
   {
@@ -204,14 +204,14 @@
    "dept": "Production",
    "force": "Welspun",
    "status": "warn",
-   "reason": "2 of 10 scheduled absent",
+   "reason": "hours +124 vs schedule",
    "roster": 22,
    "schedHC": 10,
    "workedHC": 18,
-   "absent": 2,
-   "unsched": 10,
+   "absent": 1,
+   "unsched": 9,
    "schedHrs": 84.0,
-   "actHrs": 206.6,
+   "actHrs": 208.4,
    "people": []
   },
   {
@@ -219,14 +219,14 @@
    "dept": "Production",
    "force": "Elite",
    "status": "warn",
-   "reason": "2 of 6 scheduled absent",
+   "reason": "3 of 7 scheduled absent",
    "roster": 17,
-   "schedHC": 6,
+   "schedHC": 7,
    "workedHC": 10,
-   "absent": 2,
+   "absent": 3,
    "unsched": 6,
-   "schedHrs": 48.0,
-   "actHrs": 71.4,
+   "schedHrs": 60.0,
+   "actHrs": 79.6,
    "people": []
   },
   {
@@ -234,29 +234,29 @@
    "dept": "Quality",
    "force": "Welspun",
    "status": "warn",
-   "reason": "3 of 11 scheduled absent",
+   "reason": "4 of 11 scheduled absent",
    "roster": 17,
    "schedHC": 11,
-   "workedHC": 12,
-   "absent": 3,
+   "workedHC": 11,
+   "absent": 4,
    "unsched": 4,
    "schedHrs": 120.0,
-   "actHrs": 132.6,
+   "actHrs": 126.9,
    "people": []
   },
   {
    "line": "SDC",
    "dept": "Quality",
    "force": "Elite",
-   "status": "warn",
-   "reason": "hours +21 vs schedule",
+   "status": "crit",
+   "reason": "1 of 1 scheduled absent",
    "roster": 8,
    "schedHC": 1,
-   "workedHC": 4,
-   "absent": 0,
+   "workedHC": 3,
+   "absent": 1,
    "unsched": 3,
    "schedHrs": 8.0,
-   "actHrs": 28.9,
+   "actHrs": 19.1,
    "people": []
   },
   {
@@ -271,7 +271,7 @@
    "absent": 1,
    "unsched": 0,
    "schedHrs": 36.0,
-   "actHrs": 21.5,
+   "actHrs": 23.3,
    "people": []
   },
   {
@@ -298,43 +298,33 @@
   },
   {
    "sev": "crit",
-   "where": "LIC1 Production - Elite",
-   "what": "2 of 4 scheduled absent"
+   "where": "LIC1 Quality - Elite",
+   "what": "3 of 5 scheduled absent"
+  },
+  {
+   "sev": "crit",
+   "where": "SDC Quality - Elite",
+   "what": "1 of 1 scheduled absent"
   },
   {
    "sev": "warn",
    "where": "LEC1 Quality - Elite",
-   "what": "3 of 9 scheduled absent"
-  },
-  {
-   "sev": "warn",
-   "where": "LIC1 Quality - Welspun",
-   "what": "hours +15 vs schedule"
-  },
-  {
-   "sev": "warn",
-   "where": "LIC1 Quality - Elite",
-   "what": "1 of 3 scheduled absent"
+   "what": "2 of 8 scheduled absent"
   },
   {
    "sev": "warn",
    "where": "SDC Production - Welspun",
-   "what": "2 of 10 scheduled absent"
+   "what": "hours +124 vs schedule"
   },
   {
    "sev": "warn",
    "where": "SDC Production - Elite",
-   "what": "2 of 6 scheduled absent"
+   "what": "3 of 7 scheduled absent"
   },
   {
    "sev": "warn",
    "where": "SDC Quality - Welspun",
-   "what": "3 of 11 scheduled absent"
-  },
-  {
-   "sev": "warn",
-   "where": "SDC Quality - Elite",
-   "what": "hours +21 vs schedule"
+   "what": "4 of 11 scheduled absent"
   },
   {
    "sev": "warn",
@@ -344,16 +334,16 @@
  ],
  "varianceBuckets": {
   "over": {
-   "count": 51,
-   "hours": 361.7
+   "count": 45,
+   "hours": 329.3
   },
   "on": {
-   "count": 70,
-   "hours": 24.9
+   "count": 72,
+   "hours": 22.5
   },
   "under": {
-   "count": 39,
-   "hours": -235.8
+   "count": 38,
+   "hours": -270.2
   }
  }
 }
