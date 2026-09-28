@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-27T19:30:29.418507",
+  "generated": "2026-09-28T08:16:40.369613",
   "meta": {
     "date": "09/27/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -21,20 +21,20 @@
   "production": {
     "bare": {
       "day": 49,
-      "night": 0,
-      "total": 49,
+      "night": 47,
+      "total": 96,
       "tgt": 140
     },
     "idCoated": {
-      "day": 91,
-      "night": 0,
-      "total": 91,
+      "day": 88,
+      "night": 61,
+      "total": 149,
       "tgt": 140
     },
     "odTpi": {
-      "day": 0,
+      "day": 1,
       "night": 0,
-      "total": 0,
+      "total": 1,
       "tgt": 145
     },
     "odCoated": {
@@ -44,15 +44,15 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 126,
+      "total": 127,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 171,
+      "total": 232,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 34.38,
       "tgt": 75
     },
     "idOdFeedPct": {
@@ -60,7 +60,7 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 13,
+      "val": 14,
       "tgt": 20
     },
     "stripBalanceOd": {
@@ -77,8 +77,8 @@
     "repairPct": 0.0,
     "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 100.0,
-    "idRejectPct": 0.0,
+    "ftrId": 99.33,
+    "idRejectPct": 0.67,
     "ftrIdTgt": 98,
     "repairPipes": 0,
     "rejectPipes": 0,
@@ -89,18 +89,69 @@
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
     "strippingOutput": 0,
-    "idRejects": 0,
+    "idRejects": 1,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 0.0,
+    "idDowntimeHrs": 6.67,
     "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 0,
-    "plannedDt": 0.0,
-    "unplannedDt": 0.0,
+    "sapNotif": 5,
+    "plannedDt": 6.34,
+    "unplannedDt": 0.33,
     "forklift": 0,
-    "downtimeEvents": []
+    "downtimeEvents": [
+      {
+        "desc": "Startup",
+        "line": "ID",
+        "start": "06:00",
+        "stop": "06:15",
+        "durMin": 15,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700096111"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "13:15",
+        "stop": "14:10",
+        "durMin": 55,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700096112"
+      },
+      {
+        "desc": "Startup",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:10",
+        "durMin": 10,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700096113"
+      },
+      {
+        "desc": "Shift called off due to lack of pipes",
+        "line": "ID",
+        "start": "01:00",
+        "stop": "06:00",
+        "durMin": 300,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700096133"
+      },
+      {
+        "desc": "Curing chamber carrier 5 not picking up",
+        "line": "ID",
+        "start": "18:40",
+        "stop": "19:00",
+        "durMin": 20,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004955"
+      }
+    ]
   }
 }
