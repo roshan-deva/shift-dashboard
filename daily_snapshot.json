@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-30T19:30:58.548720",
+  "generated": "2026-10-01T08:30:00.535024",
   "meta": {
     "date": "09/30/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -16,93 +16,90 @@
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    },
-    "backlogReplayed": [
-      "2026-09-29"
-    ]
+    }
   },
   "production": {
     "bare": {
-      "day": 0,
-      "night": 0,
-      "total": 0,
+      "day": 45,
+      "night": 48,
+      "total": 93,
       "tgt": 140
     },
     "idCoated": {
-      "day": 0,
-      "night": 0,
-      "total": 0,
+      "day": 85,
+      "night": 62,
+      "total": 147,
       "tgt": 140
     },
     "odTpi": {
-      "day": 0,
-      "night": 0,
-      "total": 0,
+      "day": 52,
+      "night": 80,
+      "total": 132,
       "tgt": 145
     },
     "odCoated": {
-      "day": 0,
-      "night": 0,
-      "total": 0,
+      "day": 45,
+      "night": 80,
+      "total": 125,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 22,
+      "total": 19,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 186,
+      "total": 178,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 26.88,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 76.87,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 23,
+      "val": 22,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 39,
+      "val": 35,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 9,
+      "val": 13,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 0.0,
-    "repairPct": 0.0,
-    "rejectPct": 0.0,
+    "ftrOd": 91.2,
+    "repairPct": 4.0,
+    "rejectPct": 4.8,
     "ftrOdTgt": 96,
-    "ftrId": 0.0,
+    "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 2,
-    "rejectPipes": 3,
-    "twoPartRepairs": 104,
-    "bevel": 1,
-    "sample": 1,
+    "repairPipes": 5,
+    "rejectPipes": 6,
+    "twoPartRepairs": 211,
+    "bevel": 2,
+    "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 6,
+    "strippingOutput": 13,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 1.25,
-    "odDowntimeHrs": 6.77,
+    "idDowntimeHrs": 7.42,
+    "odDowntimeHrs": 7.43,
     "tgt": 85,
-    "sapNotif": 12,
-    "plannedDt": 4.37,
-    "unplannedDt": 3.55,
+    "sapNotif": 22,
+    "plannedDt": 12.86,
+    "unplannedDt": 5.2,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -126,6 +123,16 @@
         "sap": "700096562"
       },
       {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "17:35",
+        "stop": "18:00",
+        "durMin": 25,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700096563"
+      },
+      {
         "desc": "pipes not moving through curing chamber",
         "line": "ID",
         "start": "12:35",
@@ -134,6 +141,66 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004989"
+      },
+      {
+        "desc": "pipes not moving through curing chamber",
+        "line": "ID",
+        "start": "16:40",
+        "stop": "17:35",
+        "durMin": 55,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000004990"
+      },
+      {
+        "desc": "plant startup",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:25",
+        "durMin": 25,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700096638"
+      },
+      {
+        "desc": "no available pipes",
+        "line": "ID",
+        "start": "21:15",
+        "stop": "22:45",
+        "durMin": 90,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700096639"
+      },
+      {
+        "desc": "no available pipes",
+        "line": "ID",
+        "start": "02:15",
+        "stop": "04:00",
+        "durMin": 105,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700096676"
+      },
+      {
+        "desc": "no available pipes",
+        "line": "ID",
+        "start": "05:35",
+        "stop": "06:00",
+        "durMin": 25,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700096685"
+      },
+      {
+        "desc": "v roller motor broke",
+        "line": "ID",
+        "start": "23:10",
+        "stop": "23:55",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000004992"
       },
       {
         "desc": "oil contamination",
@@ -224,6 +291,16 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000004988"
+      },
+      {
+        "desc": "plant startup",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "18:40",
+        "durMin": 40,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700096640"
       }
     ]
   }
