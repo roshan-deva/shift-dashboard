@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-30T08:20:26.170532",
+  "generated": "2026-09-30T19:30:58.548720",
   "meta": {
-    "date": "09/29/2026",
-    "shift": "24H",
+    "date": "09/30/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,277 +20,207 @@
   },
   "production": {
     "bare": {
-      "day": 65,
+      "day": 0,
       "night": 0,
-      "total": 65,
+      "total": 0,
       "tgt": 140
     },
     "idCoated": {
-      "day": 63,
+      "day": 0,
       "night": 0,
-      "total": 63,
+      "total": 0,
       "tgt": 140
     },
     "odTpi": {
-      "day": 56,
+      "day": 0,
       "night": 0,
-      "total": 56,
+      "total": 0,
       "tgt": 145
     },
     "odCoated": {
-      "day": 51,
+      "day": 0,
       "night": 0,
-      "total": 51,
+      "total": 0,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 143,
+      "total": 22,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 159,
+      "total": 186,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 52.31,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 100,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 22,
+      "val": 23,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 41,
+      "val": 39,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 13,
+      "val": 9,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 52.94,
-    "repairPct": 17.65,
-    "rejectPct": 29.41,
+    "ftrOd": 0.0,
+    "repairPct": 0.0,
+    "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 100.0,
+    "ftrId": 0.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 9,
-    "rejectPipes": 15,
-    "twoPartRepairs": 473,
-    "bevel": 2,
-    "sample": 2,
-    "tape": 2,
+    "repairPipes": 2,
+    "rejectPipes": 3,
+    "twoPartRepairs": 104,
+    "bevel": 1,
+    "sample": 1,
+    "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 12,
+    "strippingOutput": 6,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 7.17,
-    "odDowntimeHrs": 11.25,
+    "idDowntimeHrs": 1.25,
+    "odDowntimeHrs": 6.77,
     "tgt": 85,
-    "sapNotif": 19,
-    "plannedDt": 11.36,
-    "unplannedDt": 6.95,
+    "sapNotif": 12,
+    "plannedDt": 4.37,
+    "unplannedDt": 3.55,
     "forklift": 0,
     "downtimeEvents": [
       {
         "desc": "Startup",
         "line": "ID",
         "start": "06:00",
-        "stop": "06:20",
-        "durMin": 20,
+        "stop": "06:15",
+        "durMin": 15,
         "shift": "Day",
         "cause": "",
-        "sap": "700096330"
+        "sap": "700096561"
       },
       {
         "desc": "Pitstop",
         "line": "ID",
-        "start": "14:05",
-        "stop": "14:25",
-        "durMin": 20,
+        "start": "13:30",
+        "stop": "14:00",
+        "durMin": 30,
         "shift": "Day",
         "cause": "",
-        "sap": "700096331"
+        "sap": "700096562"
       },
       {
-        "desc": "Blaster-2 rotation wheel broken",
+        "desc": "pipes not moving through curing chamber",
         "line": "ID",
-        "start": "07:25",
-        "stop": "08:40",
-        "durMin": 75,
+        "start": "12:35",
+        "stop": "13:05",
+        "durMin": 30,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004972"
+        "sap": "30000004989"
       },
       {
-        "desc": "Blaster-1 boom not returning to home",
-        "line": "ID",
-        "start": "16:25",
-        "stop": "17:20",
-        "durMin": 55,
+        "desc": "oil contamination",
+        "line": "OD",
+        "start": "08:05",
+        "stop": "09:40",
+        "durMin": 95,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004973"
+        "sap": "700096557"
       },
       {
-        "desc": "Blaster-1 boom not returning to home",
-        "line": "ID",
-        "start": "17:20",
-        "stop": "18:00",
+        "desc": "coating guns not start up",
+        "line": "OD",
+        "start": "13:25",
+        "stop": "14:00",
+        "durMin": 35,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700096558"
+      },
+      {
+        "desc": "Online jeeper not working",
+        "line": "OD",
+        "start": "16:15",
+        "stop": "16:55",
         "durMin": 40,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004974"
+        "sap": "700096559"
       },
       {
-        "desc": "Startup",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:10",
-        "durMin": 10,
-        "shift": "Night",
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "17:10",
+        "stop": "18:00",
+        "durMin": 50,
+        "shift": "Day",
         "cause": "",
-        "sap": "700096484"
+        "sap": "700096560"
       },
       {
-        "desc": "Pitstop",
-        "line": "ID",
-        "start": "01:30",
-        "stop": "02:15",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700096491"
-      },
-      {
-        "desc": "Outbound kickers and conveyor not workin",
-        "line": "ID",
-        "start": "22:25",
-        "stop": "23:40",
-        "durMin": 75,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004976"
-      },
-      {
-        "desc": "Carrier 2 pressure valve/hydraulic fluid",
-        "line": "ID",
-        "start": "03:00",
-        "stop": "04:30",
-        "durMin": 90,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004977"
-      },
-      {
-        "desc": "final table full from the previous shift",
+        "desc": "Grinding station rotators damage",
         "line": "OD",
         "start": "06:00",
         "stop": "06:40",
         "durMin": 40,
         "shift": "Day",
         "cause": "",
-        "sap": "700096326"
+        "sap": "30000004982"
       },
       {
-        "desc": "several pipes having contamination canno",
+        "desc": "Final table full(south chain not working",
         "line": "OD",
-        "start": "07:50",
-        "stop": "09:05",
-        "durMin": 75,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700096327"
-      },
-      {
-        "desc": "final table full ( Excessive jeep)",
-        "line": "OD",
-        "start": "10:20",
-        "stop": "12:25",
-        "durMin": 125,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700096328"
-      },
-      {
-        "desc": "final table full (South chain not workin",
-        "line": "OD",
-        "start": "14:20",
-        "stop": "15:25",
+        "start": "12:15",
+        "stop": "13:20",
         "durMin": 65,
         "shift": "Day",
         "cause": "",
-        "sap": "700096329"
+        "sap": "30000004983"
       },
       {
-        "desc": "Pitstop",
+        "desc": "Group-1 not worked (one partial pipe)",
         "line": "OD",
-        "start": "17:15",
-        "stop": "18:00",
-        "durMin": 45,
+        "start": "14:05",
+        "stop": "14:15",
+        "durMin": 10,
         "shift": "Day",
         "cause": "",
-        "sap": "700096332"
+        "sap": "30000004985"
       },
       {
-        "desc": "V-Roller on blaster group -a damage",
+        "desc": "Group-1 roll damage",
         "line": "OD",
-        "start": "06:40",
-        "stop": "07:15",
-        "durMin": 35,
+        "start": "14:15",
+        "stop": "14:45",
+        "durMin": 30,
         "shift": "Day",
         "cause": "",
-        "sap": "30000004971"
+        "sap": "30000004986"
       },
       {
-        "desc": "Clearing final table from previous shift",
+        "desc": "Group-9 roll damage",
         "line": "OD",
-        "start": "18:00",
-        "stop": "19:00",
-        "durMin": 60,
-        "shift": "Night",
+        "start": "15:34",
+        "stop": "16:15",
+        "durMin": 41,
+        "shift": "Day",
         "cause": "",
-        "sap": "700096282"
-      },
-      {
-        "desc": "Final table backed up - jeeps and ground",
-        "line": "OD",
-        "start": "22:15",
-        "stop": "00:15",
-        "durMin": 120,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700096482"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "05:00",
-        "stop": "06:00",
-        "durMin": 60,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700096489"
-      },
-      {
-        "desc": "Welding rotator bracket at grind station",
-        "line": "OD",
-        "start": "01:20",
-        "stop": "02:10",
-        "durMin": 50,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000004975"
+        "sap": "30000004988"
       }
     ]
   }
