@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-04T19:30:34.801473",
+  "generated": "2026-10-05T07:51:32.546355",
   "meta": {
     "date": "10/04/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -88,7 +88,7 @@
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 0,
+    "strippingOutput": 7,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
