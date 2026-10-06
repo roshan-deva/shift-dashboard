@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-05T07:51:32.546355",
+  "generated": "2026-10-05T20:03:00.530266",
   "meta": {
-    "date": "10/04/2026",
-    "shift": "24H",
+    "date": "10/05/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,9 +20,9 @@
   },
   "production": {
     "bare": {
-      "day": 0,
+      "day": 26,
       "night": 0,
-      "total": 0,
+      "total": 26,
       "tgt": 140
     },
     "idCoated": {
@@ -32,9 +32,9 @@
       "tgt": 140
     },
     "odTpi": {
-      "day": 0,
+      "day": 11,
       "night": 0,
-      "total": 0,
+      "total": 11,
       "tgt": 145
     },
     "odCoated": {
@@ -44,11 +44,11 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 133,
+      "total": 74,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 93,
+      "total": 146,
       "tgt": 400
     },
     "directFeedPct": {
@@ -60,15 +60,15 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 21,
+      "val": 23,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 38,
+      "val": 31,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 17,
+      "val": 7,
       "tgt": 40
     }
   },
@@ -80,7 +80,7 @@
     "ftrId": 0.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 0,
+    "repairPipes": 1,
     "rejectPipes": 0,
     "twoPartRepairs": 0,
     "bevel": 0,
@@ -88,7 +88,7 @@
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 7,
+    "strippingOutput": 0,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
