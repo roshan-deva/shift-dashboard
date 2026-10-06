@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-05T20:03:00.530266",
+  "generated": "2026-10-06T08:43:17.261553",
   "meta": {
     "date": "10/05/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -21,14 +21,14 @@
   "production": {
     "bare": {
       "day": 26,
-      "night": 0,
-      "total": 26,
+      "night": 23,
+      "total": 49,
       "tgt": 140
     },
     "idCoated": {
-      "day": 0,
-      "night": 0,
-      "total": 0,
+      "day": 147,
+      "night": -20,
+      "total": 127,
       "tgt": 140
     },
     "odTpi": {
@@ -44,15 +44,15 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 74,
+      "total": 24,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 146,
+      "total": 223,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 142.86,
       "tgt": 75
     },
     "idOdFeedPct": {
@@ -60,7 +60,7 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 23,
+      "val": 24,
       "tgt": 20
     },
     "stripBalanceOd": {
@@ -77,7 +77,7 @@
     "repairPct": 0.0,
     "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 0.0,
+    "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
     "repairPipes": 1,
@@ -88,19 +88,130 @@
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 0,
+    "strippingOutput": 7,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 0.0,
-    "odDowntimeHrs": 0.0,
+    "idDowntimeHrs": 3.5,
+    "odDowntimeHrs": 16.5,
     "tgt": 85,
-    "sapNotif": 0,
-    "plannedDt": 0.0,
-    "unplannedDt": 0.0,
+    "sapNotif": 11,
+    "plannedDt": 19.59,
+    "unplannedDt": 0.42,
     "forklift": 0,
-    "downtimeEvents": []
+    "downtimeEvents": [
+      {
+        "desc": "Bare pipes are not available",
+        "line": "ID",
+        "start": "06:00",
+        "stop": "06:50",
+        "durMin": 50,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700097109"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "13:30",
+        "stop": "14:00",
+        "durMin": 30,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700097113"
+      },
+      {
+        "desc": "Inbound pipes are not kicking",
+        "line": "ID",
+        "start": "09:40",
+        "stop": "10:05",
+        "durMin": 25,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000005010"
+      },
+      {
+        "desc": "Short pipe fell off skid at ID final NTC",
+        "line": "ID",
+        "start": "18:50",
+        "stop": "19:55",
+        "durMin": 65,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700097159"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "01:35",
+        "stop": "02:15",
+        "durMin": 40,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700097160"
+      },
+      {
+        "desc": "Changeover to 24\"",
+        "line": "OD",
+        "start": "06:00",
+        "stop": "19:10",
+        "durMin": 790,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700097107"
+      },
+      {
+        "desc": "Not enough 24\" working couplings",
+        "line": "OD",
+        "start": "19:30",
+        "stop": "20:15",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700097161"
+      },
+      {
+        "desc": "Ran out of pipes from grind station",
+        "line": "OD",
+        "start": "20:50",
+        "stop": "21:20",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700097162"
+      },
+      {
+        "desc": "Ran out of pipes - adjusting groups 1-4",
+        "line": "OD",
+        "start": "20:25",
+        "stop": "21:20",
+        "durMin": 55,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700097163"
+      },
+      {
+        "desc": "Final table backed up",
+        "line": "OD",
+        "start": "01:40",
+        "stop": "02:20",
+        "durMin": 40,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700097164"
+      },
+      {
+        "desc": "Ran out of pipes from the yard on inboun",
+        "line": "OD",
+        "start": "03:40",
+        "stop": "04:10",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700097172"
+      }
+    ]
   }
 }
