@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T08:31:22.274152",
+  "generated": "2026-10-08T08:50:32.655927",
   "meta": {
     "date": "10/06/2026",
     "shift": "24H",
@@ -44,11 +44,11 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 55,
+      "total": 44,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 286,
+      "total": 329,
       "tgt": 400
     },
     "directFeedPct": {
@@ -60,11 +60,11 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 5,
+      "val": 15,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 26,
+      "val": 23,
       "tgt": 20
     },
     "odRepairBalance": {
@@ -73,14 +73,14 @@
     }
   },
   "quality": {
-    "ftrOd": 99.52,
-    "repairPct": 0.48,
+    "ftrOd": 100.0,
+    "repairPct": 0.0,
     "rejectPct": 0.0,
     "ftrOdTgt": 96,
     "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 1,
+    "repairPipes": 0,
     "rejectPipes": 0,
     "twoPartRepairs": 0,
     "bevel": 0,
@@ -88,60 +88,20 @@
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 7,
+    "strippingOutput": 13,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": -6.08,
-    "odDowntimeHrs": 8.42,
+    "idDowntimeHrs": 2.58,
+    "odDowntimeHrs": 2.33,
     "tgt": 85,
-    "sapNotif": 22,
-    "plannedDt": 22.8,
-    "unplannedDt": 6.02,
+    "sapNotif": 7,
+    "plannedDt": 5.25,
+    "unplannedDt": 2.25,
     "forklift": 0,
     "downtimeEvents": [
-      {
-        "desc": "startup",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "06:10",
-        "durMin": 10,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700097191"
-      },
-      {
-        "desc": "No pipes available from Spiral",
-        "line": "ID",
-        "start": "07:45",
-        "stop": "13:25",
-        "durMin": 340,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700097192"
-      },
-      {
-        "desc": "No pipes available from Spiral",
-        "line": "ID",
-        "start": "16:25",
-        "stop": "01:25",
-        "durMin": -900,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700097193"
-      },
-      {
-        "desc": "No pipes available from Spiral",
-        "line": "ID",
-        "start": "13:40",
-        "stop": "14:10",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005013"
-      },
       {
         "desc": "No pipes available from Spiral",
         "line": "ID",
@@ -151,116 +111,6 @@
         "shift": "Night",
         "cause": "",
         "sap": "700097257"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "17:15",
-        "stop": "18:00",
-        "durMin": 45,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700097173"
-      },
-      {
-        "desc": "startup",
-        "line": "OD",
-        "start": "06:00",
-        "stop": "06:20",
-        "durMin": 20,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700097194"
-      },
-      {
-        "desc": "Stacking up pipes in coating line",
-        "line": "OD",
-        "start": "10:25",
-        "stop": "10:50",
-        "durMin": 25,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700097195"
-      },
-      {
-        "desc": "gunspit",
-        "line": "OD",
-        "start": "11:25",
-        "stop": "12:10",
-        "durMin": 45,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700097196"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "17:30",
-        "stop": "18:00",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700097197"
-      },
-      {
-        "desc": "Thickness table carrier not operated",
-        "line": "OD",
-        "start": "07:00",
-        "stop": "07:10",
-        "durMin": 10,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005014"
-      },
-      {
-        "desc": "south chain not working",
-        "line": "OD",
-        "start": "07:25",
-        "stop": "09:10",
-        "durMin": 105,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005015"
-      },
-      {
-        "desc": "Group-4 carrier not worked",
-        "line": "OD",
-        "start": "10:05",
-        "stop": "10:15",
-        "durMin": 10,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005016"
-      },
-      {
-        "desc": "Quenching spray header water leakage",
-        "line": "OD",
-        "start": "10:50",
-        "stop": "11:20",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005017"
-      },
-      {
-        "desc": "Coating line tripped",
-        "line": "OD",
-        "start": "12:35",
-        "stop": "12:55",
-        "durMin": 20,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005018"
-      },
-      {
-        "desc": "Couplings not available",
-        "line": "OD",
-        "start": "16:00",
-        "stop": "16:25",
-        "durMin": 25,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005019"
       },
       {
         "desc": "Filling coating line",
