@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-09T19:30:32.455838",
+  "generated": "2026-10-10T07:30:52.691033",
   "meta": {
     "date": "10/09/2026",
-    "shift": "Day",
+    "shift": "24H",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -21,38 +21,38 @@
   "production": {
     "bare": {
       "day": 21,
-      "night": 0,
-      "total": 21,
+      "night": 13,
+      "total": 34,
       "tgt": 140
     },
     "idCoated": {
       "day": 29,
-      "night": 0,
-      "total": 29,
+      "night": 12,
+      "total": 41,
       "tgt": 140
     },
     "odTpi": {
       "day": 52,
-      "night": 0,
-      "total": 52,
+      "night": 41,
+      "total": 93,
       "tgt": 145
     },
     "odCoated": {
       "day": 52,
-      "night": 0,
-      "total": 52,
+      "night": 49,
+      "total": 101,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 37,
+      "total": 39,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 447,
+      "total": 459,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 11.76,
       "tgt": 75
     },
     "idOdFeedPct": {
@@ -94,13 +94,104 @@
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 0.0,
-    "odDowntimeHrs": 0.0,
+    "idDowntimeHrs": 10.83,
+    "odDowntimeHrs": 6.33,
     "tgt": 85,
-    "sapNotif": 0,
-    "plannedDt": 0.0,
-    "unplannedDt": 0.0,
+    "sapNotif": 9,
+    "plannedDt": 13.42,
+    "unplannedDt": 3.75,
     "forklift": 0,
-    "downtimeEvents": []
+    "downtimeEvents": [
+      {
+        "desc": "no available pipes",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "23:50",
+        "durMin": 350,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700097639"
+      },
+      {
+        "desc": "no available pipes",
+        "line": "ID",
+        "start": "01:00",
+        "stop": "06:00",
+        "durMin": 300,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700097640"
+      },
+      {
+        "desc": "plant startup",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "19:10",
+        "durMin": 70,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700097641"
+      },
+      {
+        "desc": "ran outta pipes coating line",
+        "line": "OD",
+        "start": "20:30",
+        "stop": "21:15",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700097642"
+      },
+      {
+        "desc": "ran outta pipes coating line",
+        "line": "OD",
+        "start": "21:50",
+        "stop": "22:30",
+        "durMin": 40,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700097643"
+      },
+      {
+        "desc": "carrier 16 not picking up",
+        "line": "OD",
+        "start": "19:15",
+        "stop": "19:35",
+        "durMin": 20,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000005089"
+      },
+      {
+        "desc": "grinding station rotator stop working",
+        "line": "OD",
+        "start": "23:30",
+        "stop": "00:15",
+        "durMin": 45,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000005090"
+      },
+      {
+        "desc": "grinding station rotator stop up/down",
+        "line": "OD",
+        "start": "00:45",
+        "stop": "01:15",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000005091"
+      },
+      {
+        "desc": "transfer line group 3& 4 stop working",
+        "line": "OD",
+        "start": "01:15",
+        "stop": "03:25",
+        "durMin": 130,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000005092"
+      }
+    ]
   }
 }
