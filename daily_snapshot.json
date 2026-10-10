@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-09T08:32:34.534798",
+  "generated": "2026-10-09T19:30:32.455838",
   "meta": {
-    "date": "10/08/2026",
-    "shift": "24H",
+    "date": "10/09/2026",
+    "shift": "Day",
     "project": "KM MSX",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
@@ -20,39 +20,39 @@
   },
   "production": {
     "bare": {
-      "day": 30,
-      "night": 20,
-      "total": 50,
+      "day": 21,
+      "night": 0,
+      "total": 21,
       "tgt": 140
     },
     "idCoated": {
-      "day": 9,
-      "night": 43,
-      "total": 52,
+      "day": 29,
+      "night": 0,
+      "total": 29,
       "tgt": 140
     },
     "odTpi": {
-      "day": 127,
-      "night": 117,
-      "total": 244,
+      "day": 52,
+      "night": 0,
+      "total": 52,
       "tgt": 145
     },
     "odCoated": {
-      "day": 127,
-      "night": 123,
-      "total": 250,
+      "day": 52,
+      "night": 0,
+      "total": 52,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 43,
+      "total": 37,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 412,
+      "total": 447,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 36.0,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
@@ -60,11 +60,11 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 19,
+      "val": 20,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 19,
+      "val": 10,
       "tgt": 20
     },
     "odRepairBalance": {
@@ -88,110 +88,19 @@
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 8,
+    "strippingOutput": 0,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 5.75,
-    "odDowntimeHrs": 3.75,
+    "idDowntimeHrs": 0.0,
+    "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 16,
-    "plannedDt": 21.78,
-    "unplannedDt": 2.99,
+    "sapNotif": 0,
+    "plannedDt": 0.0,
+    "unplannedDt": 0.0,
     "forklift": 0,
-    "downtimeEvents": [
-      {
-        "desc": "plant startup",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:50",
-        "durMin": 50,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700097427"
-      },
-      {
-        "desc": "no available pipes",
-        "line": "ID",
-        "start": "01:40",
-        "stop": "06:00",
-        "durMin": 260,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700097531"
-      },
-      {
-        "desc": "blaster 2 west buggy brakes",
-        "line": "ID",
-        "start": "23:40",
-        "stop": "00:15",
-        "durMin": 35,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000005031"
-      },
-      {
-        "desc": "plant startup",
-        "line": "OD",
-        "start": "18:00",
-        "stop": "18:45",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700097429"
-      },
-      {
-        "desc": "coupling fell out/result in partial",
-        "line": "OD",
-        "start": "18:55",
-        "stop": "19:05",
-        "durMin": 10,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700097431"
-      },
-      {
-        "desc": "pipes not process",
-        "line": "OD",
-        "start": "21:10",
-        "stop": "21:40",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700097434"
-      },
-      {
-        "desc": "coupling fell out/result in partial",
-        "line": "OD",
-        "start": "02:05",
-        "stop": "02:20",
-        "durMin": 15,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700097513"
-      },
-      {
-        "desc": "pitstop",
-        "line": "OD",
-        "start": "05:30",
-        "stop": "06:00",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700097530"
-      },
-      {
-        "desc": "Induction coil tripout result in partial",
-        "line": "OD",
-        "start": "19:05",
-        "stop": "20:40",
-        "durMin": 95,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000005030"
-      }
-    ]
+    "downtimeEvents": []
   }
 }
