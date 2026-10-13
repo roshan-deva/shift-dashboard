@@ -855,7 +855,7 @@ function renderMaintenance(){
   document.getElementById('snap-body').innerHTML=`
     <div class="sechead"><span class="bar"></span><h2>Maintenance · Plant Utilization</h2></div>
     <div style="display:flex;justify-content:center;margin-bottom:16px"><div style="max-width:380px;width:100%">${buildDualGauge('mt-dual',u.id,u.od,u.plant,m.tgt,'Plant Utilization · ID vs OD')}</div></div>
-    <div style="font-size:11px;color:var(--muted);margin-bottom:14px">Utilization = (${u.win} h − line downtime) ÷ ${u.win} h · ID downtime <b style="color:var(--text)">${fmt(u.idH)} h</b> · OD downtime <b style="color:var(--text)">${fmt(u.odH)} h</b> · target ${m.tgt}%</div>
+    <div style="font-size:11px;color:var(--muted);margin-bottom:14px">Utilization = (scheduled h − line downtime) ÷ scheduled h · scheduled ID <b style="color:var(--text)">${fmt(u.idW)} h</b> / OD <b style="color:var(--text)">${fmt(u.odW)} h</b> · ID downtime <b style="color:var(--text)">${fmt(u.idH)} h</b> · OD downtime <b style="color:var(--text)">${fmt(u.odH)} h</b> · target ${m.tgt}%</div>
     <div class="grid" style="grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px">${cards}</div>
     <div class="card"><div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Downtime Event Log</div>${table}</div>`;
   const b=document.getElementById('snap-body'); animateArcs(b); countUp(b);
@@ -1440,15 +1440,24 @@ function renderMpWaterfall(){
 /* ── plant utilization ──────────────────────────── */
 function plantUtil(){
   const m=DATA.maintenance, ev=m.downtimeEvents||[];
-  const win = MODE==='24H' ? 24 : 12;   /* single-shift view = 12-h window */
+  const sh=(DATA.meta&&DATA.meta.scheduledHours)||{};   /* planned running hours per line, default 24 (scheduled_hours.json) */
+  const win = MODE==='24H' ? 24 : 12;   /* normal window: single-shift view = 12 h */
+  /* Per-line window = scheduled hours. A short day fills the Day shift first (Day = min(12,h), Night = h-12);
+     a line with 0 scheduled hours in the selected view falls back to the normal window. */
+  const winFor = line => {
+    const h = (typeof sh[line]==='number' && sh[line]>=0 && sh[line]<=24) ? sh[line] : 24;
+    const w = MODE==='24H' ? h : MODE==='Day' ? Math.min(12,h) : Math.max(0,Math.min(12,h-12));
+    return w>0 ? w : win;
+  };
+  const idW=winFor('ID'), odW=winFor('OD');
   const inMode = e => MODE==='24H' || e.shift===MODE;
   const sum = line => ev.filter(e=>e.line===line&&inMode(e)).reduce((a,e)=>a+(e.durMin||0),0)/60;
   const idH = ev.length ? sum('ID') : (m.idDowntimeHrs||0);
   const odH = ev.length ? sum('OD') : (m.odDowntimeHrs||0);
-  const id=(win-idH)/win*100;
-  const od=(win-odH)/win*100;
-  const plant=(2*win-(idH+odH))/(2*win)*100;
-  return {id:Math.max(0,id), od:Math.max(0,od), plant:Math.max(0,plant), idH, odH, win};
+  const id=(idW-idH)/idW*100;
+  const od=(odW-odH)/odW*100;
+  const plant=((idW+odW)-(idH+odH))/(idW+odW)*100;
+  return {id:Math.max(0,id), od:Math.max(0,od), plant:Math.max(0,plant), idH, odH, win, idW, odW};
 }
 
 /* ── Chart.js ───────────────────────────────────── */
