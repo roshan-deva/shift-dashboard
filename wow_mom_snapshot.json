@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13T19:31:30.191405",
+  "generated": "2026-10-14T09:08:11.095178",
   "kpis": {
     "2": {
       "mill": "Spiral",
@@ -749,17 +749,17 @@
           "32": 3
         },
         "AA": {
-          "2": 55.0,
-          "4": null,
-          "5": 130,
-          "6": null,
-          "12": null,
-          "13": 459,
+          "2": 42.0,
+          "4": 0.7619047619047619,
+          "5": 47,
+          "6": 117.0,
+          "12": 0.0,
+          "13": 579,
           "16": null,
           "17": null,
           "33": null,
-          "8": null,
-          "11": null,
+          "8": 0.0,
+          "11": 1.0,
           "18": null,
           "20": null,
           "22": null,
@@ -775,7 +775,7 @@
   "currentWeekDaily": {
     "2": [
       55,
-      null,
+      29,
       null,
       null,
       null,
@@ -784,7 +784,7 @@
     ],
     "4": [
       null,
-      null,
+      1.1034,
       null,
       null,
       null,
@@ -793,7 +793,7 @@
     ],
     "5": [
       130,
-      null,
+      47,
       null,
       null,
       null,
@@ -802,7 +802,7 @@
     ],
     "6": [
       null,
-      null,
+      117,
       null,
       null,
       null,
@@ -811,7 +811,7 @@
     ],
     "12": [
       null,
-      null,
+      0,
       null,
       null,
       null,
@@ -820,7 +820,7 @@
     ],
     "13": [
       459,
-      null,
+      579,
       null,
       null,
       null,
@@ -856,7 +856,7 @@
     ],
     "8": [
       null,
-      null,
+      0,
       null,
       null,
       null,
@@ -865,7 +865,7 @@
     ],
     "11": [
       null,
-      null,
+      1,
       null,
       null,
       null,
@@ -947,7 +947,7 @@
   },
   "currentWeekLabels": [
     "10/12",
-    null,
+    "10/13",
     null,
     null,
     null,
