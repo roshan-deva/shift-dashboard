@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-14T19:30:27.576326",
+  "generated": "2026-10-15T08:18:01.112690",
   "meta": {
     "date": "10/14/2026",
-    "shift": "Day",
+    "shift": "24H",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -26,14 +26,14 @@
   "production": {
     "bare": {
       "day": 16,
-      "night": 0,
-      "total": 16,
+      "night": 18,
+      "total": 34,
       "tgt": 140
     },
     "idCoated": {
       "day": 21,
-      "night": 0,
-      "total": 21,
+      "night": 11,
+      "total": 32,
       "tgt": 140
     },
     "odTpi": {
@@ -49,15 +49,15 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 41,
+      "total": 62,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 599,
+      "total": 611,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 26.47,
       "tgt": 75
     },
     "idOdFeedPct": {
