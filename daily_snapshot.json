@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-16T05:58:38.280364",
+  "generated": "2026-10-16T08:17:01.036290",
   "meta": {
-    "date": "10/16/2026",
-    "shift": "Day",
+    "date": "10/15/2026",
+    "shift": "24H",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -25,15 +25,15 @@
   },
   "production": {
     "bare": {
-      "day": 0,
-      "night": 0,
-      "total": 0,
+      "day": 9,
+      "night": 23,
+      "total": 32,
       "tgt": 140
     },
     "idCoated": {
-      "day": 0,
-      "night": 0,
-      "total": 0,
+      "day": 5,
+      "night": 10,
+      "total": 15,
       "tgt": 140
     },
     "odTpi": {
@@ -49,11 +49,11 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 0,
+      "total": 78,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 599,
+      "total": 626,
       "tgt": 400
     },
     "directFeedPct": {
@@ -65,11 +65,11 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 0,
+      "val": 9,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 0,
+      "val": 2,
       "tgt": 20
     },
     "odRepairBalance": {
@@ -82,7 +82,7 @@
     "repairPct": 0.0,
     "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 0.0,
+    "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
     "repairPipes": 0,
@@ -99,13 +99,44 @@
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 0.0,
-    "odDowntimeHrs": 0.0,
+    "idDowntimeHrs": 12.0,
+    "odDowntimeHrs": 12.0,
     "tgt": 85,
-    "sapNotif": 0,
-    "plannedDt": 0.0,
+    "sapNotif": 6,
+    "plannedDt": 47.97,
     "unplannedDt": 0.0,
     "forklift": 0,
-    "downtimeEvents": []
+    "downtimeEvents": [
+      {
+        "desc": "Stripping",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "22:00",
+        "durMin": 240,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700098400"
+      },
+      {
+        "desc": "Changeover to .750s.",
+        "line": "ID",
+        "start": "22:00",
+        "stop": "06:00",
+        "durMin": 480,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700098401"
+      },
+      {
+        "desc": "Upgrades on induction system",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "06:00",
+        "durMin": 720,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700098402"
+      }
+    ]
   }
 }
