@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19T19:34:09.175065",
+  "generated": "2026-10-20T08:50:51.068205",
   "kpis": {
     "2": {
       "mill": "Spiral",
@@ -768,153 +768,174 @@
           "30": null,
           "31": null,
           "32": 9
+        },
+        "AI": {
+          "2": 120.0,
+          "4": 0.4166666666666667,
+          "5": 99,
+          "6": 94.0,
+          "12": 0.383,
+          "13": 569,
+          "16": 70.0,
+          "17": 67.0,
+          "33": 67.0,
+          "8": 0.031914893617021274,
+          "11": 0.9680851063829787,
+          "18": 0.8714285714285714,
+          "20": 0.12857142857142856,
+          "22": 0.1,
+          "24": 0.02857142857142857,
+          "26": 0.04285714285714286,
+          "30": null,
+          "31": null,
+          "32": 6
         }
       }
     }
   },
   "currentWeekDaily": {
     "2": [
-      55,
-      29,
-      34,
-      32,
-      86,
-      71,
+      120,
+      null,
+      null,
+      null,
+      null,
+      null,
       null
     ],
     "4": [
+      0.4167,
       null,
-      1.1034,
-      0.2647,
-      0,
-      0.0465,
+      null,
+      null,
+      null,
       null,
       null
     ],
     "5": [
-      130,
-      47,
-      62,
-      78,
-      31,
-      94,
+      99,
+      null,
+      null,
+      null,
+      null,
+      null,
       null
     ],
     "6": [
+      94,
       null,
-      117,
-      32,
-      15,
-      36,
+      null,
+      null,
+      null,
       null,
       null
     ],
     "12": [
+      0.383,
       null,
-      0,
       null,
       null,
-      0.3056,
+      null,
       null,
       null
     ],
     "13": [
-      459,
-      579,
-      611,
-      626,
-      616,
       569,
+      null,
+      null,
+      null,
+      null,
+      null,
       null
     ],
     "16": [
+      70,
       null,
       null,
       null,
       null,
-      20,
-      71,
+      null,
       null
     ],
     "17": [
+      67,
       null,
       null,
       null,
       null,
-      14,
-      60,
+      null,
       null
     ],
     "33": [
+      67,
       null,
       null,
       null,
       null,
-      14,
-      60,
+      null,
       null
     ],
     "8": [
+      0.0319,
       null,
-      0,
-      0,
-      0,
-      0,
+      null,
+      null,
+      null,
       null,
       null
     ],
     "11": [
+      0.9681,
       null,
-      1,
-      1,
-      1,
-      1,
+      null,
+      null,
+      null,
       null,
       null
     ],
     "18": [
+      0.8714,
       null,
       null,
       null,
       null,
-      1,
-      0.9577,
+      null,
       null
     ],
     "20": [
+      0.1286,
       null,
       null,
       null,
       null,
-      0.8,
-      0.5915,
+      null,
       null
     ],
     "22": [
+      0.1,
       null,
       null,
       null,
       null,
-      0,
-      0.0423,
+      null,
       null
     ],
     "24": [
+      0.0286,
       null,
       null,
       null,
       null,
-      0,
-      0,
+      null,
       null
     ],
     "26": [
+      0.0429,
       null,
       null,
       null,
       null,
-      0,
-      0.0282,
+      null,
       null
     ],
     "30": [
@@ -936,22 +957,22 @@
       null
     ],
     "32": [
+      6,
       null,
       null,
       null,
       null,
-      2,
-      9,
+      null,
       null
     ]
   },
   "currentWeekLabels": [
-    "10/12",
-    "10/13",
-    "10/14",
-    "10/15",
-    "10/16",
-    "10/17",
+    "10/19",
+    null,
+    null,
+    null,
+    null,
+    null,
     null
   ]
 }
