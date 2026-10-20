@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-19T19:31:08.184896",
+  "generated": "2026-10-20T08:49:32.948855",
   "meta": {
     "date": "10/19/2026",
-    "shift": "Day",
+    "shift": "24H",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -25,71 +25,71 @@
   },
   "production": {
     "bare": {
-      "day": 60,
-      "night": 0,
-      "total": 60,
+      "day": 58,
+      "night": 62,
+      "total": 120,
       "tgt": 140
     },
     "idCoated": {
       "day": 33,
-      "night": 0,
-      "total": 33,
+      "night": 61,
+      "total": 94,
       "tgt": 140
     },
     "odTpi": {
-      "day": 34,
-      "night": 0,
-      "total": 34,
+      "day": 33,
+      "night": 34,
+      "total": 67,
       "tgt": 145
     },
     "odCoated": {
-      "day": 32,
-      "night": 0,
-      "total": 32,
+      "day": 30,
+      "night": 40,
+      "total": 70,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 116,
+      "total": 99,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 565,
+      "total": 569,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 41.67,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 38.3,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 9,
+      "val": 4,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 9,
+      "val": 10,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 4,
+      "val": 6,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 78.12,
-    "repairPct": 21.88,
-    "rejectPct": 0.0,
+    "ftrOd": 87.14,
+    "repairPct": 10.0,
+    "rejectPct": 2.86,
     "ftrOdTgt": 96,
-    "ftrId": 90.91,
-    "idRejectPct": 9.09,
+    "ftrId": 96.81,
+    "idRejectPct": 3.19,
     "ftrIdTgt": 98,
     "repairPipes": 7,
-    "rejectPipes": 0,
-    "twoPartRepairs": 2,
+    "rejectPipes": 2,
+    "twoPartRepairs": 9,
     "bevel": 3,
-    "sample": 0,
+    "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
