@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-20T19:30:33.340610",
+  "generated": "2026-10-21T07:31:15.449644",
   "meta": {
     "date": "10/20/2026",
-    "shift": "Day",
+    "shift": "24H",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -25,43 +25,43 @@
   },
   "production": {
     "bare": {
-      "day": 0,
-      "night": 0,
-      "total": 0,
+      "day": 76,
+      "night": 58,
+      "total": 134,
       "tgt": 140
     },
     "idCoated": {
-      "day": 0,
-      "night": 0,
-      "total": 0,
+      "day": 85,
+      "night": 89,
+      "total": 174,
       "tgt": 140
     },
     "odTpi": {
-      "day": 0,
-      "night": 0,
-      "total": 0,
+      "day": 33,
+      "night": 35,
+      "total": 68,
       "tgt": 145
     },
     "odCoated": {
-      "day": 0,
-      "night": 0,
-      "total": 0,
+      "day": 36,
+      "night": 41,
+      "total": 77,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 79,
+      "total": 61,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 614,
+      "total": 668,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 40.3,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 24.71,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -69,32 +69,32 @@
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 10,
+      "val": 12,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 11,
+      "val": 14,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 0.0,
-    "repairPct": 0.0,
-    "rejectPct": 0.0,
+    "ftrOd": 88.31,
+    "repairPct": 7.79,
+    "rejectPct": 3.9,
     "ftrOdTgt": 96,
-    "ftrId": 0.0,
-    "idRejectPct": 0.0,
+    "ftrId": 99.43,
+    "idRejectPct": 0.57,
     "ftrIdTgt": 98,
-    "repairPipes": 3,
-    "rejectPipes": 0,
-    "twoPartRepairs": 28,
-    "bevel": 2,
+    "repairPipes": 6,
+    "rejectPipes": 3,
+    "twoPartRepairs": 56,
+    "bevel": 4,
     "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 0,
-    "idRejects": 0,
+    "strippingOutput": 7,
+    "idRejects": 1,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
