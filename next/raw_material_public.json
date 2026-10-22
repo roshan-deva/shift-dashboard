@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-21 19:32",
+ "generated": "2026-10-22 08:20",
  "since": "2026-10-16",
  "gate": {
   "targetPct": 95,
@@ -476,6 +476,80 @@
    "item": "Powder",
    "material": "Powder",
    "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LIC1",
+   "item": "Part B",
+   "material": "Paint",
+   "shift": "Night",
+   "why": [
+    "batch"
+   ]
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Night",
    "why": []
   }
  ]
