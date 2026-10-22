@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-21T07:31:15.449644",
+  "generated": "2026-10-21T19:30:39.328691",
   "meta": {
-    "date": "10/20/2026",
-    "shift": "24H",
+    "date": "10/21/2026",
+    "shift": "Day",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -25,87 +25,178 @@
   },
   "production": {
     "bare": {
-      "day": 76,
-      "night": 58,
-      "total": 134,
+      "day": 71,
+      "night": 0,
+      "total": 71,
       "tgt": 140
     },
     "idCoated": {
-      "day": 85,
-      "night": 89,
-      "total": 174,
+      "day": 84,
+      "night": 0,
+      "total": 84,
       "tgt": 140
     },
     "odTpi": {
-      "day": 33,
-      "night": 35,
-      "total": 68,
+      "day": 30,
+      "night": 0,
+      "total": 30,
       "tgt": 145
     },
     "odCoated": {
-      "day": 36,
-      "night": 41,
-      "total": 77,
+      "day": 32,
+      "night": 0,
+      "total": 32,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 61,
+      "total": 49,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 668,
+      "total": 708,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 40.3,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 24.71,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 4,
+      "val": 5,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 12,
+      "val": 16,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 14,
+      "val": 10,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 88.31,
-    "repairPct": 7.79,
-    "rejectPct": 3.9,
+    "ftrOd": 81.25,
+    "repairPct": 3.12,
+    "rejectPct": 15.62,
     "ftrOdTgt": 96,
-    "ftrId": 99.43,
-    "idRejectPct": 0.57,
+    "ftrId": 100.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 6,
-    "rejectPipes": 3,
-    "twoPartRepairs": 56,
-    "bevel": 4,
-    "sample": 2,
+    "repairPipes": 1,
+    "rejectPipes": 5,
+    "twoPartRepairs": 12,
+    "bevel": 0,
+    "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 7,
-    "idRejects": 1,
+    "strippingOutput": 5,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 0.0,
-    "odDowntimeHrs": 0.0,
+    "idDowntimeHrs": 2.0,
+    "odDowntimeHrs": 6.08,
     "tgt": 85,
-    "sapNotif": 0,
-    "plannedDt": 0.0,
-    "unplannedDt": 0.0,
+    "sapNotif": 9,
+    "plannedDt": 4.01,
+    "unplannedDt": 4.08,
     "forklift": 0,
-    "downtimeEvents": []
+    "downtimeEvents": [
+      {
+        "desc": "Cleaning tips on paint boom",
+        "line": "ID",
+        "start": "06:00",
+        "stop": "06:40",
+        "durMin": 40,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700099259"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "13:30",
+        "stop": "14:15",
+        "durMin": 45,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700099260"
+      },
+      {
+        "desc": "Curing chamber not moving",
+        "line": "ID",
+        "start": "06:40",
+        "stop": "07:15",
+        "durMin": 35,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000005162"
+      },
+      {
+        "desc": "Startup",
+        "line": "OD",
+        "start": "06:00",
+        "stop": "06:25",
+        "durMin": 25,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700099261"
+      },
+      {
+        "desc": "Low air pressure",
+        "line": "OD",
+        "start": "07:00",
+        "stop": "07:50",
+        "durMin": 50,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700099262"
+      },
+      {
+        "desc": "Low air pressure",
+        "line": "OD",
+        "start": "15:05",
+        "stop": "16:00",
+        "durMin": 55,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700099263"
+      },
+      {
+        "desc": "Pipe stuck on wheels in quench - partial",
+        "line": "OD",
+        "start": "16:05",
+        "stop": "16:30",
+        "durMin": 25,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700099264"
+      },
+      {
+        "desc": "Coating line group 9 trip",
+        "line": "OD",
+        "start": "09:00",
+        "stop": "10:30",
+        "durMin": 90,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000005163"
+      },
+      {
+        "desc": "Carrier 13 off track and 15 not picking",
+        "line": "OD",
+        "start": "11:40",
+        "stop": "13:40",
+        "durMin": 120,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000005164"
+      }
+    ]
   }
 }
