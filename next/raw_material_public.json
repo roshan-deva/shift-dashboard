@@ -1,0 +1,482 @@
+{
+ "generated": "2026-10-21 19:32",
+ "since": "2026-10-16",
+ "gate": {
+  "targetPct": 95,
+  "minEntries": 5,
+  "cleanDaysNeeded": 5
+ },
+ "rules": [
+  {
+   "id": "product",
+   "label": "Product differs for the same batch",
+   "detail": "The same batch number was entered under two products."
+  },
+  {
+   "id": "twice",
+   "label": "Same bag or drum entered twice",
+   "detail": "The same batch and bag or drum number appears twice."
+  },
+  {
+   "id": "material",
+   "label": "Batch code from the other material",
+   "detail": "A powder batch code on a paint entry, or the reverse."
+  },
+  {
+   "id": "batch",
+   "label": "No valid batch code",
+   "detail": "The batch field has no recognisable batch code."
+  },
+  {
+   "id": "shift",
+   "label": "Shift does not match the time",
+   "detail": "Entered more than an hour outside the shift picked."
+  }
+ ],
+ "lines": [
+  {
+   "line": "LEC1",
+   "name": "OD powder"
+  },
+  {
+   "line": "LIC1",
+   "name": "ID paint"
+  },
+  {
+   "line": "LEC2",
+   "name": "OD powder"
+  }
+ ],
+ "entries": [
+  {
+   "day": "2026-10-16",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-16",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Night",
+   "why": [
+    "product"
+   ]
+  },
+  {
+   "day": "2026-10-16",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-16",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Night",
+   "why": [
+    "product"
+   ]
+  },
+  {
+   "day": "2026-10-16",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-16",
+   "line": "LIC1",
+   "item": "Part B",
+   "material": "Paint",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-17",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": [
+    "product"
+   ]
+  },
+  {
+   "day": "2026-10-17",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-17",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-17",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-17",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-17",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-19",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-19",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-19",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-19",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-19",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-19",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-19",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-19",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-19",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-19",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-19",
+   "line": "LIC1",
+   "item": "Part B",
+   "material": "Paint",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-19",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-19",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Night",
+   "why": [
+    "twice"
+   ]
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Night",
+   "why": [
+    "shift"
+   ]
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LIC1",
+   "item": "Part B",
+   "material": "Paint",
+   "shift": "Night",
+   "why": [
+    "shift"
+   ]
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-20",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Night",
+   "why": []
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LIC1",
+   "item": "Part B",
+   "material": "Paint",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LIC1",
+   "item": "Part A",
+   "material": "Paint",
+   "shift": "Night",
+   "why": [
+    "shift"
+   ]
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  },
+  {
+   "day": "2026-10-21",
+   "line": "LEC1",
+   "item": "Powder",
+   "material": "Powder",
+   "shift": "Day",
+   "why": []
+  }
+ ]
+}
