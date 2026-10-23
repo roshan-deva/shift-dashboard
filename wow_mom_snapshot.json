@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-22T08:20:03.740636",
+  "generated": "2026-10-22T21:45:59.858920",
   "kpis": {
     "2": {
       "mill": "Spiral",
@@ -109,7 +109,7 @@
       "mill": "OD",
       "name": "Repair Pipe Rate (%)",
       "sec": "Quality",
-      "tgt": 0.0261,
+      "tgt": 0.025,
       "unit": "p",
       "dir": "L"
     },
