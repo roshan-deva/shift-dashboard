@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-22T08:18:28.353793",
+  "generated": "2026-10-22T21:44:51.576795",
   "meta": {
-    "date": "10/21/2026",
-    "shift": "24H",
+    "date": "10/22/2026",
+    "shift": "Day",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -25,47 +25,47 @@
   },
   "production": {
     "bare": {
-      "day": 70,
-      "night": 75,
-      "total": 145,
+      "day": 53,
+      "night": 0,
+      "total": 53,
       "tgt": 140
     },
     "idCoated": {
-      "day": 78,
-      "night": 86,
-      "total": 164,
+      "day": 55,
+      "night": 0,
+      "total": 55,
       "tgt": 140
     },
     "odTpi": {
-      "day": 28,
-      "night": 36,
-      "total": 64,
+      "day": 41,
+      "night": 0,
+      "total": 41,
       "tgt": 145
     },
     "odCoated": {
-      "day": 31,
-      "night": 49,
-      "total": 80,
+      "day": 30,
+      "night": 0,
+      "total": 30,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 45,
+      "total": 44,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 754,
+      "total": 772,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 53.1,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 29.27,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 3,
+      "val": 4,
       "tgt": 20
     },
     "stripBalanceOd": {
@@ -73,209 +73,129 @@
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 15,
+      "val": 8,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 82.5,
-    "repairPct": 6.25,
-    "rejectPct": 11.25,
+    "ftrOd": 93.33,
+    "repairPct": 3.33,
+    "rejectPct": 3.33,
     "ftrOdTgt": 96,
-    "ftrId": 99.39,
-    "idRejectPct": 0.61,
+    "ftrId": 100.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 5,
-    "rejectPipes": 9,
-    "twoPartRepairs": 27,
-    "bevel": 2,
-    "sample": 2,
+    "repairPipes": 1,
+    "rejectPipes": 1,
+    "twoPartRepairs": 6,
+    "bevel": 1,
+    "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 12,
-    "idRejects": 1,
+    "strippingOutput": 0,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 2.5,
-    "odDowntimeHrs": 9.08,
+    "idDowntimeHrs": 4.25,
+    "odDowntimeHrs": 6.0,
     "tgt": 85,
-    "sapNotif": 17,
-    "plannedDt": 7.19,
-    "unplannedDt": 4.32,
+    "sapNotif": 9,
+    "plannedDt": 7.59,
+    "unplannedDt": 2.67,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "Cleaning tips on paint boom",
+        "desc": "changing plastic",
         "line": "ID",
-        "start": "06:00",
-        "stop": "06:40",
-        "durMin": 40,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700099259"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "ID",
-        "start": "13:30",
-        "stop": "14:15",
-        "durMin": 45,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700099260"
-      },
-      {
-        "desc": "Curing chamber not moving",
-        "line": "ID",
-        "start": "06:40",
-        "stop": "07:15",
-        "durMin": 35,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005162"
-      },
-      {
-        "desc": "Changing cheese cloth",
-        "line": "ID",
-        "start": "21:50",
-        "stop": "22:20",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700099383"
-      },
-      {
-        "desc": "Startup",
-        "line": "OD",
         "start": "06:00",
         "stop": "06:25",
         "durMin": 25,
         "shift": "Day",
         "cause": "",
-        "sap": "700099261"
+        "sap": "700099473"
       },
       {
-        "desc": "Low air pressure",
-        "line": "OD",
+        "desc": "trouble with the hand jet",
+        "line": "ID",
         "start": "07:00",
+        "stop": "08:40",
+        "durMin": 100,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700099474"
+      },
+      {
+        "desc": "no pipes available",
+        "line": "ID",
+        "start": "11:00",
+        "stop": "12:10",
+        "durMin": 70,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700099475"
+      },
+      {
+        "desc": "no pipes available",
+        "line": "ID",
+        "start": "15:10",
+        "stop": "16:10",
+        "durMin": 60,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700099478"
+      },
+      {
+        "desc": "Barcode printer not working",
+        "line": "OD",
+        "start": "06:00",
         "stop": "07:50",
-        "durMin": 50,
+        "durMin": 110,
         "shift": "Day",
         "cause": "",
-        "sap": "700099262"
+        "sap": "700099471"
       },
       {
-        "desc": "Low air pressure",
+        "desc": "clean booth for powder mounds",
         "line": "OD",
-        "start": "15:05",
-        "stop": "16:00",
-        "durMin": 55,
+        "start": "09:10",
+        "stop": "09:40",
+        "durMin": 30,
         "shift": "Day",
         "cause": "",
-        "sap": "700099263"
+        "sap": "700099472"
       },
       {
-        "desc": "Pipe stuck on wheels in quench - partial",
+        "desc": "Final table backed up due to barcode pri",
         "line": "OD",
-        "start": "16:05",
-        "stop": "16:30",
-        "durMin": 25,
+        "start": "15:10",
+        "stop": "16:10",
+        "durMin": 60,
         "shift": "Day",
         "cause": "",
-        "sap": "700099264"
+        "sap": "700099477"
       },
       {
-        "desc": "Coating line group 9 trip",
+        "desc": "induction coil trip out resulting in par",
         "line": "OD",
-        "start": "09:00",
-        "stop": "10:30",
+        "start": "10:15",
+        "stop": "11:25",
+        "durMin": 70,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000005168"
+      },
+      {
+        "desc": "welding replacement pad on od final",
+        "line": "OD",
+        "start": "12:40",
+        "stop": "14:10",
         "durMin": 90,
         "shift": "Day",
         "cause": "",
-        "sap": "30000005163"
-      },
-      {
-        "desc": "Carrier 13 off track and 15 not picking",
-        "line": "OD",
-        "start": "11:40",
-        "stop": "13:40",
-        "durMin": 120,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005164"
-      },
-      {
-        "desc": "Startup",
-        "line": "OD",
-        "start": "18:00",
-        "stop": "18:35",
-        "durMin": 35,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700099387"
-      },
-      {
-        "desc": "Pitstop - powder mounds",
-        "line": "OD",
-        "start": "20:55",
-        "stop": "21:15",
-        "durMin": 20,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700099389"
-      },
-      {
-        "desc": "Coupling came off",
-        "line": "OD",
-        "start": "22:35",
-        "stop": "22:45",
-        "durMin": 10,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700099392"
-      },
-      {
-        "desc": "Pitstop - powder mounds",
-        "line": "OD",
-        "start": "23:45",
-        "stop": "00:20",
-        "durMin": 35,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700099394"
-      },
-      {
-        "desc": "Pitstop - powder mounds",
-        "line": "OD",
-        "start": "03:40",
-        "stop": "04:15",
-        "durMin": 35,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700099398"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "05:30",
-        "stop": "06:00",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700099412"
-      },
-      {
-        "desc": "Tripped out coating booth panel",
-        "line": "OD",
-        "start": "00:20",
-        "stop": "00:35",
-        "durMin": 15,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000005167"
+        "sap": "30000005169"
       }
     ]
   }
