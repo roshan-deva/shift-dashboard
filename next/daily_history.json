@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T02:51:03+00:00",
+ "generated": "2026-10-25T14:19:34+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -7624,6 +7624,686 @@
      "line": "ID",
      "min": 65,
      "desc": "carrier 2 arm letting up"
+    }
+   ]
+  },
+  {
+   "date": "10/14/2026",
+   "idDt": 0.0,
+   "odDt": 0.0,
+   "idCoated": {
+    "a": 32,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 0,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 0,
+    "t": 145
+   },
+   "ftrId": 100.0,
+   "ftrOd": 0.0,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": []
+  },
+  {
+   "date": "10/15/2026",
+   "idDt": 12.0,
+   "odDt": 12.0,
+   "idCoated": {
+    "a": 15,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 0,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 0,
+    "t": 145
+   },
+   "ftrId": 100.0,
+   "ftrOd": 0.0,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 240,
+     "desc": "Stripping"
+    },
+    {
+     "line": "ID",
+     "min": 480,
+     "desc": "Changeover to .750s."
+    },
+    {
+     "line": "OD",
+     "min": 720,
+     "desc": "Upgrades on induction system"
+    }
+   ]
+  },
+  {
+   "date": "10/16/2026",
+   "idDt": 18.17,
+   "odDt": 21.5,
+   "idCoated": {
+    "a": 36,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 20,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 14,
+    "t": 145
+   },
+   "ftrId": 100.0,
+   "ftrOd": 100.0,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 720,
+     "desc": "changeover 24\"\" to 42\"\""
+    },
+    {
+     "line": "ID",
+     "min": 10,
+     "desc": "Startup"
+    },
+    {
+     "line": "ID",
+     "min": 40,
+     "desc": "Pitstop ( filter change)"
+    },
+    {
+     "line": "ID",
+     "min": 190,
+     "desc": "No pipes available"
+    },
+    {
+     "line": "ID",
+     "min": 95,
+     "desc": "Pipes not kicking out inside curing cham"
+    },
+    {
+     "line": "ID",
+     "min": 35,
+     "desc": "Pipes not kicking out inside curing cham"
+    },
+    {
+     "line": "OD",
+     "min": 720,
+     "desc": "changeover 24\" to 42\""
+    },
+    {
+     "line": "OD",
+     "min": 165,
+     "desc": "Changeover 24\" to 42 \" pipes"
+    },
+    {
+     "line": "OD",
+     "min": 75,
+     "desc": "Low air pressure"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "Auto stencile machine Not working"
+    },
+    {
+     "line": "OD",
+     "min": 270,
+     "desc": "Reclamp Mechanism not functioning"
+    }
+   ]
+  },
+  {
+   "date": "10/17/2026",
+   "idDt": 12.0,
+   "odDt": 11.42,
+   "idCoated": {
+    "a": 0,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 71,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 60,
+    "t": 145
+   },
+   "ftrId": 0.0,
+   "ftrOd": 95.77,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 720,
+     "desc": "no available pipes"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 210,
+     "desc": "ARO reclaim Malfunction"
+    },
+    {
+     "line": "OD",
+     "min": 20,
+     "desc": "control panel tripout result in partial"
+    },
+    {
+     "line": "OD",
+     "min": 150,
+     "desc": "Lack of manpower shortage"
+    },
+    {
+     "line": "OD",
+     "min": 35,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 165,
+     "desc": "Shutdown"
+    },
+    {
+     "line": "OD",
+     "min": 20,
+     "desc": "startup"
+    },
+    {
+     "line": "OD",
+     "min": 25,
+     "desc": "Group-1 sensor stand broken"
+    }
+   ]
+  },
+  {
+   "date": "10/18/2026",
+   "idDt": 0.0,
+   "odDt": 0.0,
+   "idCoated": {
+    "a": 0,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 0,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 0,
+    "t": 145
+   },
+   "ftrId": 0.0,
+   "ftrOd": 0.0,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": []
+  },
+  {
+   "date": "10/19/2026",
+   "idDt": 0.0,
+   "odDt": 0.0,
+   "idCoated": {
+    "a": 94,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 70,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 67,
+    "t": 145
+   },
+   "ftrId": 96.81,
+   "ftrOd": 87.14,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": []
+  },
+  {
+   "date": "10/20/2026",
+   "idDt": 0.0,
+   "odDt": 0.0,
+   "idCoated": {
+    "a": 174,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 77,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 68,
+    "t": 145
+   },
+   "ftrId": 99.43,
+   "ftrOd": 88.31,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": []
+  },
+  {
+   "date": "10/21/2026",
+   "idDt": 2.5,
+   "odDt": 9.08,
+   "idCoated": {
+    "a": 164,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 80,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 64,
+    "t": 145
+   },
+   "ftrId": 99.39,
+   "ftrOd": 82.5,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 40,
+     "desc": "Cleaning tips on paint boom"
+    },
+    {
+     "line": "ID",
+     "min": 45,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 35,
+     "desc": "Curing chamber not moving"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "Changing cheese cloth"
+    },
+    {
+     "line": "OD",
+     "min": 25,
+     "desc": "Startup"
+    },
+    {
+     "line": "OD",
+     "min": 50,
+     "desc": "Low air pressure"
+    },
+    {
+     "line": "OD",
+     "min": 55,
+     "desc": "Low air pressure"
+    },
+    {
+     "line": "OD",
+     "min": 25,
+     "desc": "Pipe stuck on wheels in quench - partial"
+    },
+    {
+     "line": "OD",
+     "min": 90,
+     "desc": "Coating line group 9 trip"
+    },
+    {
+     "line": "OD",
+     "min": 120,
+     "desc": "Carrier 13 off track and 15 not picking"
+    },
+    {
+     "line": "OD",
+     "min": 35,
+     "desc": "Startup"
+    },
+    {
+     "line": "OD",
+     "min": 20,
+     "desc": "Pitstop - powder mounds"
+    },
+    {
+     "line": "OD",
+     "min": 10,
+     "desc": "Coupling came off"
+    },
+    {
+     "line": "OD",
+     "min": 35,
+     "desc": "Pitstop - powder mounds"
+    },
+    {
+     "line": "OD",
+     "min": 35,
+     "desc": "Pitstop - powder mounds"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 15,
+     "desc": "Tripped out coating booth panel"
+    }
+   ]
+  },
+  {
+   "date": "10/22/2026",
+   "idDt": 10.17,
+   "odDt": 9.33,
+   "idCoated": {
+    "a": 113,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 76,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 78,
+    "t": 145
+   },
+   "ftrId": 100.0,
+   "ftrOd": 90.79,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 25,
+     "desc": "changing plastic"
+    },
+    {
+     "line": "ID",
+     "min": 100,
+     "desc": "trouble with the hand jet"
+    },
+    {
+     "line": "ID",
+     "min": 70,
+     "desc": "no pipes available"
+    },
+    {
+     "line": "ID",
+     "min": 60,
+     "desc": "no pipes available"
+    },
+    {
+     "line": "ID",
+     "min": 150,
+     "desc": "no pipes available"
+    },
+    {
+     "line": "ID",
+     "min": 60,
+     "desc": "No pipes on id inbound an plant started"
+    },
+    {
+     "line": "ID",
+     "min": 90,
+     "desc": "No pipes on id inbound an plant started"
+    },
+    {
+     "line": "ID",
+     "min": 55,
+     "desc": "No pipes on id inbound an plant started"
+    },
+    {
+     "line": "OD",
+     "min": 110,
+     "desc": "Barcode printer not working"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "clean booth for powder mounds"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "Final table backed up due to barcode pri"
+    },
+    {
+     "line": "OD",
+     "min": 70,
+     "desc": "induction coil trip out resulting in par"
+    },
+    {
+     "line": "OD",
+     "min": 90,
+     "desc": "welding replacement pad on od final"
+    },
+    {
+     "line": "OD",
+     "min": 45,
+     "desc": "Pitstop (powder mounds)"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "(powder mounds)"
+    },
+    {
+     "line": "OD",
+     "min": 40,
+     "desc": "Pitstop (powder mounds)"
+    },
+    {
+     "line": "OD",
+     "min": 25,
+     "desc": "Pitstop (powder mounds)"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "Replacing auto jeeper brush"
+    }
+   ]
+  },
+  {
+   "date": "10/23/2026",
+   "idDt": 3.83,
+   "odDt": 4.92,
+   "idCoated": {
+    "a": 115,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 74,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 74,
+    "t": 145
+   },
+   "ftrId": 95.65,
+   "ftrOd": 94.59,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 25,
+     "desc": "No pipes on id inbound an plant started"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 175,
+     "desc": "paint cabinet motor replacement"
+    },
+    {
+     "line": "OD",
+     "min": 50,
+     "desc": "Startup"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "(Gun splits) high mil"
+    },
+    {
+     "line": "OD",
+     "min": 40,
+     "desc": "Pitstop (powder mounds)"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "Not activated at Group 1"
+    },
+    {
+     "line": "OD",
+     "min": 85,
+     "desc": "Blaster transfer line kicker broken"
+    }
+   ]
+  },
+  {
+   "date": "10/24/2026",
+   "idDt": 0.0,
+   "odDt": 7.67,
+   "idCoated": {
+    "a": 0,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 68,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 69,
+    "t": 145
+   },
+   "ftrId": 0.0,
+   "ftrOd": 89.71,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "OD",
+     "min": 70,
+     "desc": "changing nozzles an removing coupling fr"
+    },
+    {
+     "line": "OD",
+     "min": 215,
+     "desc": "low air pressure"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 40,
+     "desc": "Startup"
+    },
+    {
+     "line": "OD",
+     "min": 75,
+     "desc": "No pipes available in ID Inbound"
     }
    ]
   }
