@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-24T18:06:59.061189",
+  "generated": "2026-10-24T19:30:37.660341",
   "meta": {
-    "date": "10/23/2026",
-    "shift": "24H",
+    "date": "10/24/2026",
+    "shift": "Day",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -25,43 +25,43 @@
   },
   "production": {
     "bare": {
-      "day": 60,
-      "night": 60,
-      "total": 120,
+      "day": 75,
+      "night": 0,
+      "total": 75,
       "tgt": 140
     },
     "idCoated": {
-      "day": 62,
-      "night": 53,
-      "total": 115,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 140
     },
     "odTpi": {
-      "day": 37,
-      "night": 37,
-      "total": 74,
+      "day": 38,
+      "night": 0,
+      "total": 38,
       "tgt": 145
     },
     "odCoated": {
-      "day": 33,
-      "night": 41,
-      "total": 74,
+      "day": 32,
+      "night": 0,
+      "total": 32,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 58,
+      "total": 134,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 827,
+      "total": 794,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 30.83,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 22.61,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -69,133 +69,73 @@
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 22,
+      "val": 19,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 8,
+      "val": 9,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 94.59,
-    "repairPct": 2.7,
-    "rejectPct": 2.7,
+    "ftrOd": 96.88,
+    "repairPct": 3.12,
+    "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 95.65,
-    "idRejectPct": 4.35,
+    "ftrId": 0.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 2,
-    "rejectPipes": 2,
-    "twoPartRepairs": 20,
-    "bevel": 1,
-    "sample": 2,
+    "repairPipes": 1,
+    "rejectPipes": 0,
+    "twoPartRepairs": 3,
+    "bevel": 0,
+    "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 8,
-    "idRejects": 5,
+    "strippingOutput": 0,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 3.83,
-    "odDowntimeHrs": 4.92,
+    "idDowntimeHrs": 0.0,
+    "odDowntimeHrs": 5.75,
     "tgt": 85,
-    "sapNotif": 15,
-    "plannedDt": 8.9,
-    "unplannedDt": 4.8,
+    "sapNotif": 3,
+    "plannedDt": 5.75,
+    "unplannedDt": 0.0,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "No pipes on id inbound an plant started",
-        "line": "ID",
-        "start": "18:40",
-        "stop": "19:05",
-        "durMin": 25,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700099770"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "05:30",
-        "stop": "06:00",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700099771"
-      },
-      {
-        "desc": "paint cabinet motor replacement",
-        "line": "ID",
-        "start": "19:05",
-        "stop": "22:00",
-        "durMin": 175,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000005174"
-      },
-      {
-        "desc": "Startup",
+        "desc": "changing nozzles an removing coupling fr",
         "line": "OD",
-        "start": "18:00",
-        "stop": "18:50",
-        "durMin": 50,
-        "shift": "Night",
+        "start": "06:00",
+        "stop": "07:10",
+        "durMin": 70,
+        "shift": "Day",
         "cause": "",
-        "sap": "700099772"
+        "sap": "700099797"
       },
       {
-        "desc": "(Gun splits) high mil",
+        "desc": "low air pressure",
         "line": "OD",
-        "start": "20:05",
-        "stop": "21:05",
+        "start": "08:45",
+        "stop": "12:20",
+        "durMin": 215,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700099798"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "OD",
+        "start": "17:00",
+        "stop": "18:00",
         "durMin": 60,
-        "shift": "Night",
+        "shift": "Day",
         "cause": "",
-        "sap": "700099773"
-      },
-      {
-        "desc": "Pitstop (powder mounds)",
-        "line": "OD",
-        "start": "02:15",
-        "stop": "02:55",
-        "durMin": 40,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700099775"
-      },
-      {
-        "desc": "pitstop",
-        "line": "OD",
-        "start": "05:30",
-        "stop": "06:00",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700099777"
-      },
-      {
-        "desc": "Not activated at Group 1",
-        "line": "OD",
-        "start": "22:25",
-        "stop": "22:55",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000005175"
-      },
-      {
-        "desc": "Blaster transfer line kicker broken",
-        "line": "OD",
-        "start": "02:55",
-        "stop": "04:20",
-        "durMin": 85,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000005176"
+        "sap": "700099799"
       }
     ]
   }
