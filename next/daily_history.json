@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-25T14:24:06+00:00",
+ "generated": "2026-10-26T12:37:42+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -8306,6 +8306,34 @@
      "desc": "No pipes available in ID Inbound"
     }
    ]
+  },
+  {
+   "date": "10/25/2026",
+   "idDt": 0.0,
+   "odDt": 0.0,
+   "idCoated": {
+    "a": 0,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 0,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 0,
+    "t": 145
+   },
+   "ftrId": 0.0,
+   "ftrOd": 0.0,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": []
   }
  ]
 }
