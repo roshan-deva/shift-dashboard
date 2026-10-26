@@ -22,7 +22,10 @@ window.DAILY_SNAPSHOT = {
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    }
+    },
+    "needsReview": [
+      "Job LR-LDC-ID-WIP-REP, Step 1_20261025_230612.pdf"
+    ]
   },
   "production": {
     "bare": {
