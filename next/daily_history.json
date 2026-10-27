@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T00:34:12+00:00",
+ "generated": "2026-10-27T13:46:04+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -8334,6 +8334,110 @@
     "OD": 24.0
    },
    "events": []
+  },
+  {
+   "date": "10/26/2026",
+   "idDt": 16.58,
+   "odDt": 8.67,
+   "idCoated": {
+    "a": 67,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 80,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 81,
+    "t": 145
+   },
+   "ftrId": 100.0,
+   "ftrOd": 83.75,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 115,
+     "desc": "plant startup"
+    },
+    {
+     "line": "ID",
+     "min": 45,
+     "desc": "low air pressure"
+    },
+    {
+     "line": "ID",
+     "min": 115,
+     "desc": "changeover 36\" to 42\""
+    },
+    {
+     "line": "ID",
+     "min": 120,
+     "desc": "Changeover 36\" to 42\""
+    },
+    {
+     "line": "ID",
+     "min": 600,
+     "desc": "Stripping"
+    },
+    {
+     "line": "OD",
+     "min": 90,
+     "desc": "plant startup"
+    },
+    {
+     "line": "OD",
+     "min": 40,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 45,
+     "desc": "low air pressure"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 15,
+     "desc": "Induction coil tripout result in partial"
+    },
+    {
+     "line": "OD",
+     "min": 25,
+     "desc": "Startup"
+    },
+    {
+     "line": "OD",
+     "min": 55,
+     "desc": "Powder mounds"
+    },
+    {
+     "line": "OD",
+     "min": 55,
+     "desc": "Low air pressure"
+    },
+    {
+     "line": "OD",
+     "min": 105,
+     "desc": "No pipes available to coating"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "No pipes available to coating"
+    }
+   ]
   }
  ]
 }
