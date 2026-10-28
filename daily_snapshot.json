@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-27T19:30:37.808352",
+  "generated": "2026-10-28T08:37:43.874628",
   "meta": {
     "date": "10/27/2026",
-    "shift": "Day",
+    "shift": "24H",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -25,20 +25,20 @@
   },
   "production": {
     "bare": {
-      "day": 63,
-      "night": 0,
-      "total": 63,
+      "day": 62,
+      "night": 70,
+      "total": 132,
       "tgt": 140
     },
     "idCoated": {
       "day": 0,
-      "night": 0,
-      "total": 0,
+      "night": 1,
+      "total": 1,
       "tgt": 140
     },
     "odTpi": {
-      "day": 16,
-      "night": 0,
+      "day": 15,
+      "night": 1,
       "total": 16,
       "tgt": 145
     },
@@ -49,7 +49,7 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 353,
+      "total": 420,
       "tgt": 400
     },
     "wipIdOd": {
@@ -57,19 +57,19 @@
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 0.76,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 100.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 4,
+      "val": 5,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 12,
+      "val": 7,
       "tgt": 20
     },
     "odRepairBalance": {
@@ -82,7 +82,7 @@
     "repairPct": 50.0,
     "rejectPct": 50.0,
     "ftrOdTgt": 96,
-    "ftrId": 0.0,
+    "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
     "repairPipes": 1,
@@ -93,20 +93,30 @@
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 0,
+    "strippingOutput": 4,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 0.0,
-    "odDowntimeHrs": 3.42,
+    "idDowntimeHrs": 12.0,
+    "odDowntimeHrs": 23.5,
     "tgt": 85,
-    "sapNotif": 1,
-    "plannedDt": 3.42,
-    "unplannedDt": 0.0,
+    "sapNotif": 6,
+    "plannedDt": 33.9,
+    "unplannedDt": 1.58,
     "forklift": 0,
     "downtimeEvents": [
+      {
+        "desc": "No available pipes",
+        "line": "ID",
+        "start": "06:00",
+        "stop": "18:00",
+        "durMin": 720,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700100298"
+      },
       {
         "desc": "no available pipes",
         "line": "OD",
@@ -116,6 +126,46 @@
         "shift": "Day",
         "cause": "",
         "sap": "700100188"
+      },
+      {
+        "desc": "No available pipes",
+        "line": "OD",
+        "start": "06:00",
+        "stop": "09:25",
+        "durMin": 205,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700100299"
+      },
+      {
+        "desc": "No available pipes",
+        "line": "OD",
+        "start": "14:55",
+        "stop": "18:00",
+        "durMin": 185,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700100301"
+      },
+      {
+        "desc": "Lost power control panel result in parti",
+        "line": "OD",
+        "start": "10:25",
+        "stop": "12:00",
+        "durMin": 95,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000005186"
+      },
+      {
+        "desc": "No available pipes",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "06:00",
+        "durMin": 720,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700100303"
       }
     ]
   }
