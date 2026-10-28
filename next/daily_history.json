@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T00:33:08+00:00",
+ "generated": "2026-10-28T13:42:18+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -8436,6 +8436,65 @@
      "line": "OD",
      "min": 30,
      "desc": "No pipes available to coating"
+    }
+   ]
+  },
+  {
+   "date": "10/27/2026",
+   "idDt": 12.0,
+   "odDt": 23.5,
+   "idCoated": {
+    "a": 1,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 2,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 16,
+    "t": 145
+   },
+   "ftrId": 100.0,
+   "ftrOd": 0.0,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 720,
+     "desc": "No available pipes"
+    },
+    {
+     "line": "OD",
+     "min": 205,
+     "desc": "no available pipes"
+    },
+    {
+     "line": "OD",
+     "min": 205,
+     "desc": "No available pipes"
+    },
+    {
+     "line": "OD",
+     "min": 185,
+     "desc": "No available pipes"
+    },
+    {
+     "line": "OD",
+     "min": 95,
+     "desc": "Lost power control panel result in parti"
+    },
+    {
+     "line": "OD",
+     "min": 720,
+     "desc": "No available pipes"
     }
    ]
   }
