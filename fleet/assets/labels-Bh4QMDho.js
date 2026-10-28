@@ -1,0 +1,1 @@
+var e={steel:`#A9B2BC`,lining:`#9C3B2A`,fbe:`#A8D394`},t={od:e.fbe,bare:e.steel,id:e.lining};export{t as n,e as t};
