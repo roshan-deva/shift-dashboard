@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27 08:44",
+ "generated": "2026-10-27 19:32",
  "since": "2026-10-21",
  "basis": {
   "powderFbe": {
@@ -177,16 +177,16 @@
    "items": {
     "Powder FBE": {
      "unit": "kg",
-     "opened": 5,
-     "used": 5000.0,
+     "opened": 4,
+     "used": 4000.0,
      "theoretical": 3617.1,
      "allowed": 3816.0,
      "area_m2": 5698.5
     },
     "Powder ARO": {
      "unit": "kg",
-     "opened": 3,
-     "used": 3000.0,
+     "opened": 4,
+     "used": 4000.0,
      "theoretical": 5970.6,
      "allowed": 7463.3,
      "area_m2": 5698.5
