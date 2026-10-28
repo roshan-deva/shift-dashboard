@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-27T08:38:18.646935",
+  "generated": "2026-10-27T19:30:37.808352",
   "meta": {
-    "date": "10/26/2026",
-    "shift": "24H",
+    "date": "10/27/2026",
+    "shift": "Day",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -26,30 +26,30 @@
   "production": {
     "bare": {
       "day": 63,
-      "night": 73,
-      "total": 136,
+      "night": 0,
+      "total": 63,
       "tgt": 140
     },
     "idCoated": {
-      "day": 66,
-      "night": 1,
-      "total": 67,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 140
     },
     "odTpi": {
-      "day": 48,
-      "night": 33,
-      "total": 81,
+      "day": 16,
+      "night": 0,
+      "total": 16,
       "tgt": 145
     },
     "odCoated": {
-      "day": 40,
-      "night": 40,
-      "total": 80,
+      "day": 2,
+      "night": 0,
+      "total": 2,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 292,
+      "total": 353,
       "tgt": 400
     },
     "wipIdOd": {
@@ -57,205 +57,65 @@
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 2.21,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 28.36,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 5,
+      "val": 4,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 17,
+      "val": 12,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 15,
+      "val": 11,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 83.75,
-    "repairPct": 6.25,
-    "rejectPct": 10.0,
+    "ftrOd": 0.0,
+    "repairPct": 50.0,
+    "rejectPct": 50.0,
     "ftrOdTgt": 96,
-    "ftrId": 100.0,
+    "ftrId": 0.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 5,
-    "rejectPipes": 8,
-    "twoPartRepairs": 51,
-    "bevel": 5,
+    "repairPipes": 1,
+    "rejectPipes": 1,
+    "twoPartRepairs": 1,
+    "bevel": 1,
     "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 12,
+    "strippingOutput": 0,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 16.58,
-    "odDowntimeHrs": 8.67,
+    "idDowntimeHrs": 0.0,
+    "odDowntimeHrs": 3.42,
     "tgt": 85,
-    "sapNotif": 15,
-    "plannedDt": 24.94,
-    "unplannedDt": 0.25,
+    "sapNotif": 1,
+    "plannedDt": 3.42,
+    "unplannedDt": 0.0,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "plant startup",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "07:55",
-        "durMin": 115,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100061"
-      },
-      {
-        "desc": "low air pressure",
-        "line": "ID",
-        "start": "13:40",
-        "stop": "14:25",
-        "durMin": 45,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100064"
-      },
-      {
-        "desc": "changeover 36\" to 42\"",
-        "line": "ID",
-        "start": "16:05",
-        "stop": "18:00",
-        "durMin": 115,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100066"
-      },
-      {
-        "desc": "Changeover 36\" to 42\"",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "20:00",
-        "durMin": 120,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700100164"
-      },
-      {
-        "desc": "Stripping",
-        "line": "ID",
-        "start": "20:00",
-        "stop": "06:00",
-        "durMin": 600,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700100165"
-      },
-      {
-        "desc": "plant startup",
+        "desc": "no available pipes",
         "line": "OD",
         "start": "06:00",
-        "stop": "07:30",
-        "durMin": 90,
+        "stop": "09:25",
+        "durMin": 205,
         "shift": "Day",
         "cause": "",
-        "sap": "700100062"
-      },
-      {
-        "desc": "pitstop",
-        "line": "OD",
-        "start": "11:25",
-        "stop": "12:05",
-        "durMin": 40,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100063"
-      },
-      {
-        "desc": "low air pressure",
-        "line": "OD",
-        "start": "13:35",
-        "stop": "14:20",
-        "durMin": 45,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100065"
-      },
-      {
-        "desc": "pitstop",
-        "line": "OD",
-        "start": "17:00",
-        "stop": "18:00",
-        "durMin": 60,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100067"
-      },
-      {
-        "desc": "Induction coil tripout result in partial",
-        "line": "OD",
-        "start": "14:40",
-        "stop": "14:55",
-        "durMin": 15,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005178"
-      },
-      {
-        "desc": "Startup",
-        "line": "OD",
-        "start": "18:00",
-        "stop": "18:25",
-        "durMin": 25,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700100166"
-      },
-      {
-        "desc": "Powder mounds",
-        "line": "OD",
-        "start": "22:30",
-        "stop": "23:25",
-        "durMin": 55,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700100167"
-      },
-      {
-        "desc": "Low air pressure",
-        "line": "OD",
-        "start": "00:25",
-        "stop": "01:20",
-        "durMin": 55,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700100168"
-      },
-      {
-        "desc": "No pipes available to coating",
-        "line": "OD",
-        "start": "02:15",
-        "stop": "04:00",
-        "durMin": 105,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700100169"
-      },
-      {
-        "desc": "No pipes available to coating",
-        "line": "OD",
-        "start": "05:30",
-        "stop": "06:00",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700100170"
+        "sap": "700100188"
       }
     ]
   }
