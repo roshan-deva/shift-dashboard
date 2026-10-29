@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T00:33:37+00:00",
+ "generated": "2026-10-29T13:26:21+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -8495,6 +8495,85 @@
      "line": "OD",
      "min": 720,
      "desc": "No available pipes"
+    }
+   ]
+  },
+  {
+   "date": "10/28/2026",
+   "idDt": 14.42,
+   "odDt": 8.5,
+   "idCoated": {
+    "a": 50,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 1,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 18,
+    "t": 145
+   },
+   "ftrId": 84.0,
+   "ftrOd": -200.0,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 480,
+     "desc": "recon waiting on pipes"
+    },
+    {
+     "line": "ID",
+     "min": 240,
+     "desc": "changeover 42' to 36\""
+    },
+    {
+     "line": "ID",
+     "min": 10,
+     "desc": "done with changeover id startedup"
+    },
+    {
+     "line": "ID",
+     "min": 45,
+     "desc": "pitstop changing cheesecloth"
+    },
+    {
+     "line": "ID",
+     "min": 25,
+     "desc": "final table sap computer not printing b"
+    },
+    {
+     "line": "ID",
+     "min": 65,
+     "desc": "curing chamber chain off track"
+    },
+    {
+     "line": "OD",
+     "min": 35,
+     "desc": "plant startup"
+    },
+    {
+     "line": "OD",
+     "min": 185,
+     "desc": "recon waiting on pipes"
+    },
+    {
+     "line": "OD",
+     "min": 230,
+     "desc": "no available pipes"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "changeover 42' to 36\"\""
     }
    ]
   }
