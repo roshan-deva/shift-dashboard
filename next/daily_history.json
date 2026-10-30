@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T02:33:31+00:00",
+ "generated": "2026-10-30T13:55:03+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -8574,6 +8574,95 @@
      "line": "OD",
      "min": 60,
      "desc": "changeover 42' to 36\"\""
+    }
+   ]
+  },
+  {
+   "date": "10/29/2026",
+   "idDt": 5.17,
+   "odDt": 12.75,
+   "idCoated": {
+    "a": 144,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 52,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 47,
+    "t": 145
+   },
+   "ftrId": 98.61,
+   "ftrOd": 88.46,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 20,
+     "desc": "plant startup"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "pipe loaded to far oer hit bin"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "shift change"
+    },
+    {
+     "line": "ID",
+     "min": 20,
+     "desc": "pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "crooked pipes on id inbound an pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 180,
+     "desc": "blaster 1 down boom traveling motor brak"
+    },
+    {
+     "line": "OD",
+     "min": 245,
+     "desc": "changeover 42' to 36\"\""
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 40,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 20,
+     "desc": "Induction coil tripout result in cutoff"
+    },
+    {
+     "line": "OD",
+     "min": 100,
+     "desc": "blasting an filling coating line"
+    },
+    {
+     "line": "OD",
+     "min": 330,
+     "desc": "called off shift waiting on pipes from s"
     }
    ]
   }
