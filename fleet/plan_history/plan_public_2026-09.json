@@ -1,0 +1,1524 @@
+{
+ "month": "2026-09",
+ "generated": "2026-10-30T09:07:30",
+ "note": "Daily plan (pipes, and feet = pipes x planned average length) and actual TPI output from the SAP production report. LER1 in the plan is LHF1 in SAP.",
+ "days": {
+  "2026-09-01": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 103,
+     "ft": 7672.83
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 0.0
+    },
+    "LIC1": {
+     "tpi": 132,
+     "ft": 9823.94
+    },
+    "LSP1": {
+     "tpi": 148,
+     "ft": 11072.91
+    },
+    "OD": {
+     "tpi": 103,
+     "ft": 7672.83
+    }
+   }
+  },
+  "2026-09-02": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 147,
+     "ft": 11004.34
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 0.0
+    },
+    "LIC1": {
+     "tpi": 145,
+     "ft": 10859.84
+    },
+    "LSP1": {
+     "tpi": 106,
+     "ft": 7954.97
+    },
+    "OD": {
+     "tpi": 147,
+     "ft": 11004.34
+    }
+   }
+  },
+  "2026-09-03": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 21.0,
+     "ft": 1554.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 7.2
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 124,
+     "ft": 9209.93
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 0.0
+    },
+    "LIC1": {
+     "tpi": 131,
+     "ft": 9782.96
+    },
+    "LSP1": {
+     "tpi": 123,
+     "ft": 9163.43
+    },
+    "OD": {
+     "tpi": 124,
+     "ft": 9209.93
+    }
+   }
+  },
+  "2026-09-04": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 21.0,
+     "ft": 1554.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 7.2
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 115,
+     "ft": 8571.92
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 514.592
+    },
+    "LIC1": {
+     "tpi": 169,
+     "ft": 12635.73
+    },
+    "LSP1": {
+     "tpi": 134,
+     "ft": 10072.02
+    },
+    "OD": {
+     "tpi": 115,
+     "ft": 8571.92
+    }
+   }
+  },
+  "2026-09-05": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LEC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LER1": {
+     "nos": 21.0,
+     "ft": 1554.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 7.2
+    }
+   },
+   "actual": {
+    "LHF1": {
+     "tpi": 0,
+     "ft": 768.072
+    },
+    "LSP1": {
+     "tpi": 120,
+     "ft": 9105.21
+    },
+    "OD": {
+     "tpi": 0,
+     "ft": 0.0
+    }
+   }
+  },
+  "2026-09-06": {
+   "plan": {
+    "LSP1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LIC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LEC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LER1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    }
+   },
+   "actual": null
+  },
+  "2026-09-07": {
+   "plan": {
+    "LSP1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LIC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LEC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LER1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    }
+   },
+   "actual": null
+  },
+  "2026-09-08": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 33.0,
+     "ft": 2442.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 11.31
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 87,
+     "ft": 6586.48
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 2270.635
+    },
+    "LIC1": {
+     "tpi": 69,
+     "ft": 5274.78
+    },
+    "LSP1": {
+     "tpi": 95,
+     "ft": 7187.12
+    },
+    "OD": {
+     "tpi": 87,
+     "ft": 6586.48
+    }
+   }
+  },
+  "2026-09-09": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 33.0,
+     "ft": 2442.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 11.31
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 121,
+     "ft": 8988.76
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 550.903
+    },
+    "LIC1": {
+     "tpi": 77,
+     "ft": 5724.26
+    },
+    "LSP1": {
+     "tpi": 99,
+     "ft": 7233.18
+    },
+    "OD": {
+     "tpi": 121,
+     "ft": 8988.76
+    }
+   }
+  },
+  "2026-09-10": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 33.0,
+     "ft": 2442.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 11.31
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 136,
+     "ft": 10089.5
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 2397.251
+    },
+    "LIC1": {
+     "tpi": 122,
+     "ft": 9124.94
+    },
+    "LSP1": {
+     "tpi": 132,
+     "ft": 9913.35
+    },
+    "OD": {
+     "tpi": 136,
+     "ft": 10089.5
+    }
+   }
+  },
+  "2026-09-11": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 33.0,
+     "ft": 2442.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 11.31
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 161,
+     "ft": 12101.56
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 1995.458
+    },
+    "LIC1": {
+     "tpi": 178,
+     "ft": 13425.17
+    },
+    "LSP1": {
+     "tpi": 112,
+     "ft": 8364.8
+    },
+    "OD": {
+     "tpi": 161,
+     "ft": 12101.56
+    }
+   }
+  },
+  "2026-09-12": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LEC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LER1": {
+     "nos": 33.0,
+     "ft": 2442.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 11.31
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 138,
+     "ft": 10395.55
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 1846.39
+    },
+    "LIC1": {
+     "tpi": 79,
+     "ft": 5960.74
+    },
+    "LSP1": {
+     "tpi": 127,
+     "ft": 9442.28
+    },
+    "OD": {
+     "tpi": 138,
+     "ft": 10395.55
+    }
+   }
+  },
+  "2026-09-13": {
+   "plan": {
+    "LSP1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LIC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LEC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LER1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    }
+   },
+   "actual": {
+    "LIC1": {
+     "tpi": 68,
+     "ft": 5072.89
+    },
+    "LSP1": {
+     "tpi": 52,
+     "ft": 3781.37
+    },
+    "OD": {
+     "tpi": 0,
+     "ft": 0.0
+    }
+   }
+  },
+  "2026-09-14": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 46.0,
+     "ft": 3404.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 15.77
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 164,
+     "ft": 12103.18
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 2669.304
+    },
+    "LIC1": {
+     "tpi": 131,
+     "ft": 9755.98
+    },
+    "LSP1": {
+     "tpi": 117,
+     "ft": 8851.68
+    },
+    "OD": {
+     "tpi": 164,
+     "ft": 12103.18
+    }
+   }
+  },
+  "2026-09-15": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 46.0,
+     "ft": 3404.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 15.77
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 142,
+     "ft": 10671.85
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 1677.271
+    },
+    "LIC1": {
+     "tpi": 129,
+     "ft": 9735.27
+    },
+    "LSP1": {
+     "tpi": 136,
+     "ft": 10256.0
+    },
+    "OD": {
+     "tpi": 142,
+     "ft": 10671.85
+    }
+   }
+  },
+  "2026-09-16": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 46.0,
+     "ft": 3404.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 15.77
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 146,
+     "ft": 11047.6
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 2524.813
+    },
+    "LIC1": {
+     "tpi": 115,
+     "ft": 8712.99
+    },
+    "LSP1": {
+     "tpi": 111,
+     "ft": 8228.97
+    },
+    "OD": {
+     "tpi": 146,
+     "ft": 11047.6
+    }
+   }
+  },
+  "2026-09-17": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 46.0,
+     "ft": 3404.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 15.77
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 188,
+     "ft": 14054.97
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 3815.447
+    },
+    "LIC1": {
+     "tpi": 180,
+     "ft": 13506.29
+    },
+    "LSP1": {
+     "tpi": 151,
+     "ft": 11389.26
+    },
+    "OD": {
+     "tpi": 188,
+     "ft": 14054.97
+    }
+   }
+  },
+  "2026-09-18": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 46.0,
+     "ft": 3404.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 15.77
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 159,
+     "ft": 11985.59
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 2305.987
+    },
+    "LIC1": {
+     "tpi": 132,
+     "ft": 9998.7
+    },
+    "LSP1": {
+     "tpi": 152,
+     "ft": 11516.6
+    },
+    "OD": {
+     "tpi": 159,
+     "ft": 11985.59
+    }
+   }
+  },
+  "2026-09-19": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LEC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LER1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    }
+   },
+   "actual": null
+  },
+  "2026-09-20": {
+   "plan": {
+    "LSP1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LIC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LEC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LER1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    }
+   },
+   "actual": {
+    "LIC1": {
+     "tpi": 44,
+     "ft": 3355.01
+    },
+    "LSP1": {
+     "tpi": 45,
+     "ft": 3397.26
+    },
+    "OD": {
+     "tpi": 0,
+     "ft": 0.0
+    }
+   }
+  },
+  "2026-09-21": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 113,
+     "ft": 8479.46
+    },
+    "LIC1": {
+     "tpi": 157,
+     "ft": 11670.37
+    },
+    "LSP1": {
+     "tpi": 118,
+     "ft": 8724.14
+    },
+    "OD": {
+     "tpi": 113,
+     "ft": 8479.46
+    }
+   }
+  },
+  "2026-09-22": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 70.0,
+     "ft": 5180.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 24.0
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 107,
+     "ft": 7943.11
+    },
+    "LIC1": {
+     "tpi": 148,
+     "ft": 10985.52
+    },
+    "LSP1": {
+     "tpi": 131,
+     "ft": 9667.02
+    },
+    "OD": {
+     "tpi": 107,
+     "ft": 7943.11
+    }
+   }
+  },
+  "2026-09-23": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 70.0,
+     "ft": 5180.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 24.0
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 140,
+     "ft": 10388.45
+    },
+    "LIC1": {
+     "tpi": 165,
+     "ft": 12292.61
+    },
+    "LSP1": {
+     "tpi": 38,
+     "ft": 2622.08
+    },
+    "OD": {
+     "tpi": 140,
+     "ft": 10388.45
+    }
+   }
+  },
+  "2026-09-24": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 70.0,
+     "ft": 5180.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 24.0
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 140,
+     "ft": 10439.42
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 653.272
+    },
+    "LIC1": {
+     "tpi": 106,
+     "ft": 7042.64
+    },
+    "LSP1": {
+     "tpi": 29,
+     "ft": 2159.48
+    },
+    "OD": {
+     "tpi": 140,
+     "ft": 10439.42
+    }
+   }
+  },
+  "2026-09-25": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 70.0,
+     "ft": 5180.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 24.0
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 124,
+     "ft": 8866.5
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 3795.463
+    },
+    "LIC1": {
+     "tpi": 59,
+     "ft": 4364.16
+    },
+    "LSP1": {
+     "tpi": 85,
+     "ft": 6385.79
+    },
+    "OD": {
+     "tpi": 124,
+     "ft": 8866.5
+    }
+   }
+  },
+  "2026-09-26": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LEC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LER1": {
+     "nos": 70.0,
+     "ft": 5180.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 24.0
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 82,
+     "ft": 5585.18
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 2580.127
+    },
+    "LIC1": {
+     "tpi": 48,
+     "ft": 3488.19
+    },
+    "LSP1": {
+     "tpi": 110,
+     "ft": 8420.73
+    },
+    "OD": {
+     "tpi": 82,
+     "ft": 5585.18
+    }
+   }
+  },
+  "2026-09-27": {
+   "plan": {
+    "LSP1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LIC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LEC1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    },
+    "LER1": {
+     "nos": 0.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": null,
+     "schedHrs": 0.0
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 1,
+     "ft": 70.34
+    },
+    "LIC1": {
+     "tpi": 149,
+     "ft": 11442.194
+    },
+    "LSP1": {
+     "tpi": 96,
+     "ft": 7332.845
+    },
+    "OD": {
+     "tpi": 1,
+     "ft": 70.34
+    }
+   }
+  },
+  "2026-09-28": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 105.0,
+     "ft": 7770.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 24.0
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 115,
+     "ft": 8635.309
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 2683.13
+    },
+    "LIC1": {
+     "tpi": 69,
+     "ft": 5309.956
+    },
+    "LSP1": {
+     "tpi": 95,
+     "ft": 7101.001
+    },
+    "OD": {
+     "tpi": 115,
+     "ft": 8635.309
+    }
+   }
+  },
+  "2026-09-29": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 105.0,
+     "ft": 7770.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 24.0
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 118,
+     "ft": 8959.726
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 8576.101
+    },
+    "LIC1": {
+     "tpi": 124,
+     "ft": 9311.017
+    },
+    "LSP1": {
+     "tpi": 129,
+     "ft": 9692.812
+    },
+    "OD": {
+     "tpi": 118,
+     "ft": 8959.726
+    }
+   }
+  },
+  "2026-09-30": {
+   "plan": {
+    "LSP1": {
+     "nos": 140.0,
+     "ft": 10360.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LIC1": {
+     "nos": 140.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 140.0,
+     "schedHrs": 24.0
+    },
+    "LEC1": {
+     "nos": 145.0,
+     "ft": 0.0,
+     "markers": [],
+     "rate": 145.0,
+     "schedHrs": 24.0
+    },
+    "LER1": {
+     "nos": 105.0,
+     "ft": 7770.0,
+     "markers": [],
+     "rate": 70.0,
+     "schedHrs": 24.0
+    }
+   },
+   "actual": {
+    "LEC1": {
+     "tpi": 132,
+     "ft": 10101.517
+    },
+    "LHF1": {
+     "tpi": 0,
+     "ft": 3487.605
+    },
+    "LIC1": {
+     "tpi": 147,
+     "ft": 11188.621
+    },
+    "LSP1": {
+     "tpi": 93,
+     "ft": 7058.032
+    },
+    "OD": {
+     "tpi": 132,
+     "ft": 10101.517
+    }
+   }
+  }
+ }
+}
