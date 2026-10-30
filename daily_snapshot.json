@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-29T08:22:27.125522",
+  "generated": "2026-10-29T21:28:48.367847",
   "meta": {
-    "date": "10/28/2026",
-    "shift": "24H",
+    "date": "10/29/2026",
+    "shift": "Day",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -25,187 +25,167 @@
   },
   "production": {
     "bare": {
-      "day": 85,
-      "night": 82,
-      "total": 167,
+      "day": 87,
+      "night": 0,
+      "total": 87,
       "tgt": 140
     },
     "idCoated": {
-      "day": 0,
-      "night": 50,
-      "total": 50,
+      "day": 78,
+      "night": 0,
+      "total": 78,
       "tgt": 140
     },
     "odTpi": {
-      "day": 18,
+      "day": 37,
       "night": 0,
-      "total": 18,
+      "total": 37,
       "tgt": 145
     },
     "odCoated": {
-      "day": 1,
+      "day": 40,
       "night": 0,
-      "total": 1,
+      "total": 40,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 494,
+      "total": 505,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 801,
+      "total": 844,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 8.98,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 12.0,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 12,
+      "val": 9,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 6,
+      "val": 9,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 5,
+      "val": 4,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": -200.0,
-    "repairPct": 300.0,
-    "rejectPct": 0.0,
+    "ftrOd": 87.5,
+    "repairPct": 2.5,
+    "rejectPct": 10.0,
     "ftrOdTgt": 96,
-    "ftrId": 84.0,
-    "idRejectPct": 16.0,
+    "ftrId": 98.72,
+    "idRejectPct": 1.28,
     "ftrIdTgt": 98,
-    "repairPipes": 3,
-    "rejectPipes": 0,
-    "twoPartRepairs": 5,
-    "bevel": 2,
-    "sample": 2,
-    "tape": 1,
+    "repairPipes": 1,
+    "rejectPipes": 4,
+    "twoPartRepairs": 24,
+    "bevel": 1,
+    "sample": 1,
+    "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 9,
-    "idRejects": 8,
+    "strippingOutput": 2,
+    "idRejects": 1,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 14.42,
-    "odDowntimeHrs": 8.5,
+    "idDowntimeHrs": 1.67,
+    "odDowntimeHrs": 5.58,
     "tgt": 85,
-    "sapNotif": 10,
-    "plannedDt": 21.83,
-    "unplannedDt": 1.08,
+    "sapNotif": 8,
+    "plannedDt": 6.91,
+    "unplannedDt": 0.33,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "recon waiting on pipes",
+        "desc": "plant startup",
         "line": "ID",
         "start": "06:00",
-        "stop": "14:00",
-        "durMin": 480,
+        "stop": "06:20",
+        "durMin": 20,
         "shift": "Day",
         "cause": "",
-        "sap": "700100407"
+        "sap": "700100516"
       },
       {
-        "desc": "changeover 42' to 36\"",
+        "desc": "pipe loaded to far oer hit bin",
+        "line": "ID",
+        "start": "07:45",
+        "stop": "08:15",
+        "durMin": 30,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700100517"
+      },
+      {
+        "desc": "shift change",
         "line": "ID",
         "start": "14:00",
-        "stop": "18:00",
-        "durMin": 240,
+        "stop": "14:30",
+        "durMin": 30,
         "shift": "Day",
         "cause": "",
-        "sap": "700100408"
+        "sap": "700100524"
       },
       {
-        "desc": "done with changeover id startedup",
+        "desc": "pitstop",
         "line": "ID",
-        "start": "18:00",
-        "stop": "18:10",
-        "durMin": 10,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700100498"
-      },
-      {
-        "desc": "pitstop changing cheesecloth",
-        "line": "ID",
-        "start": "21:10",
-        "stop": "21:55",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700100499"
-      },
-      {
-        "desc": "final table sap computer not printing b",
-        "line": "ID",
-        "start": "23:30",
-        "stop": "23:55",
-        "durMin": 25,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700100500"
-      },
-      {
-        "desc": "curing chamber chain off track",
-        "line": "ID",
-        "start": "18:55",
-        "stop": "20:00",
-        "durMin": 65,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000005188"
-      },
-      {
-        "desc": "plant startup",
-        "line": "OD",
-        "start": "06:00",
-        "stop": "06:35",
-        "durMin": 35,
+        "start": "15:40",
+        "stop": "16:00",
+        "durMin": 20,
         "shift": "Day",
         "cause": "",
-        "sap": "700100405"
-      },
-      {
-        "desc": "recon waiting on pipes",
-        "line": "OD",
-        "start": "09:30",
-        "stop": "12:35",
-        "durMin": 185,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100406"
-      },
-      {
-        "desc": "no available pipes",
-        "line": "OD",
-        "start": "12:50",
-        "stop": "16:40",
-        "durMin": 230,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100409"
+        "sap": "700100526"
       },
       {
         "desc": "changeover 42' to 36\"\"",
         "line": "OD",
-        "start": "17:00",
-        "stop": "18:00",
-        "durMin": 60,
+        "start": "06:00",
+        "stop": "10:05",
+        "durMin": 245,
         "shift": "Day",
         "cause": "",
-        "sap": "700100410"
+        "sap": "700100515"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "14:55",
+        "stop": "15:25",
+        "durMin": 30,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700100525"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "16:35",
+        "stop": "17:15",
+        "durMin": 40,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700100527"
+      },
+      {
+        "desc": "Induction coil tripout result in cutoff",
+        "line": "OD",
+        "start": "11:25",
+        "stop": "11:45",
+        "durMin": 20,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000005190"
       }
     ]
   }
