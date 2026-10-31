@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T13:09:19+00:00",
+ "generated": "2026-10-31T13:17:19+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -8663,6 +8663,60 @@
      "line": "OD",
      "min": 330,
      "desc": "called off shift waiting on pipes from s"
+    }
+   ]
+  },
+  {
+   "date": "10/30/2026",
+   "idDt": 1.0,
+   "odDt": 10.25,
+   "idCoated": {
+    "a": 154,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 24,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 21,
+    "t": 145
+   },
+   "ftrId": 99.35,
+   "ftrOd": 70.83,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 375,
+     "desc": "Changeover"
+    },
+    {
+     "line": "OD",
+     "min": 50,
+     "desc": "board felled down in the coating booth r"
+    },
+    {
+     "line": "OD",
+     "min": 190,
+     "desc": "coupling install not working"
     }
    ]
   }
