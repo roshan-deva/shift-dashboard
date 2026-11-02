@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-01T19:30:35.992423",
+  "generated": "2026-11-02T09:11:21.812987",
   "meta": {
     "date": "11/01/2026",
-    "shift": "Day",
+    "shift": "24H",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -53,7 +53,7 @@
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 844,
+      "total": 0,
       "tgt": 400
     },
     "directFeedPct": {
