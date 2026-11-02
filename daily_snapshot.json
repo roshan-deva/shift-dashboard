@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-01T07:30:40.449905",
+  "generated": "2026-11-01T19:30:35.992423",
   "meta": {
-    "date": "10/31/2026",
-    "shift": "24H",
+    "date": "11/01/2026",
+    "shift": "Day",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -25,43 +25,43 @@
   },
   "production": {
     "bare": {
-      "day": 65,
-      "night": 70,
-      "total": 135,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 140
     },
     "idCoated": {
-      "day": 102,
-      "night": 60,
-      "total": 162,
+      "day": 12,
+      "night": 0,
+      "total": 12,
       "tgt": 140
     },
     "odTpi": {
-      "day": 71,
-      "night": 57,
-      "total": 128,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 145
     },
     "odCoated": {
-      "day": 79,
-      "night": 68,
-      "total": 147,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 514,
+      "total": 518,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 0,
+      "total": 844,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 31.85,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 74.07,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -78,115 +78,34 @@
     }
   },
   "quality": {
-    "ftrOd": 93.2,
-    "repairPct": 2.04,
-    "rejectPct": 4.76,
+    "ftrOd": 0.0,
+    "repairPct": 0.0,
+    "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 99.38,
-    "idRejectPct": 0.62,
+    "ftrId": 100.0,
+    "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 3,
-    "rejectPipes": 7,
-    "twoPartRepairs": 208,
-    "bevel": 3,
-    "sample": 2,
+    "repairPipes": 0,
+    "rejectPipes": 0,
+    "twoPartRepairs": 0,
+    "bevel": 0,
+    "sample": 0,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 4,
-    "idRejects": 1,
+    "strippingOutput": 0,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 0.75,
-    "odDowntimeHrs": 5.08,
+    "idDowntimeHrs": 0.0,
+    "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 8,
-    "plannedDt": 5.76,
+    "sapNotif": 0,
+    "plannedDt": 0.0,
     "unplannedDt": 0.0,
     "forklift": 0,
-    "downtimeEvents": [
-      {
-        "desc": "startup",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "06:10",
-        "durMin": 10,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100836"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "ID",
-        "start": "13:50",
-        "stop": "14:25",
-        "durMin": 35,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100837"
-      },
-      {
-        "desc": "Startup",
-        "line": "OD",
-        "start": "06:00",
-        "stop": "06:30",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100838"
-      },
-      {
-        "desc": "Pitstop (1 pipe Contamination)",
-        "line": "OD",
-        "start": "09:05",
-        "stop": "09:45",
-        "durMin": 40,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100839"
-      },
-      {
-        "desc": "fisheyes",
-        "line": "OD",
-        "start": "10:15",
-        "stop": "12:30",
-        "durMin": 135,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100840"
-      },
-      {
-        "desc": "1 pipe gunspit",
-        "line": "OD",
-        "start": "12:40",
-        "stop": "13:05",
-        "durMin": 25,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100841"
-      },
-      {
-        "desc": "Final table full",
-        "line": "OD",
-        "start": "15:35",
-        "stop": "16:05",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100842"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "17:15",
-        "stop": "18:00",
-        "durMin": 45,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700100843"
-      }
-    ]
+    "downtimeEvents": []
   }
 }
