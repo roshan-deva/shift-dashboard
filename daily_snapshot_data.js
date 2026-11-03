@@ -22,7 +22,10 @@ window.DAILY_SNAPSHOT = {
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    }
+    },
+    "backlogReplayed": [
+      "2026-11-02"
+    ]
   },
   "production": {
     "bare": {
