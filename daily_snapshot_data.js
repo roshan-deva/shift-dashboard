@@ -9,14 +9,14 @@ window.DAILY_SNAPSHOT = {
       "ID": 24.0,
       "OD": 24.0
     },
-    "project": "KM MSX",
+    "project": "",
     "pipe": "42\" x 0.600\" WT",
     "coating": "IFC + FBE",
     "crewDay": "A/C",
     "crewNight": "A/C",
-    "prodSup": "Keith W/ Brian R",
-    "qualSup": "Tino M/ Jeenesh S",
-    "maintSup": "Ravindra Y/ Adam E",
+    "prodSup": "",
+    "qualSup": "",
+    "maintSup": "",
     "speeds": {
       "extBlast": 12,
       "extCoat": 12,
