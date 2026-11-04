@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T03:09:37+00:00",
+ "generated": "2026-11-04T16:12:44+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -8923,6 +8923,60 @@
      "line": "OD",
      "min": 40,
      "desc": "Pitstop"
+    }
+   ]
+  },
+  {
+   "date": "11/03/2026",
+   "idDt": 1.58,
+   "odDt": 2.33,
+   "idCoated": {
+    "a": 91,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 131,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 139,
+    "t": 145
+   },
+   "ftrId": 100.0,
+   "ftrOd": 97.71,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 60,
+     "desc": "pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 35,
+     "desc": "plant startup"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "plant startup"
+    },
+    {
+     "line": "OD",
+     "min": 75,
+     "desc": "powder not dropping fluidbed # 1"
+    },
+    {
+     "line": "OD",
+     "min": 35,
+     "desc": "pitstop"
     }
    ]
   }
