@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-03T11:20:18.246216",
+  "generated": "2026-11-03T21:02:23.702603",
   "meta": {
-    "date": "11/02/2026",
-    "shift": "24H",
+    "date": "11/03/2026",
+    "shift": "Day",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -21,42 +21,39 @@
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    },
-    "backlogReplayed": [
-      "2026-11-02"
-    ]
+    }
   },
   "production": {
     "bare": {
-      "day": 62,
-      "night": 51,
-      "total": 113,
+      "day": 48,
+      "night": 0,
+      "total": 48,
       "tgt": 140
     },
     "idCoated": {
-      "day": 83,
-      "night": 108,
-      "total": 191,
+      "day": 91,
+      "night": 0,
+      "total": 91,
       "tgt": 140
     },
     "odTpi": {
-      "day": 96,
-      "night": 100,
-      "total": 196,
+      "day": 139,
+      "night": 0,
+      "total": 139,
       "tgt": 145
     },
     "odCoated": {
-      "day": 81,
-      "night": 104,
-      "total": 185,
+      "day": 131,
+      "night": 0,
+      "total": 131,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 0,
+      "total": 373,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 0,
+      "total": 844,
       "tgt": 400
     },
     "directFeedPct": {
@@ -68,207 +65,97 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 8,
+      "val": 7,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 13,
+      "val": 14,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 0,
+      "val": 1,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 95.68,
-    "repairPct": 0.0,
-    "rejectPct": 4.32,
+    "ftrOd": 97.71,
+    "repairPct": 0.76,
+    "rejectPct": 1.53,
     "ftrOdTgt": 96,
     "ftrId": 100.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 0,
-    "rejectPipes": 8,
-    "twoPartRepairs": 200,
-    "bevel": 0,
-    "sample": 2,
+    "repairPipes": 1,
+    "rejectPipes": 2,
+    "twoPartRepairs": 116,
+    "bevel": 1,
+    "sample": 0,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 12,
+    "strippingOutput": 0,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 3.17,
-    "odDowntimeHrs": 8.67,
+    "idDowntimeHrs": 1.58,
+    "odDowntimeHrs": 2.33,
     "tgt": 85,
-    "sapNotif": 16,
-    "plannedDt": 10.56,
-    "unplannedDt": 1.25,
+    "sapNotif": 5,
+    "plannedDt": 3.91,
+    "unplannedDt": 0.0,
     "forklift": 0,
     "downtimeEvents": [
       {
+        "desc": "pitstop",
+        "line": "ID",
+        "start": "13:30",
+        "stop": "14:30",
+        "durMin": 60,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700101236"
+      },
+      {
         "desc": "plant startup",
         "line": "ID",
         "start": "06:00",
-        "stop": "06:45",
-        "durMin": 45,
+        "stop": "06:35",
+        "durMin": 35,
         "shift": "Day",
         "cause": "",
-        "sap": "700101102"
+        "sap": "700101237"
       },
       {
-        "desc": "no pipes inbound",
-        "line": "ID",
-        "start": "10:40",
-        "stop": "11:05",
-        "durMin": 25,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700101103"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "ID",
-        "start": "13:35",
-        "stop": "14:05",
+        "desc": "plant startup",
+        "line": "OD",
+        "start": "06:00",
+        "stop": "06:30",
         "durMin": 30,
         "shift": "Day",
         "cause": "",
-        "sap": "700101106"
+        "sap": "700101234"
+      },
+      {
+        "desc": "powder not dropping fluidbed # 1",
+        "line": "OD",
+        "start": "11:40",
+        "stop": "12:55",
+        "durMin": 75,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700101235"
       },
       {
         "desc": "pitstop",
-        "line": "ID",
-        "start": "17:30",
+        "line": "OD",
+        "start": "17:25",
         "stop": "18:00",
-        "durMin": 30,
+        "durMin": 35,
         "shift": "Day",
         "cause": "",
-        "sap": "700101108"
-      },
-      {
-        "desc": "Plant Startup",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:20",
-        "durMin": 20,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700101222"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "ID",
-        "start": "00:35",
-        "stop": "01:00",
-        "durMin": 25,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700101223"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "ID",
-        "start": "05:45",
-        "stop": "06:00",
-        "durMin": 15,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700101224"
-      },
-      {
-        "desc": "plant startup",
-        "line": "OD",
-        "start": "06:00",
-        "stop": "07:55",
-        "durMin": 115,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700101104"
-      },
-      {
-        "desc": "auto stencil machine malfunction",
-        "line": "OD",
-        "start": "10:25",
-        "stop": "11:05",
-        "durMin": 40,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700101105"
-      },
-      {
-        "desc": "Pitstop - 5 high flow guns clogged",
-        "line": "OD",
-        "start": "14:00",
-        "stop": "15:25",
-        "durMin": 85,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700101107"
-      },
-      {
-        "desc": "crooked pipe carrier 14",
-        "line": "OD",
-        "start": "16:10",
-        "stop": "16:25",
-        "durMin": 15,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005237"
-      },
-      {
-        "desc": "control panel tripout result in partial",
-        "line": "OD",
-        "start": "17:00",
-        "stop": "18:00",
-        "durMin": 60,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005238"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "22:20",
-        "stop": "23:40",
-        "durMin": 80,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700101218"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "02:30",
-        "stop": "02:55",
-        "durMin": 25,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700101219"
-      },
-      {
-        "desc": "Reclaim system not functioning",
-        "line": "OD",
-        "start": "02:55",
-        "stop": "03:55",
-        "durMin": 60,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700101220"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "05:20",
-        "stop": "06:00",
-        "durMin": 40,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700101221"
+        "sap": "700101238"
       }
     ]
   }
