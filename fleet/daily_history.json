@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T14:41:54+00:00",
+ "generated": "2026-11-04T03:09:37+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -8816,6 +8816,115 @@
     "OD": 24.0
    },
    "events": []
+  },
+  {
+   "date": "11/02/2026",
+   "idDt": 3.17,
+   "odDt": 8.67,
+   "idCoated": {
+    "a": 191,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 185,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 196,
+    "t": 145
+   },
+   "ftrId": 100.0,
+   "ftrOd": 95.68,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 45,
+     "desc": "plant startup"
+    },
+    {
+     "line": "ID",
+     "min": 25,
+     "desc": "no pipes inbound"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 20,
+     "desc": "Plant Startup"
+    },
+    {
+     "line": "ID",
+     "min": 25,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 15,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 115,
+     "desc": "plant startup"
+    },
+    {
+     "line": "OD",
+     "min": 40,
+     "desc": "auto stencil machine malfunction"
+    },
+    {
+     "line": "OD",
+     "min": 85,
+     "desc": "Pitstop - 5 high flow guns clogged"
+    },
+    {
+     "line": "OD",
+     "min": 15,
+     "desc": "crooked pipe carrier 14"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "control panel tripout result in partial"
+    },
+    {
+     "line": "OD",
+     "min": 80,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 25,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "Reclaim system not functioning"
+    },
+    {
+     "line": "OD",
+     "min": 40,
+     "desc": "Pitstop"
+    }
+   ]
   }
  ]
 }
