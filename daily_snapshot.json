@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-03T21:02:23.702603",
+  "generated": "2026-11-04T10:02:08.749507",
   "meta": {
     "date": "11/03/2026",
-    "shift": "Day",
+    "shift": "24H",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -49,19 +49,19 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 373,
+      "total": 339,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 844,
+      "total": 0,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 112.5,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 100,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -69,11 +69,11 @@
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 14,
+      "val": 11,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 1,
+      "val": 5,
       "tgt": 40
     }
   },
