@@ -22,7 +22,8 @@ window.DAILY_SNAPSHOT = {
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    }
+    },
+    "monthRolloverNeeded": true
   },
   "production": {
     "bare": {
