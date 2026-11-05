@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T01:37:51+00:00",
+ "generated": "2026-11-05T13:37:53+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -8976,6 +8976,65 @@
     {
      "line": "OD",
      "min": 35,
+     "desc": "pitstop"
+    }
+   ]
+  },
+  {
+   "date": "11/04/2026",
+   "idDt": 5.75,
+   "odDt": 2.42,
+   "idCoated": {
+    "a": 67,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 125,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 127,
+    "t": 145
+   },
+   "ftrId": 97.01,
+   "ftrOd": 97.6,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 115,
+     "desc": "blaster 2 east rotation motor rewire"
+    },
+    {
+     "line": "ID",
+     "min": 200,
+     "desc": "blaster 1 east buggy Igus track broke"
+    },
+    {
+     "line": "OD",
+     "min": 55,
+     "desc": "plant startup"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 30,
      "desc": "pitstop"
     }
    ]
