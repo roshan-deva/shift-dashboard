@@ -1,6 +1,6 @@
 {
  "month": "2026-11",
- "generated": "2026-11-05T08:47:27",
+ "generated": "2026-11-05T09:24:38",
  "note": "Daily plan (pipes, and feet = pipes x planned average length) and actual TPI output from the SAP production report. LER1 in the plan is LHF1 in SAP.",
  "days": {
   "2026-11-01": {
@@ -517,7 +517,7 @@
     },
     "LER1": {
      "nos": 130.0,
-     "ft": 9360.0,
+     "ft": 4940.0,
      "markers": [],
      "rate": 130.0,
      "schedHrs": 24.0
@@ -559,7 +559,7 @@
     },
     "LER1": {
      "nos": 130.0,
-     "ft": 9360.0,
+     "ft": 4940.0,
      "markers": [],
      "rate": 130.0,
      "schedHrs": 24.0
@@ -603,7 +603,7 @@
     },
     "LER1": {
      "nos": 130.0,
-     "ft": 9360.0,
+     "ft": 4940.0,
      "markers": [],
      "rate": 130.0,
      "schedHrs": 24.0
@@ -643,7 +643,7 @@
     },
     "LER1": {
      "nos": 130.0,
-     "ft": 9360.0,
+     "ft": 4940.0,
      "markers": [],
      "rate": 130.0,
      "schedHrs": 24.0
@@ -723,7 +723,7 @@
     },
     "LER1": {
      "nos": 130.0,
-     "ft": 9360.0,
+     "ft": 4940.0,
      "markers": [],
      "rate": 130.0,
      "schedHrs": 24.0
@@ -763,7 +763,7 @@
     },
     "LER1": {
      "nos": 130.0,
-     "ft": 9360.0,
+     "ft": 4940.0,
      "markers": [],
      "rate": 130.0,
      "schedHrs": 24.0
@@ -803,7 +803,7 @@
     },
     "LER1": {
      "nos": 130.0,
-     "ft": 9360.0,
+     "ft": 4940.0,
      "markers": [],
      "rate": 130.0,
      "schedHrs": 24.0
@@ -843,7 +843,7 @@
     },
     "LER1": {
      "nos": 130.0,
-     "ft": 9360.0,
+     "ft": 4940.0,
      "markers": [],
      "rate": 130.0,
      "schedHrs": 24.0
@@ -883,7 +883,7 @@
     },
     "LER1": {
      "nos": 130.0,
-     "ft": 9360.0,
+     "ft": 4940.0,
      "markers": [],
      "rate": 130.0,
      "schedHrs": 24.0
@@ -923,7 +923,7 @@
     },
     "LER1": {
      "nos": 130.0,
-     "ft": 9360.0,
+     "ft": 4940.0,
      "markers": [],
      "rate": 130.0,
      "schedHrs": 24.0
@@ -1005,7 +1005,7 @@
     },
     "LER1": {
      "nos": 130.0,
-     "ft": 9360.0,
+     "ft": 4940.0,
      "markers": [],
      "rate": 130.0,
      "schedHrs": 24.0
@@ -1045,7 +1045,7 @@
     },
     "LER1": {
      "nos": 130.0,
-     "ft": 9360.0,
+     "ft": 4940.0,
      "markers": [],
      "rate": 130.0,
      "schedHrs": 24.0
@@ -1085,7 +1085,7 @@
     },
     "LER1": {
      "nos": 130.0,
-     "ft": 9360.0,
+     "ft": 4940.0,
      "markers": [],
      "rate": 130.0,
      "schedHrs": 24.0
