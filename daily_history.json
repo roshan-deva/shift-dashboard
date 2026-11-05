@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T13:37:53+00:00",
+ "generated": "2026-11-05T14:27:14+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -8985,19 +8985,19 @@
    "idDt": 5.75,
    "odDt": 2.42,
    "idCoated": {
-    "a": 67,
+    "a": 136,
     "t": 140
    },
    "odCoated": {
-    "a": 125,
+    "a": 192,
     "t": 145
    },
    "odTpi": {
-    "a": 127,
+    "a": 194,
     "t": 145
    },
-   "ftrId": 97.01,
-   "ftrOd": 97.6,
+   "ftrId": 97.79,
+   "ftrOd": 96.35,
    "ftrIdTgt": 98,
    "ftrOdTgt": 96,
    "upTgt": 85,
