@@ -22,7 +22,13 @@ window.DAILY_SNAPSHOT = {
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    }
+    },
+    "backlogReplayed": [
+      "2026-11-04"
+    ],
+    "needsReview": [
+      "Job LR-LDC-CURRENTORD-STATUS, Step 1_20261105_033105.pdf"
+    ]
   },
   "production": {
     "bare": {
