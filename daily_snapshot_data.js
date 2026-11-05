@@ -22,7 +22,11 @@ window.DAILY_SNAPSHOT = {
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    }
+    },
+    "needsReview": [
+      "Job LR-LDC-CURRENTORD-STATUS1, Step 1_20261104_183212.pdf",
+      "Job LR-LDC-CURRENTSO-INV1, Step 1_20261104_183212.pdf"
+    ]
   },
   "production": {
     "bare": {
