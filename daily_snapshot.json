@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-04T19:30:47.903175",
+  "generated": "2026-11-05T07:30:46.074881",
   "meta": {
     "date": "11/04/2026",
-    "shift": "Day",
+    "shift": "24H",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -21,11 +21,7 @@
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    },
-    "needsReview": [
-      "Job LR-LDC-CURRENTORD-STATUS1, Step 1_20261104_183212.pdf",
-      "Job LR-LDC-CURRENTSO-INV1, Step 1_20261104_183212.pdf"
-    ]
+    }
   },
   "production": {
     "bare": {
@@ -53,19 +49,19 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 340,
+      "total": 300,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 844,
+      "total": 0,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 35.59,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 100,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -73,11 +69,11 @@
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 11,
+      "val": 10,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 3,
+      "val": 6,
       "tgt": 40
     }
   },
