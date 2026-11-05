@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-04T10:40:33.147486",
+  "generated": "2026-11-04T19:30:47.903175",
   "meta": {
-    "date": "11/03/2026",
-    "shift": "24H",
+    "date": "11/04/2026",
+    "shift": "Day",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -21,52 +21,51 @@
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    },
-    "monthRolloverNeeded": true
+    }
   },
   "production": {
     "bare": {
-      "day": 48,
-      "night": 65,
-      "total": 113,
+      "day": 59,
+      "night": 0,
+      "total": 59,
       "tgt": 140
     },
     "idCoated": {
-      "day": 88,
-      "night": 100,
-      "total": 188,
+      "day": 67,
+      "night": 0,
+      "total": 67,
       "tgt": 140
     },
     "odTpi": {
-      "day": 137,
-      "night": 113,
-      "total": 250,
+      "day": 127,
+      "night": 0,
+      "total": 127,
       "tgt": 145
     },
     "odCoated": {
       "day": 125,
-      "night": 116,
-      "total": 241,
+      "night": 0,
+      "total": 125,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 339,
+      "total": 340,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 0,
+      "total": 844,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 47.79,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 100,
+      "val": 0.0,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 7,
+      "val": 9,
       "tgt": 20
     },
     "stripBalanceOd": {
@@ -74,89 +73,99 @@
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 5,
+      "val": 3,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 98.76,
-    "repairPct": 0.41,
-    "rejectPct": 0.83,
+    "ftrOd": 97.6,
+    "repairPct": 1.6,
+    "rejectPct": 0.8,
     "ftrOdTgt": 96,
-    "ftrId": 100.0,
-    "idRejectPct": 0.0,
+    "ftrId": 97.01,
+    "idRejectPct": 2.99,
     "ftrIdTgt": 98,
-    "repairPipes": 1,
-    "rejectPipes": 2,
-    "twoPartRepairs": 116,
+    "repairPipes": 2,
+    "rejectPipes": 1,
+    "twoPartRepairs": 127,
     "bevel": 1,
-    "sample": 0,
+    "sample": 1,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 0,
-    "idRejects": 0,
+    "strippingOutput": 5,
+    "idRejects": 2,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 1.58,
-    "odDowntimeHrs": 2.33,
+    "idDowntimeHrs": 5.75,
+    "odDowntimeHrs": 2.42,
     "tgt": 85,
-    "sapNotif": 5,
-    "plannedDt": 3.91,
-    "unplannedDt": 0.0,
+    "sapNotif": 6,
+    "plannedDt": 2.92,
+    "unplannedDt": 5.25,
     "forklift": 0,
     "downtimeEvents": [
       {
         "desc": "pitstop",
         "line": "ID",
-        "start": "13:30",
-        "stop": "14:30",
-        "durMin": 60,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700101236"
-      },
-      {
-        "desc": "plant startup",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "06:35",
-        "durMin": 35,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700101237"
-      },
-      {
-        "desc": "plant startup",
-        "line": "OD",
-        "start": "06:00",
-        "stop": "06:30",
+        "start": "17:30",
+        "stop": "18:00",
         "durMin": 30,
         "shift": "Day",
         "cause": "",
-        "sap": "700101234"
+        "sap": "700101333"
       },
       {
-        "desc": "powder not dropping fluidbed # 1",
-        "line": "OD",
-        "start": "11:40",
-        "stop": "12:55",
-        "durMin": 75,
+        "desc": "blaster 2 east rotation motor rewire",
+        "line": "ID",
+        "start": "09:40",
+        "stop": "11:35",
+        "durMin": 115,
         "shift": "Day",
         "cause": "",
-        "sap": "700101235"
+        "sap": "30000005251"
+      },
+      {
+        "desc": "blaster 1 east buggy Igus track broke",
+        "line": "ID",
+        "start": "06:00",
+        "stop": "09:20",
+        "durMin": 200,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000005252"
+      },
+      {
+        "desc": "plant startup",
+        "line": "OD",
+        "start": "06:00",
+        "stop": "06:55",
+        "durMin": 55,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700101331"
       },
       {
         "desc": "pitstop",
         "line": "OD",
-        "start": "17:25",
-        "stop": "18:00",
-        "durMin": 35,
+        "start": "12:30",
+        "stop": "13:30",
+        "durMin": 60,
         "shift": "Day",
         "cause": "",
-        "sap": "700101238"
+        "sap": "700101332"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "17:30",
+        "stop": "18:00",
+        "durMin": 30,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700101334"
       }
     ]
   }
