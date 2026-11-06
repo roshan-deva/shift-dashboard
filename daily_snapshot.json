@@ -21,7 +21,11 @@
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    }
+    },
+    "needsReview": [
+      "Job LR-LDC-CURRENTORD-STATUS, Step 1_20261106_033045.pdf",
+      "Job LR-LDC-CURRENTSO-INV, Step 1_20261105_150051.pdf"
+    ]
   },
   "production": {
     "bare": {
