@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-05T22:06:47.128039",
+  "generated": "2026-11-09T08:40:22.202941",
   "meta": {
-    "date": "11/05/2026",
-    "shift": "Day",
+    "date": "11/08/2026",
+    "shift": "24H",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -21,43 +21,39 @@
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    },
-    "needsReview": [
-      "Job LR-LDC-CURRENTORD-STATUS, Step 1_20261106_033045.pdf",
-      "Job LR-LDC-CURRENTSO-INV, Step 1_20261105_150051.pdf"
-    ]
+    }
   },
   "production": {
     "bare": {
-      "day": 2,
-      "night": 0,
-      "total": 2,
+      "day": 0,
+      "night": 10,
+      "total": 10,
       "tgt": 140
     },
     "idCoated": {
-      "day": 87,
+      "day": 0,
       "night": 0,
-      "total": 87,
+      "total": 0,
       "tgt": 140
     },
     "odTpi": {
-      "day": 95,
+      "day": 0,
       "night": 0,
-      "total": 95,
+      "total": 0,
       "tgt": 145
     },
     "odCoated": {
-      "day": 95,
+      "day": 0,
       "night": 0,
-      "total": 95,
+      "total": 0,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 221,
+      "total": 257,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 844,
+      "total": 799,
       "tgt": 400
     },
     "directFeedPct": {
@@ -69,148 +65,47 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 4,
+      "val": 0,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 10,
+      "val": 7,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 3,
+      "val": 6,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 96.84,
-    "repairPct": 1.05,
-    "rejectPct": 2.11,
+    "ftrOd": 0.0,
+    "repairPct": 0.0,
+    "rejectPct": 0.0,
     "ftrOdTgt": 96,
-    "ftrId": 100.0,
+    "ftrId": 0.0,
     "idRejectPct": 0.0,
     "ftrIdTgt": 98,
-    "repairPipes": 1,
-    "rejectPipes": 2,
-    "twoPartRepairs": 105,
+    "repairPipes": 0,
+    "rejectPipes": 0,
+    "twoPartRepairs": 0,
     "bevel": 0,
-    "sample": 1,
+    "sample": 0,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 5,
+    "strippingOutput": 0,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 1.58,
-    "odDowntimeHrs": 5.08,
+    "idDowntimeHrs": 0.0,
+    "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 10,
-    "plannedDt": 3.92,
-    "unplannedDt": 2.75,
+    "sapNotif": 0,
+    "plannedDt": 0.0,
+    "unplannedDt": 0.0,
     "forklift": 0,
-    "downtimeEvents": [
-      {
-        "desc": "plant startup",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "06:35",
-        "durMin": 35,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700101411"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "12:40",
-        "stop": "13:10",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700101424"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "17:30",
-        "stop": "18:00",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700101426"
-      },
-      {
-        "desc": "pitstop",
-        "line": "OD",
-        "start": "12:50",
-        "stop": "13:45",
-        "durMin": 55,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700101425"
-      },
-      {
-        "desc": "low air pressure",
-        "line": "OD",
-        "start": "16:35",
-        "stop": "17:00",
-        "durMin": 25,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700101427"
-      },
-      {
-        "desc": "pitstop",
-        "line": "OD",
-        "start": "17:00",
-        "stop": "18:00",
-        "durMin": 60,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700101428"
-      },
-      {
-        "desc": "Induction coil tripout",
-        "line": "OD",
-        "start": "06:00",
-        "stop": "06:35",
-        "durMin": 35,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005256"
-      },
-      {
-        "desc": "powder not dropping surge hopper",
-        "line": "OD",
-        "start": "10:20",
-        "stop": "10:50",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005259"
-      },
-      {
-        "desc": "replace pad on final",
-        "line": "OD",
-        "start": "09:00",
-        "stop": "09:45",
-        "durMin": 45,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005260"
-      },
-      {
-        "desc": "replace idle wheel group 7 coating line",
-        "line": "OD",
-        "start": "14:20",
-        "stop": "15:15",
-        "durMin": 55,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005261"
-      }
-    ]
+    "downtimeEvents": []
   }
 }
