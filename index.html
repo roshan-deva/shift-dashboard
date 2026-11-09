@@ -18,5 +18,17 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- GoatCounter (roshan-shift), the counter the old site used; lost in the 4 Nov 2026 cutover.
+         Pages switch after the '#', which GoatCounter does not see, so each view is counted by hand. -->
+    <script>
+      window.goatcounter = { no_onload: true }
+      function gcCount() {
+        if (window.goatcounter && window.goatcounter.count) {
+          window.goatcounter.count({ path: location.pathname + location.hash })
+        }
+      }
+      window.addEventListener('hashchange', gcCount)
+    </script>
+    <script data-goatcounter="https://roshan-shift.goatcounter.com/count" async src="https://gc.zgo.at/count.js" onload="gcCount()"></script>
   </body>
 </html>
