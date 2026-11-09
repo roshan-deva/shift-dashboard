@@ -21,7 +21,19 @@
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    }
+    },
+    "backlogReplayed": [
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07"
+    ],
+    "needsReview": [
+      "Job LR-LDC-CURRENTORD-STATUS, Step 1_20261107_033047.pdf",
+      "Job LR-LDC-CURRENTORD-STATUS, Step 1_20261108_033045.pdf",
+      "Job LR-LDC-CURRENTSO-INV, Step 1_20261106_150059.pdf",
+      "Job LR-LDC-CURRENTSO-INV, Step 1_20261107_150052.pdf",
+      "Job LR-LDC-CURRENTSO-INV, Step 1_20261108_150144.pdf"
+    ]
   },
   "production": {
     "bare": {
