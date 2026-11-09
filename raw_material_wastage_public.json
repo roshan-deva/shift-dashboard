@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06 15:07",
+ "generated": "2026-11-09 08:47",
  "since": "2026-10-21",
  "basis": {
   "powderFbe": {
@@ -502,6 +502,117 @@
      "theoretical": 229.4,
      "allowed": 261.5,
      "area_m2": 8559.3
+    }
+   }
+  },
+  {
+   "day": "2026-11-05",
+   "items": {
+    "Powder FBE": {
+     "unit": "kg",
+     "opened": 6,
+     "used": 6000.0,
+     "theoretical": 5032.8,
+     "allowed": 5309.6,
+     "area_m2": 7928.8
+    },
+    "Powder ARO": {
+     "unit": "kg",
+     "opened": 0,
+     "used": 0.0,
+     "theoretical": 0.0,
+     "allowed": 0.0,
+     "area_m2": 0
+    },
+    "Part A": {
+     "unit": "L",
+     "opened": 6,
+     "used": 1135.6,
+     "theoretical": 1010.8,
+     "allowed": 1152.3,
+     "area_m2": 9429.3
+    },
+    "Part B": {
+     "unit": "L",
+     "opened": 2,
+     "used": 378.5,
+     "theoretical": 252.7,
+     "allowed": 288.1,
+     "area_m2": 9429.3
+    }
+   }
+  },
+  {
+   "day": "2026-11-06",
+   "items": {
+    "Powder FBE": {
+     "unit": "kg",
+     "opened": 4,
+     "used": 4000.0,
+     "theoretical": 6930.4,
+     "allowed": 7311.6,
+     "area_m2": 10918.4
+    },
+    "Powder ARO": {
+     "unit": "kg",
+     "opened": 0,
+     "used": 0.0,
+     "theoretical": 0.0,
+     "allowed": 0.0,
+     "area_m2": 0
+    },
+    "Part A": {
+     "unit": "L",
+     "opened": 4,
+     "used": 757.0,
+     "theoretical": 692.9,
+     "allowed": 789.9,
+     "area_m2": 6463.4
+    },
+    "Part B": {
+     "unit": "L",
+     "opened": 1,
+     "used": 189.3,
+     "theoretical": 173.2,
+     "allowed": 197.5,
+     "area_m2": 6463.4
+    }
+   }
+  },
+  {
+   "day": "2026-11-07",
+   "items": {
+    "Powder FBE": {
+     "unit": "kg",
+     "opened": 2,
+     "used": 2000.0,
+     "theoretical": 6180.0,
+     "allowed": 6519.9,
+     "area_m2": 9736.2
+    },
+    "Powder ARO": {
+     "unit": "kg",
+     "opened": 0,
+     "used": 0.0,
+     "theoretical": 0.0,
+     "allowed": 0.0,
+     "area_m2": 0
+    },
+    "Part A": {
+     "unit": "L",
+     "opened": 1,
+     "used": 189.3,
+     "theoretical": 251.9,
+     "allowed": 287.2,
+     "area_m2": 2350.0
+    },
+    "Part B": {
+     "unit": "L",
+     "opened": 0,
+     "used": 0.0,
+     "theoretical": 63.0,
+     "allowed": 71.8,
+     "area_m2": 2350.0
     }
    }
   }
