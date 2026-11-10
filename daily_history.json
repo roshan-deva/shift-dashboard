@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T04:10:37+00:00",
+ "generated": "2026-11-10T13:45:00+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -9066,6 +9066,105 @@
     "OD": 24.0
    },
    "events": []
+  },
+  {
+   "date": "11/09/2026",
+   "idDt": 12.17,
+   "odDt": 5.92,
+   "idCoated": {
+    "a": 61,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 193,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 191,
+    "t": 145
+   },
+   "ftrId": 98.36,
+   "ftrOd": 92.75,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 540,
+     "desc": "No Bare pipes available"
+    },
+    {
+     "line": "ID",
+     "min": 10,
+     "desc": "startup"
+    },
+    {
+     "line": "ID",
+     "min": 35,
+     "desc": "waiting on pipe"
+    },
+    {
+     "line": "ID",
+     "min": 20,
+     "desc": "pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 125,
+     "desc": "agis track on paint line broke"
+    },
+    {
+     "line": "OD",
+     "min": 55,
+     "desc": "South chain crooked up"
+    },
+    {
+     "line": "OD",
+     "min": 75,
+     "desc": "Pipes not kicking up in final table"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "Group-2 lockdown"
+    },
+    {
+     "line": "OD",
+     "min": 20,
+     "desc": "Low Air Pressure"
+    },
+    {
+     "line": "OD",
+     "min": 15,
+     "desc": "startup"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "final table backed up for 2 parts"
+    },
+    {
+     "line": "OD",
+     "min": 10,
+     "desc": "low air pressure"
+    },
+    {
+     "line": "OD",
+     "min": 45,
+     "desc": "Pitstop powder wasn't transferring"
+    },
+    {
+     "line": "OD",
+     "min": 45,
+     "desc": "pitstop"
+    }
+   ]
   }
  ]
 }
