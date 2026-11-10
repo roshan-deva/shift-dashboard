@@ -1,252 +1,105 @@
 {
-  "generated": "2026-11-10T07:31:25.041402",
+  "generated": "2026-11-10T10:46:57.672198",
   "meta": {
     "date": "11/09/2026",
-    "shift": "24H",
-    "scheduledHours": {
-      "BARE": 24.0,
-      "ID": 24.0,
-      "OD": 24.0
-    },
+    "shift": "Day",
+    "scheduledHours": {},
     "project": "",
-    "pipe": "42\" x 0.600\" WT",
-    "coating": "IFC + FBE",
-    "crewDay": "A/C",
-    "crewNight": "A/C",
+    "pipe": "\u2014",
+    "coating": "\u2014",
     "prodSup": "",
     "qualSup": "",
     "maintSup": "",
     "speeds": {
-      "extBlast": 12,
-      "extCoat": 12,
-      "intBlast": 9,
-      "intCoat": 11
+      "extBlast": 0,
+      "extCoat": 0,
+      "intBlast": 0,
+      "intCoat": 0
     }
   },
   "production": {
     "bare": {
-      "day": 29,
-      "night": 41,
-      "total": 70,
+      "day": null,
+      "night": null,
+      "total": null,
       "tgt": 140
     },
     "idCoated": {
-      "day": 4,
-      "night": 57,
-      "total": 61,
+      "day": null,
+      "night": null,
+      "total": null,
       "tgt": 140
     },
     "odTpi": {
-      "day": 84,
-      "night": 107,
-      "total": 191,
+      "day": null,
+      "night": null,
+      "total": null,
       "tgt": 145
     },
     "odCoated": {
-      "day": 80,
-      "night": 113,
-      "total": 193,
+      "day": null,
+      "night": null,
+      "total": null,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 230,
+      "total": 0,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 658,
+      "total": 0,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 37.14,
+      "val": null,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 44.26,
+      "val": null,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 1,
+      "val": 0,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 7,
+      "val": 0,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 14,
+      "val": 0,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 92.75,
-    "repairPct": 6.22,
-    "rejectPct": 1.04,
+    "ftrOd": null,
+    "repairPct": null,
+    "rejectPct": null,
     "ftrOdTgt": 96,
-    "ftrId": 98.36,
-    "idRejectPct": 1.64,
+    "ftrId": null,
+    "idRejectPct": null,
     "ftrIdTgt": 98,
-    "repairPipes": 12,
-    "rejectPipes": 2,
-    "twoPartRepairs": 221,
-    "bevel": 5,
-    "sample": 2,
+    "repairPipes": 0,
+    "rejectPipes": 0,
+    "twoPartRepairs": 0,
+    "bevel": 0,
+    "sample": 0,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
     "strippingOutput": 0,
-    "idRejects": 1,
+    "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 12.17,
-    "odDowntimeHrs": 5.92,
+    "idDowntimeHrs": 0.0,
+    "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 14,
-    "plannedDt": 14.64,
-    "unplannedDt": 3.4,
+    "sapNotif": 0,
+    "plannedDt": 0.0,
+    "unplannedDt": 0.0,
     "forklift": 0,
-    "downtimeEvents": [
-      {
-        "desc": "No Bare pipes available",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "15:00",
-        "durMin": 540,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700101797"
-      },
-      {
-        "desc": "startup",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "18:10",
-        "durMin": 10,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700101801"
-      },
-      {
-        "desc": "waiting on pipe",
-        "line": "ID",
-        "start": "21:15",
-        "stop": "21:50",
-        "durMin": 35,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700101809"
-      },
-      {
-        "desc": "pitstop",
-        "line": "ID",
-        "start": "05:40",
-        "stop": "06:00",
-        "durMin": 20,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700101888"
-      },
-      {
-        "desc": "agis track on paint line broke",
-        "line": "ID",
-        "start": "01:20",
-        "stop": "03:25",
-        "durMin": 125,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000005278"
-      },
-      {
-        "desc": "South chain crooked up",
-        "line": "OD",
-        "start": "07:00",
-        "stop": "07:55",
-        "durMin": 55,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700101794"
-      },
-      {
-        "desc": "Pipes not kicking up in final table",
-        "line": "OD",
-        "start": "08:20",
-        "stop": "09:35",
-        "durMin": 75,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700101795"
-      },
-      {
-        "desc": "Group-2 lockdown",
-        "line": "OD",
-        "start": "11:35",
-        "stop": "12:35",
-        "durMin": 60,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005275"
-      },
-      {
-        "desc": "Low Air Pressure",
-        "line": "OD",
-        "start": "17:00",
-        "stop": "17:20",
-        "durMin": 20,
-        "shift": "Day",
-        "cause": "",
-        "sap": "30000005276"
-      },
-      {
-        "desc": "startup",
-        "line": "OD",
-        "start": "18:00",
-        "stop": "18:15",
-        "durMin": 15,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700101800"
-      },
-      {
-        "desc": "final table backed up for 2 parts",
-        "line": "OD",
-        "start": "22:30",
-        "stop": "23:00",
-        "durMin": 30,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700101861"
-      },
-      {
-        "desc": "low air pressure",
-        "line": "OD",
-        "start": "19:25",
-        "stop": "19:35",
-        "durMin": 10,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700101863"
-      },
-      {
-        "desc": "Pitstop powder wasn't transferring",
-        "line": "OD",
-        "start": "01:15",
-        "stop": "02:00",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700101864"
-      },
-      {
-        "desc": "pitstop",
-        "line": "OD",
-        "start": "05:15",
-        "stop": "06:00",
-        "durMin": 45,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700101891"
-      }
-    ]
+    "downtimeEvents": []
   }
 }
