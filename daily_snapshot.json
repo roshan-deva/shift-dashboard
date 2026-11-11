@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-10T19:31:20.416719-06:00",
+  "generated": "2026-11-11T08:14:28.487901-06:00",
   "meta": {
     "date": "11/10/2026",
-    "shift": "Day",
+    "shift": "24H",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -24,46 +24,46 @@
   "production": {
     "bare": {
       "day": 65,
-      "night": 0,
-      "total": 65,
+      "night": 42,
+      "total": 107,
       "tgt": 140
     },
     "idCoated": {
-      "day": 72,
-      "night": 0,
-      "total": 72,
+      "day": 67,
+      "night": 67,
+      "total": 134,
       "tgt": 140
     },
     "odTpi": {
-      "day": 115,
-      "night": 0,
-      "total": 115,
+      "day": 109,
+      "night": 97,
+      "total": 206,
       "tgt": 145
     },
     "odCoated": {
-      "day": 107,
-      "night": 0,
-      "total": 107,
+      "day": 101,
+      "night": 102,
+      "total": 203,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 229,
+      "total": 201,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 619,
+      "total": 599,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 42.99,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 19.4,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 0,
+      "val": 4,
       "tgt": 20
     },
     "stripBalanceOd": {
@@ -71,38 +71,38 @@
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 5,
+      "val": 10,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 98.13,
-    "repairPct": 0.93,
-    "rejectPct": 0.93,
+    "ftrOd": 97.04,
+    "repairPct": 2.46,
+    "rejectPct": 0.49,
     "ftrOdTgt": 96,
-    "ftrId": 100.0,
-    "idRejectPct": 0.0,
+    "ftrId": 97.01,
+    "idRejectPct": 2.99,
     "ftrIdTgt": 98,
-    "repairPipes": 1,
+    "repairPipes": 5,
     "rejectPipes": 1,
-    "twoPartRepairs": 125,
-    "bevel": 1,
-    "sample": 2,
+    "twoPartRepairs": 260,
+    "bevel": 4,
+    "sample": 3,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
     "strippingOutput": 5,
-    "idRejects": 0,
+    "idRejects": 4,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 2.25,
-    "odDowntimeHrs": 3.92,
+    "idDowntimeHrs": 3.58,
+    "odDowntimeHrs": 7.08,
     "tgt": 85,
-    "sapNotif": 10,
-    "plannedDt": 3.82,
-    "unplannedDt": 2.3,
+    "sapNotif": 17,
+    "plannedDt": 6.15,
+    "unplannedDt": 4.47,
     "forklift": 0,
     "downtimeEvents": [
       {
@@ -144,6 +144,36 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000005286"
+      },
+      {
+        "desc": "changing cheese cloth an gum rubber",
+        "line": "ID",
+        "start": "18:00",
+        "stop": "18:30",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700101961"
+      },
+      {
+        "desc": "crook pipe",
+        "line": "ID",
+        "start": "22:40",
+        "stop": "23:00",
+        "durMin": 20,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700101965"
+      },
+      {
+        "desc": "pitstop",
+        "line": "ID",
+        "start": "05:30",
+        "stop": "06:00",
+        "durMin": 30,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700102069"
       },
       {
         "desc": "Startup",
@@ -204,6 +234,46 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000005284"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "05:00",
+        "stop": "06:00",
+        "durMin": 60,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700102068"
+      },
+      {
+        "desc": "coupling install not working",
+        "line": "OD",
+        "start": "19:00",
+        "stop": "19:40",
+        "durMin": 40,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000005287"
+      },
+      {
+        "desc": "hydraulic leak on carrier 13",
+        "line": "OD",
+        "start": "23:40",
+        "stop": "00:45",
+        "durMin": 65,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000005288"
+      },
+      {
+        "desc": "grinding station rotator stop working",
+        "line": "OD",
+        "start": "03:35",
+        "stop": "04:00",
+        "durMin": 25,
+        "shift": "Night",
+        "cause": "",
+        "sap": "30000005289"
       }
     ]
   }
