@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T01:42:50+00:00",
+ "generated": "2026-11-11T14:32:18+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -9163,6 +9163,120 @@
      "line": "OD",
      "min": 45,
      "desc": "pitstop"
+    }
+   ]
+  },
+  {
+   "date": "11/10/2026",
+   "idDt": 3.58,
+   "odDt": 7.08,
+   "idCoated": {
+    "a": 134,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 203,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 206,
+    "t": 145
+   },
+   "ftrId": 97.01,
+   "ftrOd": 97.04,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 55,
+     "desc": "Spray Gun Settings"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "Blaster buggy is not rotating"
+    },
+    {
+     "line": "ID",
+     "min": 20,
+     "desc": "Paint buggy is not rotating"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "changing cheese cloth an gum rubber"
+    },
+    {
+     "line": "ID",
+     "min": 20,
+     "desc": "crook pipe"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 20,
+     "desc": "Startup"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "Low air pressure"
+    },
+    {
+     "line": "OD",
+     "min": 55,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 40,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 20,
+     "desc": "Quenching Group 10 Rollers not functioni"
+    },
+    {
+     "line": "OD",
+     "min": 70,
+     "desc": "Quenching group -9 Idler roller damage"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 40,
+     "desc": "coupling install not working"
+    },
+    {
+     "line": "OD",
+     "min": 65,
+     "desc": "hydraulic leak on carrier 13"
+    },
+    {
+     "line": "OD",
+     "min": 25,
+     "desc": "grinding station rotator stop working"
     }
    ]
   }
