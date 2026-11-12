@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T14:32:18+00:00",
+ "generated": "2026-11-12T14:37:48+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -9277,6 +9277,120 @@
      "line": "OD",
      "min": 25,
      "desc": "grinding station rotator stop working"
+    }
+   ]
+  },
+  {
+   "date": "11/11/2026",
+   "idDt": 2.92,
+   "odDt": 9.17,
+   "idCoated": {
+    "a": 141,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 193,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 195,
+    "t": 145
+   },
+   "ftrId": 99.29,
+   "ftrOd": 94.3,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 55,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 25,
+     "desc": "plant startup"
+    },
+    {
+     "line": "ID",
+     "min": 25,
+     "desc": "low air pressure"
+    },
+    {
+     "line": "ID",
+     "min": 40,
+     "desc": "heater tripout result in tacky pipes"
+    },
+    {
+     "line": "OD",
+     "min": 65,
+     "desc": "final table full"
+    },
+    {
+     "line": "OD",
+     "min": 65,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 50,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 40,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "Trouble light on carrier 13"
+    },
+    {
+     "line": "OD",
+     "min": 20,
+     "desc": "plant startup"
+    },
+    {
+     "line": "OD",
+     "min": 20,
+     "desc": "low air pressure"
+    },
+    {
+     "line": "OD",
+     "min": 15,
+     "desc": "nozzle popoff result in partial"
+    },
+    {
+     "line": "OD",
+     "min": 35,
+     "desc": "low air pressure"
+    },
+    {
+     "line": "OD",
+     "min": 120,
+     "desc": "final backed up north rotator"
+    },
+    {
+     "line": "OD",
+     "min": 45,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 45,
+     "desc": "replace idle wheel group 3 coating line"
     }
    ]
   }
