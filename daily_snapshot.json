@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T12:06:47.827443-06:00",
+  "generated": "2026-11-13T12:29:58.729988-06:00",
   "meta": {
     "date": "11/12/2026",
     "shift": "24H",
@@ -97,13 +97,104 @@
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 0.0,
-    "odDowntimeHrs": 0.0,
+    "idDowntimeHrs": 2.83,
+    "odDowntimeHrs": 3.75,
     "tgt": 85,
     "sapNotif": 9,
     "plannedDt": 4.79,
     "unplannedDt": 1.72,
     "forklift": 0,
-    "downtimeEvents": []
+    "downtimeEvents": [
+      {
+        "desc": "Startup",
+        "line": "ID",
+        "start": "06:00",
+        "stop": "06:20",
+        "durMin": 20,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700102195"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "ID",
+        "start": "12:30",
+        "stop": "13:00",
+        "durMin": 30,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700102196"
+      },
+      {
+        "desc": "No pipes available",
+        "line": "ID",
+        "start": "16:30",
+        "stop": "18:00",
+        "durMin": 90,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700102197"
+      },
+      {
+        "desc": "Blaster Buggy track damage",
+        "line": "ID",
+        "start": "07:25",
+        "stop": "07:55",
+        "durMin": 30,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000005296"
+      },
+      {
+        "desc": "Startup",
+        "line": "OD",
+        "start": "06:00",
+        "stop": "06:15",
+        "durMin": 15,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700102109"
+      },
+      {
+        "desc": "Pitstop",
+        "line": "OD",
+        "start": "12:20",
+        "stop": "13:20",
+        "durMin": 60,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700102193"
+      },
+      {
+        "desc": "final table backed up due to south load",
+        "line": "OD",
+        "start": "16:45",
+        "stop": "18:00",
+        "durMin": 75,
+        "shift": "Day",
+        "cause": "",
+        "sap": "700102194"
+      },
+      {
+        "desc": "Induction trip on startup",
+        "line": "OD",
+        "start": "06:15",
+        "stop": "06:30",
+        "durMin": 15,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000005294"
+      },
+      {
+        "desc": "South chain not picking up backing up fi",
+        "line": "OD",
+        "start": "08:20",
+        "stop": "09:20",
+        "durMin": 60,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000005295"
+      }
+    ]
   }
 }
