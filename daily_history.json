@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T18:11:12+00:00",
+ "generated": "2026-11-13T18:34:07+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -9396,8 +9396,8 @@
   },
   {
    "date": "11/12/2026",
-   "idDt": 0.0,
-   "odDt": 0.0,
+   "idDt": 2.83,
+   "odDt": 3.75,
    "idCoated": {
     "a": 119,
     "t": 140
@@ -9420,7 +9420,53 @@
     "ID": 24.0,
     "OD": 24.0
    },
-   "events": []
+   "events": [
+    {
+     "line": "ID",
+     "min": 20,
+     "desc": "Startup"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 90,
+     "desc": "No pipes available"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "Blaster Buggy track damage"
+    },
+    {
+     "line": "OD",
+     "min": 15,
+     "desc": "Startup"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 75,
+     "desc": "final table backed up due to south load"
+    },
+    {
+     "line": "OD",
+     "min": 15,
+     "desc": "Induction trip on startup"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "South chain not picking up backing up fi"
+    }
+   ]
   }
  ]
 }
