@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T01:47:15+00:00",
+ "generated": "2026-11-13T14:09:27+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -9393,6 +9393,34 @@
      "desc": "replace idle wheel group 3 coating line"
     }
    ]
+  },
+  {
+   "date": "11/12/2026",
+   "idDt": 0.0,
+   "odDt": 0.0,
+   "idCoated": {
+    "a": 71,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 112,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 115,
+    "t": 145
+   },
+   "ftrId": 98.59,
+   "ftrOd": 94.64,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": []
   }
  ]
 }
