@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T08:02:30.493818-06:00",
+  "generated": "2026-11-13T12:06:47.827443-06:00",
   "meta": {
     "date": "11/12/2026",
     "shift": "24H",
@@ -19,83 +19,80 @@
       "extCoat": 12,
       "intBlast": 9,
       "intCoat": 11
-    },
-    "backlogReplayed": [
-      "2026-11-12"
-    ]
+    }
   },
   "production": {
     "bare": {
       "day": 35,
-      "night": 0,
-      "total": 35,
+      "night": 44,
+      "total": 79,
       "tgt": 140
     },
     "idCoated": {
       "day": 69,
-      "night": 2,
-      "total": 71,
+      "night": 50,
+      "total": 119,
       "tgt": 140
     },
     "odTpi": {
       "day": 113,
-      "night": 2,
-      "total": 115,
+      "night": 77,
+      "total": 190,
       "tgt": 145
     },
     "odCoated": {
       "day": 108,
-      "night": 4,
-      "total": 112,
+      "night": 84,
+      "total": 192,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 0,
+      "total": 164,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 0,
+      "total": 520,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 0.0,
+      "val": 22.78,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 0.0,
+      "val": 12.61,
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 0,
+      "val": 4,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 0,
+      "val": 4,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 0,
+      "val": 7,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 94.64,
-    "repairPct": 4.46,
-    "rejectPct": 0.89,
+    "ftrOd": 92.19,
+    "repairPct": 6.25,
+    "rejectPct": 1.56,
     "ftrOdTgt": 96,
-    "ftrId": 98.59,
-    "idRejectPct": 1.41,
+    "ftrId": 98.32,
+    "idRejectPct": 1.68,
     "ftrIdTgt": 98,
-    "repairPipes": 5,
-    "rejectPipes": 1,
-    "twoPartRepairs": 165,
-    "bevel": 3,
-    "sample": 1,
+    "repairPipes": 12,
+    "rejectPipes": 3,
+    "twoPartRepairs": 266,
+    "bevel": 7,
+    "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
     "strippingOutput": 0,
-    "idRejects": 1,
+    "idRejects": 2,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
@@ -103,9 +100,9 @@
     "idDowntimeHrs": 0.0,
     "odDowntimeHrs": 0.0,
     "tgt": 85,
-    "sapNotif": 0,
-    "plannedDt": 0.0,
-    "unplannedDt": 0.0,
+    "sapNotif": 9,
+    "plannedDt": 4.79,
+    "unplannedDt": 1.72,
     "forklift": 0,
     "downtimeEvents": []
   }
