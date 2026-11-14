@@ -1,6 +1,6 @@
 {
  "month": "2026-11",
- "generated": "2026-11-13T19:32:02",
+ "generated": "2026-11-14T07:31:59",
  "note": "Daily plan (pipes, and feet = pipes x planned average length) and actual TPI output from the SAP production report. LER1 in the plan is LHF1 in SAP.",
  "days": {
   "2026-11-01": {
@@ -785,7 +785,32 @@
      "schedHrs": 24.0
     }
    },
-   "actual": null
+   "actual": {
+    "LEC1": {
+     "tpi": 46,
+     "ft": 3082.927
+    },
+    "LEC2": {
+     "tpi": 50,
+     "ft": 3774.963
+    },
+    "LHF1": {
+     "tpi": 65,
+     "ft": 2519.301
+    },
+    "LIC1": {
+     "tpi": 16,
+     "ft": 1047.28
+    },
+    "LSP1": {
+     "tpi": 110,
+     "ft": 7502.222
+    },
+    "OD": {
+     "tpi": 46,
+     "ft": 3082.927
+    }
+   }
   },
   "2026-11-14": {
    "plan": {

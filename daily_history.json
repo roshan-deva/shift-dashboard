@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-14T01:33:00+00:00",
+ "generated": "2026-11-14T13:32:45+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -9465,6 +9465,65 @@
      "line": "OD",
      "min": 60,
      "desc": "South chain not picking up backing up fi"
+    }
+   ]
+  },
+  {
+   "date": "11/13/2026",
+   "idDt": 0.0,
+   "odDt": 9.25,
+   "idCoated": {
+    "a": 16,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 46,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 46,
+    "t": 145
+   },
+   "ftrId": 50.0,
+   "ftrOd": 69.57,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "OD",
+     "min": 90,
+     "desc": "no pipes in the building"
+    },
+    {
+     "line": "OD",
+     "min": 5,
+     "desc": "changing idle wheel on group 3 coating"
+    },
+    {
+     "line": "OD",
+     "min": 25,
+     "desc": "grinding on pipes that had coating still"
+    },
+    {
+     "line": "OD",
+     "min": 310,
+     "desc": "waiting on pipe"
+    },
+    {
+     "line": "OD",
+     "min": 80,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 45,
+     "desc": "changing idle wheel on group 3 coating"
     }
    ]
   }
