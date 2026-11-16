@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T01:39:47+00:00",
+ "generated": "2026-11-16T15:12:58+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -9570,6 +9570,34 @@
      "desc": "waiting on pipe from id coating"
     }
    ]
+  },
+  {
+   "date": "11/15/2026",
+   "idDt": 0.0,
+   "odDt": 0.0,
+   "idCoated": {
+    "a": 0,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 0,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 0,
+    "t": 145
+   },
+   "ftrId": null,
+   "ftrOd": null,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": []
   }
  ]
 }
