@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T03:58:31+00:00",
+ "generated": "2026-11-17T14:33:33+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -9598,6 +9598,120 @@
     "OD": 24.0
    },
    "events": []
+  },
+  {
+   "date": "11/16/2026",
+   "idDt": 2.58,
+   "odDt": 7.5,
+   "idCoated": {
+    "a": 138,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 129,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 150,
+    "t": 145
+   },
+   "ftrId": 97.1,
+   "ftrOd": 88.37,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "Startup"
+    },
+    {
+     "line": "ID",
+     "min": 50,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 15,
+     "desc": "Malfunction Blaster Buggy Rotation"
+    },
+    {
+     "line": "ID",
+     "min": 20,
+     "desc": "startup"
+    },
+    {
+     "line": "ID",
+     "min": 40,
+     "desc": "pitstop changing cheese cloth"
+    },
+    {
+     "line": "OD",
+     "min": 25,
+     "desc": "Startup"
+    },
+    {
+     "line": "OD",
+     "min": 15,
+     "desc": "final table full"
+    },
+    {
+     "line": "OD",
+     "min": 135,
+     "desc": "Group-3 one drive not working"
+    },
+    {
+     "line": "OD",
+     "min": 40,
+     "desc": "Grinding station transfer line was not w"
+    },
+    {
+     "line": "OD",
+     "min": 15,
+     "desc": "Carrier -15 kicked pipe early (1 Part"
+    },
+    {
+     "line": "OD",
+     "min": 20,
+     "desc": "Induction coil trip (1 Partial coated)"
+    },
+    {
+     "line": "OD",
+     "min": 25,
+     "desc": "replacing nozzles"
+    },
+    {
+     "line": "OD",
+     "min": 40,
+     "desc": "replacing air nozzles"
+    },
+    {
+     "line": "OD",
+     "min": 40,
+     "desc": "maintenance working on south side v- ro"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "no power on the north side jeeper box"
+    },
+    {
+     "line": "OD",
+     "min": 20,
+     "desc": "induction coil tripped result in partial"
+    },
+    {
+     "line": "OD",
+     "min": 15,
+     "desc": "crooked pipe on south chain"
+    }
+   ]
   }
  ]
 }
