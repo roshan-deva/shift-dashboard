@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17 19:33",
+ "generated": "2026-11-18 08:12",
  "since": "2026-10-21",
  "basis": {
   "powderFbe": {
@@ -872,6 +872,43 @@
      "theoretical": 267.6,
      "allowed": 305.0,
      "area_m2": 9984.4
+    }
+   }
+  },
+  {
+   "day": "2026-11-17",
+   "items": {
+    "Powder FBE": {
+     "unit": "kg",
+     "opened": 9,
+     "used": 9000.0,
+     "theoretical": 6233.6,
+     "allowed": 6576.4,
+     "area_m2": 9820.6
+    },
+    "Powder ARO": {
+     "unit": "kg",
+     "opened": 0,
+     "used": 0.0,
+     "theoretical": 0.0,
+     "allowed": 0.0,
+     "area_m2": 0
+    },
+    "Part A": {
+     "unit": "L",
+     "opened": 7,
+     "used": 1324.8,
+     "theoretical": 1007.5,
+     "allowed": 1148.5,
+     "area_m2": 9398.1
+    },
+    "Part B": {
+     "unit": "L",
+     "opened": 2,
+     "used": 378.5,
+     "theoretical": 251.9,
+     "allowed": 287.1,
+     "area_m2": 9398.1
     }
    }
   }

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T01:34:38+00:00",
+ "generated": "2026-11-18T14:17:06+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -9710,6 +9710,135 @@
      "line": "OD",
      "min": 15,
      "desc": "crooked pipe on south chain"
+    }
+   ]
+  },
+  {
+   "date": "11/17/2026",
+   "idDt": 6.17,
+   "odDt": 8.58,
+   "idCoated": {
+    "a": 135,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 148,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 137,
+    "t": 145
+   },
+   "ftrId": 97.78,
+   "ftrOd": 90.54,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "Startup"
+    },
+    {
+     "line": "ID",
+     "min": 40,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 20,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 20,
+     "desc": "changing cheese cloth"
+    },
+    {
+     "line": "ID",
+     "min": 45,
+     "desc": "pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "pitstop only running on blaster 2"
+    },
+    {
+     "line": "ID",
+     "min": 185,
+     "desc": "blaster 1 down checking sensor"
+    },
+    {
+     "line": "OD",
+     "min": 10,
+     "desc": "Startup"
+    },
+    {
+     "line": "OD",
+     "min": 10,
+     "desc": "Consecutive short pipes"
+    },
+    {
+     "line": "OD",
+     "min": 20,
+     "desc": "Consecutive short pipes"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 10,
+     "desc": "Induction coil trip (1 Partial coated)"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "Grinding station transfer line was not w"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "Quenching Group-9 (1 Roller damage)"
+    },
+    {
+     "line": "OD",
+     "min": 50,
+     "desc": "Coupling came off at Group-1 &5"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "wheel marks on pipe"
+    },
+    {
+     "line": "OD",
+     "min": 50,
+     "desc": "Final table backed up"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "pitstop Final table backed up 4 buff bac"
+    },
+    {
+     "line": "OD",
+     "min": 130,
+     "desc": "replace idle wheel on group 3 coating l"
+    },
+    {
+     "line": "OD",
+     "min": 25,
+     "desc": "induction coil tripped result in 1 parti"
     }
    ]
   }
