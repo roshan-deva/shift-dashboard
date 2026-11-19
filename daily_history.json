@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T02:01:32+00:00",
+ "generated": "2026-11-19T15:00:17+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -9839,6 +9839,135 @@
      "line": "OD",
      "min": 25,
      "desc": "induction coil tripped result in 1 parti"
+    }
+   ]
+  },
+  {
+   "date": "11/18/2026",
+   "idDt": 7.5,
+   "odDt": -5.63,
+   "idCoated": {
+    "a": 142,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 175,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 167,
+    "t": 145
+   },
+   "ftrId": 99.3,
+   "ftrOd": 92.57,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 20,
+     "desc": "Startup"
+    },
+    {
+     "line": "ID",
+     "min": 20,
+     "desc": "changing gum Rubber"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 40,
+     "desc": "blaster 1 down sensor Not working"
+    },
+    {
+     "line": "ID",
+     "min": 225,
+     "desc": "blaster 1 down sensor Not working"
+    },
+    {
+     "line": "ID",
+     "min": 50,
+     "desc": "no inbound sap"
+    },
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "pitstop"
+    },
+    {
+     "line": "ID",
+     "min": 35,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 10,
+     "desc": "Startup"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "Final table backed up"
+    },
+    {
+     "line": "OD",
+     "min": 50,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 40,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": -808,
+     "desc": "Induction coil trip (1 Partial coated)"
+    },
+    {
+     "line": "OD",
+     "min": 45,
+     "desc": "South chain pipe crooked"
+    },
+    {
+     "line": "OD",
+     "min": 50,
+     "desc": "Blaster Tripped"
+    },
+    {
+     "line": "OD",
+     "min": 50,
+     "desc": "Blaster Tripped"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "plant startup"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "plant startup"
+    },
+    {
+     "line": "OD",
+     "min": 80,
+     "desc": "replace saddle wheel on north west saddl"
+    },
+    {
+     "line": "OD",
+     "min": 55,
+     "desc": "south chain not picking up"
     }
    ]
   }
