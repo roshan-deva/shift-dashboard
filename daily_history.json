@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T03:57:12+00:00",
+ "generated": "2026-11-20T15:01:36+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -9968,6 +9968,110 @@
      "line": "OD",
      "min": 55,
      "desc": "south chain not picking up"
+    }
+   ]
+  },
+  {
+   "date": "11/19/2026",
+   "idDt": 16.42,
+   "odDt": 14.58,
+   "idCoated": {
+    "a": 82,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 117,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 110,
+    "t": 145
+   },
+   "ftrId": 100.0,
+   "ftrOd": 82.91,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "ID",
+     "min": 30,
+     "desc": "Startup"
+    },
+    {
+     "line": "ID",
+     "min": 100,
+     "desc": "No Bare Pipe Available"
+    },
+    {
+     "line": "ID",
+     "min": 135,
+     "desc": "No Bare Pipe Available"
+    },
+    {
+     "line": "ID",
+     "min": 360,
+     "desc": "stripping & recoating"
+    },
+    {
+     "line": "ID",
+     "min": 360,
+     "desc": "No available pipes"
+    },
+    {
+     "line": "OD",
+     "min": 55,
+     "desc": "Pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 470,
+     "desc": "South chain Broken"
+    },
+    {
+     "line": "OD",
+     "min": 50,
+     "desc": "final table backed up north rotator"
+    },
+    {
+     "line": "OD",
+     "min": 15,
+     "desc": "pipe kickover too early"
+    },
+    {
+     "line": "OD",
+     "min": 45,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 35,
+     "desc": "control panel tripout"
+    },
+    {
+     "line": "OD",
+     "min": 35,
+     "desc": "control panel tripout"
+    },
+    {
+     "line": "OD",
+     "min": 20,
+     "desc": "control panel tripout"
+    },
+    {
+     "line": "OD",
+     "min": 75,
+     "desc": "control panel tripout result in partial"
+    },
+    {
+     "line": "OD",
+     "min": 75,
+     "desc": "control panel tripout result in partial"
     }
    ]
   }
