@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T15:01:36+00:00",
+ "generated": "2026-11-21T12:55:56+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -10072,6 +10072,75 @@
      "line": "OD",
      "min": 75,
      "desc": "control panel tripout result in partial"
+    }
+   ]
+  },
+  {
+   "date": "11/20/2026",
+   "idDt": 0.0,
+   "odDt": 10.5,
+   "idCoated": {
+    "a": 0,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 50,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 65,
+    "t": 145
+   },
+   "ftrId": null,
+   "ftrOd": 78.0,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "OD",
+     "min": 80,
+     "desc": "replacing pad on final table"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "buff back 5''"
+    },
+    {
+     "line": "OD",
+     "min": 30,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 25,
+     "desc": "control panel tripout"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "grinding station rotator stop working"
+    },
+    {
+     "line": "OD",
+     "min": 170,
+     "desc": "control panel tripout"
+    },
+    {
+     "line": "OD",
+     "min": 50,
+     "desc": "saddle off track"
+    },
+    {
+     "line": "OD",
+     "min": 155,
+     "desc": "south chain out of alignment"
     }
    ]
   }
