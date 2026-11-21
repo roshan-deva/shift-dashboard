@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-20T08:54:20.774029-06:00",
+  "generated": "2026-11-21T06:49:47.560566-06:00",
   "meta": {
-    "date": "11/19/2026",
+    "date": "11/20/2026",
     "shift": "24H",
     "scheduledHours": {
       "BARE": 24.0,
@@ -23,43 +23,43 @@
   },
   "production": {
     "bare": {
-      "day": 70,
-      "night": 67,
-      "total": 137,
+      "day": 43,
+      "night": 0,
+      "total": 43,
       "tgt": 140
     },
     "idCoated": {
-      "day": 60,
-      "night": 22,
-      "total": 82,
+      "day": 0,
+      "night": 0,
+      "total": 0,
       "tgt": 140
     },
     "odTpi": {
-      "day": 39,
-      "night": 71,
-      "total": 110,
+      "day": 65,
+      "night": 0,
+      "total": 65,
       "tgt": 145
     },
     "odCoated": {
-      "day": 29,
-      "night": 88,
-      "total": 117,
+      "day": 50,
+      "night": 0,
+      "total": 50,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 491,
+      "total": 593,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 358,
+      "total": 227,
       "tgt": 400
     },
     "directFeedPct": {
-      "val": 6.57,
+      "val": 0.0,
       "tgt": 75
     },
     "idOdFeedPct": {
-      "val": 37.8,
+      "val": null,
       "tgt": 75
     },
     "stripBalanceId": {
@@ -67,193 +67,123 @@
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 21,
+      "val": 27,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 35,
+      "val": 23,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 82.91,
-    "repairPct": 13.68,
-    "rejectPct": 3.42,
+    "ftrOd": 78.0,
+    "repairPct": 12.0,
+    "rejectPct": 10.0,
     "ftrOdTgt": 96,
-    "ftrId": 100.0,
-    "idRejectPct": 0.0,
+    "ftrId": null,
+    "idRejectPct": null,
     "ftrIdTgt": 98,
-    "repairPipes": 16,
-    "rejectPipes": 4,
-    "twoPartRepairs": 168,
+    "repairPipes": 6,
+    "rejectPipes": 5,
+    "twoPartRepairs": 137,
     "bevel": 4,
     "sample": 2,
-    "tape": 0,
+    "tape": 1,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
-    "strippingOutput": 4,
+    "strippingOutput": 2,
     "idRejects": 0,
     "pipeMismatch": 0,
     "pipesToGroundId": 0
   },
   "maintenance": {
-    "idDowntimeHrs": 16.42,
-    "odDowntimeHrs": 14.58,
+    "idDowntimeHrs": 0.0,
+    "odDowntimeHrs": 10.5,
     "tgt": 85,
-    "sapNotif": 15,
-    "plannedDt": 19.17,
-    "unplannedDt": 11.82,
+    "sapNotif": 8,
+    "plannedDt": 2.83,
+    "unplannedDt": 7.65,
     "forklift": 0,
     "downtimeEvents": [
       {
-        "desc": "Startup",
-        "line": "ID",
-        "start": "06:00",
-        "stop": "06:30",
-        "durMin": 30,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700103294"
-      },
-      {
-        "desc": "No Bare Pipe Available",
-        "line": "ID",
-        "start": "13:10",
-        "stop": "14:50",
-        "durMin": 100,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700103295"
-      },
-      {
-        "desc": "No Bare Pipe Available",
-        "line": "ID",
-        "start": "15:45",
-        "stop": "18:00",
-        "durMin": 135,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700103296"
-      },
-      {
-        "desc": "stripping & recoating",
-        "line": "ID",
-        "start": "18:00",
-        "stop": "00:00",
-        "durMin": 360,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700103355"
-      },
-      {
-        "desc": "No available pipes",
-        "line": "ID",
-        "start": "00:00",
-        "stop": "06:00",
-        "durMin": 360,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700103356"
-      },
-      {
-        "desc": "Pitstop",
-        "line": "OD",
-        "start": "17:05",
-        "stop": "18:00",
-        "durMin": 55,
-        "shift": "Day",
-        "cause": "",
-        "sap": "700103297"
-      },
-      {
-        "desc": "South chain Broken",
+        "desc": "replacing pad on final table",
         "line": "OD",
         "start": "06:00",
-        "stop": "13:50",
-        "durMin": 470,
+        "stop": "07:20",
+        "durMin": 80,
         "shift": "Day",
         "cause": "",
-        "sap": "30000005353"
+        "sap": "700103486"
       },
       {
-        "desc": "final table backed up north rotator",
+        "desc": "buff back 5''",
         "line": "OD",
-        "start": "23:20",
-        "stop": "00:10",
-        "durMin": 50,
-        "shift": "Night",
+        "start": "08:30",
+        "stop": "09:30",
+        "durMin": 60,
+        "shift": "Day",
         "cause": "",
-        "sap": "700103357"
-      },
-      {
-        "desc": "pipe kickover too early",
-        "line": "OD",
-        "start": "03:00",
-        "stop": "03:15",
-        "durMin": 15,
-        "shift": "Night",
-        "cause": "",
-        "sap": "700103375"
+        "sap": "700103487"
       },
       {
         "desc": "pitstop",
         "line": "OD",
-        "start": "05:15",
-        "stop": "06:00",
-        "durMin": 45,
-        "shift": "Night",
+        "start": "17:30",
+        "stop": "18:00",
+        "durMin": 30,
+        "shift": "Day",
         "cause": "",
-        "sap": "700103377"
+        "sap": "700103488"
       },
       {
         "desc": "control panel tripout",
+        "line": "OD",
+        "start": "09:35",
+        "stop": "10:00",
+        "durMin": 25,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000005360"
+      },
+      {
+        "desc": "grinding station rotator stop working",
+        "line": "OD",
+        "start": "11:40",
+        "stop": "12:40",
+        "durMin": 60,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000005361"
+      },
+      {
+        "desc": "control panel tripout",
+        "line": "OD",
+        "start": "12:50",
+        "stop": "15:40",
+        "durMin": 170,
+        "shift": "Day",
+        "cause": "",
+        "sap": "30000005362"
+      },
+      {
+        "desc": "saddle off track",
         "line": "OD",
         "start": "18:00",
-        "stop": "18:35",
-        "durMin": 35,
+        "stop": "18:50",
+        "durMin": 50,
         "shift": "Night",
         "cause": "",
-        "sap": "30000005354"
+        "sap": "30000005363"
       },
       {
-        "desc": "control panel tripout",
+        "desc": "south chain out of alignment",
         "line": "OD",
         "start": "20:15",
-        "stop": "20:50",
-        "durMin": 35,
+        "stop": "22:50",
+        "durMin": 155,
         "shift": "Night",
         "cause": "",
-        "sap": "30000005355"
-      },
-      {
-        "desc": "control panel tripout",
-        "line": "OD",
-        "start": "00:10",
-        "stop": "00:30",
-        "durMin": 20,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000005356"
-      },
-      {
-        "desc": "control panel tripout result in partial",
-        "line": "OD",
-        "start": "01:35",
-        "stop": "02:50",
-        "durMin": 75,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000005357"
-      },
-      {
-        "desc": "control panel tripout result in partial",
-        "line": "OD",
-        "start": "01:35",
-        "stop": "02:50",
-        "durMin": 75,
-        "shift": "Night",
-        "cause": "",
-        "sap": "30000005358"
+        "sap": "30000005364"
       }
     ]
   }
