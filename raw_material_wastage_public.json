@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21 07:34",
+ "generated": "2026-11-21 19:37",
  "since": "2026-10-21",
  "basis": {
   "powderFbe": {
@@ -1026,7 +1026,7 @@
  ],
  "hfw": {
   "line": "LEC2",
-  "bookings": 2,
+  "bookings": 3,
   "basis": {
    "powderFbe": {
     "kgPerM2": 0.6347,
