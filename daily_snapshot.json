@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-21T19:30:47.245635-06:00",
+  "generated": "2026-11-22T07:30:29.521580-06:00",
   "meta": {
     "date": "11/21/2026",
-    "shift": "Day",
+    "shift": "24H",
     "scheduledHours": {
       "BARE": 24.0,
       "ID": 24.0,
@@ -24,8 +24,8 @@
   "production": {
     "bare": {
       "day": 63,
-      "night": 0,
-      "total": 63,
+      "night": 78,
+      "total": 141,
       "tgt": 140
     },
     "idCoated": {
@@ -35,23 +35,23 @@
       "tgt": 140
     },
     "odTpi": {
-      "day": 57,
-      "night": 0,
-      "total": 57,
+      "day": 52,
+      "night": 85,
+      "total": 137,
       "tgt": 145
     },
     "odCoated": {
-      "day": 64,
-      "night": 0,
-      "total": 64,
+      "day": 57,
+      "night": 91,
+      "total": 148,
       "tgt": 145
     },
     "wipBareId": {
-      "total": 654,
+      "total": 729,
       "tgt": 400
     },
     "wipIdOd": {
-      "total": 168,
+      "total": 93,
       "tgt": 400
     },
     "directFeedPct": {
@@ -67,27 +67,27 @@
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 29,
+      "val": 31,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 26,
+      "val": 30,
       "tgt": 40
     }
   },
   "quality": {
-    "ftrOd": 92.19,
-    "repairPct": 3.12,
-    "rejectPct": 4.69,
+    "ftrOd": 93.24,
+    "repairPct": 3.38,
+    "rejectPct": 3.38,
     "ftrOdTgt": 96,
     "ftrId": null,
     "idRejectPct": null,
     "ftrIdTgt": 98,
-    "repairPipes": 2,
-    "rejectPipes": 3,
-    "twoPartRepairs": 43,
-    "bevel": 0,
-    "sample": 1,
+    "repairPipes": 5,
+    "rejectPipes": 5,
+    "twoPartRepairs": 173,
+    "bevel": 1,
+    "sample": 2,
     "tape": 0,
     "repairsLoadout": 0,
     "tpiToGroundSouth": 0,
@@ -98,10 +98,10 @@
   },
   "maintenance": {
     "idDowntimeHrs": 0.0,
-    "odDowntimeHrs": 6.17,
+    "odDowntimeHrs": 10.33,
     "tgt": 85,
-    "sapNotif": 6,
-    "plannedDt": 3.17,
+    "sapNotif": 10,
+    "plannedDt": 7.33,
     "unplannedDt": 3.0,
     "forklift": 0,
     "downtimeEvents": [
@@ -164,6 +164,46 @@
         "shift": "Day",
         "cause": "",
         "sap": "30000005368"
+      },
+      {
+        "desc": "plant startup",
+        "line": "OD",
+        "start": "18:00",
+        "stop": "18:15",
+        "durMin": 15,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700103605"
+      },
+      {
+        "desc": "pitstop",
+        "line": "OD",
+        "start": "23:10",
+        "stop": "00:10",
+        "durMin": 60,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700103666"
+      },
+      {
+        "desc": "final table backed up north rotator",
+        "line": "OD",
+        "start": "02:10",
+        "stop": "03:00",
+        "durMin": 50,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700103667"
+      },
+      {
+        "desc": "pitstop/end of shift",
+        "line": "OD",
+        "start": "03:55",
+        "stop": "06:00",
+        "durMin": 125,
+        "shift": "Night",
+        "cause": "",
+        "sap": "700103699"
       }
     ]
   }
