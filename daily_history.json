@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T01:51:47+00:00",
+ "generated": "2026-11-23T14:22:37+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -10222,6 +10222,34 @@
      "desc": "pitstop/end of shift"
     }
    ]
+  },
+  {
+   "date": "11/22/2026",
+   "idDt": 0.0,
+   "odDt": 0.0,
+   "idCoated": {
+    "a": 0,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 0,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 0,
+    "t": 145
+   },
+   "ftrId": null,
+   "ftrOd": null,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": []
   }
  ]
 }
