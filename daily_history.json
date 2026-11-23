@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T01:40:52+00:00",
+ "generated": "2026-11-23T01:51:47+00:00",
  "source": "git history of daily_snapshot.json (development fixture)",
  "days": [
   {
@@ -10141,6 +10141,85 @@
      "line": "OD",
      "min": 155,
      "desc": "south chain out of alignment"
+    }
+   ]
+  },
+  {
+   "date": "11/21/2026",
+   "idDt": 0.0,
+   "odDt": 10.33,
+   "idCoated": {
+    "a": 0,
+    "t": 140
+   },
+   "odCoated": {
+    "a": 148,
+    "t": 145
+   },
+   "odTpi": {
+    "a": 137,
+    "t": 145
+   },
+   "ftrId": null,
+   "ftrOd": 93.24,
+   "ftrIdTgt": 98,
+   "ftrOdTgt": 96,
+   "upTgt": 85,
+   "scheduledHours": {
+    "BARE": 24.0,
+    "ID": 24.0,
+    "OD": 24.0
+   },
+   "events": [
+    {
+     "line": "OD",
+     "min": 130,
+     "desc": "south load out nothing moving"
+    },
+    {
+     "line": "OD",
+     "min": 15,
+     "desc": "pipe came over to early result in partia"
+    },
+    {
+     "line": "OD",
+     "min": 45,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 120,
+     "desc": "maintenance working on south chainm"
+    },
+    {
+     "line": "OD",
+     "min": 50,
+     "desc": "changing v-roller on group 2"
+    },
+    {
+     "line": "OD",
+     "min": 10,
+     "desc": "panel tripout result in partial coat"
+    },
+    {
+     "line": "OD",
+     "min": 15,
+     "desc": "plant startup"
+    },
+    {
+     "line": "OD",
+     "min": 60,
+     "desc": "pitstop"
+    },
+    {
+     "line": "OD",
+     "min": 50,
+     "desc": "final table backed up north rotator"
+    },
+    {
+     "line": "OD",
+     "min": 125,
+     "desc": "pitstop/end of shift"
     }
    ]
   }
