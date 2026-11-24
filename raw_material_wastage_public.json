@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23 08:20",
+ "generated": "2026-11-23 19:45",
  "since": "2026-10-21",
  "basis": {
   "powderFbe": {
@@ -1063,7 +1063,7 @@
  ],
  "hfw": {
   "line": "LEC2",
-  "bookings": 3,
+  "bookings": 1,
   "basis": {
    "powderFbe": {
     "kgPerM2": 0.6347,
@@ -1071,19 +1071,6 @@
    }
   },
   "days": [
-   {
-    "day": "2026-11-20",
-    "items": {
-     "Powder FBE": {
-      "unit": "kg",
-      "opened": 2,
-      "used": 2000.0,
-      "area_m2": 567.8,
-      "theoretical": 360.4,
-      "allowed": 389.2
-     }
-    }
-   },
    {
     "day": "2026-11-21",
     "items": {
