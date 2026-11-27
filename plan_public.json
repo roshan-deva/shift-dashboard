@@ -1,6 +1,6 @@
 {
  "month": "2026-11",
- "generated": "2026-11-27T08:41:02",
+ "generated": "2026-11-27T08:56:13",
  "note": "Daily plan (pipes, and feet = pipes x planned average length) and actual TPI output from the SAP production report. LER1 in the plan is LHF1 in SAP.",
  "days": {
   "2026-11-01": {
@@ -1399,12 +1399,8 @@
    },
    "actual": {
     "LEC1": {
-     "tpi": 5,
-     "ft": 380.955
-    },
-    "LEC2": {
-     "tpi": 45,
-     "ft": 3457.195
+     "tpi": 50,
+     "ft": 3838.15
     },
     "LHF1": {
      "tpi": 51,
@@ -1415,8 +1411,8 @@
      "ft": 8236.88
     },
     "OD": {
-     "tpi": 5,
-     "ft": 380.955
+     "tpi": 50,
+     "ft": 3838.15
     }
    }
   },
@@ -1460,20 +1456,20 @@
    },
    "actual": {
     "LEC1": {
-     "tpi": 6,
-     "ft": 403.56
+     "tpi": 144,
+     "ft": 11102.449
     },
     "LEC2": {
-     "tpi": 176,
-     "ft": 12191.949
+     "tpi": 38,
+     "ft": 1493.06
     },
     "LSP1": {
      "tpi": 112,
      "ft": 8130.012
     },
     "OD": {
-     "tpi": 6,
-     "ft": 403.56
+     "tpi": 144,
+     "ft": 11102.449
     }
    }
   },
@@ -1517,12 +1513,12 @@
    },
    "actual": {
     "LEC1": {
-     "tpi": 3,
-     "ft": 151.43
+     "tpi": 81,
+     "ft": 6138.017
     },
     "LEC2": {
-     "tpi": 130,
-     "ft": 7972.876
+     "tpi": 52,
+     "ft": 1986.289
     },
     "LHF1": {
      "tpi": 3,
@@ -1533,8 +1529,8 @@
      "ft": 6207.956
     },
     "OD": {
-     "tpi": 3,
-     "ft": 151.43
+     "tpi": 81,
+     "ft": 6138.017
     }
    }
   },
