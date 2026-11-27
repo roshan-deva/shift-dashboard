@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-23T07:30:32.619460-06:00",
+  "generated": "2026-11-27T08:39:13.404638-06:00",
   "meta": {
     "date": "11/22/2026",
     "shift": "24H",
@@ -47,7 +47,7 @@
       "tgt": 145
     },
     "wipBareId": {
-      "total": 786,
+      "total": 1090,
       "tgt": 400
     },
     "wipIdOd": {
@@ -63,15 +63,15 @@
       "tgt": 75
     },
     "stripBalanceId": {
-      "val": 3,
+      "val": 4,
       "tgt": 20
     },
     "stripBalanceOd": {
-      "val": 31,
+      "val": 32,
       "tgt": 20
     },
     "odRepairBalance": {
-      "val": 30,
+      "val": 15,
       "tgt": 40
     }
   },
